@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="462dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/essence_theft" />
+
+        <TextView
+            android:id="@+id/tvPassiveName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView1"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/imageView1"
+            android:text="Essence Theft"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tvPassiveText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvPassiveName"
+            android:layout_below="@+id/tvPassiveName"
+            android:text="@string/EssenceTheft"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvQText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvQName"
+            android:layout_below="@+id/tvQName"
+            android:text="@string/OrbOfDeception"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvWText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvWName"
+            android:layout_below="@+id/tvWName"
+            android:text="@string/FoxFire"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvEText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvEName"
+            android:layout_below="@+id/tvEName"
+            android:text="@string/Charm"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvRText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvRName"
+            android:layout_below="@+id/tvRName"
+            android:text="@string/SpiritRush"
+            android:layout_marginBottom="15dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvEName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvWText"
+            android:layout_below="@+id/tvWText"
+            android:layout_marginTop="15dp"
+            android:text="Charm"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignTop="@+id/tvEName"
+            android:layout_toLeftOf="@+id/tvPassiveName"
+            android:src="@drawable/charm" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@+id/tvQText"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@+id/tvPassiveName"
+            android:src="@drawable/foxfire" />
+
+        <TextView
+            android:id="@+id/tvQName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvPassiveText"
+            android:layout_below="@+id/tvPassiveText"
+            android:layout_marginTop="15dp"
+            android:text="Orb Of Deception"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignTop="@+id/tvQName"
+            android:layout_toLeftOf="@+id/tvPassiveName"
+            android:src="@drawable/orb_of_deception" />
+
+        <TextView
+            android:id="@+id/tvWName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvQText"
+            android:layout_below="@+id/tvQText"
+            android:layout_marginTop="15dp"
+            android:text="Fox-Fire"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_below="@+id/tvEText"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@+id/tvPassiveName"
+            android:src="@drawable/spirit_rush" />
+
+        <TextView
+            android:id="@+id/tvRName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvEText"
+            android:layout_below="@+id/tvEText"
+            android:layout_marginTop="15dp"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</ScrollView>

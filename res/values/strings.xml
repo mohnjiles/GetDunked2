@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Get Dunked</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="AhriLore" formatted="false">    Unlike other foxes that roamed the woods of southern Ionia, Ahri had always felt a strange connection to the magical
+    world around her; a connection that was somehow incomplete. Deep inside, she felt the skin she had been born into was
+    an ill fit for her and dreamt of one day becoming human. Her goal seemed forever out of reach, until she happened upon
+    the wake of a human battle. It was a grisly scene, the land obscured by the forms of wounded and dying soldiers. She
+    felt drawn to one: a robed man encircled by a waning field of magic whose life was quickly slipping away. She
+    approached him and something deep inside of her triggered, reaching out to the man in a way she couldn\'t understand.
+    His life essence poured into her, carried on invisible strands of magic. The sensation was intoxicating and
+    overwhelming. As her reverie faded, she was delighted to discover that she had changed. Her sleek white fur had
+    receded and her body was long and lithe, the shape of the humans who lay scattered about her.\n\n
+    However, though she appeared human, she knew that in truth the transformation was incomplete. A cunning creature,
+    she adapted herself to the customs of human society and used her profound gift of beauty to attract unsuspecting men.
+    She could consume their life essences when they were under the spell of her seductive charms. Feeding on their
+    desires brought her closer to her dream, but as she took more lives, a strange sense of regret began to well within
+    her. She had reservations about actions which never troubled her as a fox. She realized that she could not overcome
+    the pangs of her evolving morality. In search of a solution, Ahri found the Institute of War, home of the most gifted
+    mages on Runeterra. They offered her a chance to attain her humanity without further harm through service in the League
+    of Legends.\n\n\t"Mercy is a human luxury... and responsibility."\n\t
+    ―Ahri</string>
+    <string name="EssenceTheft">    Ahri gains a charge of Essence Theft with each enemy unit hit by any of her spells, with a cap of 3 
+    charges per spell cast. Upon reaching 9 charges, Ahri\'s next spell will have 35% bonus spell vamp.</string>
+    <string name="OrbOfDeception">ACTIVE: Ahri sends out an orb in a line in front of her and then pulls it back, 
+  dealing magic damage on the way out and true damage on the way back.</string>
+    <string name="FoxFire">    ACTIVE: Ahri releases three fox-fires to surround her for up to 5 seconds. 
+    After a short delay after cast, each flame will target the closest enemy unit to itself, 
+    prioritizing champions, and deal magic damage to the target.
+    Additional fox-fires that hit the same target will only deal 50% damage.</string>
+    <string name="Charm">    ACTIVE: Ahri will blow a kiss that travels in a line in front of her. It will deal magic damage and charm 
+    the first enemy it encounters, forcing them to walk harmlessly towards her, while being slowed by 50% for 
+    the duration.</string>
+    <string name="SpiritRush">    ACTIVE: Ahri dashes towards the cursor and fires essence bolts, dealing magic damage to up to 3 
+    nearby enemies, prioritizing champions. In the next 10 seconds, Spirit Rush can be cast two additional 
+    times before going on cooldown. Each enemy can only be hit once per dash.</string>
+    <string name="TwinDisciplines" formatted="false">    DISCIPLINE OF FORCE: Akali\'s auto attacks deal 6% (+ 1% per 6 AP) bonus magic damage.\nDISCIPLINE OF MIGHT: 
+    Akali gains 6% (+ 1% per 6 bonus AD) spell vamp.</string>
+    <string name="MarkOfTheAssassin">    ACTIVE: Akali throws her kama at a target enemy, dealing magic damage and marking the target for 6 seconds.
+    Akali\'s basic attacks or Crescent Slashes against a marked target will consume the mark, dealing the same damage 
+    again and restoring energy to Akali.</string>
+    <string name="TwilightShroud">    ACTIVE: Akali creates a smoke cloud in the target 600-diameter area for 8 seconds. While within the cloud,
+    Akali is granted stealth, and bonus armor and magic resistance. Attacking or using abilities reveals her for 0.5 seconds. 
+    Enemies inside the smoke suffer slowed movement.</string>
+    <string name="CrescentSlash">    ACTIVE: Akali flourishes her kamas, dealing physical damage and triggering any Marks of the Assassin on nearby enemies.</string>
+    <string name="ShadowDance">    ACTIVE: Akali uses an Essence of Shadow, dashing to and dealing magic damage to a target enemy. Akali gains an Essence of Shadow 
+    periodically, affected by cooldown reduction, up to a maximum of 3. Additionally, Akali gains an Essence of Shadow for each kill or
+    assist she obtains.</string>
+    <string name="Trample">    Each time Alistar casts a spell, for 3 seconds afterwards he gains the ability to ignore unit collision and will 
+    deal 3 + (1 × level) (+ 10% AP) magic damage to nearby enemy units and structures each second. Trample deals double damage to minions 
+    and monsters.</string>
+    <string name="Pulverize">    ACTIVE: Alistar smashes the ground where he is standing, dealing magic damage to all surrounding enemies and knocking them up 
+    for 1 second, additionally stunning them upon landing for 0.5 seconds.</string>
+    <string name="Headbutt">    ACTIVE: Alistar dashes to an enemy\'s position and rams them, dealing magic damage and knocking them back a set distance over 
+    1 second, also briefly immobilizing them.</string>
+    <string name="TriumphantRoar">    ACTIVE: Alistar instantly restores health to himself, healing nearby friendly units for half of that amount. The cooldown 
+    of this ability is reduced by 2 seconds each time a nearby enemy unit dies.</string>
+    <string name="UnbreakableWill">    ACTIVE: With a mighty roar Alistar removes all crowd control effects on himself, and for 7 seconds afterwards he gains 
+    bonus attack damage and takes reduced physical and magic damage.</string>
+    <string name="CursedTouch">Amumu\'s autoattacks reduce the target\'s magic resistance by 15 / 20 / 25 for 3 seconds. The debuff
+  doesn\'t stack but it refreshes with every autoattack.</string>
+    <string name="BandageToss">ACTIVE: Amumu tosses a sticky bandage in a straight line towards a target location. If it contacts an enemy, 
+  Amumu will pull himself to it, dealing magic damage and stunning the target for 1 second.</string>
+    <string name="Despair">TOGGLE: While toggled on, Amumu will be surrounded by a small damaging area of tears. Enemies in the area will be dealt 
+  a percentage of their maximum health plus a base amount as magic damage each second.</string>
+    <string name="Tantrum" formatted="false">    PASSIVE: Amumu takes reduced physical damage from autoattacks and abilities.\nACTIVE: Amumu will make an instantaneous tantrum, 
+    dealing magic damage to surrounding units. Additionally, each time Amumu is hit by an autoattack the cooldown on Tantrum\'s active 
+    will be reduced by 0.5 seconds.</string>
+    <string name="CurseOfTheSadMummy">    ACTIVE: Amumu entangles surrounding enemy units, dealing magic damage and rendering them unable to move or use autoattacks for 2 seconds.</string>
+    <string name="Rebirth">    Upon dying, Anivia will transform into an egg and will get an armor and magic resistance modifier of −40 / −25 / −10 / +5 / +20. 
+    If the egg can survive for 6 seconds, she is reborn with the same percentage of health that her egg had left. 
+    Rebirth has a static cooldown and is unaffected by cooldown reduction.</string>
+    <string name="FlashFrost">    ACTIVE: Anivia fires an orb of ice that travels in a line. All enemies it hits take magic damage and are "chilled" for 3 seconds, 
+    slowing their movement speed by 20%. The shard will detonate when reaching its maximum range or if the ability is activated again. 
+    When the shard explodes, it deals the same damage to all enemies within 75 range, stuns them for 1 second, and "chills" them for 3 seconds.</string>
+    <string name="Crystallize">    ACTIVE: Anivia creates an impassible wall of ice centered on target point, perpendicular to Anivia\'s facing, lasting 5 seconds.</string>
+    <string name="Frostbite">ACTIVE: Anivia fires a shard of ice to deal magic damage to a target enemy. Frostbite deals double damage 
+  to enemies "chilled" by Anivia\'s other spells.</string>
+    <string name="GlacialStorm">    TOGGLE: Anivia creates a blizzard in a target area. Enemies inside this area take magic damage over time and 
+    are "chilled", slowing their movement and attack speed by 20%. Glacial Storm drains mana from Anivia while active, and deactivates 
+    if she runs out.</string>
+    <string name="Pyromania">    After every 4 spell casts, Annie\'s next offensive spell will stun all damaged enemies for 1.75 seconds. The stunning 
+    spell does not count towards Pyromania\'s counter.</string>
+    <string name="Disintegrate">    ACTIVE: Annie deals magic damage to a target enemy. If Disintegrate kills the target, it refunds its mana cost.</string>
+    <string name="Incinerate">    ACTIVE: Annie deals magic damage to all enemies in a cone in front of her.</string>
+    <string name="MoltenShield">    ACTIVE: For 5 seconds, Annie has increased armor and magic resistance and deals magic damage to enemies 
+    whenever they use a basic attack against her.</string>
+    <string name="SummonTibbers">    ACTIVE: Annie summons Tibbers to the target location in a burst of flame, dealing magic damage to enemies 
+    within range. Tibbers remains on the field for up to 45 seconds, and Annie can control his movement and his 
+    physical attacks. Tibbers is also surrounded by a flaming aura that deals magic damage every second to enemies 
+    around himself.</string>
+    <string name="Focus">    Ashe\'s critical strike chance increases by 3 / 6 / 9 / 12 / 15 / 18% every 3 seconds while not attacking. Focus\' 
+    bonus is expended with her next basic attack.</string>
+    <string name="FrostShot">    TOGGLE: Ashe\'s basic attacks slow her targets for 2 seconds.</string>
+    <string name="Volley">    ACTIVE: Ashe fires 7 arrows in a cone, dealing physical damage to each target hit. Each arrow will only hit 
+    one enemy, and each enemy will only be hit by one arrow. Volley also applies the current rank of Frost Shot, 
+    regardless if it is toggled on or not.</string>
+    <string name="Hawkshot" formatted="false">    PASSIVE: Ashe gains bonus gold whenever she kills a unit or destroys a structure. \nACTIVE: Ashe animates a hawk to scout for her, 
+    revealing terrain for 2 seconds as it flies towards a target location. Hawkshot reveals a wide area for 5 seconds 
+    when it reaches its destination.</string>
+    <string name="EnchantedCrystalArrow">    ACTIVE: Ashe fires a large arrow in a straight line. If it hits an enemy champion, it will deal magic damage and stun 
+    that champion for 1 to 3.5 seconds based on the distance the arrow traveled. Additionally, surrounding units take half the 
+    damage and are slowed by 50% for 3 seconds.</string>
+    <string name="ManaBarrier" formatted="false">    PASSIVE: When Blitzcrank\'s life is brought below 20%  health he activates Mana Barrier, creating a damage shield that lasts for 
+    10 seconds. The shield strength is equal to 50% of Blitzcrank\'s current mana.</string>
+    <string name="RocketGrab">    ACTIVE: Blitzcrank fires his right hand at a straight line to the target area. If his hand encounters an enemy unit it will 
+    pull the target back to his location, dealing magic damage and stunning it for 1 second in the process.</string>
+    <string name="Overdrive">    ACTIVE: Blitzcrank super charges himself to gain dramatically increased movement and attack speed for 8 seconds.</string>
+    <string name="PowerFist">    ACTIVE: Blitzcrank charges up his fist to make his next attack deal double his total attack damage and knock his 
+    target up in the air. This ability will reset Blitzcrank\'s attack timer when cast.</string>
+    <string name="StaticField" formatted="false">    PASSIVE: Every 2.5 seconds, Blitzcrank fires a lightning bolt at one random nearby enemy unit, dealing magic
+    damage to it. This is not affected by cooldown reduction, and will not target enemies in stealth.\nACTIVE: Blitzcrank emits a wave of 
+    electricity to deal magic damage to nearby enemies and silence them for 0.5 seconds. Activating it removes the passive lightning 
+    bolts until Static Field becomes available again.</string>
+    <string name="Blaze" formatted="false">    Brand\'s spells light his targets ablaze, dealing 2% of their maximum health as magic damage per second for 4 seconds, 
+    for a total of 8%. Monsters take a maximum of 80 damage per second from Blaze.</string>
+    <string name="Sear">    ACTIVE: Brand launches a fireball forward that deals magic damage to the first enemy it hits. 
+    If the target is ablaze, the target will be stunned for 2 seconds.</string>
+    <string name="PillarOfFlame" formatted="false">    ACTIVE: After a short delay, Brand blasts a target area, dealing magic damage to enemy 
+    units within the area. Units that are ablaze take an additional 25% damage.</string>
+    <string name="Conflagration">    ACTIVE: Brand conjures an instant blast at his target, dealing magic damage to it. If the target is ablaze, 
+    the conflagration will also spread to nearby enemies.</string>
+    <string name="Pyroclasm">    ACTIVE: Brand unleashes a devastating torrent of fire to a target that will bounce between enemies, dealing damage each 
+    time it bounces. If a target is ablaze, Pyroclasm\'s next bounce will prioritize champions. It will bounce up to four
+    times for a total of five hits, and can hit the same enemy up to three times.</string>
+    <string name="ChampionsButton">Champions</string>
+    <string name="title_activity_champs">Champions</string>
+    <string name="title_section3">lore</string>
+    <string name="title_section2">Abilities</string>
+    <string name="title_section1">Statistics</string>
+    <string name="title_activity_champion_page">ChampionName</string>
+    <string name="title_section4">Other</string>
+    <string name="title_activity_stats">StatsActivity</string>
+    <string name="title_activity_ability_fragment">AbilityFragment</string>
+    <string name="title_activity_lore_fragment">LoreFragment</string>
+
+</resources>
