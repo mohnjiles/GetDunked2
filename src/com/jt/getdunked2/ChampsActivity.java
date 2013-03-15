@@ -1,6 +1,7 @@
 package com.jt.getdunked2;
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -10,10 +11,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.Toast;
+
 
 public class ChampsActivity extends Activity {
 
+	public static int myInt  = 0;
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,10 +34,14 @@ public class ChampsActivity extends Activity {
 	        public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
 	            Toast.makeText(ChampsActivity.this, "" + position, Toast.LENGTH_SHORT).show();
 	            
+	            myInt = position;
+	            
 	            startActivity(new Intent(ChampsActivity.this, ChampionPage.class));
 	            
 	        }
 	    });
+	    
+	    
 		
 	}
 

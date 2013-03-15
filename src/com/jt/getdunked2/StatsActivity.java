@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 public class StatsActivity extends Fragment {
 
@@ -14,8 +13,8 @@ public class StatsActivity extends Fragment {
         Bundle savedInstanceState) {
         // Inflate the layout for this fragment
     	
-    	View V = inflater.inflate(R.layout.activity_stats, container, false);
-        return V;
+    	
+        return inflater.inflate(R.layout.activity_stats, container, false);
         
         
     }

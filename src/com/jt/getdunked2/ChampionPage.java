@@ -3,6 +3,7 @@ package com.jt.getdunked2;
 import java.util.Vector;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.app.Fragment;
@@ -16,18 +17,26 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ChampionPage extends FragmentActivity {
 
-
+	int position = ChampsActivity.myInt;
 	@Override
 	 protected void onCreate(Bundle arg0) {
 		
 	  super.onCreate(arg0);
+	  
+	  String[] champNames = getResources().getStringArray(R.array.ChampNames);
+	  setTitle(champNames[position]);
+	  
+	  
 	  setContentView(R.layout.activity_champion_page);
 	  getActionBar().setDisplayHomeAsUpEnabled(true);
 
+	  
+	  
 	  Vector<Fragment> fragments = new Vector<Fragment>();
 	  StatsActivity fragmentOne = new StatsActivity();
 	  Bundle bundle = new Bundle();
@@ -55,6 +64,7 @@ public class ChampionPage extends FragmentActivity {
 	    getSupportFragmentManager(), fragments);
 	  myPager.setAdapter(adapter);
 	  myPager.setCurrentItem(0);
+	 
 
 	  myPager.setOnPageChangeListener(new OnPageChangeListener() {
 
@@ -72,6 +82,8 @@ public class ChampionPage extends FragmentActivity {
 	   public void onPageScrollStateChanged(int arg0) {
 	   }
 	  });
+	  
+	  
 	 }
 		
 
@@ -155,36 +167,9 @@ public class ChampionPage extends FragmentActivity {
 		    	 return "ABILITIES";
 		     case 2:
 		    	 return "LORE";
-		     case 3:
-		    	 return "OTHER";
 		     }
 			 return null;
 		    }
 
 		}
-	/**
-	 * A dummy fragment representing a section of the app, but that simply
-	 * displays dummy text.
-	 */
-	public static class DummySectionFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
-
-		public DummySectionFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			// Create a new TextView and set its text to the fragment's section
-			// number argument value.
-			
-			return null;
-			
-		}
-	}
-
 }

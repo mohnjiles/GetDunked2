@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
+    android:background="@drawable/background"
     tools:context=".MainActivity" >
 
     <Button
@@ -15,6 +15,17 @@
         android:layout_marginTop="13dp"
         android:onClick="champButtonPressed"
         android:text="@string/ChampionsButton"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/button1"
+        android:text="Jungle Timers"
+        android:onClick="profileButtonPressed"
         android:textColor="#FFFFFF" />
 
 </RelativeLayout>

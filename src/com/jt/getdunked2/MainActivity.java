@@ -24,5 +24,9 @@ public class MainActivity extends Activity {
 	public void champButtonPressed(View view) {
 		startActivity(new Intent(MainActivity.this, ChampsActivity.class));
 	}
+	
+	public void profileButtonPressed(View view) {
+		startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+	}
 
 }

@@ -45,6 +45,13 @@
             android:name="com.jt.getdunked2.LoreFragment"
             android:label="@string/title_activity_lore_fragment" >
         </activity>
+        <activity
+            android:name="com.jt.getdunked2.ProfileActivity"
+            android:label="@string/title_activity_profile" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jt.getdunked2.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
