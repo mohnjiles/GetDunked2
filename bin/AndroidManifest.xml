@@ -4,6 +4,8 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="17" />
@@ -51,6 +53,18 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.jt.getdunked2.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.jt.getdunked2.MatchHistoryFragment"
+            android:label="@string/title_activity_match_history_fragment" >
+        </activity>
+        <activity
+            android:name="com.jt.getdunked2.ListViewTest"
+            android:label="@string/title_activity_list_view_test" >
+        </activity>
+        <activity
+            android:name="com.jt.getdunked2.PassivePopup"
+            android:label="@string/title_activity_passive_popup" >
         </activity>
     </application>
 
