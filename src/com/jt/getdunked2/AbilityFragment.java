@@ -433,6 +433,182 @@ public class AbilityFragment extends Fragment {
 	  			tvRTitle.setText("Spider Form / Human Form");
 	  			tvRText.setText(R.string.EliseR);
 	  			return V;
+	  		case 18:
+	  			ivPassive.setImageResource(R.drawable.shadow_walk);
+	  			ivQ.setImageResource(R.drawable.hate_spike);
+	  			ivW.setImageResource(R.drawable.dark_frenzy);
+	  			ivE.setImageResource(R.drawable.ravage);
+	  			ivR.setImageResource(R.drawable.agonys_embrace);
+	  			
+	  			tvPassiveTitle.setText("Shadow Walk");
+	  			tvPassiveText.setText(R.string.ShadowWalk);
+	  			
+	  			tvQTitle.setText("Hate Spike");
+	  			tvQText.setText(R.string.HateSpike);
+	  			
+	  			tvWTitle.setText("Dark Frenzy");
+	  			tvWText.setText(R.string.DarkFrenzy);
+	  			
+	  			tvETitle.setText("Ravage");
+	  			tvEText.setText(R.string.Ravage);
+	  			
+	  			tvRTitle.setText("Agony's Embrace");
+	  			tvRText.setText(R.string.AgonysEmbrace);
+	  			return V;
+	  		case 19:
+	  			ivPassive.setImageResource(R.drawable.rising_spell_force);
+	  			ivQ.setImageResource(R.drawable.mystic_shot);
+	  			ivW.setImageResource(R.drawable.essence_flux);
+	  			ivE.setImageResource(R.drawable.arcane_shift);
+	  			ivR.setImageResource(R.drawable.trueshot_barrage);
+	  			
+	  			tvPassiveTitle.setText("Rising Spell Force");
+	  			tvPassiveText.setText(R.string.RisingSpellForce);
+	  			
+	  			tvQTitle.setText("Mystic Shot");
+	  			tvQText.setText(R.string.MysticShot);
+	  			
+	  			tvWTitle.setText("Essence Flux");
+	  			tvWText.setText(R.string.EssenceFlux);
+	  			
+	  			tvETitle.setText("Arcane Shift");
+	  			tvEText.setText(R.string.ArcaneShift);
+	  			
+	  			tvRTitle.setText("Trueshot Barrage");
+	  			tvRText.setText(R.string.TrueshotBarrage);
+	  			return V;
+	  		case 20:
+	  			ivPassive.setImageResource(R.drawable.dread);
+	  			ivQ.setImageResource(R.drawable.terrify);
+	  			ivW.setImageResource(R.drawable.drain);
+	  			ivE.setImageResource(R.drawable.dark_wind);
+	  			ivR.setImageResource(R.drawable.crowstorm);
+	  			
+	  			tvPassiveTitle.setText("Dread");
+	  			tvPassiveText.setText(R.string.Dread);
+	  			
+	  			tvQTitle.setText("Terrify");
+	  			tvQText.setText(R.string.Terrify);
+	  			
+	  			tvWTitle.setText("Drain");
+	  			tvWText.setText(R.string.Drain);
+	  			
+	  			tvETitle.setText("Dark Wind");
+	  			tvEText.setText(R.string.DarkWind);
+	  			
+	  			tvRTitle.setText("Crowstorm");
+	  			tvRText.setText(R.string.Crowstorm);
+	  			return V;
+	  		case 21:
+	  			ivPassive.setImageResource(R.drawable.duelist);
+	  			ivQ.setImageResource(R.drawable.lunge);
+	  			ivW.setImageResource(R.drawable.riposte);
+	  			ivE.setImageResource(R.drawable.burst_of_speed);
+	  			ivR.setImageResource(R.drawable.blade_waltz);
+	  			
+	  			tvPassiveTitle.setText("Duelist");
+	  			tvPassiveText.setText(R.string.Duelist);
+	  			
+	  			tvQTitle.setText("Lunge");
+	  			tvQText.setText(R.string.Lunge);
+	  			
+	  			tvWTitle.setText("Riposte");
+	  			tvWText.setText(R.string.Riposte);
+	  			
+	  			tvETitle.setText("Burst of Speed");
+	  			tvEText.setText(R.string.BurstofSpeed);
+	  			
+	  			tvRTitle.setText("Blade Waltz");
+	  			tvRText.setText(R.string.BladeWaltz);
+	  			return V;
+	  		case 22:
+	  			ivPassive.setImageResource(R.drawable.nimble_fighter);
+	  			ivQ.setImageResource(R.drawable.urchin_strike);
+	  			ivW.setImageResource(R.drawable.seastone_trident);
+	  			ivE.setImageResource(R.drawable.playful);
+	  			ivR.setImageResource(R.drawable.chum_the_waters);
+	  			
+	  			tvPassiveTitle.setText("Nimble Fighter");
+	  			tvPassiveText.setText(R.string.NimbleFighter);
+	  			
+	  			tvQTitle.setText("Urchin Strike");
+	  			tvQText.setText(R.string.UrchinStrike);
+	  			
+	  			tvWTitle.setText("Seastone Trident");
+	  			tvWText.setText(R.string.SeastoneTrident);
+	  			
+	  			tvETitle.setText("Playful / Trickster");
+	  			tvEText.setText(R.string.PlayfulTrickster);
+	  			
+	  			tvRTitle.setText("Chum the Waters");
+	  			tvRText.setText(R.string.ChumtheWaters);
+	  			return V;
+	  		case 23:
+	  			ivPassive.setImageResource(R.drawable.runic_skin);
+	  			ivQ.setImageResource(R.drawable.resolute_smite);
+	  			ivW.setImageResource(R.drawable.bulwark);
+	  			ivE.setImageResource(R.drawable.righteous_gust);
+	  			ivR.setImageResource(R.drawable.idol_of_durand);
+	  			
+	  			tvPassiveTitle.setText("Runic Skin");
+	  			tvPassiveText.setText(R.string.RunicSkin);
+	  			
+	  			tvQTitle.setText("Resolute Smite");
+	  			tvQText.setText(R.string.ResoluteSmite);
+	  			
+	  			tvWTitle.setText("Bulwark");
+	  			tvWText.setText(R.string.Bulwark);
+	  			
+	  			tvETitle.setText("Righteous Gust");
+	  			tvEText.setText(R.string.RighteousGust);
+	  			
+	  			tvRTitle.setText("Idol of Durand");
+	  			tvRText.setText(R.string.IdolofDurand);
+	  			return V;
+	  		case 24:
+	  			ivPassive.setImageResource(R.drawable.grog_soaked_blade);
+	  			ivQ.setImageResource(R.drawable.parrrley);
+	  			ivW.setImageResource(R.drawable.remove_scurvy);
+	  			ivE.setImageResource(R.drawable.raise_morale);
+	  			ivR.setImageResource(R.drawable.cannon_barrage);
+	  			
+	  			tvPassiveTitle.setText("Grog Soaked Blade");
+	  			tvPassiveText.setText(R.string.GrogSoakedBlade);
+	  			
+	  			tvQTitle.setText("Parrrley");
+	  			tvQText.setText(R.string.Parrrley);
+	  			
+	  			tvWTitle.setText("Remove Scurvy");
+	  			tvWText.setText(R.string.RemoveScurvy);
+	  			
+	  			tvETitle.setText("Raise Morale");
+	  			tvEText.setText(R.string.RaiseMorale);
+	  			
+	  			tvRTitle.setText("Cannon Barrage");
+	  			tvRText.setText(R.string.CannonBarrage);
+	  			return V;
+	  		case 25:
+	  			ivPassive.setImageResource(R.drawable.perseverance);
+	  			ivQ.setImageResource(R.drawable.decisive_strike);
+	  			ivW.setImageResource(R.drawable.courage);
+	  			ivE.setImageResource(R.drawable.judgment);
+	  			ivR.setImageResource(R.drawable.demacian_justice);
+	  			
+	  			tvPassiveTitle.setText("Perseverance");
+	  			tvPassiveText.setText(R.string.Perseverance);
+	  			
+	  			tvQTitle.setText("Decisive Strike");
+	  			tvQText.setText(R.string.DecisiveStrike);
+	  			
+	  			tvWTitle.setText("Courage");
+	  			tvWText.setText(R.string.Courage);
+	  			
+	  			tvETitle.setText("Judgment");
+	  			tvEText.setText(R.string.Judgment);
+	  			
+	  			tvRTitle.setText("Demacian Justice");
+	  			tvRText.setText(R.string.DemacianJustice);
+	  			return V;
 	  		default:
 	  			return V;
   	  }

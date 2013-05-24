@@ -227,7 +227,7 @@
 	    enemy struck. \nUpon reaching the edge of the map, striking an enemy champion or upon the reactivation of Whirling Death, the axes 
 	    will slowly come to a stop before changing direction and returning to Draven, dealing the same damage to every enemy struck on the way back. 
 	    \nWhirling Death deals 8% less damage for each unit hit, down to a minimum of 40%. The damage reduction resets when the axes reverse direction.</string>
-	<string name="SpiderSwarm" formatted="false">INNATE: When Elise\'s Human Form spells hit an enemy, she readies a Spiderling. While Elise is in 
+	<string name="SpiderSwarm" formatted="false">PASSIVE: When Elise\'s Human Form spells hit an enemy, she readies a Spiderling. While Elise is in 
 	    Spider Form, she summons Spiderlings to attack nearby foes. The maximum number of Spiderlings increases with Spider Form\'s level.
 	    
 	</string>
@@ -254,6 +254,184 @@
 	<string name="EliseR" formatted="false">TOGGLE: Elise transforms into a menacing spider, summoning her readied Spiderlings and granting access 
 	    to arachnid abilities. While in Spider Form, Elise becomes melee and loses 425 range, deals bonus magic damage with her autoattacks and 
 	    gains 10 movement speed.\nSPIDERLINGS: Spiderlings deal physical damage and take reduced damage from multi-target abilities.
+	    
+	</string>
+	<string name="ShadowWalk" formatted="false">PASSIVE: When out of combat for 6 seconds, Evelynn enters stealth only being able to be seen by 
+	    enemy champions (within 700 range) or true sight. Evelynn regenerates 1% of her maximum mana every second while stealthed.\nCasting spells, 
+	    taking damage or dealing damage reveals Evelynn for 6 seconds.
+	    	    
+	</string>
+	<string name="HateSpike" formatted="false">ACTIVE: Evelynn fires a line of spikes through a nearby enemy, dealing magic damage to all 
+	    enemy units in its path.
+	    
+	</string>
+	<string name="DarkFrenzy" formatted="false">PASSIVE: Evelynn\'s spell hits on enemy champions grant her a flat movement speed bonus for 3 seconds. 
+	    This effect stacks up to 4 times.\nACTIVE: Evelynn removes all slows affecting her, gains increased movement speed for 3 seconds and ignores 
+	    unit collision. Champion kills and assists refresh Dark Frenzy\'s cooldown.
+	    
+	</string>
+	<string name="Ravage" formatted="false">ACTIVE: Evelynn slashes a target twice, dealing magic damage with each strike. Evelynn then gains 
+	    bonus attack speed for 3 seconds.
+	    
+	</string>
+	<string name="AgonysEmbrace" formatted="false">ACTIVE: Evelynn impales all enemy units in target 250-radius area, dealing magic damage equal to a 
+	    percentage of their current health and slowing their movement speed for 2 seconds.\nEvelynn siphons their pain, gaining a shield that 
+	    grows in strength for each enemy champion hit and lasts up to 6 seconds.
+	    
+	</string>
+	<string name="RisingSpellForce" formatted="false">PASSIVE: Hitting a target with any of Ezreal\'s abilities increases his own attack speed by 10%. 
+	    This effect lasts for 5 seconds and stacks up to 5 times.
+	    
+	</string>
+	<string name="MysticShot" formatted="false">ACTIVE: Ezreal fires a bolt of energy in a line that will deal physical damage and apply on-hit effects 
+	    to the first enemy it hits. If it strikes an enemy unit, all of Ezreal\'s cooldowns will be reduced by 1 second.
+	    
+	</string>
+	<string name="EssenceFlux" formatted="false">ACTIVE: Ezreal fires a wave of energy in a line. Any enemy champions it passes through are dealt 
+	    magic damage, while any allied champions it travels through have their attack speed increased for 5 seconds.
+	    
+	</string>
+	<string name="ArcaneShift" formatted="false">ACTIVE: Ezreal instantly teleports to a nearby target location and fires a homing arrow at the nearest 
+	    enemy unit, dealing magic damage to it.
+	    
+	</string>
+	<string name="TrueshotBarrage" formatted="false">ACTIVE: Ezreal charges for 1 second to fire a powerful broad energy missile that travels in a line 
+	    across the whole map, dealing magic damage to each enemy unit it passes through. It will deal 10% less damage for each subsequent target hit, 
+	    down to a minimum of 30% damage dealt.
+	    
+	</string>
+	<string name="Dread" formatted="false">PASSIVE: Nearby enemy units have their magic resistance reduced by 10.
+	    
+	</string>
+	<string name="Terrify" formatted="false">ACTIVE: Afflicts a target unit with fear, preventing it from taking any actions and causing it to move 
+	    around randomly at a slowed movement speed for the duration of the spell.
+	    
+	</string>
+	<string name="Drain" formatted="false">ACTIVE: Fiddlesticks creates a leash on a target enemy and channels for up to 5 seconds, dealing 
+	    magic damage each second and healing himself for a percentage of the damage done. If the target leaves the range of Fiddlesticks\' leash, he will stop channeling.
+	    
+	</string>
+	<string name="DarkWind" formatted="false">ACTIVE: Fiddlesticks throws a crow that bounces to enemy units up to 5 times (5 hits in total), 
+	    dealing magic damage (50% increased damage to minions and monsters) and silencing for 1.2 seconds with each strike. 
+	    Dark Wind may strike the same target multiple times.
+	    
+	</string>
+	<string name="Crowstorm" formatted="false">ACTIVE: After channeling for 1.5 seconds, Fiddlesticks teleports to nearby target location with a 
+	    murder of crows flying wildly around him for 5 seconds, dealing magic damage to all enemy units in the area each second.
+	    
+	</string>
+	<string name="Duelist" formatted="false">Fiora regenerates 7 + (Fiora\'s level) health over 6 seconds each time she deals physical damage. 
+	    Striking champions will cause this effect to stack up to 4 times.
+	    
+	</string>
+	<string name="Lunge" formatted="false">ACTIVE: Fiora dashes forward to strike her target, dealing physical damage. Fiora can perform the 
+	    dash a second time within 4 seconds at no mana cost.
+	    
+	</string>
+	<string name="Riposte" formatted="false">PASSIVE: Fiora\'s attack damage is increased.\nACTIVE: Fiora parries the next basic attack within 
+	    1.5 seconds and deals magic damage to the attacker. Works against champions, monsters, and large minions.
+	
+	</string>
+	<string name="BurstofSpeed" formatted="false">ACTIVE: Fiora gains additional attack speed for 3 seconds. Each basic attack or Lunge she lands during 
+	    this time increases her movement speed for 3 seconds, stacking up to 3 times.\nKilling a champion refreshes the cooldown on Burst of Speed. 
+	    Assists reduce the cooldown by half of the base amount.
+	    	    
+	</string>
+	<string name="BladeWaltz" formatted="false">ACTIVE: Fiora dashes around the battlefield—becoming untargetable in the process—dealing physical damage to 
+	    random enemy champion(s) 5 times. Successive hits against the same target deal 25% damage. The first and last attack will be against the same target. 
+	    Each strike applies on-hit effects.
+	    
+	</string>
+	<string name="NimbleFighter" formatted="false">Fizz\'s dexterity allows him to ignore unit collision and take 4 / 6 / 8 / 10 / 12 / 14 reduced physical 
+	    damage from auto attacks.
+	    
+	</string>
+	<string name="UrchinStrike" formatted="false">ACTIVE: Fizz dashes a fixed distance in the direction of the target enemy unit, dealing physical damage equal to 
+	    his attack damage plus additional magic damage. The physical damage applies on-hit effects and the magic damage applies on-ability effects.
+	    
+	</string>
+	<string name="SeastoneTrident" formatted="false">PASSIVE: Fizz\'s autoattacks rend his target, dealing magic damage over 3 seconds that is increased based on a 
+	    percentage of the target\'s missing health. This effect does not stack and multiple autoattacks will only refresh the duration. The total damage caps at 
+	    300 against minions and monsters. \nACTIVE: Fizz\'s autoattacks are empowered for the next 5 seconds, dealing additional magic damage on-hit and applying 
+	    Grievous Wounds (50% healing reduction) for 3 seconds.
+	     
+	</string>
+	<string name="PlayfulTrickster" formatted="false">Playful: ACTIVE: Fizz hops onto his trident in a nearby location, becoming untargetable for 0.75 
+	    seconds and gaining the ability to use Trickster before the effect ends.\nIf Fizz does not use Trickster, he will slam the ground below him, 
+	    dealing magic damage and slowing nearby enemies within 250 range for 2 seconds.\n\nTrickster: ACTIVE: Fizz hops off from his trident to a nearby location, 
+	    dealing magic damage to nearby enemies within 250 range. Trickster does not apply a slow.
+	    
+	</string>
+	<string name="ChumtheWaters" formatted="false">ACTIVE: Fizz throws a fish in a line that will bind itself onto the first enemy champion it hits. 
+	    If it doesn\'t hit an enemy champion it will stay on an area, and it will stick to the first enemy champion that walks into the area. 
+	    The fish will slow and reveal any enemy champion it is attached to.\n\nRegardless of position, after 1.5 seconds, a Shark will come out from the earth 
+	    to eat the fish, dealing magic damage to all enemies within 250 range. The target is knocked up for 1 second, and all other enemies hit are knocked 
+	    away from the center. All enemies hit are slowed for 1.5 seconds afterwards.
+	    
+	</string>
+	<string name="RunicSkin" formatted="false">Galio gains 50% of his total magic resistance as ability power.
+	    
+	</string>
+	<string name="ResoluteSmite" formatted="false">ACTIVE: Galio fires a concussive blast from his eyes to a target 235-radius area, 
+	    dealing magic damage and slowing enemies hit for 2.5 seconds.
+	    
+	</string>
+	<string name="Bulwark" formatted="false">ACTIVE: Galio shields an allied champion for 4 seconds, increasing their armor and magic resistance. 
+	    Each time that unit takes damage, Galio is healed. The heal is 20% weaker than the last for each consecutive hit.
+	    
+	</string>
+	<string name="RighteousGust" formatted="false">ACTIVE: Galio unleashes a gust of magical wind that deals magic damage to all enemies in its path. 
+	    A directional draft remains for 5 seconds, increasing the movement speed of allies passing through it.
+	    
+	</string>
+	<string name="IdolofDurand" formatted="false">ACTIVE: Galio becomes a statue and channels for 2 seconds, taunting nearby foes and reducing 
+	    incoming physical and magic damage by 50%. When the channel ends, Galio bursts out of his statue form, dealing magic damage to enemies within range. 
+	    The damage is increased by 5% for each attack suffered while channeling (maximum 40%). If the channel is canceled, the damage radius is reduced to 
+	    575 instead of 600.\nWhile channeling Idol of Durand, Galio can still cast Bulwark on allies within range.
+	    
+	    
+	</string>
+	<string name="GrogSoakedBlade" formatted="false">Gangplank\'s basic attacks apply a poison debuff for 3 seconds that can stack up to 3 times. 
+	    Each stack deals 3 + (1 × level) magic damage per second and slows the target by 7%.
+	    
+	</string>
+	<string name="Parrrley" formatted="false">ACTIVE: Gangplank shoots a target enemy with his pistol, dealing physical damage. If it is killed with 
+	    this ability, he gains extra gold and refunds half the mana cost. This ability can critically strike and applies on-hit effects, including his passive.
+	    
+	</string>
+	<string name="RemoveScurvy" formatted="false">ACTIVE: Gangplank eats a large amount of citrus fruit, instantly removing all crowd control 
+	    effects on him, as well as healing himself.
+	    
+	</string>
+	<string name="RaiseMorale" formatted="false">PASSIVE: Gangplank\'s attack damage and movement speed are increased permanently.\nACTIVE: Gangplank fires 
+	    into the air, disabling his passive boost but inspiring himself to gain additional attack damage and movement speed, with allied champions 
+	    within range receiving half that amount, for 7 seconds.
+	         
+	</string>
+	<string name="CannonBarrage" formatted="false">ACTIVE: Gangplank signals his ship to fire a cannonball barrage upon a target 600-radius area for 7 seconds, 
+	    granting vision of the area and slowing enemies inside it by 25% until 1.25 seconds after they exit the area.\n25 cannonballs randomly drop over the duration, 
+	    each one dealing magic damage to enemies within a radius of 150.	    
+	    
+	</string>
+	<string name="Perseverance" formatted="false">If Garen has not taken damage from any source except minions in the last 9 seconds or affected by an enemy champion\'s 
+	    abilities, he will start regenerating 0.4% of his maximum health per second.
+	    
+	</string>
+	<string name="DecisiveStrike" formatted="false">ACTIVE: Garen breaks free from all slows affecting him and gains 35% movement speed for a few seconds. Additionally, 
+	    his next basic attack within 4.5 seconds will deal additional physical damage and will silence his target.
+	    
+	</string>
+	<string name="Courage" formatted="false">PASSIVE: Garen\'s bonus armor and magic resistance are increased by 20%.\nACTIVE: Garen gains a defensive shield for a 
+	    few seconds, reducing incoming damage by 30% and granting 30% crowd control reduction for the duration.
+	    	    
+	</string>
+	<string name="Judgment" formatted="false">ACTIVE: Garen rapidly spins his sword around his body for 3 seconds, dealing physical damage to enemies 
+	    within range each second (minions and monsters take 75% damage). Judgment can critically strike dealing bonus damage.\nGaren ignores unit collision while 
+	    spinning, but moves 20% slower when traveling directly through minions. Garen can deactivate Judgment early by activating the ability again after 0.5 seconds.
+	    	    
+	</string>
+	<string name="DemacianJustice" formatted="false">ACTIVE: Garen calls upon the might of Demacia to attempt to execute an enemy champion, dealing magic 
+	    damage plus additional damage based on his target\'s missing health.
 	    
 	</string>
     <string name="ChampionsButton">Champions</string>
