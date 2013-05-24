@@ -125,6 +125,137 @@
     <string name="Pyroclasm">    ACTIVE: Brand unleashes a devastating torrent of fire to a target that will bounce between enemies, dealing damage each 
     time it bounces. If a target is ablaze, Pyroclasm\'s next bounce will prioritize champions. It will bounce up to four
     times for a total of five hits, and can hit the same enemy up to three times.</string>
+    <string name="Headshot" formatted="false">Every 8th / 7th / 6th basic attack deals 150% damage to a champion or 250% damage to a minion or monster. 
+        Attacks from brush increase the attack counter by two instead of one.      </string>
+    <string name="PiltoverPeacemaker" formatted="false">ACTIVE: After a 1 second casting time, Caitlyn fires a projectile that deals physical damage to all 
+        targets it passes through. Each target hit after the first takes 10% less damage, down to a minimum of 50% of the original damage.      </string>
+    <string name="YordleSnapTrap" formatted="false">ACTIVE: Caitlyn sets a trap at target location that activates after a brief delay. When an enemy champion
+         comes within 67.5 range of the trap, the trap snares and deals magic damage to the enemy over 1.5 seconds, also revealing the enemy 
+         for 9 seconds. \nCaitlyn can set up to 3 traps and each lasts 4 minutes. Traps are visible to both allies and enemies. If she sets 
+         a trap when three are already placed, the oldest trap will deactivate itself.</string>
+    <string name="NinetyCaliberNet">ACTIVE: Caitlyn fires a net, knocking herself back 400 units in the opposite direction. The net 
+        will deal magic damage and slow the first enemy hit by 50%.</string>
+    <string name="AceInTheHole">ACTIVE: Caitlyn channels for 1 second, providing vision of target enemy champion. She then fires a 3200-speed homing 
+        projectile to the target, dealing physical damage to the first enemy champion it hits. Other enemy champions can intercept the bullet.</string>
+    <string name="DeadlyCadence" formatted="false">Casting a spell causes any subsequent spellcasts within 5 seconds to cost 10% less mana, 
+        stacking up to 5 times.</string>
+    <string name="NoxiousBlast" formatted="false">ACTIVE: After a 0.6 second delay, Cassiopeia blasts the target 75-radius area. All enemies 
+	    hit are poisoned and dealt magic damage over 3 seconds.\nCassiopeia is granted a movement speed boost for 3 seconds if Noxious Blast 
+	    damages a champion.</string>
+    <string name="Miasma">ACTIVE: Cassiopeia throws a growing cloud of poison to a target location, granting vision of the area and growing 
+	    from a radius of 125 to 250 over 7 seconds. Enemies in the area are poisoned, becoming slowed and taking magic damage per second for 
+	    2 seconds. Continual exposure renews the poison.</string>
+    <string name="TwinFang" formatted="false">ACTIVE: Cassiopeia fires fangs at an enemy, dealing magic damage. If her target is poisoned, 
+	    Twin Fang\'s cooldown is reduced to 0.5 seconds.</string>
+    <string name="PetrifyingGaze" formatted="false">ACTIVE: Cassiopeia blasts all enemies in a cone in front of her with her gaze, 
+	    dealing magic damage to them. Enemies facing her when damaged are stunned for 2 seconds, while enemies facing away are slowed 
+	    by 60% for 2 seconds instead. </string>
+    <string name="Carnivore" formatted="false">Whenever Cho\'Gath kills a unit, he recovers 17 + (3 × level) health and 3.25 + (0.25 × level) mana.</string>
+	<string name="Rupture" formatted="false">ACTIVE: After 0.625 seconds, Cho\'Gath makes spikes erupt in target 175-radius area, 
+	    dealing magic damage and knocking up enemies for 1 second. Targets hit are slowed by 60% for a further 3 seconds after landing.
+	    
+	</string>
+    <string name="FeralScream" formatted="false">ACTIVE: Cho\'Gath roars, dealing magic damage and silencing all enemies in a cone area in front of him.
+</string>
+    <string name="VorpalSpikes" formatted="false">TOGGLE: Whenever Cho\'Gath performs a basic attack, he will launch spikes dealing 
+	    magic damage to enemies in a line in front of him.	    </string>
+    <string name="Feast" formatted="false">ACTIVE: Cho\'gath devours target enemy, dealing true damage. If Feast kills the target, 
+	    Cho\'Gath grows larger and gains extra health and basic attack range, stacking up to six times. Cho\'Gath loses half of these stacks, 
+	    rounded up (Lost stacks being rounded up, thus, kept stacks rounded down), whenever he dies.\nFeast deals 1000 (+ 70% AP) true damage to 
+	    minions and monsters.</string>
+    <string name="HextechShrapnelShells" formatted="false">Corki\'s basic attacks deal additional true damage equal to 10% of his attack damage.
+	     This bonus damage is not affected by critical hits, nor can it damage structures.</string>
+    <string name="PhosphorusBomb" formatted="false">ACTIVE: Corki detonates a bomb over a 250-radius area. Enemies within the area upon cast 
+	    take magic damage and are revealed for 6 seconds. Phosphorus Bomb cannot reveal stealthed enemies.</string>
+    <string name="Valkyrie" formatted="false">ACTIVE: Corki flies to a target location at 650 speed, dropping bombs that leave up to 3 blazing 
+	    patches along his path, depending on his distance travelled. The fire lasts for 2 seconds, damaging enemies that remain in the area 
+	    every 0.5 seconds, for a maximum of 5 ticks of damage.</string>
+    <string name="GatlingGun" formatted="false">ACTIVE: Corki activates his gatling gun, spraying bullets in a 35° cone in front 
+	    of him for 4 seconds. Enemies inside the cone take physical damage and have their armor reduced by a stacking amount every 
+	    0.5 seconds they remain in the gunfire, for a maximum of 8 applications of its damage and armor reduction. Gatling Gun does 
+	    not hinder Corki\'s actions, and its cone will remain in front of him as he moves.</string>
+    <string name="MissileBarrage" formatted="false">ACTIVE: Corki fires a missile in a line that explodes if it hits an enemy, 
+	    damaging all enemies within 75 range.\nCorki reloads a missile every few seconds, up to a maximum of 7 stored at once; 
+	    this reload time is affected by cooldown reduction. Upon death, Corki will respawn with 4 missiles. \nEvery third missile Corki 
+	    fires becomes a Big One, dealing 50% additional damage and doubling its explosion range to 150. </string>
+    <string name="Hemorrhage" formatted="false">Darius\' basic attacks and damaging abilities cause enemies to bleed 
+	    for 12 / 15 / 18 / 21 / 24 / 27 / 30 / 33 / 36 (+ 30% Bonus AD) magic damage over 5 seconds. This stacks up to 
+	    5 times for a maximum of 60 / 75 / 90 / 105 / 120 / 135 / 150 / 165 / 180 (+ 150% Bonus AD) magic damage over the duration.\n
+	    Darius gains 5% movement speed for each bleeding enemy champion.</string>
+    <string name="Decimate" formatted="false">ACTIVE: Darius swings his axe, dealing physical damage to all nearby enemies in a circle around him.\n
+	    Champions in the outer half of the ability are struck by the blade, taking 50% additional damage.</string>
+    <string name="CripplingStrike" formatted="false">ACTIVE: Darius\' next basic attack deals additional damage and slows the target\'s 
+	    movement and attack speed for 2 seconds.\nCrippling Strike\'s base cooldown is reduced by 1 second for each stack of Hemorrhage on the target.</string>
+    <string name="Apprehend" formatted="false">PASSIVE: Darius gains armor penetration.\nACTIVE: Darius pulls in all enemies in front of him.</string>
+    <string name="NoxianGuillotine" formatted="false">ACTIVE: Darius leaps to target enemy champion and strikes a lethal blow, dealing true damage.
+	    For each stack of Hemorrhage on the target, Noxian Guillotine deals an additional 20% damage.\nWhen Noxian Guillotine kills the target, 
+	    it can be recast within the next 12 seconds. This can occur multiple times in succession.</string>
+    <string name="MoonsilverBlade" formatted="false">Diana gains 20% bonus attack speed. In addition, every third basic attack cleaves nearby 
+	    enemies for 20 / 25 / 30 / 35 / 40 / 50 / 60 / 70 / 80 / 90 / 105 / 120 / 135 / 155 / 175 / 200 / 225 / 250 (+ 60% AP) additional magic damage.</string>
+    <string name="CrescentStrike" formatted="false">ACTIVE: Diana unleashes a bolt of lunar energy that travels in an arc. Enemies struck take 
+	    magic damage and are afflicted with Moonlight, revealing them for 3 seconds.</string>
+    <string name="PaleCascade" formatted="false">ACTIVE: Diana gains a temporary shield for 5 seconds that absorbs incoming damage. 
+	    She also creates three spheres that orbit her for up to 5 seconds. The spheres detonate on contact with an enemy unit, 
+	    dealing magic damage to all nearby enemies.\nIf all three spheres detonate, the shield is reapplied and the duration is refreshed. 
+	    This second shield stacks with the original shield.</string>
+    <string name="Moonfall" formatted="false">ACTIVE: Diana draws in all nearby enemies to her location, slowing them for 2 seconds afterwards.</string>
+    <string name="LunarRush" formatted="false">ACTIVE: Diana becomes the living embodiment of the vengeful moon, rushing at an enemy and dealing 
+	    magic damage to it.\nWhen used to teleport to an enemy afflicted with Moonlight, Lunar Rush\'s cooldown is refreshed and the Moonlight 
+	    debuff is consumed. All other enemies will have the Moonlight debuff removed regardless of whether they were the target of Lunar Rush.</string>
+    <string name="AdrenalineRush" formatted="false">Dr. Mundo regains 0.3% of his maximum health each second.</string>
+    <string name="InfectedCleaver" formatted="false">ACTIVE: Dr. Mundo hurls his cleaver in a line. The first enemy it hits takes magic 
+	    damage equal to a percentage of its current health and is slowed by 40% for 2 seconds. In addition, Dr. Mundo is healed for an 
+	    amount equal to half the health cost. Infected Cleaver has a minimum damage threshold, and a maximum damage cap versus monsters and minions.</string>
+    <string name="BurningAgony" formatted="false">TOGGLE: While active, Dr. Mundo deals magic damage each second to nearby enemies and reduces the 
+	    duration of crowd control effects on himself.</string>
+    <string name="Masochism" formatted="false">ACTIVE: For 5 seconds, Dr. Mundo gains bonus attack damage plus additional attack damage for 
+	    every 1% of his missing health.</string>
+    <string name="Sadism" formatted="false">ACTIVE: Dr. Mundo regenerates a percentage of his maximum health over a period of 12 seconds. 
+	    During this time his movement speed is increased.</string>
+    <string name="WickedBlades" formatted="false">Draven\'s critical strikes deal 30 + (4 × level) bonus physical damage over 4 seconds. 
+	    Spinning Axe also causes this effect even if it does not critically strike. If Wicked Blades is re-applied to a target, its duration 
+	    is reset to 4 seconds and any damage not yet dealt is carried forward, increasing the amount of each tick of damage.</string>
+    <string name="SpinningAxe" formatted="false">ACTIVE: Draven starts spinning his axe, making his next attack deal bonus physical damage 
+	    equal to a percentage of his total attack damage. Wicked Blades is also applied to the target.\nThis axe will ricochet off the target 
+	    high up into the air, landing 2 seconds later at a location determined by Draven\'s current movement direction and speed. If Draven 
+	    catches it, Spinning Axe will be applied to his next attack.\nDraven can have up to two Spinning Axes readied at once.</string>
+    <string name="BloodRush" formatted="false">ACTIVE: Draven gains increased movement speed for 1.5 seconds and increased attack speed for 
+	    3 seconds. The movement speed bonus decreases rapidly over its duration.\nCatching a Spinning Axe will refresh Blood Rush\'s cooldown.</string>
+    <string name="StandAside" formatted="false">ACTIVE: Draven throws his axes in a line. Enemies hit take physical damage, are knocked aside, 
+	    and are slowed for 2 seconds afterwards.</string>
+    <string name="WhirlingDeath" formatted="false">ACTIVE: Draven hurls two massive axes in a given direction, dealing physical damage to every 
+	    enemy struck. \nUpon reaching the edge of the map, striking an enemy champion or upon the reactivation of Whirling Death, the axes 
+	    will slowly come to a stop before changing direction and returning to Draven, dealing the same damage to every enemy struck on the way back. 
+	    \nWhirling Death deals 8% less damage for each unit hit, down to a minimum of 40%. The damage reduction resets when the axes reverse direction.</string>
+	<string name="SpiderSwarm" formatted="false">INNATE: When Elise\'s Human Form spells hit an enemy, she readies a Spiderling. While Elise is in 
+	    Spider Form, she summons Spiderlings to attack nearby foes. The maximum number of Spiderlings increases with Spider Form\'s level.
+	    
+	</string>
+	<string name="EliseQ" formatted="false">Human Form: ACTIVE: Launches a blast of corrosive poison at target enemy, dealing magic damage equal 
+	    to a base amount plus a percentage of target\'s current Health. Damage is capped against monsters.\n\nSpider Form: ACTIVE: Elise lunges 
+	    to a target with a poisonous bite that deals magic damage equal to a base amount plus a percentage of the target\'s missing health. 
+	    Damage is capped against monsters.
+	    
+	</string>
+	<string name="EliseW" formatted="false">Human Form: ACTIVE: Summons a venom-gorged Spiderling that moves to the target location and explodes, 
+	    dealing magic damage to nearby enemies when it nears an enemy unit or after 3 seconds. If the Spiderling does not hit an enemy at the target 
+	    location it will re-target itself and chase down a nearby enemy, prioritizing champions. The Spiderling\'s Movement Speed increases as it 
+	    gets closer to its target.\n\nSpider Form: PASSIVE: Spiderlings gain bonus attack speed.\nACTIVE: Increases the attack speed of Elise and 
+	    her Spiderlings for 3 seconds. While active, Elise is healed for a small amount when she or her spiderlings attack.
+	    
+	    </string>
+	<string name="EliseE" formatted="false">Human Form: ACTIVE: Elise fires a web that stuns the first enemy hit for 1.5 seconds. 
+	    It will also reveal enemies that are hit for a second.\n\nSpider Form: ACTIVE (ON ENEMY CAST): Elise reveals nearby enemy targets, 
+	    while she and her Spiderlings lift up into the air, becoming untargetable for 1 second. She then descends upon the target enemy.\n
+		ACTIVE (ON GROUND CAST): Elise reveals nearby enemy targets while she and her Spiderlings lift up into the air, becoming untargetable 
+		for 2 seconds. During that time she can cast Rappel again to descend upon a nearby enemy. If no enemy is targeted within 2 seconds, 
+		she will descend at her original location.
+	</string>
+	<string name="EliseR" formatted="false">TOGGLE: Elise transforms into a menacing spider, summoning her readied Spiderlings and granting access 
+	    to arachnid abilities. While in Spider Form, Elise becomes melee and loses 425 range, deals bonus magic damage with her autoattacks and 
+	    gains 10 movement speed.\nSPIDERLINGS: Spiderlings deal physical damage and take reduced damage from multi-target abilities.
+	    
+	</string>
     <string name="ChampionsButton">Champions</string>
     <string name="title_activity_champs">Champions</string>
     <string name="title_section3">lore</string>
@@ -250,5 +381,8 @@
     </string-array>
 
     <string name="title_activity_profile">ProfileActivity</string>
+    <string name="title_activity_match_history_fragment">MatchHistoryFragment</string>
+    <string name="title_activity_list_view_test">ListViewTest</string>
+    <string name="title_activity_passive_popup">PassivePopup</string>
 
 </resources>

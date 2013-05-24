@@ -1,11 +1,16 @@
 package com.jt.getdunked2;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 public class AbilityFragment extends Fragment {
@@ -37,13 +42,20 @@ public class AbilityFragment extends Fragment {
   	  TextView tvWText = (TextView)V.findViewById(R.id.tvWText);
   	  TextView tvEText = (TextView)V.findViewById(R.id.tvEText);
   	  TextView tvRText = (TextView)V.findViewById(R.id.tvRText);
-
-  	  
-
-
-  	  
+	  
   	  
   	  int position = ChampsActivity.myInt;
+  	  
+  	  ivPassive.setOnClickListener(new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {	
+			Intent passiveIntent = new Intent(getActivity().getBaseContext(), PassivePopup.class);
+			startActivity(passiveIntent);
+			
+		}
+	});
+  	  
   	  switch (position) {
 	  		case 1:
 
@@ -222,6 +234,204 @@ public class AbilityFragment extends Fragment {
 	  			
 	  			tvRTitle.setText("Pyroclasm");
 	  			tvRText.setText(R.string.Pyroclasm);
+	  			return V;
+	  		case 9:
+	  			ivPassive.setImageResource(R.drawable.headshot);
+	  			ivQ.setImageResource(R.drawable.piltover_peacemaker);
+	  			ivW.setImageResource(R.drawable.yordle_snap_trap);
+	  			ivE.setImageResource(R.drawable.ninety_caliber_net);
+	  			ivR.setImageResource(R.drawable.ace_in_the_hole);
+	  			
+	  			tvPassiveTitle.setText("Headshot");
+	  			tvPassiveText.setText(R.string.Headshot);
+	  			
+	  			tvQTitle.setText("Piltover Peacemaker");
+	  			tvQText.setText(R.string.PiltoverPeacemaker);
+	  			
+	  			tvWTitle.setText("Yordle Snap Trap");
+	  			tvWText.setText(R.string.YordleSnapTrap);
+	  			
+	  			tvETitle.setText("90 Caliber Net");
+	  			tvEText.setText(R.string.NinetyCaliberNet);
+	  			
+	  			tvRTitle.setText("Ace in the Hole");
+	  			tvRText.setText(R.string.AceInTheHole);
+	  			return V;
+	  		case 10:
+	  			ivPassive.setImageResource(R.drawable.deadly_cadence);
+	  			ivQ.setImageResource(R.drawable.noxious_blast);
+	  			ivW.setImageResource(R.drawable.miasma);
+	  			ivE.setImageResource(R.drawable.twin_fang);
+	  			ivR.setImageResource(R.drawable.petrifying_gaze);
+	  			
+	  			tvPassiveTitle.setText("Deadly Cadence");
+	  			tvPassiveText.setText(R.string.DeadlyCadence);
+	  			
+	  			tvQTitle.setText("Noxious Blast");
+	  			tvQText.setText(R.string.NoxiousBlast);
+	  			
+	  			tvWTitle.setText("Miasma");
+	  			tvWText.setText(R.string.Miasma);
+	  			
+	  			tvETitle.setText("Twin Fang");
+	  			tvEText.setText(R.string.TwinFang);
+	  			
+	  			tvRTitle.setText("Petrifying Gaze");
+	  			tvRText.setText(R.string.PetrifyingGaze);
+	  			return V;
+	  		case 11:
+	  			ivPassive.setImageResource(R.drawable.carnivore);
+	  			ivQ.setImageResource(R.drawable.rupture);
+	  			ivW.setImageResource(R.drawable.feral_scream);
+	  			ivE.setImageResource(R.drawable.vorpal_spikes);
+	  			ivR.setImageResource(R.drawable.feast);
+	  			
+	  			tvPassiveTitle.setText("Carnivore");
+	  			tvPassiveText.setText(R.string.Carnivore);
+	  			
+	  			tvQTitle.setText("Rupture");
+	  			tvQText.setText(R.string.Rupture);
+	  			
+	  			tvWTitle.setText("Feral Scream");
+	  			tvWText.setText(R.string.FeralScream);
+	  			
+	  			tvETitle.setText("Vorpal Spikes");
+	  			tvEText.setText(R.string.VorpalSpikes);
+	  			
+	  			tvRTitle.setText("Feast");
+	  			tvRText.setText(R.string.Feast);
+	  			return V;
+	  		case 12:
+	  			ivPassive.setImageResource(R.drawable.hextech_shrapnel_shells);
+	  			ivQ.setImageResource(R.drawable.phosphorus_bomb);
+	  			ivW.setImageResource(R.drawable.valkyrie);
+	  			ivE.setImageResource(R.drawable.gatling_gun);
+	  			ivR.setImageResource(R.drawable.missile_barrage);
+	  			
+	  			tvPassiveTitle.setText("Hextech Shrapnel Shells");
+	  			tvPassiveText.setText(R.string.HextechShrapnelShells);
+	  			
+	  			tvQTitle.setText("Phosphorus Bomb");
+	  			tvQText.setText(R.string.PhosphorusBomb);
+	  			
+	  			tvWTitle.setText("Valkyrie");
+	  			tvWText.setText(R.string.Valkyrie);
+	  			
+	  			tvETitle.setText("Gatling Gun");
+	  			tvEText.setText(R.string.GatlingGun);
+	  			
+	  			tvRTitle.setText("Missile Barrage");
+	  			tvRText.setText(R.string.MissileBarrage);
+	  			return V;
+	  		case 13:
+	  			ivPassive.setImageResource(R.drawable.hemorrhage);
+	  			ivQ.setImageResource(R.drawable.decimate);
+	  			ivW.setImageResource(R.drawable.crippling_strike);
+	  			ivE.setImageResource(R.drawable.apprehend);
+	  			ivR.setImageResource(R.drawable.noxian_guillotine);
+	  			
+	  			tvPassiveTitle.setText("Hemorrhage");
+	  			tvPassiveText.setText(R.string.Hemorrhage);
+	  			
+	  			tvQTitle.setText("Decimate");
+	  			tvQText.setText(R.string.Decimate);
+	  			
+	  			tvWTitle.setText("Crippling Strike");
+	  			tvWText.setText(R.string.CripplingStrike);
+	  			
+	  			tvETitle.setText("Apprehend");
+	  			tvEText.setText(R.string.Apprehend);
+	  			
+	  			tvRTitle.setText("Noxian Guillotine");
+	  			tvRText.setText(R.string.NoxianGuillotine);
+	  			return V;
+	  		case 14:
+	  			ivPassive.setImageResource(R.drawable.moonsilver_blade);
+	  			ivQ.setImageResource(R.drawable.crescent_strike);
+	  			ivW.setImageResource(R.drawable.pale_cascade);
+	  			ivE.setImageResource(R.drawable.moonfall);
+	  			ivR.setImageResource(R.drawable.lunar_rush);
+	  			
+	  			tvPassiveTitle.setText("Moonsilver Blade");
+	  			tvPassiveText.setText(R.string.MoonsilverBlade);
+	  			
+	  			tvQTitle.setText("Crescent Strike");
+	  			tvQText.setText(R.string.CrescentStrike);
+	  			
+	  			tvWTitle.setText("Pale Cascade");
+	  			tvWText.setText(R.string.PaleCascade);
+	  			
+	  			tvETitle.setText("Moonfall");
+	  			tvEText.setText(R.string.Moonfall);
+	  			
+	  			tvRTitle.setText("Lunar Rush");
+	  			tvRText.setText(R.string.LunarRush);
+	  			return V;
+	  		case 15:
+	  			ivPassive.setImageResource(R.drawable.adrenaline_rush);
+	  			ivQ.setImageResource(R.drawable.infected_cleaver);
+	  			ivW.setImageResource(R.drawable.burning_agony);
+	  			ivE.setImageResource(R.drawable.masochism);
+	  			ivR.setImageResource(R.drawable.sadism);
+	  			
+	  			tvPassiveTitle.setText("Adrenaline Rush");
+	  			tvPassiveText.setText(R.string.AdrenalineRush);
+	  			
+	  			tvQTitle.setText("Infected Cleaver");
+	  			tvQText.setText(R.string.InfectedCleaver);
+	  			
+	  			tvWTitle.setText("Burning Agony");
+	  			tvWText.setText(R.string.BurningAgony);
+	  			
+	  			tvETitle.setText("Masochism");
+	  			tvEText.setText(R.string.Masochism);
+	  			
+	  			tvRTitle.setText("Sadism");
+	  			tvRText.setText(R.string.Sadism);
+	  			return V;
+	  		case 16:
+	  			ivPassive.setImageResource(R.drawable.wicked_blades);
+	  			ivQ.setImageResource(R.drawable.spinning_axe);
+	  			ivW.setImageResource(R.drawable.blood_rush);
+	  			ivE.setImageResource(R.drawable.stand_aside);
+	  			ivR.setImageResource(R.drawable.whirling_death);
+	  			
+	  			tvPassiveTitle.setText("Wicked Blades");
+	  			tvPassiveText.setText(R.string.WickedBlades);
+	  			
+	  			tvQTitle.setText("Spinning Axe");
+	  			tvQText.setText(R.string.SpinningAxe);
+	  			
+	  			tvWTitle.setText("Blood Rush");
+	  			tvWText.setText(R.string.BloodRush);
+	  			
+	  			tvETitle.setText("Stand Aside");
+	  			tvEText.setText(R.string.StandAside);
+	  			
+	  			tvRTitle.setText("Whirling Death");
+	  			tvRText.setText(R.string.WhirlingDeath);
+	  			return V;
+	  		case 17:
+	  			ivPassive.setImageResource(R.drawable.spider_swarm);
+	  			ivQ.setImageResource(R.drawable.neurotoxin);
+	  			ivW.setImageResource(R.drawable.volatile_spiderling);
+	  			ivE.setImageResource(R.drawable.cocoon);
+	  			ivR.setImageResource(R.drawable.spider_form);
+	  			
+	  			tvPassiveTitle.setText("Spider Swarm");
+	  			tvPassiveText.setText(R.string.SpiderSwarm);
+	  			
+	  			tvQTitle.setText("Neurotoxin / Venomous Bite");
+	  			tvQText.setText(R.string.EliseQ);
+	  			
+	  			tvWTitle.setText("Volatile Spiderling / Skittering Frenzy");
+	  			tvWText.setText(R.string.EliseW);
+	  			
+	  			tvETitle.setText("Cocoon / Rappel");
+	  			tvEText.setText(R.string.EliseE);
+	  			
+	  			tvRTitle.setText("Spider Form / Human Form");
+	  			tvRText.setText(R.string.EliseR);
 	  			return V;
 	  		default:
 	  			return V;

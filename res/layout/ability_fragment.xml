@@ -162,7 +162,7 @@
             android:layout_alignLeft="@+id/tvEText"
             android:layout_below="@+id/tvEText"
             android:layout_marginTop="15dp"
-            android:text="Large Text"
+            android:text="Spirit Rush"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#FFFFFF"
             android:textSize="20sp" />
