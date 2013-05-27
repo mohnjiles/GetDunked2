@@ -26,7 +26,8 @@ public class MainActivity extends Activity {
 	}
 	
 	public void profileButtonPressed(View view) {
-		startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+		startActivity(new Intent(MainActivity.this, ProfileActivity.class));  
 	}
+	
 
 }

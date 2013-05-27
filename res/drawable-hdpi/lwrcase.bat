@@ -27,4 +27,6 @@ set LC1=%LC1:W=w%
 set LC1=%LC1:X=x%
 set LC1=%LC1:Y=y%
 set LC1=%LC1:Z=z%
+set LC1=%LC1:'=%
+set LC1=%LC1:-=%
 ren %1 "%LC1%"
