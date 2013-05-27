@@ -1,12 +1,19 @@
 package com.jt.getdunked2;
 
+<<<<<<< HEAD
+=======
+import android.content.Context;
+>>>>>>> d56ad557451e3c607625b5f9fbc5412b165fe61b
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 
 public class AbilityFragment extends Fragment {
@@ -39,6 +46,7 @@ public class AbilityFragment extends Fragment {
   	  TextView tvEText = (TextView)V.findViewById(R.id.tvEText);
   	  TextView tvRText = (TextView)V.findViewById(R.id.tvRText);
 	  
+<<<<<<< HEAD
   	  
   	  int position = ChampsActivity.myInt;
   	  
@@ -95,7 +103,20 @@ public class AbilityFragment extends Fragment {
   	  /*********** END R onClickListener ***********/
   	 
   	  
+=======
   	  
+  	  int position = ChampsActivity.myInt;
+>>>>>>> d56ad557451e3c607625b5f9fbc5412b165fe61b
+  	  
+  	  ivPassive.setOnClickListener(new View.OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {	
+			Intent passiveIntent = new Intent(getActivity().getBaseContext(), PassivePopup.class);
+			startActivity(passiveIntent);
+			
+		}
+	});
   	  
   	  switch (position) {
 	  		case 1:
