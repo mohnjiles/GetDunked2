@@ -66,13 +66,10 @@
             android:name="com.jt.getdunked2.PassivePopup"
             android:label="@string/title_activity_passive_popup" >
         </activity>
-<<<<<<< HEAD
         <activity
             android:name="com.jt.getdunked2.AbilityDetails"
             android:label="@string/title_activity_ability_details" >
         </activity>
-=======
->>>>>>> d56ad557451e3c607625b5f9fbc5412b165fe61b
     </application>
 
 </manifest>
