@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_selector"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+ 
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dip"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/image_bg"
+        android:layout_marginRight="5dip">
+ 
+        <ImageView
+            android:id="@+id/list_image"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:src="@drawable/ahrisquare"/>
+ 
+    </LinearLayout>
+ 
+    <!-- Title Of Song-->
+
+    <TextView
+        android:id="@+id/gameType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="Game Type"
+        android:textColor="#040404"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:typeface="sans" />
+ 
+    <!-- Artist Name -->
+ 
+    <!-- Rightend Duration -->
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gameType"
+        android:layout_below="@+id/gameType"
+        android:text="Victory"
+        android:textColor="#343434"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvScoreKills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvResult"
+        android:layout_below="@+id/tvResult"
+        android:text="1"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvKills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvScoreKills"
+        android:layout_alignBottom="@+id/tvScoreKills"
+        android:layout_toRightOf="@+id/tvScoreKills"
+        android:text=" Kills /"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvScoreDeaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvKills"
+        android:layout_toRightOf="@+id/tvKills"
+        android:text=" 2"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvDeaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvScoreDeaths"
+        android:layout_alignBottom="@+id/tvScoreDeaths"
+        android:layout_toRightOf="@+id/tvScoreDeaths"
+        android:text=" Deaths /"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvScoreAssists"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvDeaths"
+        android:layout_alignBottom="@+id/tvDeaths"
+        android:layout_toRightOf="@+id/tvDeaths"
+        android:text=" 3"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvScoreAssists"
+        android:layout_alignBottom="@+id/tvScoreAssists"
+        android:layout_toRightOf="@+id/tvScoreAssists"
+        android:text=" Assists"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="12sp" />
+ 
+</RelativeLayout>
