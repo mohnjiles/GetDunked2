@@ -6,10 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class QPopup extends Fragment {
+public class WPopup extends Fragment {
 	
 	TextView tvSpellName;
 	ImageView ivPassiveIcon;
@@ -30,7 +29,7 @@ public class QPopup extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, 
         Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-    	View V = inflater.inflate(R.layout.activity_q_popup, container, false);
+    	View V = inflater.inflate(R.layout.activity_w_popup, container, false);
     	
     	int position = ChampsActivity.myInt;
     	
@@ -54,17 +53,18 @@ public class QPopup extends Fragment {
 		
 		switch (position) {
 			case 0:
-				SetStuff("Orb of Deception", R.drawable.orb_of_deception, "Range", "Cooldown", "Cost", "Magic / True Damage", "Max Damage to Same Target", 
-						"880", "7 seconds", "70 / 75 / 80 / 85 / 90 Mana", "40 / 65 / 90 / 115 / 140 (+ 33% AP)", "80 / 130 / 180 / 230 / 280 (+ 66% AP)");
+				SetStuff("Fox-Fire", R.drawable.foxfire, "Range", "Cooldown", "Cost", "Magic Damage per Fox-Fire", 
+						"Magic Damage to Three Targets", "Magic Damage to the Same Target", "800", "9 / 8 / 7 / 6 / 5 seconds", 
+						"60 Mana", "40 / 65 / 90 / 115 / 140 (+ 40% AP)", "120 / 195 / 270 / 345 / 420 (+ 120% AP)", 
+						"80 / 130 / 180 / 230 / 280 (+ 80% AP)");
 				break;
 			case 1:
-				SetStuff("Mark of the Assassin", R.drawable.mark_of_the_assassin, "Range", "Cooldown", "Cost", "Initial Magic Damage", "Detonation Magic Damage", 
-						"Energy Restored", "600", "6 / 5.5 / 5 / 4.5 / 4 seconds", "60 Energy", "35 / 55 / 75 / 95 / 115 (+ 40% AP)", 
-						"45 / 70 / 95 / 120 / 145 (+ 50% AP)", "20 / 25 / 30 / 35 / 40 Energy");
+				SetStuff("Twilight Shroud", R.drawable.twilight_shroud, "Range", "Cooldown", "Cost", "Armor / Magic Resistance", 
+						"Slow", "700", "20 seconds", "80 / 75 / 70 / 65 / 60 energy", "10 / 20 / 30 / 40 / 50", "14 / 18 / 22 / 26 / 30%");
 				break;
 			case 2:
-				SetStuff("Pulverize", R.drawable.pulverize, "Range", "Cooldown", "Cost", "Magic Damage", "182.5", "17 / 16 / 15 / 14 / 13 seconds", 
-						"70 / 80 / 90 / 100 / 110 Mana", "60 / 105 / 150 / 195 / 240 (+50% AP)");
+				SetStuff("Headbutt", R.drawable.headbutt, "Range", "Cooldown", "Cost", "Magic Damage", "Knockback Distance", "650", "14 / 13 / 12 / 11 / 10 seconds", 
+						"70 / 80 / 90 / 100 / 110 Mana", "55 / 110 / 165 / 220 / 275 (+70% AP)", "650");
 				break;
 				
 		}  	

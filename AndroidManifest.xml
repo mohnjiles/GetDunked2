@@ -66,6 +66,22 @@
             android:name="com.jt.getdunked2.PassivePopup"
             android:label="@string/title_activity_passive_popup" >
         </activity>
+        <activity
+            android:name="com.jt.getdunked2.WPopup"
+            android:label="@string/title_activity_wpopup" >
+        </activity>
+        <activity
+            android:name="com.jt.getdunked2.AbilityDetails"
+            android:label="@string/title_activity_ability_details" >
+        </activity>
+        <activity
+            android:name="com.jt.getdunked2.EPopup"
+            android:label="@string/title_activity_epopup" >
+        </activity>
+        <activity
+            android:name="com.jt.getdunked2.RPopup"
+            android:label="@string/title_activity_rpopup" >
+        </activity>
     </application>
 
 </manifest>

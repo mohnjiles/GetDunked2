@@ -166,6 +166,7 @@ public class AbilityFragment extends Fragment {
 	  			
 	  			tvRTitle.setText("Curse of the Sad Mummy");
 	  			tvRText.setText(R.string.CurseOfTheSadMummy);
+	  			return V;
 	  		case 4:
 	  			ivPassive.setImageResource(R.drawable.rebirth);
 	  			ivQ.setImageResource(R.drawable.flash_frost);

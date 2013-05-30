@@ -6,10 +6,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class QPopup extends Fragment {
+public class EPopup extends Fragment {
 	
 	TextView tvSpellName;
 	ImageView ivPassiveIcon;
@@ -30,7 +29,7 @@ public class QPopup extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, 
         Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-    	View V = inflater.inflate(R.layout.activity_q_popup, container, false);
+    	View V = inflater.inflate(R.layout.activity_e_popup, container, false);
     	
     	int position = ChampsActivity.myInt;
     	
@@ -54,23 +53,22 @@ public class QPopup extends Fragment {
 		
 		switch (position) {
 			case 0:
-				SetStuff("Orb of Deception", R.drawable.orb_of_deception, "Range", "Cooldown", "Cost", "Magic / True Damage", "Max Damage to Same Target", 
-						"880", "7 seconds", "70 / 75 / 80 / 85 / 90 Mana", "40 / 65 / 90 / 115 / 140 (+ 33% AP)", "80 / 130 / 180 / 230 / 280 (+ 66% AP)");
+				SetStuff("Charm", R.drawable.charm, "Range", "Cooldown", "Cost", "Magic Damage", "Duration", "975", "12 seconds", 
+						"50 / 65 / 80 / 95 / 110 mana", "60 / 90 / 120 / 150 / 180 (+ 35% AP)", "1 / 1.25 / 1.5 / 1.75 / 2 second(s)");
 				break;
 			case 1:
-				SetStuff("Mark of the Assassin", R.drawable.mark_of_the_assassin, "Range", "Cooldown", "Cost", "Initial Magic Damage", "Detonation Magic Damage", 
-						"Energy Restored", "600", "6 / 5.5 / 5 / 4.5 / 4 seconds", "60 Energy", "35 / 55 / 75 / 95 / 115 (+ 40% AP)", 
-						"45 / 70 / 95 / 120 / 145 (+ 50% AP)", "20 / 25 / 30 / 35 / 40 Energy");
+				SetStuff("Crescent Slash", R.drawable.crescent_slash, "Range", "Cooldown", "Cost", "Physical Damage", "325", 
+						"7 / 6 / 5 / 4 / 3 seconds", "60 / 55 / 50 / 45 / 40 energy", "30 / 55 / 80 / 105 / 130 (+ 30% AP) (+ 60% AD)");
 				break;
 			case 2:
-				SetStuff("Pulverize", R.drawable.pulverize, "Range", "Cooldown", "Cost", "Magic Damage", "182.5", "17 / 16 / 15 / 14 / 13 seconds", 
-						"70 / 80 / 90 / 100 / 110 Mana", "60 / 105 / 150 / 195 / 240 (+50% AP)");
+				SetStuff("Triumphant Roar", R.drawable.triumphant_roar, "Range", "Cooldown", "Cost", "Self Heal", "Friendly Unit Heal", 
+						"287.5", "12 seconds", "40 / 50 / 60 / 70 / 80 mana", "60 / 90 / 120 / 150 / 180 (+20% AP)", 
+						"30 / 45 / 60 / 75 / 90 (+10% AP)");
 				break;
-				
 		}  	
         return V;       
     }
-
+    
 	public void SetStuff(String abilityName, int abilityIcon, String header1, String header2, String header3, String header4, 
 			String header5, String header6, String value1, String value2, String value3, String value4, String value5, String value6) {
 		

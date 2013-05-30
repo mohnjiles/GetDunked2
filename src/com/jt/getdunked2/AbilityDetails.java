@@ -38,12 +38,16 @@ public class AbilityDetails extends FragmentActivity {
 	 * The {@link ViewPager} that will host the section contents.
 	 */
 	ViewPager mViewPager;
-
+	int position = ChampsActivity.myInt;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ability_details);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+		
+		String[] champNames = getResources().getStringArray(R.array.ChampNames);
+		setTitle(champNames[position]);
 
 		  Vector<Fragment> fragments = new Vector<Fragment>();
 		  QPopup fragmentOne = new QPopup();
@@ -51,13 +55,17 @@ public class AbilityDetails extends FragmentActivity {
 		  fragmentOne.setArguments(bundle);
 		  fragments.add(fragmentOne);
 
-		  AbilityFragment fragmenttwo = new AbilityFragment();
+		  WPopup fragmenttwo = new WPopup();
 		  fragmenttwo.setArguments(bundle);
 		  fragments.add(fragmenttwo);
 
-		  LoreFragment fragmenthree = new LoreFragment();
+		  EPopup fragmenthree = new EPopup();
 		  fragmenthree.setArguments(bundle);
 		  fragments.add(fragmenthree);
+		  
+		  RPopup fragmentfour = new RPopup();
+		  fragmenthree.setArguments(bundle);
+		  fragments.add(fragmentfour);
 
 		  ViewPager myPager = (ViewPager) findViewById(R.id.pager);
 		  FragmentAdapter adapter = new FragmentAdapter(
@@ -161,11 +169,13 @@ public class AbilityDetails extends FragmentActivity {
 		     switch (position)
 		     {
 		     case 0:
-		    	 return "PASSIVE";
-		     case 1:
 		    	 return "Q";
-		     case 2:
+		     case 1:
 		    	 return "W";
+		     case 2:
+		    	 return "E";
+		     case 3:
+		    	 return "R";
 		     }
 			 return null;
 		    }
