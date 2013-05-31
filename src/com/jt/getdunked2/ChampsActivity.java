@@ -1,23 +1,22 @@
 package com.jt.getdunked2;
 
-import android.app.Activity;
-import android.app.Application;
+import com.actionbarsherlock.app.SherlockActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 
-public class ChampsActivity extends Activity {
+public class ChampsActivity extends SherlockActivity {
 
 	public static int myInt  = 0;
+	
 	
 	
 	@Override
@@ -25,7 +24,7 @@ public class ChampsActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_champs);
 		// Show the Up button in the action bar.
-		getActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		GridView gridview = (GridView) findViewById(R.id.gridview);
 		gridview.setAdapter(new ImageAdapter(this));
@@ -35,6 +34,7 @@ public class ChampsActivity extends Activity {
 	            Toast.makeText(ChampsActivity.this, "" + position, Toast.LENGTH_SHORT).show();
 	            
 	            myInt = position;
+	            
 	            
 	            startActivity(new Intent(ChampsActivity.this, ChampionPage.class));
 	            
@@ -46,14 +46,14 @@ public class ChampsActivity extends Activity {
 	}
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
+	public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_champs, menu);
+		getSupportMenuInflater().inflate(R.menu.activity_champs, menu);
 		return true;
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
+	public boolean onOptionsItemSelected(com.actionbarsherlock.view.MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
 			// This ID represents the Home or Up button. In the case of this

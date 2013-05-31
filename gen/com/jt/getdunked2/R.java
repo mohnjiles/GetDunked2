@@ -9,1158 +9,2165 @@ package com.jt.getdunked2;
 
 public final class R {
     public static final class array {
-        public static final int ChampNames=0x7f050000;
+        public static final int ChampNames=0x7f0b0000;
     }
     public static final class attr {
+        /**  Custom divider drawable to use for elements in the action bar. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionBarDivider=0x7f01000e;
+        /**  Custom item state list drawable background for action bar items. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionBarItemBackground=0x7f01000f;
+        /**  Size of the Action Bar, including the contextual
+             bar used to present Action Modes. 
+         <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
+</table>
+         */
+        public static final int actionBarSize=0x7f01000d;
+        /**  Reference to a style for the split Action Bar. This style
+             controls the split component that holds the menu/action
+             buttons. actionBarStyle is still used for the primary
+             bar. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionBarSplitStyle=0x7f01000b;
+        /**  Reference to a style for the Action Bar 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionBarStyle=0x7f01000a;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionBarTabBarStyle=0x7f010007;
+        /**  Default style for tabs within an action bar 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionBarTabStyle=0x7f010006;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionBarTabTextStyle=0x7f010008;
+        /**  Reference to a theme that should be used to inflate widgets
+             and layouts destined for the action bar. Most of the time
+             this will be a reference to the current theme, but when
+             the action bar has a significantly different contrast
+             profile than the rest of the activity the difference
+             can become important. If this is set to @null the current
+             theme will be used.
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionBarWidgetTheme=0x7f01000c;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionButtonStyle=0x7f01003a;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionDropDownStyle=0x7f010039;
+        /**  TextAppearance style that will be applied to text that
+             appears within action menu items. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionMenuTextAppearance=0x7f010010;
+        /**  Color for text that appears within action menu items. 
+         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int actionMenuTextColor=0x7f010011;
+        /**  Background drawable to use for action mode UI 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionModeBackground=0x7f010014;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionModeCloseButtonStyle=0x7f010013;
+        /**  Drawable to use for the close action mode button 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionModeCloseDrawable=0x7f010016;
+        /**  PopupWindow style to use for action modes when showing as a window overlay. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionModePopupWindowStyle=0x7f010018;
+        /**  Drawable to use for the Share action button in WebView selection action modes 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionModeShareDrawable=0x7f010017;
+        /**  Background drawable to use for action mode UI in the lower split bar 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionModeSplitBackground=0x7f010015;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionModeStyle=0x7f010012;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionOverflowButtonStyle=0x7f010009;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int actionSpinnerItemStyle=0x7f01003f;
+        /**  Drawable used as a background for activated items. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int activatedBackgroundIndicator=0x7f010047;
+        /**  Default ActivityChooserView style. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int activityChooserViewStyle=0x7f010046;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int background=0x7f010002;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int backgroundSplit=0x7f010003;
+        /**  Specifies a background drawable for a second stacked row of the action bar. 
+         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int backgroundStacked=0x7f01004f;
+        /**  Small Button style. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonStyleSmall=0x7f010019;
+        /**  Specifies a layout for custom navigation. Overrides navigationMode. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int customNavigationLayout=0x7f010050;
+        /**  Options affecting how the action bar is displayed. 
+         <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>useLogo</code></td><td>0x1</td><td></td></tr>
+<tr><td><code>showHome</code></td><td>0x2</td><td></td></tr>
+<tr><td><code>homeAsUp</code></td><td>0x4</td><td></td></tr>
+<tr><td><code>showTitle</code></td><td>0x8</td><td></td></tr>
+<tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
+<tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
+</table>
+         */
+        public static final int displayOptions=0x7f01004a;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int divider=0x7f010005;
+        /**  Drawable to use for generic vertical dividers. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int dividerVertical=0x7f010038;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int dropDownHintAppearance=0x7f010048;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int dropDownListViewStyle=0x7f01003c;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int dropdownListPreferredItemHeight=0x7f01003e;
+        /**  The drawable to show in the button for expanding the activities overflow popup.
+             <strong>Note:</strong> Clients would like to set this drawable
+             as a clue about the action the chosen activity will perform. For
+             example, if share activity is to be chosen the drawable should
+             give a clue that sharing is to be performed.
+         
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int expandActivityOverflowButtonDrawable=0x7f01005f;
+        /**  Default background for the menu header. 
+         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int headerBackground=0x7f010059;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int height=0x7f010004;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int homeAsUpIndicator=0x7f01003b;
+        /**  Specifies a layout to use for the "home" section of the action bar. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int homeLayout=0x7f010051;
+        /**  Default horizontal divider between rows of menu items. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int horizontalDivider=0x7f010057;
+        /**  Specifies the drawable used for the application icon. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int icon=0x7f01004d;
+        /**  The default state of the SearchView. If true, it will be iconified when not in
+             use and expanded when clicked. 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int iconifiedByDefault=0x7f010060;
+        /**  Specifies a style resource to use for an indeterminate progress spinner. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int indeterminateProgressStyle=0x7f010053;
+        /**  The maximal number of items initially shown in the activity list. 
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int initialActivityCount=0x7f01005e;
+        /**  Default background for each menu item. 
+         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int itemBackground=0x7f01005a;
+        /**  Default disabled icon alpha for each menu item that shows an icon. 
+         <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int itemIconDisabledAlpha=0x7f01005c;
+        /**  Specifies padding that should be applied to the left and right sides of
+             system-provided items in the bar. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int itemPadding=0x7f010055;
+        /**  Default appearance of menu item text. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int itemTextAppearance=0x7f010056;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int listPopupWindowStyle=0x7f010045;
+        /**  A smaller, sleeker list item height. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int listPreferredItemHeightSmall=0x7f010032;
+        /**  The preferred padding along the left edge of list items. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int listPreferredItemPaddingLeft=0x7f010033;
+        /**  The preferred padding along the right edge of list items. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int listPreferredItemPaddingRight=0x7f010034;
+        /**  Specifies the drawable used for the application logo. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int logo=0x7f01004e;
+        /**  The type of navigation to use. 
+         <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td> Normal static title text </td></tr>
+<tr><td><code>listMode</code></td><td>1</td><td> The action bar will use a selection list for navigation. </td></tr>
+<tr><td><code>tabMode</code></td><td>2</td><td> The action bar will use a series of horizontal tabs for navigation. </td></tr>
+</table>
+         */
+        public static final int navigationMode=0x7f010049;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int popupMenuStyle=0x7f01003d;
+        /**  Whether space should be reserved in layout when an icon is missing. 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int preserveIconSpacing=0x7f01005d;
+        /**  Specifies the horizontal padding on either end for an embedded progress bar. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int progressBarPadding=0x7f010054;
+        /**  Specifies a style resource to use for an embedded progress bar. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int progressBarStyle=0x7f010052;
+        /**  An optional query hint string to be displayed in the empty query field. 
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int queryHint=0x7f010061;
+        /**  SearchView AutoCompleteTextView style 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int searchAutoCompleteTextView=0x7f010024;
+        /**  SearchView dropdown background 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int searchDropdownBackground=0x7f010025;
+        /**  The list item height for search results. @hide 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int searchResultListItemHeight=0x7f01002f;
+        /**  SearchView close button icon 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int searchViewCloseIcon=0x7f010026;
+        /**  SearchView query refinement icon 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int searchViewEditQuery=0x7f01002a;
+        /**  SearchView query refinement icon background 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int searchViewEditQueryBackground=0x7f01002b;
+        /**  SearchView Go button icon 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int searchViewGoIcon=0x7f010027;
+        /**  SearchView Search icon 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int searchViewSearchIcon=0x7f010028;
+        /**  SearchView text field background for the left section 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int searchViewTextField=0x7f01002c;
+        /**  SearchView text field background for the right section 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int searchViewTextFieldRight=0x7f01002d;
+        /**  SearchView Voice button icon 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int searchViewVoiceIcon=0x7f010029;
+        /**  Background drawable for standalone items that need focus/pressed states. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int selectableItemBackground=0x7f01001a;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int spinnerDropDownItemStyle=0x7f010023;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int spinnerItemStyle=0x7f010022;
+        /**  Specifies subtitle text used for navigationMode="normal" 
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int subtitle=0x7f01004c;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int subtitleTextStyle=0x7f010001;
+        /**  Text color, typeface, size, and style for the text inside of a popup menu. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int textAppearanceLargePopupMenu=0x7f01001c;
+        /**  The preferred TextAppearance for the primary text of small list items. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int textAppearanceListItemSmall=0x7f010035;
+        /**  Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int textAppearanceSearchResultSubtitle=0x7f010031;
+        /**  Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int textAppearanceSearchResultTitle=0x7f010030;
+        /**  Text color, typeface, size, and style for "small" text. Defaults to secondary text color. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int textAppearanceSmall=0x7f01001e;
+        /**  Text color, typeface, size, and style for small text inside of a popup menu. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int textAppearanceSmallPopupMenu=0x7f01001d;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textColorPrimary=0x7f01001f;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textColorPrimaryDisableOnly=0x7f010020;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textColorPrimaryInverse=0x7f010021;
+        /**  Text color for urls in search suggestions, used by things like global search and the browser. @hide 
+         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int textColorSearchUrl=0x7f01002e;
+        /**  Specifies title text used for navigationMode="normal" 
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int title=0x7f01004b;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int titleTextStyle=0x7f010000;
+        /**  Default vertical divider between menu items. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int verticalDivider=0x7f010058;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowActionBar=0x7f010041;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowActionBarOverlay=0x7f010042;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowActionModeOverlay=0x7f010043;
+        /**  Default animations for the menu. 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int windowAnimationStyle=0x7f01005b;
+        /**  This Drawable is overlaid over the foreground of the Window's content area, usually
+             to place a shadow below the title.  
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int windowContentOverlay=0x7f01001b;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowMinWidthMajor=0x7f010036;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowMinWidthMinor=0x7f010037;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowNoTitle=0x7f010040;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int windowSplitActionBar=0x7f010044;
+    }
+    public static final class bool {
+        public static final int abs__action_bar_embed_tabs=0x7f050000;
+        public static final int abs__action_bar_expanded_action_views_exclusive=0x7f050002;
+        /**  Whether action menu items should be displayed in ALLCAPS or not.
+         Defaults to true. If this is not appropriate for specific locales
+         it should be disabled in that locale's resources. 
+         */
+        public static final int abs__config_actionMenuItemAllCaps=0x7f050004;
+        /**  Whether action menu items should obey the "withText" showAsAction
+         flag. This may be set to false for situations where space is
+         extremely limited. 
+ Whether action menu items should obey the "withText" showAsAction
+         flag. This may be set to false for situations where space is
+         extremely limited. 
+         */
+        public static final int abs__config_allowActionMenuItemTextWithIcon=0x7f050005;
+        /**  Sets whether menu shortcuts should be displayed on panel menus when
+         a keyboard is present. 
+         */
+        public static final int abs__config_showMenuShortcutsWhenKeyboardPresent=0x7f050003;
+        public static final int abs__split_action_bar_is_narrow=0x7f050001;
+    }
+    public static final class color {
+        public static final int abs__background_holo_dark=0x7f060000;
+        public static final int abs__background_holo_light=0x7f060001;
+        public static final int abs__bright_foreground_disabled_holo_dark=0x7f060004;
+        public static final int abs__bright_foreground_disabled_holo_light=0x7f060005;
+        public static final int abs__bright_foreground_holo_dark=0x7f060002;
+        public static final int abs__bright_foreground_holo_light=0x7f060003;
+        public static final int abs__primary_text_disable_only_holo_dark=0x7f060006;
+        public static final int abs__primary_text_disable_only_holo_light=0x7f060007;
+        public static final int abs__primary_text_holo_dark=0x7f060008;
+        public static final int abs__primary_text_holo_light=0x7f060009;
+    }
+    public static final class dimen {
+        /**  Default height of an action bar. 
+ Default height of an action bar. 
+ Default height of an action bar. 
+ Default height of an action bar. 
+ Default height of an action bar. 
+ Default height of an action bar. 
+ Default height of an action bar. 
+ Default height of an action bar. 
+         */
+        public static final int abs__action_bar_default_height=0x7f070001;
+        /**  Vertical padding around action bar icons. 
+ Vertical padding around action bar icons. 
+ Vertical padding around action bar icons. 
+ Vertical padding around action bar icons. 
+ Vertical padding around action bar icons. 
+ Vertical padding around action bar icons. 
+ Vertical padding around action bar icons. 
+ Vertical padding around action bar icons. 
+         */
+        public static final int abs__action_bar_icon_vertical_padding=0x7f070002;
+        /**  Bottom margin for action bar subtitles 
+ Bottom margin for action bar subtitles 
+ Bottom margin for action bar subtitles 
+ Bottom margin for action bar subtitles 
+ Bottom margin for action bar subtitles 
+ Bottom margin for action bar subtitles 
+ Bottom margin for action bar subtitles 
+ Bottom margin for action bar subtitles 
+         */
+        public static final int abs__action_bar_subtitle_bottom_margin=0x7f070006;
+        /**  Text size for action bar subtitles 
+ Text size for action bar subtitles 
+ Text size for action bar subtitles 
+ Text size for action bar subtitles 
+ Text size for action bar subtitles 
+ Text size for action bar subtitles 
+ Text size for action bar subtitles 
+ Text size for action bar subtitles 
+         */
+        public static final int abs__action_bar_subtitle_text_size=0x7f070004;
+        /**  Top margin for action bar subtitles 
+ Top margin for action bar subtitles 
+ Top margin for action bar subtitles 
+ Top margin for action bar subtitles 
+ Top margin for action bar subtitles 
+ Top margin for action bar subtitles 
+ Top margin for action bar subtitles 
+ Top margin for action bar subtitles 
+         */
+        public static final int abs__action_bar_subtitle_top_margin=0x7f070005;
+        /**  Text size for action bar titles 
+ Text size for action bar titles 
+ Text size for action bar titles 
+ Text size for action bar titles 
+ Text size for action bar titles 
+ Text size for action bar titles 
+ Text size for action bar titles 
+ Text size for action bar titles 
+         */
+        public static final int abs__action_bar_title_text_size=0x7f070003;
+        /**  Minimum width for an action button in the menu area of an action bar 
+ Minimum width for an action button in the menu area of an action bar 
+ Minimum width for an action button in the menu area of an action bar 
+ Minimum width for an action button in the menu area of an action bar 
+         */
+        public static final int abs__action_button_min_width=0x7f070007;
+        /**  The maximum width we would prefer dialogs to be.  0 if there is no
+         maximum (let them grow as large as the screen).  Actual values are
+         specified for -large and -xlarge configurations. 
+         */
+        public static final int abs__config_prefDialogWidth=0x7f070000;
+        /**  The platform's desired minimum size for a dialog's width when it
+         is along the major axis (that is the screen is landscape).  This may
+         be either a fraction or a dimension. 
+         */
+        public static final int abs__dialog_min_width_major=0x7f07000d;
+        /**  The platform's desired minimum size for a dialog's width when it
+         is along the minor axis (that is the screen is portrait).  This may
+         be either a fraction or a dimension. 
+         */
+        public static final int abs__dialog_min_width_minor=0x7f07000e;
+        /**  Width of the icon in a dropdown list 
+         */
+        public static final int abs__dropdownitem_icon_width=0x7f07000a;
+        /**  Text padding for dropdown items 
+         */
+        public static final int abs__dropdownitem_text_padding_left=0x7f070008;
+        /**  Text padding for dropdown items 
+         */
+        public static final int abs__dropdownitem_text_padding_right=0x7f070009;
+        /**  Preferred width of the search view. 
+         */
+        public static final int abs__search_view_preferred_width=0x7f07000c;
+        /**  Minimum width of the search view text entry area. 
+         */
+        public static final int abs__search_view_text_min_width=0x7f07000b;
     }
     public static final class drawable {
         public static final int ability=0x7f020000;
         public static final int abilitybackground=0x7f020001;
         public static final int abilitybackground2=0x7f020002;
-        public static final int absolute_zero=0x7f020003;
-        public static final int acceleration_gate=0x7f020004;
-        public static final int ace_in_the_hole=0x7f020005;
-        public static final int acid_hunter=0x7f020006;
-        public static final int adrenaline_rush=0x7f020007;
-        public static final int aegis_of_zeonia=0x7f020008;
-        public static final int aegis_protection=0x7f020009;
-        public static final int agony=0x7f02000a;
-        public static final int agonys_embrace=0x7f02000b;
-        public static final int agonysembrace=0x7f02000c;
-        public static final int ahri_0=0x7f02000d;
-        public static final int ahribg=0x7f02000e;
-        public static final int ahrisouleater=0x7f02000f;
-        public static final int ahrisouleater2=0x7f020010;
-        public static final int ahrisquare=0x7f020011;
-        public static final int akali_0=0x7f020012;
-        public static final int akalisquare=0x7f020013;
-        public static final int alistar_0=0x7f020014;
-        public static final int alistarsquare=0x7f020015;
-        public static final int alpha_strike=0x7f020016;
-        public static final int ambush=0x7f020017;
-        public static final int amumu_0=0x7f020018;
-        public static final int amumusquare=0x7f020019;
-        public static final int angry=0x7f02001a;
-        public static final int animateentangler=0x7f02001b;
-        public static final int animatethornspitter=0x7f02001c;
-        public static final int animatevitalis=0x7f02001d;
-        public static final int anivia_0=0x7f02001e;
-        public static final int aniviasquare=0x7f02001f;
-        public static final int annie_0=0x7f020020;
-        public static final int anniesquare=0x7f020021;
-        public static final int anniesquare_old=0x7f020022;
-        public static final int apprehend=0x7f020023;
-        public static final int aqua_prison=0x7f020024;
-        public static final int arcane_barrage=0x7f020025;
-        public static final int arcane_shift=0x7f020026;
-        public static final int arcane_smash=0x7f020027;
-        public static final int arcanopulse=0x7f020028;
-        public static final int archers_mark=0x7f020029;
-        public static final int arctic_assault=0x7f02002a;
-        public static final int aria_of_perseverance=0x7f02002b;
-        public static final int armordillo_0=0x7f02002c;
-        public static final int armsmaster_0=0x7f02002d;
-        public static final int ascended_form=0x7f02002e;
-        public static final int ashe_0=0x7f02002f;
-        public static final int ashesquare=0x7f020030;
-        public static final int ashesquare_old=0x7f020031;
-        public static final int aspect_of_the_cougar=0x7f020032;
-        public static final int assault_and_battery=0x7f020033;
-        public static final int astral_blessing=0x7f020034;
-        public static final int audacious_charge=0x7f020035;
-        public static final int averdrian_astral_barrier=0x7f020036;
-        public static final int averdrian_astral_beam=0x7f020037;
-        public static final int averdrian_consume_spirit=0x7f020038;
-        public static final int averdrian_detonate=0x7f020039;
-        public static final int averdrian_lockdown=0x7f02003a;
-        public static final int averdriansquare=0x7f02003b;
-        public static final int backstab=0x7f02003c;
-        public static final int baleful_strike=0x7f02003d;
-        public static final int bandage_toss=0x7f02003e;
-        public static final int barrel_roll=0x7f02003f;
-        public static final int battle_cry=0x7f020040;
-        public static final int battle_roar=0x7f020041;
-        public static final int bear_stance=0x7f020042;
-        public static final int berserker_rage=0x7f020043;
-        public static final int bioarcane_barrage=0x7f020044;
-        public static final int black_shield=0x7f020045;
-        public static final int blade_of_the_exile=0x7f020046;
-        public static final int blade_waltz=0x7f020047;
-        public static final int bladesurge=0x7f020048;
-        public static final int blast_shield=0x7f020049;
-        public static final int blaze=0x7f02004a;
-        public static final int blighted_quiver=0x7f02004b;
-        public static final int blinding_dart=0x7f02004c;
-        public static final int blindmonk_0=0x7f02004d;
-        public static final int blindmonk_blindingstrike=0x7f02004e;
-        public static final int blindmonk_cripplingblow=0x7f02004f;
-        public static final int blindmonk_exploitweakness=0x7f020050;
-        public static final int blindmonk_fistsoffury=0x7f020051;
-        public static final int blindmonk_hardiness=0x7f020052;
-        public static final int blindmonk_mysticmeditation=0x7f020053;
-        public static final int blindmonk_sightunseeing=0x7f020054;
-        public static final int blitzcrank_0=0x7f020055;
-        public static final int blitzcranksquare=0x7f020056;
-        public static final int blood_boil=0x7f020057;
-        public static final int blood_rush=0x7f020058;
-        public static final int blood_scent=0x7f020059;
-        public static final int bloodlust=0x7f02005a;
-        public static final int body_slam=0x7f02005b;
-        public static final int bola_strike=0x7f02005c;
-        public static final int boomerang_blade=0x7f02005d;
-        public static final int bouncing_blades=0x7f02005e;
-        public static final int bouncing_bomb=0x7f02005f;
-        public static final int brand_0=0x7f020060;
-        public static final int brandsquare=0x7f020061;
-        public static final int broken_wings=0x7f020062;
-        public static final int brutal_strikes=0x7f020063;
-        public static final int buckshot=0x7f020064;
-        public static final int bullet_time=0x7f020065;
-        public static final int bulwark=0x7f020066;
-        public static final int burning_agony=0x7f020067;
-        public static final int burnout=0x7f020068;
-        public static final int burst_of_speed=0x7f020069;
-        public static final int buster_shot=0x7f02006a;
-        public static final int caitlyn_0=0x7f02006b;
-        public static final int caitlynsquare=0x7f02006c;
-        public static final int call_of_the_void=0x7f02006d;
-        public static final int camouflage=0x7f02006e;
-        public static final int cannibalism=0x7f02006f;
-        public static final int cannon_barrage=0x7f020070;
-        public static final int carnivore=0x7f020071;
-        public static final int carrion_renewal=0x7f020072;
-        public static final int cassiopeia_0=0x7f020073;
-        public static final int cassiopeiasquare=0x7f020074;
-        public static final int caustic_spittle=0x7f020075;
-        public static final int certain_death=0x7f020076;
-        public static final int ch1_concussion_grenade=0x7f020077;
-        public static final int chain_of_corruption=0x7f020078;
-        public static final int challenge=0x7f020079;
-        public static final int champpage=0x7f02007a;
-        public static final int chaos_storm=0x7f02007b;
-        public static final int charm=0x7f02007c;
-        public static final int chemicalman_0=0x7f02007d;
-        public static final int children_of_the_grave=0x7f02007e;
-        public static final int chogath_0=0x7f02007f;
-        public static final int chogathsquare=0x7f020080;
-        public static final int chosen_of_the_storm=0x7f020081;
-        public static final int chrono_shift=0x7f020082;
-        public static final int chronokeeper_0=0x7f020083;
-        public static final int chum_the_waters=0x7f020084;
-        public static final int circle_of_the_ancestors=0x7f020085;
-        public static final int clockwork_windup=0x7f020086;
-        public static final int cocoon=0x7f020087;
-        public static final int collateral_damage=0x7f020088;
-        public static final int commandattack=0x7f020089;
-        public static final int commanddissonance=0x7f02008a;
-        public static final int commandprotect=0x7f02008b;
-        public static final int commandshockwave=0x7f02008c;
-        public static final int condemn=0x7f02008d;
-        public static final int conflagration=0x7f02008e;
-        public static final int consecration=0x7f02008f;
-        public static final int consume=0x7f020090;
-        public static final int contaminate=0x7f020091;
-        public static final int contempt_for_the_weak=0x7f020092;
-        public static final int corki_0=0x7f020093;
-        public static final int corkisquare=0x7f020094;
-        public static final int counter_strike=0x7f020095;
-        public static final int courage=0x7f020096;
-        public static final int crashysmashy_palom=0x7f020097;
-        public static final int crashysmashy_porom=0x7f020098;
-        public static final int creeping_death=0x7f020099;
-        public static final int crescendo=0x7f02009a;
-        public static final int crescent_slash=0x7f02009b;
-        public static final int crescent_strike=0x7f02009c;
-        public static final int crescent_sweep=0x7f02009d;
-        public static final int crimson_pact=0x7f02009e;
-        public static final int cripple=0x7f02009f;
-        public static final int crippling_strike=0x7f0200a0;
-        public static final int crowstorm=0x7f0200a1;
-        public static final int crushing_blow=0x7f0200a2;
-        public static final int cryptic_gaze=0x7f0200a3;
-        public static final int crystal_slash=0x7f0200a4;
-        public static final int crystalline_exoskeleton=0x7f0200a5;
-        public static final int crystallize=0x7f0200a6;
-        public static final int curse_of_the_sad_mummy=0x7f0200a7;
-        public static final int cursed_touch=0x7f0200a8;
-        public static final int cutthroat=0x7f0200a9;
-        public static final int cyclone=0x7f0200aa;
-        public static final int damnation=0x7f0200ab;
-        public static final int darius_0=0x7f0200ac;
-        public static final int dariussquare=0x7f0200ad;
-        public static final int dark_binding=0x7f0200ae;
-        public static final int dark_frenzy=0x7f0200af;
-        public static final int dark_matter=0x7f0200b0;
-        public static final int dark_sphere=0x7f0200b1;
-        public static final int dark_wind=0x7f0200b2;
-        public static final int darkpassage=0x7f0200b3;
-        public static final int dazzle=0x7f0200b4;
-        public static final int deadly_bloom=0x7f0200b5;
-        public static final int deadly_cadence=0x7f0200b6;
-        public static final int deadly_venom=0x7f0200b7;
-        public static final int death_defied=0x7f0200b8;
-        public static final int death_lotus=0x7f0200b9;
-        public static final int death_mark=0x7f0200ba;
-        public static final int death_ray=0x7f0200bb;
-        public static final int deaths_caress=0x7f0200bc;
-        public static final int deathsentence=0x7f0200bd;
-        public static final int debilitating_poison=0x7f0200be;
-        public static final int deceive=0x7f0200bf;
-        public static final int decimate=0x7f0200c0;
-        public static final int decisive_strike=0x7f0200c1;
-        public static final int decompose=0x7f0200c2;
-        public static final int decoy=0x7f0200c3;
-        public static final int decrepify=0x7f0200c4;
-        public static final int defensive_ball_curl=0x7f0200c5;
-        public static final int defile=0x7f0200c6;
-        public static final int demacian_justice=0x7f0200c7;
-        public static final int denting_blows=0x7f0200c8;
-        public static final int depth_charge=0x7f0200c9;
-        public static final int despair=0x7f0200ca;
-        public static final int destiny=0x7f0200cb;
-        public static final int determined_killer=0x7f0200cc;
-        public static final int devastating_blow=0x7f0200cd;
-        public static final int devastating_charge=0x7f0200ce;
-        public static final int diana_0=0x7f0200cf;
-        public static final int dianasquare=0x7f0200d0;
-        public static final int dice=0x7f0200d1;
-        public static final int diplomatic_immunity=0x7f0200d2;
-        public static final int disintegrate=0x7f0200d3;
-        public static final int distortion=0x7f0200d4;
-        public static final int divine_blessing=0x7f0200d5;
-        public static final int double_strike=0x7f0200d6;
-        public static final int double_up=0x7f0200d7;
-        public static final int dragons_descent=0x7f0200d8;
-        public static final int dragons_rage=0x7f0200d9;
-        public static final int drain=0x7f0200da;
-        public static final int draven_0=0x7f0200db;
-        public static final int dravensquare=0x7f0200dc;
-        public static final int draw_a_bead=0x7f0200dd;
-        public static final int dread=0x7f0200de;
-        public static final int dredge_line=0x7f0200df;
-        public static final int drmundo_0=0x7f0200e0;
-        public static final int drmundosquare=0x7f0200e1;
-        public static final int drunken_rage=0x7f0200e2;
-        public static final int duelist=0x7f0200e3;
-        public static final int duskbringer=0x7f0200e4;
-        public static final int ebb_and_flow=0x7f0200e5;
-        public static final int eclipse=0x7f0200e6;
-        public static final int electrical_surge=0x7f0200e7;
-        public static final int electroharpoon=0x7f0200e8;
-        public static final int elise_0=0x7f0200e9;
-        public static final int elisesquare=0x7f0200ea;
-        public static final int empower=0x7f0200eb;
-        public static final int empowered_battle_roar=0x7f0200ec;
-        public static final int empowered_bola_strike=0x7f0200ed;
-        public static final int empowered_bulwark=0x7f0200ee;
-        public static final int empowered_savagery=0x7f0200ef;
-        public static final int enchanted_crystal_arrow=0x7f0200f0;
-        public static final int energize=0x7f0200f1;
-        public static final int enfeeble=0x7f0200f2;
-        public static final int enrage=0x7f0200f3;
-        public static final int entrench=0x7f0200f4;
-        public static final int entropy=0x7f0200f5;
-        public static final int equilibrium=0x7f0200f6;
-        public static final int equilibrium_strike=0x7f0200f7;
-        public static final int essence_flux=0x7f0200f8;
-        public static final int essence_theft=0x7f0200f9;
-        public static final int eternal_thirst=0x7f0200fa;
-        public static final int ethereal_chains=0x7f0200fb;
-        public static final int evelynn_0=0x7f0200fc;
-        public static final int evelynnsquare=0x7f0200fd;
-        public static final int evelynnsquare_old=0x7f0200fe;
-        public static final int event_horizon=0x7f0200ff;
-        public static final int evolution_active_camouflage=0x7f020100;
-        public static final int evolution_enlarged_claws=0x7f020101;
-        public static final int evolution_spike_racks=0x7f020102;
-        public static final int evolution_wings=0x7f020103;
-        public static final int evolving_technology=0x7f020104;
-        public static final int excessive_force=0x7f020105;
-        public static final int explosive_cask=0x7f020106;
-        public static final int explosive_shot=0x7f020107;
-        public static final int expunge=0x7f020108;
-        public static final int eye_for_an_eye=0x7f020109;
-        public static final int eye_of_the_storm=0x7f02010a;
-        public static final int ezreal_0=0x7f02010b;
-        public static final int ezrealsquare=0x7f02010c;
-        public static final int fearmonger=0x7f02010d;
-        public static final int feast=0x7f02010e;
-        public static final int feel_no_pain=0x7f02010f;
-        public static final int feint=0x7f020110;
-        public static final int feral_scream=0x7f020111;
-        public static final int ferocious_howl=0x7f020112;
-        public static final int fiddlestick_paranoia=0x7f020113;
-        public static final int fiddlesticks_0=0x7f020114;
-        public static final int fiddlestickssquare=0x7f020115;
-        public static final int final_hour=0x7f020116;
-        public static final int final_spark=0x7f020117;
-        public static final int finales_funkeln=0x7f020118;
-        public static final int fiora_0=0x7f020119;
-        public static final int fiorasquare=0x7f02011a;
-        public static final int fizz_0=0x7f02011b;
-        public static final int fizzsquare=0x7f02011c;
-        public static final int flame_breath=0x7f02011d;
-        public static final int flamespitter=0x7f02011e;
-        public static final int flash_frost=0x7f02011f;
-        public static final int flay=0x7f020120;
-        public static final int fleet_of_foot=0x7f020121;
-        public static final int fling=0x7f020122;
-        public static final int flurry=0x7f020123;
-        public static final int focus=0x7f020124;
-        public static final int force_of_will=0x7f020125;
-        public static final int force_of_will_2=0x7f020126;
-        public static final int force_pulse=0x7f020127;
-        public static final int foxfire=0x7f020128;
-        public static final int fracture=0x7f020129;
-        public static final int frenzy=0x7f02012a;
-        public static final int frost=0x7f02012b;
-        public static final int frost_shot=0x7f02012c;
-        public static final int frostbite=0x7f02012d;
-        public static final int fury_of_the_dragonborn=0x7f02012e;
-        public static final int fury_of_the_sands=0x7f02012f;
-        public static final int galio_0=0x7f020130;
-        public static final int galiosquare=0x7f020131;
-        public static final int gangplank_0=0x7f020132;
-        public static final int gangplanksquare=0x7f020133;
-        public static final int garen_0=0x7f020134;
-        public static final int garensquare=0x7f020135;
-        public static final int gate=0x7f020136;
-        public static final int gatling_gun=0x7f020137;
-        public static final int gavidsquare=0x7f020138;
-        public static final int gemcraft=0x7f020139;
-        public static final int gemknight_0=0x7f02013a;
-        public static final int ghastly_shield=0x7f02013b;
-        public static final int glacial_prison=0x7f02013c;
-        public static final int glacial_storm=0x7f02013d;
-        public static final int glitterlance=0x7f02013e;
-        public static final int gradient_bg=0x7f02013f;
-        public static final int gradient_bg_hover=0x7f020140;
-        public static final int gragas_0=0x7f020141;
-        public static final int gragassquare=0x7f020142;
-        public static final int grand_skyfall=0x7f020143;
-        public static final int grandmasters_might=0x7f020144;
-        public static final int granite_shield=0x7f020145;
-        public static final int grasping_roots=0x7f020146;
-        public static final int graves_0=0x7f020147;
-        public static final int gravessquare=0x7f020148;
-        public static final int gravity_field=0x7f020149;
-        public static final int greenterror_0=0x7f02014a;
-        public static final int grog_soaked_blade=0x7f02014b;
-        public static final int ground_slam=0x7f02014c;
-        public static final int h28g_evolution_turret=0x7f02014d;
-        public static final int hail_of_arrows=0x7f02014e;
-        public static final int hallucinate=0x7f02014f;
-        public static final int happy_hour=0x7f020150;
-        public static final int hate_spike=0x7f020151;
-        public static final int hawkshot=0x7f020152;
-        public static final int headbutt=0x7f020153;
-        public static final int headshot=0x7f020154;
-        public static final int heartseeker_strike=0x7f020155;
-        public static final int hecarim_0=0x7f020156;
-        public static final int hecarimsquare=0x7f020157;
-        public static final int heightened_learning=0x7f020158;
-        public static final int heimerdinger_0=0x7f020159;
-        public static final int heimerdingersquare=0x7f02015a;
-        public static final int help_pix=0x7f02015b;
-        public static final int hemoplague=0x7f02015c;
-        public static final int hemorrhage=0x7f02015d;
-        public static final int heroic_charge=0x7f02015e;
-        public static final int hexplosive_minefield=0x7f02015f;
-        public static final int hextech_capacitor=0x7f020160;
-        public static final int hextech_microrockets=0x7f020161;
-        public static final int hextech_shrapnel_shells=0x7f020162;
-        public static final int highlander=0x7f020163;
-        public static final int hiten_style=0x7f020164;
-        public static final int hiten_style_ready=0x7f020165;
-        public static final int holy_fervor=0x7f020166;
-        public static final int howling_gale=0x7f020167;
-        public static final int hungering_strike=0x7f020168;
-        public static final int hunters_call=0x7f020169;
-        public static final int hymn_of_valor=0x7f02016a;
-        public static final int hyper_charge=0x7f02016b;
-        public static final int hyperkinetic_position_reverser=0x7f02016c;
-        public static final int ic_launcher=0x7f02016d;
-        public static final int icathian_surprise=0x7f02016e;
-        public static final int ice_blast=0x7f02016f;
-        public static final int icon=0x7f020170;
-        public static final int idol_of_durand=0x7f020171;
-        public static final int illumination=0x7f020172;
-        public static final int imag0020=0x7f020173;
-        public static final int image_bg=0x7f020174;
-        public static final int imbue=0x7f020175;
-        public static final int impale=0x7f020176;
-        public static final int impure_shots=0x7f020177;
-        public static final int incinerate=0x7f020178;
-        public static final int infected_cleaver=0x7f020179;
-        public static final int infinite_duress=0x7f02017a;
-        public static final int infinite_light=0x7f02017b;
-        public static final int infuse=0x7f02017c;
-        public static final int insanity_potion=0x7f02017d;
-        public static final int intervention=0x7f02017e;
-        public static final int ionian_fervor=0x7f02017f;
-        public static final int irelia_0=0x7f020180;
-        public static final int ireliasquare=0x7f020181;
-        public static final int iron_man=0x7f020182;
-        public static final int iron_will=0x7f020183;
-        public static final int jack_in_the_box=0x7f020184;
-        public static final int janna_0=0x7f020185;
-        public static final int jannasquare=0x7f020186;
-        public static final int jarvaniv_0=0x7f020187;
-        public static final int jarvanivsquare=0x7f020188;
-        public static final int jax_0=0x7f020189;
-        public static final int jaxsquare=0x7f02018a;
-        public static final int jayce_0=0x7f02018b;
-        public static final int jaycesquare=0x7f02018c;
-        public static final int jester_0=0x7f02018d;
-        public static final int judgment=0x7f02018e;
-        public static final int judicator_0=0x7f02018f;
-        public static final int junkyard_titan=0x7f020190;
-        public static final int karma_0=0x7f020191;
-        public static final int karmasquare=0x7f020192;
-        public static final int karthus_0=0x7f020193;
-        public static final int karthussquare=0x7f020194;
-        public static final int kassadin_0=0x7f020195;
-        public static final int kassadinsquare=0x7f020196;
-        public static final int kassadinsquare_old=0x7f020197;
-        public static final int katarina_0=0x7f020198;
-        public static final int katarinasquare=0x7f020199;
-        public static final int katarinasquare_old=0x7f02019a;
-        public static final int kayle_0=0x7f02019b;
-        public static final int kaylesquare=0x7f02019c;
-        public static final int kennen_0=0x7f02019d;
-        public static final int kennensquare=0x7f02019e;
-        public static final int khazix_0=0x7f02019f;
-        public static final int khazixsquare=0x7f0201a0;
-        public static final int ki_burst=0x7f0201a1;
-        public static final int ki_strike=0x7f0201a2;
-        public static final int killer_instincts=0x7f0201a3;
-        public static final int kogmaw_0=0x7f0201a4;
-        public static final int kogmawsquare=0x7f0201a5;
-        public static final int lay_waste=0x7f0201a6;
-        public static final int leap=0x7f0201a7;
-        public static final int leap_strike=0x7f0201a8;
-        public static final int leblanc_0=0x7f0201a9;
-        public static final int leblancsquare=0x7f0201aa;
-        public static final int leesin_0=0x7f0201ab;
-        public static final int leesinsquare=0x7f0201ac;
-        public static final int leona_0=0x7f0201ad;
-        public static final int leonasquare=0x7f0201ae;
-        public static final int light_binding=0x7f0201af;
-        public static final int lightning_field=0x7f0201b0;
-        public static final int lightning_rush=0x7f0201b1;
-        public static final int list_selector=0x7f0201b2;
-        public static final int living_artillery=0x7f0201b3;
-        public static final int living_shadow=0x7f0201b4;
-        public static final int living_vengeance=0x7f0201b5;
-        public static final int loaded_dice=0x7f0201b6;
-        public static final int locus_of_power=0x7f0201b7;
-        public static final int lucent_singularity=0x7f0201b8;
-        public static final int lulu_0=0x7f0201b9;
-        public static final int lulusquare=0x7f0201ba;
-        public static final int lunar_rush=0x7f0201bb;
-        public static final int lunge=0x7f0201bc;
-        public static final int lux_0=0x7f0201bd;
-        public static final int luxsquare=0x7f0201be;
-        public static final int lwrcase=0x7f0201bf;
-        public static final int lwrcase_folder=0x7f0201c0;
-        public static final int mace_of_spades=0x7f0201c1;
-        public static final int mage_chains=0x7f0201c2;
-        public static final int majestic_roar=0x7f0201c3;
-        public static final int make_it_rain=0x7f0201c4;
-        public static final int malefic_visions=0x7f0201c5;
-        public static final int malice_and_spite=0x7f0201c6;
-        public static final int malphite_0=0x7f0201c7;
-        public static final int malphitesquare=0x7f0201c8;
-        public static final int malzahar_0=0x7f0201c9;
-        public static final int malzaharsquare=0x7f0201ca;
-        public static final int mana_barrier=0x7f0201cb;
-        public static final int maokai_0=0x7f0201cc;
-        public static final int maokaisquare=0x7f0201cd;
-        public static final int mark_of_the_assassin=0x7f0201ce;
-        public static final int mark_of_the_storm=0x7f0201cf;
-        public static final int masochism=0x7f0201d0;
-        public static final int masteryi_0=0x7f0201d1;
-        public static final int masteryisquare=0x7f0201d2;
-        public static final int meditate=0x7f0201d3;
-        public static final int mega_adhesive=0x7f0201d4;
-        public static final int mega_inferno_bomb=0x7f0201d5;
-        public static final int menu=0x7f0201d6;
-        public static final int mercury_cannon=0x7f0201d7;
-        public static final int mercury_hammer=0x7f0201d8;
-        public static final int mercy=0x7f0201d9;
-        public static final int miasma=0x7f0201da;
-        public static final int mighty_cleave=0x7f0201db;
-        public static final int mimic=0x7f0201dc;
-        public static final int mimic_distortion=0x7f0201dd;
-        public static final int mimic_ethereal_chains=0x7f0201de;
-        public static final int mimic_sigil_of_silence=0x7f0201df;
-        public static final int mirror_image=0x7f0201e0;
-        public static final int missfortune_0=0x7f0201e1;
-        public static final int missfortunesquare=0x7f0201e2;
-        public static final int missile_barrage=0x7f0201e3;
-        public static final int mocking_shout=0x7f0201e4;
-        public static final int molten_shield=0x7f0201e5;
-        public static final int monkeyking_0=0x7f0201e6;
-        public static final int monkeys_agility=0x7f0201e7;
-        public static final int monsoon=0x7f0201e8;
-        public static final int moonfall=0x7f0201e9;
-        public static final int moonsilver_blade=0x7f0201ea;
-        public static final int mordekaiser_0=0x7f0201eb;
-        public static final int mordekaisersquare=0x7f0201ec;
-        public static final int morgana_0=0x7f0201ed;
-        public static final int morganasquare=0x7f0201ee;
-        public static final int morganasquare_old=0x7f0201ef;
-        public static final int move_quick=0x7f0201f0;
-        public static final int mystic_shot=0x7f0201f1;
-        public static final int nami_0=0x7f0201f2;
-        public static final int namisquare=0x7f0201f3;
-        public static final int nasus_0=0x7f0201f4;
-        public static final int nasussquare=0x7f0201f5;
-        public static final int nautilus_0=0x7f0201f6;
-        public static final int nautilussquare=0x7f0201f7;
-        public static final int nether_blade=0x7f0201f8;
-        public static final int nether_grasp=0x7f0201f9;
-        public static final int neurotoxin=0x7f0201fa;
-        public static final int nevermove=0x7f0201fb;
-        public static final int nidalee_0=0x7f0201fc;
-        public static final int nidaleesquare=0x7f0201fd;
-        public static final int night_hunter=0x7f0201fe;
-        public static final int nimble_fighter=0x7f0201ff;
-        public static final int nimbus_strike=0x7f020200;
-        public static final int ninety_caliber_net=0x7f020201;
-        public static final int nocturne_0=0x7f020202;
-        public static final int nocturnesquare=0x7f020203;
-        public static final int northern_winds=0x7f020204;
-        public static final int noxian_corrosive_charge=0x7f020205;
-        public static final int noxian_diplomacy=0x7f020206;
-        public static final int noxian_guillotine=0x7f020207;
-        public static final int noxious_blast=0x7f020208;
-        public static final int noxious_trap=0x7f020209;
-        public static final int null_sphere=0x7f02020a;
-        public static final int null_zone=0x7f02020b;
-        public static final int nunu_0=0x7f02020c;
-        public static final int nunusquare=0x7f02020d;
-        public static final int olaf_0=0x7f02020e;
-        public static final int olafsquare=0x7f02020f;
-        public static final int olddarkwind=0x7f020210;
-        public static final int omen_of_death=0x7f020211;
-        public static final int omen_of_famine=0x7f020212;
-        public static final int omen_of_pestilence=0x7f020213;
-        public static final int omen_of_war=0x7f020214;
-        public static final int omensquare=0x7f020215;
-        public static final int on_the_hunt=0x7f020216;
-        public static final int onslaught_of_shadows=0x7f020217;
-        public static final int orb_of_deception=0x7f020218;
-        public static final int orianna_0=0x7f020219;
-        public static final int oriannasquare=0x7f02021a;
-        public static final int overdrive=0x7f02021b;
-        public static final int pacify=0x7f02021c;
-        public static final int pale_cascade=0x7f02021d;
-        public static final int pantheon_0=0x7f02021e;
-        public static final int pantheonsquare=0x7f02021f;
-        public static final int paragon_of_demacia=0x7f020220;
-        public static final int paranoia=0x7f020221;
-        public static final int parrrley=0x7f020222;
-        public static final int permafrost=0x7f020223;
-        public static final int perseverance=0x7f020224;
-        public static final int petrifying_gaze=0x7f020225;
-        public static final int phoenix_stance=0x7f020226;
-        public static final int phosphorus_bomb=0x7f020227;
-        public static final int pick_a_card=0x7f020228;
-        public static final int piercing_arrow=0x7f020229;
-        public static final int pillar_of_filth=0x7f02022a;
-        public static final int pillar_of_flame=0x7f02022b;
-        public static final int piltover_peacemaker=0x7f02022c;
-        public static final int pix_faerie_companion=0x7f02022d;
-        public static final int playful=0x7f02022e;
-        public static final int plentifulbounty=0x7f02022f;
-        public static final int poison_trail=0x7f020230;
-        public static final int poppy_0=0x7f020231;
-        public static final int poppysquare=0x7f020232;
-        public static final int power_chord=0x7f020233;
-        public static final int power_fist=0x7f020234;
-        public static final int power_transfer=0x7f020235;
-        public static final int powerball=0x7f020236;
-        public static final int primordial_burst=0x7f020237;
-        public static final int priscillasquare=0x7f020238;
-        public static final int prismatic_barrier=0x7f020239;
-        public static final int pulverize=0x7f02023a;
-        public static final int puncturing_taunt=0x7f02023b;
-        public static final int pyroclasm=0x7f02023c;
-        public static final int pyromania=0x7f02023d;
-        public static final int queenofthorns=0x7f02023e;
-        public static final int quickdraw=0x7f02023f;
-        public static final int quinnsquare=0x7f020240;
-        public static final int rabid_bite=0x7f020241;
-        public static final int radiance=0x7f020242;
-        public static final int ragnarok=0x7f020243;
-        public static final int raise_morale=0x7f020244;
-        public static final int rake=0x7f020245;
-        public static final int rammus_0=0x7f020246;
-        public static final int rammussquare=0x7f020247;
-        public static final int rampage=0x7f020248;
-        public static final int rampant_growth=0x7f020249;
-        public static final int rapid_fire=0x7f02024a;
-        public static final int rappel=0x7f02024b;
-        public static final int ravage=0x7f02024c;
-        public static final int ravenous_flock=0x7f02024d;
-        public static final int razor_shuriken=0x7f02024e;
-        public static final int rebirth=0x7f02024f;
-        public static final int reckless_swing=0x7f020250;
-        public static final int reckoning=0x7f020251;
-        public static final int reilock_r=0x7f020252;
-        public static final int relentless_assault=0x7f020253;
-        public static final int remove_scurvy=0x7f020254;
-        public static final int rendingshot=0x7f020255;
-        public static final int renekton_0=0x7f020256;
-        public static final int renektonsquare=0x7f020257;
-        public static final int rengar_0=0x7f020258;
-        public static final int rengarsquare=0x7f020259;
-        public static final int requiem=0x7f02025a;
-        public static final int resolute_smite=0x7f02025b;
-        public static final int resonating_strike=0x7f02025c;
-        public static final int rewind=0x7f02025d;
-        public static final int ricochet=0x7f02025e;
-        public static final int riftwalk=0x7f02025f;
-        public static final int righteous_fury=0x7f020260;
-        public static final int righteous_gust=0x7f020261;
-        public static final int riposte=0x7f020262;
-        public static final int riptide=0x7f020263;
-        public static final int rise_of_the_thorns=0x7f020264;
-        public static final int rising_spell_force=0x7f020265;
-        public static final int riven_0=0x7f020266;
-        public static final int rivensquare=0x7f020267;
-        public static final int rocket_grab=0x7f020268;
-        public static final int rocket_jump=0x7f020269;
-        public static final int rolling_thunder=0x7f02026a;
-        public static final int rumble_0=0x7f02026b;
-        public static final int rumblesquare=0x7f02026c;
-        public static final int runic_blade=0x7f02026d;
-        public static final int runic_skin=0x7f02026e;
-        public static final int rupture=0x7f02026f;
-        public static final int ryze_0=0x7f020270;
-        public static final int ryzesquare=0x7f020271;
-        public static final int sadism=0x7f020272;
-        public static final int safeguard=0x7f020273;
-        public static final int sanguine_pool=0x7f020274;
-        public static final int sap_magic=0x7f020275;
-        public static final int sapling_toss=0x7f020276;
-        public static final int satchel_charge=0x7f020277;
-        public static final int savagery=0x7f020278;
-        public static final int scatter_the_weak=0x7f020279;
-        public static final int scrap_shield=0x7f02027a;
-        public static final int sealfate=0x7f02027b;
-        public static final int sear=0x7f02027c;
-        public static final int seastone_trident=0x7f02027d;
-        public static final int seismic_shard=0x7f02027e;
-        public static final int sejuani_0=0x7f02027f;
-        public static final int sejuanisquare=0x7f020280;
-        public static final int shaco_0=0x7f020281;
-        public static final int shacosquare=0x7f020282;
-        public static final int shadow_assault=0x7f020283;
-        public static final int shadow_dance=0x7f020284;
-        public static final int shadow_dash=0x7f020285;
-        public static final int shadow_slash=0x7f020286;
-        public static final int shadow_walk=0x7f020287;
-        public static final int shatter=0x7f020288;
-        public static final int shen_0=0x7f020289;
-        public static final int shensquare=0x7f02028a;
-        public static final int shield_of_daybreak=0x7f02028b;
-        public static final int shock_blast=0x7f02028c;
-        public static final int short_fuse=0x7f02028d;
-        public static final int shroud_of_darkness=0x7f02028e;
-        public static final int shunpo=0x7f02028f;
-        public static final int shyvana_0=0x7f020290;
-        public static final int shyvanasquare=0x7f020291;
-        public static final int sigil_of_silence=0x7f020292;
-        public static final int silver_bolts=0x7f020293;
-        public static final int singed_0=0x7f020294;
-        public static final int singedsquare=0x7f020295;
-        public static final int sinister_steel=0x7f020296;
-        public static final int sion_0=0x7f020297;
-        public static final int sionsquare=0x7f020298;
-        public static final int siphon_of_destruction=0x7f020299;
-        public static final int siphoning_strike=0x7f02029a;
-        public static final int sivir_0=0x7f02029b;
-        public static final int sivirsquare=0x7f02029c;
-        public static final int sivirsquare_old=0x7f02029d;
-        public static final int skarner_0=0x7f02029e;
-        public static final int skarnersquare=0x7f02029f;
-        public static final int skittering_frenzy=0x7f0202a0;
-        public static final int slicing_maelstrom=0x7f0202a1;
-        public static final int smoke_screen=0x7f0202a2;
-        public static final int solar_flare=0x7f0202a3;
-        public static final int sona_0=0x7f0202a4;
-        public static final int sonasquare=0x7f0202a5;
-        public static final int song_of_celerity=0x7f0202a6;
-        public static final int sonic_wave=0x7f0202a7;
-        public static final int soraka_0=0x7f0202a8;
-        public static final int sorakasquare=0x7f0202a9;
-        public static final int soul_eater=0x7f0202aa;
-        public static final int soul_shackles=0x7f0202ab;
-        public static final int soul_siphon=0x7f0202ac;
-        public static final int souldrain=0x7f0202ad;
-        public static final int spear_shot=0x7f0202ae;
-        public static final int spell_shield=0x7f0202af;
-        public static final int spider_form=0x7f0202b0;
-        public static final int spider_swarm=0x7f0202b1;
-        public static final int spiderqueen_camouflage=0x7f0202b2;
-        public static final int spiderqueen_corpsemaker=0x7f0202b3;
-        public static final int spiderqueen_ensare=0x7f0202b4;
-        public static final int spiderqueen_injectspiderlings=0x7f0202b5;
-        public static final int spiderqueen_thirst=0x7f0202b6;
-        public static final int spiked_shell=0x7f0202b7;
-        public static final int spinning_axe=0x7f0202b8;
-        public static final int spinning_slash=0x7f0202b9;
-        public static final int spirit_fire=0x7f0202ba;
-        public static final int spirit_of_dread=0x7f0202bb;
-        public static final int spirit_rush=0x7f0202bc;
-        public static final int spray_and_pray=0x7f0202bd;
-        public static final int sprint=0x7f0202be;
-        public static final int sprout=0x7f0202bf;
-        public static final int stacked_deck=0x7f0202c0;
-        public static final int staggering_blow=0x7f0202c1;
-        public static final int stand_aside=0x7f0202c2;
-        public static final int stand_united=0x7f0202c3;
-        public static final int starcall=0x7f0202c4;
-        public static final int static_field=0x7f0202c5;
-        public static final int stone_skin=0x7f0202c6;
-        public static final int stranglethorns=0x7f0202c7;
-        public static final int strut=0x7f0202c8;
-        public static final int summon_voidling=0x7f0202c9;
-        public static final int summontibbers=0x7f0202ca;
-        public static final int sunlight=0x7f0202cb;
-        public static final int surging_tides=0x7f0202cc;
-        public static final int swain_0=0x7f0202cd;
-        public static final int swainsquare=0x7f0202ce;
-        public static final int syndra_0=0x7f0202cf;
-        public static final int syndrasquare=0x7f0202d0;
-        public static final int syndrasquare2=0x7f0202d1;
-        public static final int tailwind=0x7f0202d2;
-        public static final int talon_0=0x7f0202d3;
-        public static final int talonsquare=0x7f0202d4;
-        public static final int tantrum=0x7f0202d5;
-        public static final int taric_0=0x7f0202d6;
-        public static final int taricsquare=0x7f0202d7;
-        public static final int taricsquare_old=0x7f0202d8;
-        public static final int taste_their_fear=0x7f0202d9;
-        public static final int tatoo=0x7f0202da;
-        public static final int techmaturgical_repair_bots=0x7f0202db;
-        public static final int teemo_0=0x7f0202dc;
-        public static final int teemosquare=0x7f0202dd;
-        public static final int tempest=0x7f0202de;
-        public static final int terrify=0x7f0202df;
-        public static final int terror_capacitor=0x7f0202e0;
-        public static final int the_equalizer=0x7f0202e1;
-        public static final int thebox=0x7f0202e2;
-        public static final int thorns=0x7f0202e3;
-        public static final int three_talon_strike=0x7f0202e4;
-        public static final int thresh_0=0x7f0202e5;
-        public static final int threshsquare=0x7f0202e6;
-        public static final int thrill_of_the_hunt=0x7f0202e7;
-        public static final int thunder_claws=0x7f0202e8;
-        public static final int thundering_blow=0x7f0202e9;
-        public static final int thundering_shuriken=0x7f0202ea;
-        public static final int tidal_wave=0x7f0202eb;
-        public static final int tidecallers_blessing=0x7f0202ec;
-        public static final int tides_of_blood=0x7f0202ed;
-        public static final int tiger_stance=0x7f0202ee;
-        public static final int time_bomb=0x7f0202ef;
-        public static final int time_warp=0x7f0202f0;
-        public static final int tirelesswarrior=0x7f0202f1;
-        public static final int titans_wrath=0x7f0202f2;
-        public static final int to_the_skies=0x7f0202f3;
-        public static final int torment=0x7f0202f4;
-        public static final int tormented_soil=0x7f0202f5;
-        public static final int toxic_shot=0x7f0202f6;
-        public static final int trailblazer=0x7f0202f7;
-        public static final int trample=0x7f0202f8;
-        public static final int transcendent=0x7f0202f9;
-        public static final int transcendent_blades=0x7f0202fa;
-        public static final int transcendentbladesready=0x7f0202fb;
-        public static final int transfusion=0x7f0202fc;
-        public static final int tremors=0x7f0202fd;
-        public static final int trickster=0x7f0202fe;
-        public static final int tristana_0=0x7f0202ff;
-        public static final int tristanasquare=0x7f020300;
-        public static final int triumphant_roar=0x7f020301;
-        public static final int true_grit=0x7f020302;
-        public static final int trueshot_barrage=0x7f020303;
-        public static final int trundle_0=0x7f020304;
-        public static final int trundlesquare=0x7f020305;
-        public static final int tryndamere_0=0x7f020306;
-        public static final int tryndameresquare=0x7f020307;
-        public static final int tryndameresquare_old=0x7f020308;
-        public static final int tumble=0x7f020309;
-        public static final int turtle_stance=0x7f02030a;
-        public static final int twilight_shroud=0x7f02030b;
-        public static final int twin_bite=0x7f02030c;
-        public static final int twin_disciplines=0x7f02030d;
-        public static final int twin_fang=0x7f02030e;
-        public static final int twisted_advance=0x7f02030f;
-        public static final int twistedfate_0=0x7f020310;
-        public static final int twistedfatesquare=0x7f020311;
-        public static final int twistedfatesquare_old=0x7f020312;
-        public static final int twitch_0=0x7f020313;
-        public static final int twitchsquare=0x7f020314;
-        public static final int twitchsquare_old=0x7f020315;
-        public static final int twoshiv_poison=0x7f020316;
-        public static final int typhoon=0x7f020317;
-        public static final int udyr_0=0x7f020318;
-        public static final int udyrsquare=0x7f020319;
-        public static final int umbra_blades=0x7f02031a;
-        public static final int unbreakable_will=0x7f02031b;
-        public static final int undertow=0x7f02031c;
-        public static final int undying_rage=0x7f02031d;
-        public static final int unholy_covenant=0x7f02031e;
-        public static final int unleashed_power=0x7f02031f;
-        public static final int unseen_predator=0x7f020320;
-        public static final int unseen_threat=0x7f020321;
-        public static final int unspeakable_horror=0x7f020322;
-        public static final int unstoppable_force=0x7f020323;
-        public static final int upgrade=0x7f020324;
-        public static final int urchin_strike=0x7f020325;
-        public static final int urgot_0=0x7f020326;
-        public static final int urgotsquare=0x7f020327;
-        public static final int valiant_fighter=0x7f020328;
-        public static final int valkyrie=0x7f020329;
-        public static final int valor=0x7f02032a;
-        public static final int varus_0=0x7f02032b;
-        public static final int varussquare=0x7f02032c;
-        public static final int vault_breaker=0x7f02032d;
-        public static final int vayne_0=0x7f02032e;
-        public static final int vaynesquare=0x7f02032f;
-        public static final int veigar_0=0x7f020330;
-        public static final int veigarsquare=0x7f020331;
-        public static final int veigarsquare_old=0x7f020332;
-        public static final int vengeful_maelstrom=0x7f020333;
-        public static final int venom_cask=0x7f020334;
-        public static final int venomous_bite=0x7f020335;
-        public static final int vi_0=0x7f020336;
-        public static final int vicious_strikes=0x7f020337;
-        public static final int viktor_0=0x7f020338;
-        public static final int viktorsquare=0x7f020339;
-        public static final int visionary=0x7f02033a;
-        public static final int visquare=0x7f02033b;
-        public static final int vladimir_0=0x7f02033c;
-        public static final int vladimirsquare=0x7f02033d;
-        public static final int void_assault=0x7f02033e;
-        public static final int void_ooze=0x7f02033f;
-        public static final int void_spike=0x7f020340;
-        public static final int void_stone=0x7f020341;
-        public static final int volatile_spiderling=0x7f020342;
-        public static final int volibear_0=0x7f020343;
-        public static final int volibearsquare=0x7f020344;
-        public static final int volley=0x7f020345;
-        public static final int voracity=0x7f020346;
-        public static final int vorpal_blade=0x7f020347;
-        public static final int vorpal_spikes=0x7f020348;
-        public static final int wall_of_pain=0x7f020349;
-        public static final int wallofpain=0x7f02034a;
-        public static final int warpath=0x7f02034b;
-        public static final int warwick_0=0x7f02034c;
-        public static final int warwicksquare=0x7f02034d;
-        public static final int wellsquare=0x7f02034e;
-        public static final int whimsy=0x7f02034f;
-        public static final int whirling_death=0x7f020350;
-        public static final int wicked_blades=0x7f020351;
-        public static final int wikia_gaming_20_online=0x7f020352;
-        public static final int wild_cards=0x7f020353;
-        public static final int wild_growth=0x7f020354;
-        public static final int windslash=0x7f020355;
-        public static final int wish=0x7f020356;
-        public static final int wither=0x7f020357;
-        public static final int wuju_style=0x7f020358;
-        public static final int wukongsquare=0x7f020359;
-        public static final int xerath_0=0x7f02035a;
-        public static final int xerathsquare=0x7f02035b;
-        public static final int xinzhao_0=0x7f02035c;
-        public static final int xinzhaosquare=0x7f02035d;
-        public static final int yordle_snap_trap=0x7f02035e;
-        public static final int yorick_0=0x7f02035f;
-        public static final int yoricksquare=0x7f020360;
-        public static final int zauntouched_bolt_augmenter=0x7f020361;
-        public static final int zed_0=0x7f020362;
-        public static final int zedsquare=0x7f020363;
-        public static final int zenith_blade=0x7f020364;
-        public static final int zephyr=0x7f020365;
-        public static final int ziggs_0=0x7f020366;
-        public static final int ziggssquare=0x7f020367;
-        public static final int zilean_0=0x7f020368;
-        public static final int zileansquare=0x7f020369;
-        public static final int zyra_0=0x7f02036a;
-        public static final int zyra_square_0=0x7f02036b;
-        public static final int zyrasquare=0x7f02036c;
+        public static final int abs__ab_bottom_solid_dark_holo=0x7f020003;
+        public static final int abs__ab_bottom_solid_inverse_holo=0x7f020004;
+        public static final int abs__ab_bottom_solid_light_holo=0x7f020005;
+        public static final int abs__ab_bottom_transparent_dark_holo=0x7f020006;
+        public static final int abs__ab_bottom_transparent_light_holo=0x7f020007;
+        public static final int abs__ab_share_pack_holo_dark=0x7f020008;
+        public static final int abs__ab_share_pack_holo_light=0x7f020009;
+        public static final int abs__ab_solid_dark_holo=0x7f02000a;
+        public static final int abs__ab_solid_light_holo=0x7f02000b;
+        public static final int abs__ab_solid_shadow_holo=0x7f02000c;
+        public static final int abs__ab_stacked_solid_dark_holo=0x7f02000d;
+        public static final int abs__ab_stacked_solid_light_holo=0x7f02000e;
+        public static final int abs__ab_stacked_transparent_dark_holo=0x7f02000f;
+        public static final int abs__ab_stacked_transparent_light_holo=0x7f020010;
+        public static final int abs__ab_transparent_dark_holo=0x7f020011;
+        public static final int abs__ab_transparent_light_holo=0x7f020012;
+        public static final int abs__activated_background_holo_dark=0x7f020013;
+        public static final int abs__activated_background_holo_light=0x7f020014;
+        public static final int abs__btn_cab_done_default_holo_dark=0x7f020015;
+        public static final int abs__btn_cab_done_default_holo_light=0x7f020016;
+        public static final int abs__btn_cab_done_focused_holo_dark=0x7f020017;
+        public static final int abs__btn_cab_done_focused_holo_light=0x7f020018;
+        public static final int abs__btn_cab_done_holo_dark=0x7f020019;
+        public static final int abs__btn_cab_done_holo_light=0x7f02001a;
+        public static final int abs__btn_cab_done_pressed_holo_dark=0x7f02001b;
+        public static final int abs__btn_cab_done_pressed_holo_light=0x7f02001c;
+        public static final int abs__cab_background_bottom_holo_dark=0x7f02001d;
+        public static final int abs__cab_background_bottom_holo_light=0x7f02001e;
+        public static final int abs__cab_background_top_holo_dark=0x7f02001f;
+        public static final int abs__cab_background_top_holo_light=0x7f020020;
+        public static final int abs__ic_ab_back_holo_dark=0x7f020021;
+        public static final int abs__ic_ab_back_holo_light=0x7f020022;
+        public static final int abs__ic_cab_done_holo_dark=0x7f020023;
+        public static final int abs__ic_cab_done_holo_light=0x7f020024;
+        public static final int abs__ic_clear=0x7f020025;
+        public static final int abs__ic_clear_disabled=0x7f020026;
+        public static final int abs__ic_clear_holo_light=0x7f020027;
+        public static final int abs__ic_clear_normal=0x7f020028;
+        public static final int abs__ic_clear_search_api_disabled_holo_light=0x7f020029;
+        public static final int abs__ic_clear_search_api_holo_light=0x7f02002a;
+        public static final int abs__ic_commit_search_api_holo_dark=0x7f02002b;
+        public static final int abs__ic_commit_search_api_holo_light=0x7f02002c;
+        public static final int abs__ic_go=0x7f02002d;
+        public static final int abs__ic_go_search_api_holo_light=0x7f02002e;
+        public static final int abs__ic_menu_moreoverflow_holo_dark=0x7f02002f;
+        public static final int abs__ic_menu_moreoverflow_holo_light=0x7f020030;
+        public static final int abs__ic_menu_moreoverflow_normal_holo_dark=0x7f020031;
+        public static final int abs__ic_menu_moreoverflow_normal_holo_light=0x7f020032;
+        public static final int abs__ic_menu_share_holo_dark=0x7f020033;
+        public static final int abs__ic_menu_share_holo_light=0x7f020034;
+        public static final int abs__ic_search=0x7f020035;
+        public static final int abs__ic_search_api_holo_light=0x7f020036;
+        public static final int abs__ic_voice_search=0x7f020037;
+        public static final int abs__ic_voice_search_api_holo_light=0x7f020038;
+        public static final int abs__item_background_holo_dark=0x7f020039;
+        public static final int abs__item_background_holo_light=0x7f02003a;
+        public static final int abs__list_activated_holo=0x7f02003b;
+        public static final int abs__list_divider_holo_dark=0x7f02003c;
+        public static final int abs__list_divider_holo_light=0x7f02003d;
+        public static final int abs__list_focused_holo=0x7f02003e;
+        public static final int abs__list_longpressed_holo=0x7f02003f;
+        public static final int abs__list_pressed_holo_dark=0x7f020040;
+        public static final int abs__list_pressed_holo_light=0x7f020041;
+        public static final int abs__list_selector_background_transition_holo_dark=0x7f020042;
+        public static final int abs__list_selector_background_transition_holo_light=0x7f020043;
+        public static final int abs__list_selector_disabled_holo_dark=0x7f020044;
+        public static final int abs__list_selector_disabled_holo_light=0x7f020045;
+        public static final int abs__list_selector_holo_dark=0x7f020046;
+        public static final int abs__list_selector_holo_light=0x7f020047;
+        public static final int abs__menu_dropdown_panel_holo_dark=0x7f020048;
+        public static final int abs__menu_dropdown_panel_holo_light=0x7f020049;
+        public static final int abs__progress_bg_holo_dark=0x7f02004a;
+        public static final int abs__progress_bg_holo_light=0x7f02004b;
+        public static final int abs__progress_horizontal_holo_dark=0x7f02004c;
+        public static final int abs__progress_horizontal_holo_light=0x7f02004d;
+        public static final int abs__progress_medium_holo=0x7f02004e;
+        public static final int abs__progress_primary_holo_dark=0x7f02004f;
+        public static final int abs__progress_primary_holo_light=0x7f020050;
+        public static final int abs__progress_secondary_holo_dark=0x7f020051;
+        public static final int abs__progress_secondary_holo_light=0x7f020052;
+        public static final int abs__search_dropdown_dark=0x7f020053;
+        public static final int abs__search_dropdown_light=0x7f020054;
+        public static final int abs__spinner_48_inner_holo=0x7f020055;
+        public static final int abs__spinner_48_outer_holo=0x7f020056;
+        public static final int abs__spinner_ab_default_holo_dark=0x7f020057;
+        public static final int abs__spinner_ab_default_holo_light=0x7f020058;
+        public static final int abs__spinner_ab_disabled_holo_dark=0x7f020059;
+        public static final int abs__spinner_ab_disabled_holo_light=0x7f02005a;
+        public static final int abs__spinner_ab_focused_holo_dark=0x7f02005b;
+        public static final int abs__spinner_ab_focused_holo_light=0x7f02005c;
+        public static final int abs__spinner_ab_holo_dark=0x7f02005d;
+        public static final int abs__spinner_ab_holo_light=0x7f02005e;
+        public static final int abs__spinner_ab_pressed_holo_dark=0x7f02005f;
+        public static final int abs__spinner_ab_pressed_holo_light=0x7f020060;
+        public static final int abs__tab_indicator_ab_holo=0x7f020061;
+        public static final int abs__tab_selected_focused_holo=0x7f020062;
+        public static final int abs__tab_selected_holo=0x7f020063;
+        public static final int abs__tab_selected_pressed_holo=0x7f020064;
+        public static final int abs__tab_unselected_pressed_holo=0x7f020065;
+        public static final int abs__textfield_search_default_holo_dark=0x7f020066;
+        public static final int abs__textfield_search_default_holo_light=0x7f020067;
+        public static final int abs__textfield_search_right_default_holo_dark=0x7f020068;
+        public static final int abs__textfield_search_right_default_holo_light=0x7f020069;
+        public static final int abs__textfield_search_right_selected_holo_dark=0x7f02006a;
+        public static final int abs__textfield_search_right_selected_holo_light=0x7f02006b;
+        public static final int abs__textfield_search_selected_holo_dark=0x7f02006c;
+        public static final int abs__textfield_search_selected_holo_light=0x7f02006d;
+        public static final int abs__textfield_searchview_holo_dark=0x7f02006e;
+        public static final int abs__textfield_searchview_holo_light=0x7f02006f;
+        public static final int abs__textfield_searchview_right_holo_dark=0x7f020070;
+        public static final int abs__textfield_searchview_right_holo_light=0x7f020071;
+        public static final int abs__toast_frame=0x7f020072;
+        public static final int absolute_zero=0x7f020073;
+        public static final int acceleration_gate=0x7f020074;
+        public static final int ace_in_the_hole=0x7f020075;
+        public static final int acid_hunter=0x7f020076;
+        public static final int adrenaline_rush=0x7f020077;
+        public static final int aegis_of_zeonia=0x7f020078;
+        public static final int aegis_protection=0x7f020079;
+        public static final int agony=0x7f02007a;
+        public static final int agonys_embrace=0x7f02007b;
+        public static final int agonysembrace=0x7f02007c;
+        public static final int ahri_0=0x7f02007d;
+        public static final int ahribg=0x7f02007e;
+        public static final int ahrisouleater=0x7f02007f;
+        public static final int ahrisouleater2=0x7f020080;
+        public static final int ahrisquare=0x7f020081;
+        public static final int akali_0=0x7f020082;
+        public static final int akalisquare=0x7f020083;
+        public static final int alistar_0=0x7f020084;
+        public static final int alistarsquare=0x7f020085;
+        public static final int alpha_strike=0x7f020086;
+        public static final int ambush=0x7f020087;
+        public static final int amumu_0=0x7f020088;
+        public static final int amumusquare=0x7f020089;
+        public static final int angry=0x7f02008a;
+        public static final int animateentangler=0x7f02008b;
+        public static final int animatethornspitter=0x7f02008c;
+        public static final int animatevitalis=0x7f02008d;
+        public static final int anivia_0=0x7f02008e;
+        public static final int aniviasquare=0x7f02008f;
+        public static final int annie_0=0x7f020090;
+        public static final int anniesquare=0x7f020091;
+        public static final int anniesquare_old=0x7f020092;
+        public static final int apprehend=0x7f020093;
+        public static final int aqua_prison=0x7f020094;
+        public static final int arcane_barrage=0x7f020095;
+        public static final int arcane_shift=0x7f020096;
+        public static final int arcane_smash=0x7f020097;
+        public static final int arcanopulse=0x7f020098;
+        public static final int archers_mark=0x7f020099;
+        public static final int arctic_assault=0x7f02009a;
+        public static final int aria_of_perseverance=0x7f02009b;
+        public static final int armordillo_0=0x7f02009c;
+        public static final int armsmaster_0=0x7f02009d;
+        public static final int ascended_form=0x7f02009e;
+        public static final int ashe_0=0x7f02009f;
+        public static final int ashesquare=0x7f0200a0;
+        public static final int ashesquare_old=0x7f0200a1;
+        public static final int aspect_of_the_cougar=0x7f0200a2;
+        public static final int assault_and_battery=0x7f0200a3;
+        public static final int astral_blessing=0x7f0200a4;
+        public static final int audacious_charge=0x7f0200a5;
+        public static final int averdrian_astral_barrier=0x7f0200a6;
+        public static final int averdrian_astral_beam=0x7f0200a7;
+        public static final int averdrian_consume_spirit=0x7f0200a8;
+        public static final int averdrian_detonate=0x7f0200a9;
+        public static final int averdrian_lockdown=0x7f0200aa;
+        public static final int averdriansquare=0x7f0200ab;
+        public static final int backstab=0x7f0200ac;
+        public static final int baleful_strike=0x7f0200ad;
+        public static final int bandage_toss=0x7f0200ae;
+        public static final int barrel_roll=0x7f0200af;
+        public static final int battle_cry=0x7f0200b0;
+        public static final int battle_roar=0x7f0200b1;
+        public static final int bear_stance=0x7f0200b2;
+        public static final int berserker_rage=0x7f0200b3;
+        public static final int bioarcane_barrage=0x7f0200b4;
+        public static final int black_shield=0x7f0200b5;
+        public static final int blade_of_the_exile=0x7f0200b6;
+        public static final int blade_waltz=0x7f0200b7;
+        public static final int bladesurge=0x7f0200b8;
+        public static final int blast_shield=0x7f0200b9;
+        public static final int blaze=0x7f0200ba;
+        public static final int blighted_quiver=0x7f0200bb;
+        public static final int blinding_dart=0x7f0200bc;
+        public static final int blindmonk_0=0x7f0200bd;
+        public static final int blindmonk_blindingstrike=0x7f0200be;
+        public static final int blindmonk_cripplingblow=0x7f0200bf;
+        public static final int blindmonk_exploitweakness=0x7f0200c0;
+        public static final int blindmonk_fistsoffury=0x7f0200c1;
+        public static final int blindmonk_hardiness=0x7f0200c2;
+        public static final int blindmonk_mysticmeditation=0x7f0200c3;
+        public static final int blindmonk_sightunseeing=0x7f0200c4;
+        public static final int blitzcrank_0=0x7f0200c5;
+        public static final int blitzcranksquare=0x7f0200c6;
+        public static final int blood_boil=0x7f0200c7;
+        public static final int blood_rush=0x7f0200c8;
+        public static final int blood_scent=0x7f0200c9;
+        public static final int bloodlust=0x7f0200ca;
+        public static final int blue_texture_wallpaper=0x7f0200cb;
+        public static final int body_slam=0x7f0200cc;
+        public static final int bola_strike=0x7f0200cd;
+        public static final int boomerang_blade=0x7f0200ce;
+        public static final int bouncing_blades=0x7f0200cf;
+        public static final int bouncing_bomb=0x7f0200d0;
+        public static final int brand_0=0x7f0200d1;
+        public static final int brandsquare=0x7f0200d2;
+        public static final int broken_wings=0x7f0200d3;
+        public static final int brutal_strikes=0x7f0200d4;
+        public static final int buckshot=0x7f0200d5;
+        public static final int bullet_time=0x7f0200d6;
+        public static final int bulwark=0x7f0200d7;
+        public static final int burning_agony=0x7f0200d8;
+        public static final int burnout=0x7f0200d9;
+        public static final int burst_of_speed=0x7f0200da;
+        public static final int buster_shot=0x7f0200db;
+        public static final int caitlyn_0=0x7f0200dc;
+        public static final int caitlynsquare=0x7f0200dd;
+        public static final int call_of_the_void=0x7f0200de;
+        public static final int camouflage=0x7f0200df;
+        public static final int cannibalism=0x7f0200e0;
+        public static final int cannon_barrage=0x7f0200e1;
+        public static final int carnivore=0x7f0200e2;
+        public static final int carrion_renewal=0x7f0200e3;
+        public static final int cassiopeia_0=0x7f0200e4;
+        public static final int cassiopeiasquare=0x7f0200e5;
+        public static final int caustic_spittle=0x7f0200e6;
+        public static final int certain_death=0x7f0200e7;
+        public static final int ch1_concussion_grenade=0x7f0200e8;
+        public static final int chain_of_corruption=0x7f0200e9;
+        public static final int challenge=0x7f0200ea;
+        public static final int champpage=0x7f0200eb;
+        public static final int chaos_storm=0x7f0200ec;
+        public static final int charm=0x7f0200ed;
+        public static final int chemicalman_0=0x7f0200ee;
+        public static final int children_of_the_grave=0x7f0200ef;
+        public static final int chogath_0=0x7f0200f0;
+        public static final int chogathsquare=0x7f0200f1;
+        public static final int chosen_of_the_storm=0x7f0200f2;
+        public static final int chrono_shift=0x7f0200f3;
+        public static final int chronokeeper_0=0x7f0200f4;
+        public static final int chum_the_waters=0x7f0200f5;
+        public static final int circle_of_the_ancestors=0x7f0200f6;
+        public static final int clockwork_windup=0x7f0200f7;
+        public static final int cocoon=0x7f0200f8;
+        public static final int collateral_damage=0x7f0200f9;
+        public static final int commandattack=0x7f0200fa;
+        public static final int commanddissonance=0x7f0200fb;
+        public static final int commandprotect=0x7f0200fc;
+        public static final int commandshockwave=0x7f0200fd;
+        public static final int condemn=0x7f0200fe;
+        public static final int conflagration=0x7f0200ff;
+        public static final int consecration=0x7f020100;
+        public static final int consume=0x7f020101;
+        public static final int contaminate=0x7f020102;
+        public static final int contempt_for_the_weak=0x7f020103;
+        public static final int corki_0=0x7f020104;
+        public static final int corkisquare=0x7f020105;
+        public static final int counter_strike=0x7f020106;
+        public static final int courage=0x7f020107;
+        public static final int crashysmashy_palom=0x7f020108;
+        public static final int crashysmashy_porom=0x7f020109;
+        public static final int creeping_death=0x7f02010a;
+        public static final int crescendo=0x7f02010b;
+        public static final int crescent_slash=0x7f02010c;
+        public static final int crescent_strike=0x7f02010d;
+        public static final int crescent_sweep=0x7f02010e;
+        public static final int crimson_pact=0x7f02010f;
+        public static final int cripple=0x7f020110;
+        public static final int crippling_strike=0x7f020111;
+        public static final int crowstorm=0x7f020112;
+        public static final int crushing_blow=0x7f020113;
+        public static final int cryptic_gaze=0x7f020114;
+        public static final int crystal_slash=0x7f020115;
+        public static final int crystalline_exoskeleton=0x7f020116;
+        public static final int crystallize=0x7f020117;
+        public static final int curse_of_the_sad_mummy=0x7f020118;
+        public static final int cursed_touch=0x7f020119;
+        public static final int cutthroat=0x7f02011a;
+        public static final int cyclone=0x7f02011b;
+        public static final int damnation=0x7f02011c;
+        public static final int darius_0=0x7f02011d;
+        public static final int dariussquare=0x7f02011e;
+        public static final int dark_binding=0x7f02011f;
+        public static final int dark_frenzy=0x7f020120;
+        public static final int dark_matter=0x7f020121;
+        public static final int dark_sphere=0x7f020122;
+        public static final int dark_wind=0x7f020123;
+        public static final int darkpassage=0x7f020124;
+        public static final int dazzle=0x7f020125;
+        public static final int deadly_bloom=0x7f020126;
+        public static final int deadly_cadence=0x7f020127;
+        public static final int deadly_venom=0x7f020128;
+        public static final int death_defied=0x7f020129;
+        public static final int death_lotus=0x7f02012a;
+        public static final int death_mark=0x7f02012b;
+        public static final int death_ray=0x7f02012c;
+        public static final int deaths_caress=0x7f02012d;
+        public static final int deathsentence=0x7f02012e;
+        public static final int debilitating_poison=0x7f02012f;
+        public static final int deceive=0x7f020130;
+        public static final int decimate=0x7f020131;
+        public static final int decisive_strike=0x7f020132;
+        public static final int decompose=0x7f020133;
+        public static final int decoy=0x7f020134;
+        public static final int decrepify=0x7f020135;
+        public static final int defensive_ball_curl=0x7f020136;
+        public static final int defile=0x7f020137;
+        public static final int demacian_justice=0x7f020138;
+        public static final int denting_blows=0x7f020139;
+        public static final int depth_charge=0x7f02013a;
+        public static final int despair=0x7f02013b;
+        public static final int destiny=0x7f02013c;
+        public static final int determined_killer=0x7f02013d;
+        public static final int devastating_blow=0x7f02013e;
+        public static final int devastating_charge=0x7f02013f;
+        public static final int diana_0=0x7f020140;
+        public static final int dianasquare=0x7f020141;
+        public static final int dice=0x7f020142;
+        public static final int diplomatic_immunity=0x7f020143;
+        public static final int disintegrate=0x7f020144;
+        public static final int distortion=0x7f020145;
+        public static final int divine_blessing=0x7f020146;
+        public static final int double_strike=0x7f020147;
+        public static final int double_up=0x7f020148;
+        public static final int dragons_descent=0x7f020149;
+        public static final int dragons_rage=0x7f02014a;
+        public static final int drain=0x7f02014b;
+        public static final int draven_0=0x7f02014c;
+        public static final int dravensquare=0x7f02014d;
+        public static final int draw_a_bead=0x7f02014e;
+        public static final int dread=0x7f02014f;
+        public static final int dredge_line=0x7f020150;
+        public static final int drmundo_0=0x7f020151;
+        public static final int drmundosquare=0x7f020152;
+        public static final int drunken_rage=0x7f020153;
+        public static final int duelist=0x7f020154;
+        public static final int duskbringer=0x7f020155;
+        public static final int ebb_and_flow=0x7f020156;
+        public static final int eclipse=0x7f020157;
+        public static final int electrical_surge=0x7f020158;
+        public static final int electroharpoon=0x7f020159;
+        public static final int elise_0=0x7f02015a;
+        public static final int elisesquare=0x7f02015b;
+        public static final int empower=0x7f02015c;
+        public static final int empowered_battle_roar=0x7f02015d;
+        public static final int empowered_bola_strike=0x7f02015e;
+        public static final int empowered_bulwark=0x7f02015f;
+        public static final int empowered_savagery=0x7f020160;
+        public static final int enchanted_crystal_arrow=0x7f020161;
+        public static final int energize=0x7f020162;
+        public static final int enfeeble=0x7f020163;
+        public static final int enrage=0x7f020164;
+        public static final int entrench=0x7f020165;
+        public static final int entropy=0x7f020166;
+        public static final int equilibrium=0x7f020167;
+        public static final int equilibrium_strike=0x7f020168;
+        public static final int essence_flux=0x7f020169;
+        public static final int essence_theft=0x7f02016a;
+        public static final int eternal_thirst=0x7f02016b;
+        public static final int ethereal_chains=0x7f02016c;
+        public static final int evelynn_0=0x7f02016d;
+        public static final int evelynnsquare=0x7f02016e;
+        public static final int evelynnsquare_old=0x7f02016f;
+        public static final int event_horizon=0x7f020170;
+        public static final int evolution_active_camouflage=0x7f020171;
+        public static final int evolution_enlarged_claws=0x7f020172;
+        public static final int evolution_spike_racks=0x7f020173;
+        public static final int evolution_wings=0x7f020174;
+        public static final int evolving_technology=0x7f020175;
+        public static final int excessive_force=0x7f020176;
+        public static final int explosive_cask=0x7f020177;
+        public static final int explosive_shot=0x7f020178;
+        public static final int expunge=0x7f020179;
+        public static final int eye_for_an_eye=0x7f02017a;
+        public static final int eye_of_the_storm=0x7f02017b;
+        public static final int ezreal_0=0x7f02017c;
+        public static final int ezrealsquare=0x7f02017d;
+        public static final int fearmonger=0x7f02017e;
+        public static final int feast=0x7f02017f;
+        public static final int feel_no_pain=0x7f020180;
+        public static final int feint=0x7f020181;
+        public static final int feral_scream=0x7f020182;
+        public static final int ferocious_howl=0x7f020183;
+        public static final int fiddlestick_paranoia=0x7f020184;
+        public static final int fiddlesticks_0=0x7f020185;
+        public static final int fiddlestickssquare=0x7f020186;
+        public static final int final_hour=0x7f020187;
+        public static final int final_spark=0x7f020188;
+        public static final int finales_funkeln=0x7f020189;
+        public static final int fiora_0=0x7f02018a;
+        public static final int fiorasquare=0x7f02018b;
+        public static final int fizz_0=0x7f02018c;
+        public static final int fizzsquare=0x7f02018d;
+        public static final int flame_breath=0x7f02018e;
+        public static final int flamespitter=0x7f02018f;
+        public static final int flash_frost=0x7f020190;
+        public static final int flay=0x7f020191;
+        public static final int fleet_of_foot=0x7f020192;
+        public static final int fling=0x7f020193;
+        public static final int flurry=0x7f020194;
+        public static final int focus=0x7f020195;
+        public static final int force_of_will=0x7f020196;
+        public static final int force_of_will_2=0x7f020197;
+        public static final int force_pulse=0x7f020198;
+        public static final int foxfire=0x7f020199;
+        public static final int fracture=0x7f02019a;
+        public static final int frenzy=0x7f02019b;
+        public static final int frost=0x7f02019c;
+        public static final int frost_shot=0x7f02019d;
+        public static final int frostbite=0x7f02019e;
+        public static final int fury_of_the_dragonborn=0x7f02019f;
+        public static final int fury_of_the_sands=0x7f0201a0;
+        public static final int galio_0=0x7f0201a1;
+        public static final int galiosquare=0x7f0201a2;
+        public static final int gangplank_0=0x7f0201a3;
+        public static final int gangplanksquare=0x7f0201a4;
+        public static final int garen_0=0x7f0201a5;
+        public static final int garensquare=0x7f0201a6;
+        public static final int gate=0x7f0201a7;
+        public static final int gatling_gun=0x7f0201a8;
+        public static final int gavidsquare=0x7f0201a9;
+        public static final int gemcraft=0x7f0201aa;
+        public static final int gemknight_0=0x7f0201ab;
+        public static final int ghastly_shield=0x7f0201ac;
+        public static final int glacial_prison=0x7f0201ad;
+        public static final int glacial_storm=0x7f0201ae;
+        public static final int glitterlance=0x7f0201af;
+        public static final int gradient_bg=0x7f0201b0;
+        public static final int gradient_bg_hover=0x7f0201b1;
+        public static final int gragas_0=0x7f0201b2;
+        public static final int gragassquare=0x7f0201b3;
+        public static final int grand_skyfall=0x7f0201b4;
+        public static final int grandmasters_might=0x7f0201b5;
+        public static final int granite_shield=0x7f0201b6;
+        public static final int grasping_roots=0x7f0201b7;
+        public static final int graves_0=0x7f0201b8;
+        public static final int gravessquare=0x7f0201b9;
+        public static final int gravity_field=0x7f0201ba;
+        public static final int greenterror_0=0x7f0201bb;
+        public static final int grog_soaked_blade=0x7f0201bc;
+        public static final int ground_slam=0x7f0201bd;
+        public static final int h28g_evolution_turret=0x7f0201be;
+        public static final int hail_of_arrows=0x7f0201bf;
+        public static final int hallucinate=0x7f0201c0;
+        public static final int happy_hour=0x7f0201c1;
+        public static final int hate_spike=0x7f0201c2;
+        public static final int hawkshot=0x7f0201c3;
+        public static final int headbutt=0x7f0201c4;
+        public static final int headshot=0x7f0201c5;
+        public static final int heartseeker_strike=0x7f0201c6;
+        public static final int hecarim_0=0x7f0201c7;
+        public static final int hecarimsquare=0x7f0201c8;
+        public static final int heightened_learning=0x7f0201c9;
+        public static final int heimerdinger_0=0x7f0201ca;
+        public static final int heimerdingersquare=0x7f0201cb;
+        public static final int help_pix=0x7f0201cc;
+        public static final int hemoplague=0x7f0201cd;
+        public static final int hemorrhage=0x7f0201ce;
+        public static final int heroic_charge=0x7f0201cf;
+        public static final int hexplosive_minefield=0x7f0201d0;
+        public static final int hextech_capacitor=0x7f0201d1;
+        public static final int hextech_microrockets=0x7f0201d2;
+        public static final int hextech_shrapnel_shells=0x7f0201d3;
+        public static final int highlander=0x7f0201d4;
+        public static final int hiten_style=0x7f0201d5;
+        public static final int hiten_style_ready=0x7f0201d6;
+        public static final int holy_fervor=0x7f0201d7;
+        public static final int howling_gale=0x7f0201d8;
+        public static final int hungering_strike=0x7f0201d9;
+        public static final int hunters_call=0x7f0201da;
+        public static final int hymn_of_valor=0x7f0201db;
+        public static final int hyper_charge=0x7f0201dc;
+        public static final int hyperkinetic_position_reverser=0x7f0201dd;
+        public static final int ic_launcher=0x7f0201de;
+        public static final int icathian_surprise=0x7f0201df;
+        public static final int ice_blast=0x7f0201e0;
+        public static final int icon=0x7f0201e1;
+        public static final int idol_of_durand=0x7f0201e2;
+        public static final int illumination=0x7f0201e3;
+        public static final int imag0020=0x7f0201e4;
+        public static final int image_bg=0x7f0201e5;
+        public static final int imbue=0x7f0201e6;
+        public static final int impale=0x7f0201e7;
+        public static final int impure_shots=0x7f0201e8;
+        public static final int incinerate=0x7f0201e9;
+        public static final int infected_cleaver=0x7f0201ea;
+        public static final int infinite_duress=0x7f0201eb;
+        public static final int infinite_light=0x7f0201ec;
+        public static final int infuse=0x7f0201ed;
+        public static final int insanity_potion=0x7f0201ee;
+        public static final int intervention=0x7f0201ef;
+        public static final int ionian_fervor=0x7f0201f0;
+        public static final int irelia_0=0x7f0201f1;
+        public static final int ireliasquare=0x7f0201f2;
+        public static final int iron_man=0x7f0201f3;
+        public static final int iron_will=0x7f0201f4;
+        public static final int jack_in_the_box=0x7f0201f5;
+        public static final int janna_0=0x7f0201f6;
+        public static final int jannasquare=0x7f0201f7;
+        public static final int jarvaniv_0=0x7f0201f8;
+        public static final int jarvanivsquare=0x7f0201f9;
+        public static final int jax_0=0x7f0201fa;
+        public static final int jaxsquare=0x7f0201fb;
+        public static final int jayce_0=0x7f0201fc;
+        public static final int jaycesquare=0x7f0201fd;
+        public static final int jester_0=0x7f0201fe;
+        public static final int judgment=0x7f0201ff;
+        public static final int judicator_0=0x7f020200;
+        public static final int junkyard_titan=0x7f020201;
+        public static final int karma_0=0x7f020202;
+        public static final int karmasquare=0x7f020203;
+        public static final int karthus_0=0x7f020204;
+        public static final int karthussquare=0x7f020205;
+        public static final int kassadin_0=0x7f020206;
+        public static final int kassadinsquare=0x7f020207;
+        public static final int kassadinsquare_old=0x7f020208;
+        public static final int katarina_0=0x7f020209;
+        public static final int katarinasquare=0x7f02020a;
+        public static final int katarinasquare_old=0x7f02020b;
+        public static final int kayle_0=0x7f02020c;
+        public static final int kaylesquare=0x7f02020d;
+        public static final int kennen_0=0x7f02020e;
+        public static final int kennensquare=0x7f02020f;
+        public static final int khazix_0=0x7f020210;
+        public static final int khazixsquare=0x7f020211;
+        public static final int ki_burst=0x7f020212;
+        public static final int ki_strike=0x7f020213;
+        public static final int killer_instincts=0x7f020214;
+        public static final int kogmaw_0=0x7f020215;
+        public static final int kogmawsquare=0x7f020216;
+        public static final int lay_waste=0x7f020217;
+        public static final int leap=0x7f020218;
+        public static final int leap_strike=0x7f020219;
+        public static final int leblanc_0=0x7f02021a;
+        public static final int leblancsquare=0x7f02021b;
+        public static final int leesin_0=0x7f02021c;
+        public static final int leesinsquare=0x7f02021d;
+        public static final int leona_0=0x7f02021e;
+        public static final int leonasquare=0x7f02021f;
+        public static final int light_binding=0x7f020220;
+        public static final int lightning_field=0x7f020221;
+        public static final int lightning_rush=0x7f020222;
+        public static final int list_selector=0x7f020223;
+        public static final int living_artillery=0x7f020224;
+        public static final int living_shadow=0x7f020225;
+        public static final int living_vengeance=0x7f020226;
+        public static final int loaded_dice=0x7f020227;
+        public static final int locus_of_power=0x7f020228;
+        public static final int lucent_singularity=0x7f020229;
+        public static final int lulu_0=0x7f02022a;
+        public static final int lulusquare=0x7f02022b;
+        public static final int lunar_rush=0x7f02022c;
+        public static final int lunge=0x7f02022d;
+        public static final int lux_0=0x7f02022e;
+        public static final int luxsquare=0x7f02022f;
+        public static final int lwrcase=0x7f020230;
+        public static final int lwrcase_folder=0x7f020231;
+        public static final int mace_of_spades=0x7f020232;
+        public static final int mage_chains=0x7f020233;
+        public static final int majestic_roar=0x7f020234;
+        public static final int make_it_rain=0x7f020235;
+        public static final int malefic_visions=0x7f020236;
+        public static final int malice_and_spite=0x7f020237;
+        public static final int malphite_0=0x7f020238;
+        public static final int malphitesquare=0x7f020239;
+        public static final int malzahar_0=0x7f02023a;
+        public static final int malzaharsquare=0x7f02023b;
+        public static final int mana_barrier=0x7f02023c;
+        public static final int maokai_0=0x7f02023d;
+        public static final int maokaisquare=0x7f02023e;
+        public static final int mark_of_the_assassin=0x7f02023f;
+        public static final int mark_of_the_storm=0x7f020240;
+        public static final int masochism=0x7f020241;
+        public static final int masteryi_0=0x7f020242;
+        public static final int masteryisquare=0x7f020243;
+        public static final int meditate=0x7f020244;
+        public static final int mega_adhesive=0x7f020245;
+        public static final int mega_inferno_bomb=0x7f020246;
+        public static final int menu=0x7f020247;
+        public static final int mercury_cannon=0x7f020248;
+        public static final int mercury_hammer=0x7f020249;
+        public static final int mercy=0x7f02024a;
+        public static final int miasma=0x7f02024b;
+        public static final int mighty_cleave=0x7f02024c;
+        public static final int mimic=0x7f02024d;
+        public static final int mimic_distortion=0x7f02024e;
+        public static final int mimic_ethereal_chains=0x7f02024f;
+        public static final int mimic_sigil_of_silence=0x7f020250;
+        public static final int mirror_image=0x7f020251;
+        public static final int missfortune_0=0x7f020252;
+        public static final int missfortunesquare=0x7f020253;
+        public static final int missile_barrage=0x7f020254;
+        public static final int mocking_shout=0x7f020255;
+        public static final int molten_shield=0x7f020256;
+        public static final int monkeyking_0=0x7f020257;
+        public static final int monkeys_agility=0x7f020258;
+        public static final int monsoon=0x7f020259;
+        public static final int moonfall=0x7f02025a;
+        public static final int moonsilver_blade=0x7f02025b;
+        public static final int mordekaiser_0=0x7f02025c;
+        public static final int mordekaisersquare=0x7f02025d;
+        public static final int morgana_0=0x7f02025e;
+        public static final int morganasquare=0x7f02025f;
+        public static final int morganasquare_old=0x7f020260;
+        public static final int move_quick=0x7f020261;
+        public static final int mystic_shot=0x7f020262;
+        public static final int nami_0=0x7f020263;
+        public static final int namisquare=0x7f020264;
+        public static final int nasus_0=0x7f020265;
+        public static final int nasussquare=0x7f020266;
+        public static final int nautilus_0=0x7f020267;
+        public static final int nautilussquare=0x7f020268;
+        public static final int nether_blade=0x7f020269;
+        public static final int nether_grasp=0x7f02026a;
+        public static final int neurotoxin=0x7f02026b;
+        public static final int nevermove=0x7f02026c;
+        public static final int nidalee_0=0x7f02026d;
+        public static final int nidaleesquare=0x7f02026e;
+        public static final int night_hunter=0x7f02026f;
+        public static final int nimble_fighter=0x7f020270;
+        public static final int nimbus_strike=0x7f020271;
+        public static final int ninety_caliber_net=0x7f020272;
+        public static final int nocturne_0=0x7f020273;
+        public static final int nocturnesquare=0x7f020274;
+        public static final int northern_winds=0x7f020275;
+        public static final int noxian_corrosive_charge=0x7f020276;
+        public static final int noxian_diplomacy=0x7f020277;
+        public static final int noxian_guillotine=0x7f020278;
+        public static final int noxious_blast=0x7f020279;
+        public static final int noxious_trap=0x7f02027a;
+        public static final int null_sphere=0x7f02027b;
+        public static final int null_zone=0x7f02027c;
+        public static final int nunu_0=0x7f02027d;
+        public static final int nunusquare=0x7f02027e;
+        public static final int olaf_0=0x7f02027f;
+        public static final int olafsquare=0x7f020280;
+        public static final int olddarkwind=0x7f020281;
+        public static final int omen_of_death=0x7f020282;
+        public static final int omen_of_famine=0x7f020283;
+        public static final int omen_of_pestilence=0x7f020284;
+        public static final int omen_of_war=0x7f020285;
+        public static final int omensquare=0x7f020286;
+        public static final int on_the_hunt=0x7f020287;
+        public static final int onslaught_of_shadows=0x7f020288;
+        public static final int orb_of_deception=0x7f020289;
+        public static final int orianna_0=0x7f02028a;
+        public static final int oriannasquare=0x7f02028b;
+        public static final int overdrive=0x7f02028c;
+        public static final int pacify=0x7f02028d;
+        public static final int pale_cascade=0x7f02028e;
+        public static final int pantheon_0=0x7f02028f;
+        public static final int pantheonsquare=0x7f020290;
+        public static final int paragon_of_demacia=0x7f020291;
+        public static final int paranoia=0x7f020292;
+        public static final int parrrley=0x7f020293;
+        public static final int permafrost=0x7f020294;
+        public static final int perseverance=0x7f020295;
+        public static final int petrifying_gaze=0x7f020296;
+        public static final int phoenix_stance=0x7f020297;
+        public static final int phosphorus_bomb=0x7f020298;
+        public static final int pick_a_card=0x7f020299;
+        public static final int piercing_arrow=0x7f02029a;
+        public static final int pillar_of_filth=0x7f02029b;
+        public static final int pillar_of_flame=0x7f02029c;
+        public static final int piltover_peacemaker=0x7f02029d;
+        public static final int pix_faerie_companion=0x7f02029e;
+        public static final int playful=0x7f02029f;
+        public static final int plentifulbounty=0x7f0202a0;
+        public static final int poison_trail=0x7f0202a1;
+        public static final int poppy_0=0x7f0202a2;
+        public static final int poppysquare=0x7f0202a3;
+        public static final int power_chord=0x7f0202a4;
+        public static final int power_fist=0x7f0202a5;
+        public static final int power_transfer=0x7f0202a6;
+        public static final int powerball=0x7f0202a7;
+        public static final int primordial_burst=0x7f0202a8;
+        public static final int priscillasquare=0x7f0202a9;
+        public static final int prismatic_barrier=0x7f0202aa;
+        public static final int pulverize=0x7f0202ab;
+        public static final int puncturing_taunt=0x7f0202ac;
+        public static final int pyroclasm=0x7f0202ad;
+        public static final int pyromania=0x7f0202ae;
+        public static final int queenofthorns=0x7f0202af;
+        public static final int quickdraw=0x7f0202b0;
+        public static final int quinnsquare=0x7f0202b1;
+        public static final int rabid_bite=0x7f0202b2;
+        public static final int radiance=0x7f0202b3;
+        public static final int ragnarok=0x7f0202b4;
+        public static final int raise_morale=0x7f0202b5;
+        public static final int rake=0x7f0202b6;
+        public static final int rammus_0=0x7f0202b7;
+        public static final int rammussquare=0x7f0202b8;
+        public static final int rampage=0x7f0202b9;
+        public static final int rampant_growth=0x7f0202ba;
+        public static final int rapid_fire=0x7f0202bb;
+        public static final int rappel=0x7f0202bc;
+        public static final int ravage=0x7f0202bd;
+        public static final int ravenous_flock=0x7f0202be;
+        public static final int razor_shuriken=0x7f0202bf;
+        public static final int rebirth=0x7f0202c0;
+        public static final int reckless_swing=0x7f0202c1;
+        public static final int reckoning=0x7f0202c2;
+        public static final int reilock_r=0x7f0202c3;
+        public static final int relentless_assault=0x7f0202c4;
+        public static final int remove_scurvy=0x7f0202c5;
+        public static final int rendingshot=0x7f0202c6;
+        public static final int renekton_0=0x7f0202c7;
+        public static final int renektonsquare=0x7f0202c8;
+        public static final int rengar_0=0x7f0202c9;
+        public static final int rengarsquare=0x7f0202ca;
+        public static final int requiem=0x7f0202cb;
+        public static final int resolute_smite=0x7f0202cc;
+        public static final int resonating_strike=0x7f0202cd;
+        public static final int rewind=0x7f0202ce;
+        public static final int ricochet=0x7f0202cf;
+        public static final int riftwalk=0x7f0202d0;
+        public static final int righteous_fury=0x7f0202d1;
+        public static final int righteous_gust=0x7f0202d2;
+        public static final int riposte=0x7f0202d3;
+        public static final int riptide=0x7f0202d4;
+        public static final int rise_of_the_thorns=0x7f0202d5;
+        public static final int rising_spell_force=0x7f0202d6;
+        public static final int riven_0=0x7f0202d7;
+        public static final int rivensquare=0x7f0202d8;
+        public static final int rocket_grab=0x7f0202d9;
+        public static final int rocket_jump=0x7f0202da;
+        public static final int rolling_thunder=0x7f0202db;
+        public static final int rumble_0=0x7f0202dc;
+        public static final int rumblesquare=0x7f0202dd;
+        public static final int runic_blade=0x7f0202de;
+        public static final int runic_skin=0x7f0202df;
+        public static final int rupture=0x7f0202e0;
+        public static final int ryze_0=0x7f0202e1;
+        public static final int ryzesquare=0x7f0202e2;
+        public static final int sadism=0x7f0202e3;
+        public static final int safeguard=0x7f0202e4;
+        public static final int sanguine_pool=0x7f0202e5;
+        public static final int sap_magic=0x7f0202e6;
+        public static final int sapling_toss=0x7f0202e7;
+        public static final int satchel_charge=0x7f0202e8;
+        public static final int savagery=0x7f0202e9;
+        public static final int scatter_the_weak=0x7f0202ea;
+        public static final int scrap_shield=0x7f0202eb;
+        public static final int sealfate=0x7f0202ec;
+        public static final int sear=0x7f0202ed;
+        public static final int seastone_trident=0x7f0202ee;
+        public static final int seismic_shard=0x7f0202ef;
+        public static final int sejuani_0=0x7f0202f0;
+        public static final int sejuanisquare=0x7f0202f1;
+        public static final int shaco_0=0x7f0202f2;
+        public static final int shacosquare=0x7f0202f3;
+        public static final int shadow_assault=0x7f0202f4;
+        public static final int shadow_dance=0x7f0202f5;
+        public static final int shadow_dash=0x7f0202f6;
+        public static final int shadow_slash=0x7f0202f7;
+        public static final int shadow_walk=0x7f0202f8;
+        public static final int shatter=0x7f0202f9;
+        public static final int shen_0=0x7f0202fa;
+        public static final int shensquare=0x7f0202fb;
+        public static final int shield_of_daybreak=0x7f0202fc;
+        public static final int shock_blast=0x7f0202fd;
+        public static final int short_fuse=0x7f0202fe;
+        public static final int shroud_of_darkness=0x7f0202ff;
+        public static final int shunpo=0x7f020300;
+        public static final int shyvana_0=0x7f020301;
+        public static final int shyvanasquare=0x7f020302;
+        public static final int sigil_of_silence=0x7f020303;
+        public static final int silver_bolts=0x7f020304;
+        public static final int singed_0=0x7f020305;
+        public static final int singedsquare=0x7f020306;
+        public static final int sinister_steel=0x7f020307;
+        public static final int sion_0=0x7f020308;
+        public static final int sionsquare=0x7f020309;
+        public static final int siphon_of_destruction=0x7f02030a;
+        public static final int siphoning_strike=0x7f02030b;
+        public static final int sivir_0=0x7f02030c;
+        public static final int sivirsquare=0x7f02030d;
+        public static final int sivirsquare_old=0x7f02030e;
+        public static final int skarner_0=0x7f02030f;
+        public static final int skarnersquare=0x7f020310;
+        public static final int skittering_frenzy=0x7f020311;
+        public static final int slicing_maelstrom=0x7f020312;
+        public static final int smoke_screen=0x7f020313;
+        public static final int solar_flare=0x7f020314;
+        public static final int sona_0=0x7f020315;
+        public static final int sonasquare=0x7f020316;
+        public static final int song_of_celerity=0x7f020317;
+        public static final int sonic_wave=0x7f020318;
+        public static final int soraka_0=0x7f020319;
+        public static final int sorakasquare=0x7f02031a;
+        public static final int soul_eater=0x7f02031b;
+        public static final int soul_shackles=0x7f02031c;
+        public static final int soul_siphon=0x7f02031d;
+        public static final int souldrain=0x7f02031e;
+        public static final int spear_shot=0x7f02031f;
+        public static final int spell_shield=0x7f020320;
+        public static final int spider_form=0x7f020321;
+        public static final int spider_swarm=0x7f020322;
+        public static final int spiderqueen_camouflage=0x7f020323;
+        public static final int spiderqueen_corpsemaker=0x7f020324;
+        public static final int spiderqueen_ensare=0x7f020325;
+        public static final int spiderqueen_injectspiderlings=0x7f020326;
+        public static final int spiderqueen_thirst=0x7f020327;
+        public static final int spiked_shell=0x7f020328;
+        public static final int spinning_axe=0x7f020329;
+        public static final int spinning_slash=0x7f02032a;
+        public static final int spirit_fire=0x7f02032b;
+        public static final int spirit_of_dread=0x7f02032c;
+        public static final int spirit_rush=0x7f02032d;
+        public static final int spray_and_pray=0x7f02032e;
+        public static final int sprint=0x7f02032f;
+        public static final int sprout=0x7f020330;
+        public static final int stacked_deck=0x7f020331;
+        public static final int staggering_blow=0x7f020332;
+        public static final int stand_aside=0x7f020333;
+        public static final int stand_united=0x7f020334;
+        public static final int starcall=0x7f020335;
+        public static final int static_field=0x7f020336;
+        public static final int stone_skin=0x7f020337;
+        public static final int stranglethorns=0x7f020338;
+        public static final int strut=0x7f020339;
+        public static final int summon_voidling=0x7f02033a;
+        public static final int summontibbers=0x7f02033b;
+        public static final int sunlight=0x7f02033c;
+        public static final int surging_tides=0x7f02033d;
+        public static final int swain_0=0x7f02033e;
+        public static final int swainsquare=0x7f02033f;
+        public static final int syndra_0=0x7f020340;
+        public static final int syndrasquare=0x7f020341;
+        public static final int syndrasquare2=0x7f020342;
+        public static final int tailwind=0x7f020343;
+        public static final int talon_0=0x7f020344;
+        public static final int talonsquare=0x7f020345;
+        public static final int tantrum=0x7f020346;
+        public static final int taric_0=0x7f020347;
+        public static final int taricsquare=0x7f020348;
+        public static final int taricsquare_old=0x7f020349;
+        public static final int taste_their_fear=0x7f02034a;
+        public static final int tatoo=0x7f02034b;
+        public static final int techmaturgical_repair_bots=0x7f02034c;
+        public static final int teemo_0=0x7f02034d;
+        public static final int teemosquare=0x7f02034e;
+        public static final int tempest=0x7f02034f;
+        public static final int terrify=0x7f020350;
+        public static final int terror_capacitor=0x7f020351;
+        public static final int the_equalizer=0x7f020352;
+        public static final int thebox=0x7f020353;
+        public static final int thorns=0x7f020354;
+        public static final int three_talon_strike=0x7f020355;
+        public static final int thresh_0=0x7f020356;
+        public static final int threshsquare=0x7f020357;
+        public static final int thrill_of_the_hunt=0x7f020358;
+        public static final int thunder_claws=0x7f020359;
+        public static final int thundering_blow=0x7f02035a;
+        public static final int thundering_shuriken=0x7f02035b;
+        public static final int tidal_wave=0x7f02035c;
+        public static final int tidecallers_blessing=0x7f02035d;
+        public static final int tides_of_blood=0x7f02035e;
+        public static final int tiger_stance=0x7f02035f;
+        public static final int time_bomb=0x7f020360;
+        public static final int time_warp=0x7f020361;
+        public static final int tirelesswarrior=0x7f020362;
+        public static final int titans_wrath=0x7f020363;
+        public static final int to_the_skies=0x7f020364;
+        public static final int torment=0x7f020365;
+        public static final int tormented_soil=0x7f020366;
+        public static final int toxic_shot=0x7f020367;
+        public static final int trailblazer=0x7f020368;
+        public static final int trample=0x7f020369;
+        public static final int transcendent=0x7f02036a;
+        public static final int transcendent_blades=0x7f02036b;
+        public static final int transcendentbladesready=0x7f02036c;
+        public static final int transfusion=0x7f02036d;
+        public static final int tremors=0x7f02036e;
+        public static final int trickster=0x7f02036f;
+        public static final int tristana_0=0x7f020370;
+        public static final int tristanasquare=0x7f020371;
+        public static final int triumphant_roar=0x7f020372;
+        public static final int true_grit=0x7f020373;
+        public static final int trueshot_barrage=0x7f020374;
+        public static final int trundle_0=0x7f020375;
+        public static final int trundlesquare=0x7f020376;
+        public static final int tryndamere_0=0x7f020377;
+        public static final int tryndameresquare=0x7f020378;
+        public static final int tryndameresquare_old=0x7f020379;
+        public static final int tumble=0x7f02037a;
+        public static final int turtle_stance=0x7f02037b;
+        public static final int twilight_shroud=0x7f02037c;
+        public static final int twin_bite=0x7f02037d;
+        public static final int twin_disciplines=0x7f02037e;
+        public static final int twin_fang=0x7f02037f;
+        public static final int twisted_advance=0x7f020380;
+        public static final int twistedfate_0=0x7f020381;
+        public static final int twistedfatesquare=0x7f020382;
+        public static final int twistedfatesquare_old=0x7f020383;
+        public static final int twitch_0=0x7f020384;
+        public static final int twitchsquare=0x7f020385;
+        public static final int twitchsquare_old=0x7f020386;
+        public static final int twoshiv_poison=0x7f020387;
+        public static final int typhoon=0x7f020388;
+        public static final int udyr_0=0x7f020389;
+        public static final int udyrsquare=0x7f02038a;
+        public static final int umbra_blades=0x7f02038b;
+        public static final int unbreakable_will=0x7f02038c;
+        public static final int undertow=0x7f02038d;
+        public static final int undying_rage=0x7f02038e;
+        public static final int unholy_covenant=0x7f02038f;
+        public static final int unleashed_power=0x7f020390;
+        public static final int unseen_predator=0x7f020391;
+        public static final int unseen_threat=0x7f020392;
+        public static final int unspeakable_horror=0x7f020393;
+        public static final int unstoppable_force=0x7f020394;
+        public static final int upgrade=0x7f020395;
+        public static final int urchin_strike=0x7f020396;
+        public static final int urgot_0=0x7f020397;
+        public static final int urgotsquare=0x7f020398;
+        public static final int valiant_fighter=0x7f020399;
+        public static final int valkyrie=0x7f02039a;
+        public static final int valor=0x7f02039b;
+        public static final int varus_0=0x7f02039c;
+        public static final int varussquare=0x7f02039d;
+        public static final int vault_breaker=0x7f02039e;
+        public static final int vayne_0=0x7f02039f;
+        public static final int vaynesquare=0x7f0203a0;
+        public static final int veigar_0=0x7f0203a1;
+        public static final int veigarsquare=0x7f0203a2;
+        public static final int veigarsquare_old=0x7f0203a3;
+        public static final int vengeful_maelstrom=0x7f0203a4;
+        public static final int venom_cask=0x7f0203a5;
+        public static final int venomous_bite=0x7f0203a6;
+        public static final int vi_0=0x7f0203a7;
+        public static final int vicious_strikes=0x7f0203a8;
+        public static final int viktor_0=0x7f0203a9;
+        public static final int viktorsquare=0x7f0203aa;
+        public static final int visionary=0x7f0203ab;
+        public static final int visquare=0x7f0203ac;
+        public static final int vladimir_0=0x7f0203ad;
+        public static final int vladimirsquare=0x7f0203ae;
+        public static final int void_assault=0x7f0203af;
+        public static final int void_ooze=0x7f0203b0;
+        public static final int void_spike=0x7f0203b1;
+        public static final int void_stone=0x7f0203b2;
+        public static final int volatile_spiderling=0x7f0203b3;
+        public static final int volibear_0=0x7f0203b4;
+        public static final int volibearsquare=0x7f0203b5;
+        public static final int volley=0x7f0203b6;
+        public static final int voracity=0x7f0203b7;
+        public static final int vorpal_blade=0x7f0203b8;
+        public static final int vorpal_spikes=0x7f0203b9;
+        public static final int wall_of_pain=0x7f0203ba;
+        public static final int wallofpain=0x7f0203bb;
+        public static final int warpath=0x7f0203bc;
+        public static final int warwick_0=0x7f0203bd;
+        public static final int warwicksquare=0x7f0203be;
+        public static final int wellsquare=0x7f0203bf;
+        public static final int whimsy=0x7f0203c0;
+        public static final int whirling_death=0x7f0203c1;
+        public static final int wicked_blades=0x7f0203c2;
+        public static final int wikia_gaming_20_online=0x7f0203c3;
+        public static final int wild_cards=0x7f0203c4;
+        public static final int wild_growth=0x7f0203c5;
+        public static final int windslash=0x7f0203c6;
+        public static final int wish=0x7f0203c7;
+        public static final int wither=0x7f0203c8;
+        public static final int wuju_style=0x7f0203c9;
+        public static final int wukongsquare=0x7f0203ca;
+        public static final int xerath_0=0x7f0203cb;
+        public static final int xerathsquare=0x7f0203cc;
+        public static final int xinzhao_0=0x7f0203cd;
+        public static final int xinzhaosquare=0x7f0203ce;
+        public static final int yordle_snap_trap=0x7f0203cf;
+        public static final int yorick_0=0x7f0203d0;
+        public static final int yoricksquare=0x7f0203d1;
+        public static final int zauntouched_bolt_augmenter=0x7f0203d2;
+        public static final int zed_0=0x7f0203d3;
+        public static final int zedsquare=0x7f0203d4;
+        public static final int zenith_blade=0x7f0203d5;
+        public static final int zephyr=0x7f0203d6;
+        public static final int ziggs_0=0x7f0203d7;
+        public static final int ziggssquare=0x7f0203d8;
+        public static final int zilean_0=0x7f0203d9;
+        public static final int zileansquare=0x7f0203da;
+        public static final int zyra_0=0x7f0203db;
+        public static final int zyra_square_0=0x7f0203dc;
+        public static final int zyrasquare=0x7f0203dd;
     }
     public static final class id {
-        public static final int TextView01=0x7f080048;
-        public static final int btnSearch=0x7f080025;
-        public static final int button1=0x7f08001f;
-        public static final int button2=0x7f080020;
-        public static final int etSearch=0x7f080026;
-        public static final int gameType=0x7f080041;
-        public static final int gridview=0x7f080011;
-        public static final int imageView1=0x7f080000;
-        public static final int imageView2=0x7f08000d;
-        public static final int imageView3=0x7f08000c;
-        public static final int imageView4=0x7f08000b;
-        public static final int imageView5=0x7f08000e;
-        public static final int listViewStats=0x7f080027;
-        public static final int list_image=0x7f080040;
-        public static final int menu_settings=0x7f08004a;
-        public static final int pager=0x7f08000f;
-        public static final int pager2=0x7f080021;
-        public static final int pager_title_strip=0x7f080010;
-        public static final int pager_title_strip2=0x7f080022;
-        public static final int textView10=0x7f080039;
-        public static final int textView13=0x7f08003d;
-        public static final int textView16=0x7f08003b;
-        public static final int textView2=0x7f080029;
-        public static final int textView3=0x7f08002a;
-        public static final int textView4=0x7f08002b;
-        public static final int textView5=0x7f08002e;
-        public static final int textView6=0x7f08002f;
-        public static final int textView7=0x7f080032;
-        public static final int textView8=0x7f080035;
-        public static final int textView9=0x7f080037;
-        public static final int textViewAD=0x7f080036;
-        public static final int textViewArmor=0x7f08003c;
-        public static final int textViewAtkSpeed=0x7f080038;
-        public static final int textViewEnergy=0x7f080033;
-        public static final int textViewEnergyRegen=0x7f080034;
-        public static final int textViewHP=0x7f08002c;
-        public static final int textViewHPRegen=0x7f08002d;
-        public static final int textViewMana=0x7f080030;
-        public static final int textViewManaRegen=0x7f080031;
-        public static final int textViewMoveSpeed=0x7f08003e;
-        public static final int textViewRange=0x7f08003a;
-        public static final int thumbnail=0x7f08003f;
-        public static final int tvDeaths=0x7f080046;
-        public static final int tvDebug=0x7f080028;
-        public static final int tvEName=0x7f080008;
-        public static final int tvEText=0x7f080007;
-        public static final int tvHeader1=0x7f080012;
-        public static final int tvHeader2=0x7f080013;
-        public static final int tvHeader3=0x7f080014;
-        public static final int tvHeader4=0x7f080015;
-        public static final int tvHeader5=0x7f080016;
-        public static final int tvHeader6=0x7f08001d;
-        public static final int tvKills=0x7f080044;
-        public static final int tvLore=0x7f080049;
-        public static final int tvPassiveName=0x7f080001;
-        public static final int tvPassiveText=0x7f080002;
-        public static final int tvQName=0x7f080004;
-        public static final int tvQText=0x7f080003;
-        public static final int tvRName=0x7f08000a;
-        public static final int tvRText=0x7f080009;
-        public static final int tvResult=0x7f080042;
-        public static final int tvScoreAssists=0x7f080047;
-        public static final int tvScoreDeaths=0x7f080045;
-        public static final int tvScoreKills=0x7f080043;
-        public static final int tvSpellName=0x7f08001c;
-        public static final int tvSummonerLevel=0x7f080024;
-        public static final int tvSummonerName=0x7f080023;
-        public static final int tvValue1=0x7f080017;
-        public static final int tvValue2=0x7f08001b;
-        public static final int tvValue3=0x7f080018;
-        public static final int tvValue4=0x7f080019;
-        public static final int tvValue5=0x7f08001a;
-        public static final int tvValue6=0x7f08001e;
-        public static final int tvWName=0x7f080006;
-        public static final int tvWText=0x7f080005;
+        public static final int TextView01=0x7f04007a;
+        public static final int abs__action_bar=0x7f04002f;
+        public static final int abs__action_bar_container=0x7f04002e;
+        public static final int abs__action_bar_subtitle=0x7f040020;
+        public static final int abs__action_bar_title=0x7f04001f;
+        public static final int abs__action_context_bar=0x7f040030;
+        public static final int abs__action_menu_divider=0x7f04000c;
+        public static final int abs__action_menu_presenter=0x7f04000d;
+        public static final int abs__action_mode_bar=0x7f040034;
+        public static final int abs__action_mode_bar_stub=0x7f040033;
+        public static final int abs__action_mode_close_button=0x7f040023;
+        public static final int abs__activity_chooser_view_content=0x7f040024;
+        public static final int abs__checkbox=0x7f04002b;
+        public static final int abs__content=0x7f040031;
+        public static final int abs__default_activity_button=0x7f040027;
+        public static final int abs__expand_activities_button=0x7f040025;
+        public static final int abs__home=0x7f04000a;
+        public static final int abs__icon=0x7f040029;
+        public static final int abs__image=0x7f040026;
+        public static final int abs__imageButton=0x7f040021;
+        public static final int abs__list_item=0x7f040028;
+        public static final int abs__progress_circular=0x7f04000e;
+        public static final int abs__progress_horizontal=0x7f04000f;
+        public static final int abs__radio=0x7f04002c;
+        public static final int abs__search_badge=0x7f040037;
+        public static final int abs__search_bar=0x7f040036;
+        public static final int abs__search_button=0x7f040038;
+        public static final int abs__search_close_btn=0x7f04003d;
+        public static final int abs__search_edit_frame=0x7f040039;
+        public static final int abs__search_go_btn=0x7f04003f;
+        public static final int abs__search_mag_icon=0x7f04003a;
+        public static final int abs__search_plate=0x7f04003b;
+        public static final int abs__search_src_text=0x7f04003c;
+        public static final int abs__search_voice_btn=0x7f040040;
+        public static final int abs__shortcut=0x7f04002d;
+        public static final int abs__split_action_bar=0x7f040032;
+        public static final int abs__submit_area=0x7f04003e;
+        public static final int abs__textButton=0x7f040022;
+        public static final int abs__title=0x7f04002a;
+        public static final int abs__up=0x7f04000b;
+        public static final int btnSearch=0x7f040057;
+        public static final int button1=0x7f040051;
+        public static final int button2=0x7f040052;
+        public static final int disableHome=0x7f040009;
+        public static final int edit_query=0x7f040035;
+        public static final int etSearch=0x7f040058;
+        public static final int gameType=0x7f040073;
+        public static final int gridview=0x7f040043;
+        public static final int homeAsUp=0x7f040006;
+        public static final int imageView1=0x7f040010;
+        public static final int imageView2=0x7f04001d;
+        public static final int imageView3=0x7f04001c;
+        public static final int imageView4=0x7f04001b;
+        public static final int imageView5=0x7f04001e;
+        public static final int listMode=0x7f040002;
+        public static final int listViewStats=0x7f040059;
+        public static final int list_image=0x7f040072;
+        public static final int menu_settings=0x7f04007c;
+        public static final int normal=0x7f040001;
+        public static final int pager=0x7f040041;
+        public static final int pager2=0x7f040053;
+        public static final int pager_title_strip=0x7f040042;
+        public static final int pager_title_strip2=0x7f040054;
+        public static final int showCustom=0x7f040008;
+        public static final int showHome=0x7f040005;
+        public static final int showTitle=0x7f040007;
+        public static final int tabMode=0x7f040003;
+        public static final int textView10=0x7f04006b;
+        public static final int textView13=0x7f04006f;
+        public static final int textView16=0x7f04006d;
+        public static final int textView2=0x7f04005b;
+        public static final int textView3=0x7f04005c;
+        public static final int textView4=0x7f04005d;
+        public static final int textView5=0x7f040060;
+        public static final int textView6=0x7f040061;
+        public static final int textView7=0x7f040064;
+        public static final int textView8=0x7f040067;
+        public static final int textView9=0x7f040069;
+        public static final int textViewAD=0x7f040068;
+        public static final int textViewArmor=0x7f04006e;
+        public static final int textViewAtkSpeed=0x7f04006a;
+        public static final int textViewEnergy=0x7f040065;
+        public static final int textViewEnergyRegen=0x7f040066;
+        public static final int textViewHP=0x7f04005e;
+        public static final int textViewHPRegen=0x7f04005f;
+        public static final int textViewMana=0x7f040062;
+        public static final int textViewManaRegen=0x7f040063;
+        public static final int textViewMoveSpeed=0x7f040070;
+        public static final int textViewRange=0x7f04006c;
+        public static final int thumbnail=0x7f040071;
+        public static final int tvDeaths=0x7f040078;
+        public static final int tvDebug=0x7f04005a;
+        public static final int tvEName=0x7f040018;
+        public static final int tvEText=0x7f040017;
+        public static final int tvHeader1=0x7f040044;
+        public static final int tvHeader2=0x7f040045;
+        public static final int tvHeader3=0x7f040046;
+        public static final int tvHeader4=0x7f040047;
+        public static final int tvHeader5=0x7f040048;
+        public static final int tvHeader6=0x7f04004f;
+        public static final int tvKills=0x7f040076;
+        public static final int tvLore=0x7f04007b;
+        public static final int tvPassiveName=0x7f040011;
+        public static final int tvPassiveText=0x7f040012;
+        public static final int tvQName=0x7f040014;
+        public static final int tvQText=0x7f040013;
+        public static final int tvRName=0x7f04001a;
+        public static final int tvRText=0x7f040019;
+        public static final int tvResult=0x7f040074;
+        public static final int tvScoreAssists=0x7f040079;
+        public static final int tvScoreDeaths=0x7f040077;
+        public static final int tvScoreKills=0x7f040075;
+        public static final int tvSpellName=0x7f04004e;
+        public static final int tvSummonerLevel=0x7f040056;
+        public static final int tvSummonerName=0x7f040055;
+        public static final int tvValue1=0x7f040049;
+        public static final int tvValue2=0x7f04004d;
+        public static final int tvValue3=0x7f04004a;
+        public static final int tvValue4=0x7f04004b;
+        public static final int tvValue5=0x7f04004c;
+        public static final int tvValue6=0x7f040050;
+        public static final int tvWName=0x7f040016;
+        public static final int tvWText=0x7f040015;
+        public static final int useLogo=0x7f040004;
+        public static final int wrap_content=0x7f040000;
+    }
+    public static final class integer {
+        public static final int abs__max_action_buttons=0x7f080000;
     }
     public static final class layout {
         public static final int ability_fragment=0x7f030000;
-        public static final int activity_ability_details=0x7f030001;
-        public static final int activity_champion_page=0x7f030002;
-        public static final int activity_champs=0x7f030003;
-        public static final int activity_e_popup=0x7f030004;
-        public static final int activity_main=0x7f030005;
-        public static final int activity_passive_popup=0x7f030006;
-        public static final int activity_profile=0x7f030007;
-        public static final int activity_q_popup=0x7f030008;
-        public static final int activity_r_popup=0x7f030009;
-        public static final int activity_stats=0x7f03000a;
-        public static final int activity_w_popup=0x7f03000b;
-        public static final int custom_list_view=0x7f03000c;
-        public static final int lore_fragment=0x7f03000d;
-        public static final int popup_passive=0x7f03000e;
+        public static final int abs__action_bar_home=0x7f030001;
+        public static final int abs__action_bar_tab=0x7f030002;
+        public static final int abs__action_bar_tab_bar_view=0x7f030003;
+        public static final int abs__action_bar_title_item=0x7f030004;
+        public static final int abs__action_menu_item_layout=0x7f030005;
+        public static final int abs__action_menu_layout=0x7f030006;
+        public static final int abs__action_mode_bar=0x7f030007;
+        public static final int abs__action_mode_close_item=0x7f030008;
+        public static final int abs__activity_chooser_view=0x7f030009;
+        public static final int abs__activity_chooser_view_list_item=0x7f03000a;
+        public static final int abs__list_menu_item_checkbox=0x7f03000b;
+        public static final int abs__list_menu_item_icon=0x7f03000c;
+        public static final int abs__list_menu_item_radio=0x7f03000d;
+        public static final int abs__popup_menu_item_layout=0x7f03000e;
+        public static final int abs__screen_action_bar=0x7f03000f;
+        public static final int abs__screen_action_bar_overlay=0x7f030010;
+        public static final int abs__screen_simple=0x7f030011;
+        public static final int abs__screen_simple_overlay_action_mode=0x7f030012;
+        public static final int abs__search_dropdown_item_icons_2line=0x7f030013;
+        public static final int abs__search_view=0x7f030014;
+        public static final int abs__simple_dropdown_hint=0x7f030015;
+        public static final int activity_ability_details=0x7f030016;
+        public static final int activity_champion_page=0x7f030017;
+        public static final int activity_champs=0x7f030018;
+        public static final int activity_e_popup=0x7f030019;
+        public static final int activity_main=0x7f03001a;
+        public static final int activity_passive_popup=0x7f03001b;
+        public static final int activity_profile=0x7f03001c;
+        public static final int activity_q_popup=0x7f03001d;
+        public static final int activity_r_popup=0x7f03001e;
+        public static final int activity_stats=0x7f03001f;
+        public static final int activity_w_popup=0x7f030020;
+        public static final int custom_list_view=0x7f030021;
+        public static final int lore_fragment=0x7f030022;
+        public static final int popup_passive=0x7f030023;
+        public static final int sherlock_spinner_dropdown_item=0x7f030024;
+        public static final int sherlock_spinner_item=0x7f030025;
     }
     public static final class menu {
-        public static final int ability_fragment=0x7f070000;
-        public static final int activity_ability_details=0x7f070001;
-        public static final int activity_champion_page=0x7f070002;
-        public static final int activity_champs=0x7f070003;
-        public static final int activity_e_popup=0x7f070004;
-        public static final int activity_list_view_test=0x7f070005;
-        public static final int activity_main=0x7f070006;
-        public static final int activity_passive_popup=0x7f070007;
-        public static final int activity_profile=0x7f070008;
-        public static final int activity_q_popup=0x7f070009;
-        public static final int activity_r_popup=0x7f07000a;
-        public static final int activity_stats=0x7f07000b;
-        public static final int activity_w_popup=0x7f07000c;
-        public static final int lore_fragment=0x7f07000d;
-        public static final int match_history_fragment=0x7f07000e;
+        public static final int ability_fragment=0x7f0c0000;
+        public static final int activity_ability_details=0x7f0c0001;
+        public static final int activity_champion_page=0x7f0c0002;
+        public static final int activity_champs=0x7f0c0003;
+        public static final int activity_e_popup=0x7f0c0004;
+        public static final int activity_list_view_test=0x7f0c0005;
+        public static final int activity_main=0x7f0c0006;
+        public static final int activity_passive_popup=0x7f0c0007;
+        public static final int activity_profile=0x7f0c0008;
+        public static final int activity_q_popup=0x7f0c0009;
+        public static final int activity_r_popup=0x7f0c000a;
+        public static final int activity_stats=0x7f0c000b;
+        public static final int activity_w_popup=0x7f0c000c;
+        public static final int lore_fragment=0x7f0c000d;
+        public static final int match_history_fragment=0x7f0c000e;
     }
     public static final class string {
-        public static final int AceInTheHole=0x7f040035;
-        public static final int AdrenalineRush=0x7f04004f;
-        public static final int AgonysEmbrace=0x7f040062;
-        public static final int AhriLore=0x7f040003;
-        public static final int Apprehend=0x7f040048;
-        public static final int ArcaneShift=0x7f040066;
-        public static final int BandageToss=0x7f040014;
-        public static final int BarrelRoll=0x7f040087;
-        public static final int BladeWaltz=0x7f040071;
-        public static final int Blaze=0x7f04002c;
-        public static final int BloodRush=0x7f040056;
-        public static final int BodySlam=0x7f040089;
-        public static final int Bulwark=0x7f040079;
-        public static final int BurningAgony=0x7f040051;
-        public static final int BurstofSpeed=0x7f040070;
-        public static final int CannonBarrage=0x7f040080;
-        public static final int Carnivore=0x7f04003b;
-        public static final int ChampionsButton=0x7f04008b;
-        public static final int Charm=0x7f040007;
-        public static final int ChumtheWaters=0x7f040076;
-        public static final int Conflagration=0x7f04002f;
-        public static final int Courage=0x7f040083;
-        public static final int CrescentSlash=0x7f04000c;
-        public static final int CrescentStrike=0x7f04004b;
-        public static final int CripplingStrike=0x7f040047;
-        public static final int Crowstorm=0x7f04006c;
-        public static final int Crystallize=0x7f04001a;
-        public static final int CurseOfTheSadMummy=0x7f040017;
-        public static final int CursedTouch=0x7f040013;
-        public static final int DarkFrenzy=0x7f040060;
-        public static final int DarkWind=0x7f04006b;
-        public static final int DeadlyCadence=0x7f040036;
-        public static final int Decimate=0x7f040046;
-        public static final int DecisiveStrike=0x7f040082;
-        public static final int DemacianJustice=0x7f040085;
-        public static final int Despair=0x7f040015;
-        public static final int Disintegrate=0x7f04001e;
-        public static final int Drain=0x7f04006a;
-        public static final int Dread=0x7f040068;
-        public static final int DrunkenRage=0x7f040088;
-        public static final int Duelist=0x7f04006d;
-        public static final int EliseE=0x7f04005c;
-        public static final int EliseQ=0x7f04005a;
-        public static final int EliseR=0x7f04005d;
-        public static final int EliseW=0x7f04005b;
-        public static final int EnchantedCrystalArrow=0x7f040026;
-        public static final int EssenceFlux=0x7f040065;
-        public static final int EssenceTheft=0x7f040004;
-        public static final int ExplosiveCask=0x7f04008a;
-        public static final int Feast=0x7f04003f;
-        public static final int FeralScream=0x7f04003d;
-        public static final int FlashFrost=0x7f040019;
-        public static final int Focus=0x7f040022;
-        public static final int FoxFire=0x7f040006;
-        public static final int FrostShot=0x7f040023;
-        public static final int Frostbite=0x7f04001b;
-        public static final int GatlingGun=0x7f040043;
-        public static final int GlacialStorm=0x7f04001c;
-        public static final int GrogSoakedBlade=0x7f04007c;
-        public static final int HappyHour=0x7f040086;
-        public static final int HateSpike=0x7f04005f;
-        public static final int Hawkshot=0x7f040025;
-        public static final int Headbutt=0x7f040010;
-        public static final int Headshot=0x7f040031;
-        public static final int Hemorrhage=0x7f040045;
-        public static final int HextechShrapnelShells=0x7f040040;
-        public static final int IdolofDurand=0x7f04007b;
-        public static final int Incinerate=0x7f04001f;
-        public static final int InfectedCleaver=0x7f040050;
-        public static final int Judgment=0x7f040084;
-        public static final int LunarRush=0x7f04004e;
-        public static final int Lunge=0x7f04006e;
-        public static final int ManaBarrier=0x7f040027;
-        public static final int MarkOfTheAssassin=0x7f04000a;
-        public static final int Masochism=0x7f040052;
-        public static final int Miasma=0x7f040038;
-        public static final int MissileBarrage=0x7f040044;
-        public static final int MoltenShield=0x7f040020;
-        public static final int Moonfall=0x7f04004d;
-        public static final int MoonsilverBlade=0x7f04004a;
-        public static final int MysticShot=0x7f040064;
-        public static final int NimbleFighter=0x7f040072;
-        public static final int NinetyCaliberNet=0x7f040034;
-        public static final int NoxianGuillotine=0x7f040049;
-        public static final int NoxiousBlast=0x7f040037;
-        public static final int OrbOfDeception=0x7f040005;
-        public static final int Overdrive=0x7f040029;
-        public static final int PaleCascade=0x7f04004c;
-        public static final int Parrrley=0x7f04007d;
-        public static final int Perseverance=0x7f040081;
-        public static final int PetrifyingGaze=0x7f04003a;
-        public static final int PhosphorusBomb=0x7f040041;
-        public static final int PillarOfFlame=0x7f04002e;
-        public static final int PiltoverPeacemaker=0x7f040032;
-        public static final int PlayfulTrickster=0x7f040075;
-        public static final int PowerFist=0x7f04002a;
-        public static final int Pulverize=0x7f04000f;
-        public static final int Pyroclasm=0x7f040030;
-        public static final int Pyromania=0x7f04001d;
-        public static final int RaiseMorale=0x7f04007f;
-        public static final int Ravage=0x7f040061;
-        public static final int Rebirth=0x7f040018;
-        public static final int RemoveScurvy=0x7f04007e;
-        public static final int ResoluteSmite=0x7f040078;
-        public static final int RighteousGust=0x7f04007a;
-        public static final int Riposte=0x7f04006f;
-        public static final int RisingSpellForce=0x7f040063;
-        public static final int RocketGrab=0x7f040028;
-        public static final int RunicSkin=0x7f040077;
-        public static final int Rupture=0x7f04003c;
-        public static final int Sadism=0x7f040053;
-        public static final int Sear=0x7f04002d;
-        public static final int SeastoneTrident=0x7f040074;
-        public static final int ShadowDance=0x7f04000d;
-        public static final int ShadowWalk=0x7f04005e;
-        public static final int SpiderSwarm=0x7f040059;
-        public static final int SpinningAxe=0x7f040055;
-        public static final int SpiritRush=0x7f040008;
-        public static final int StandAside=0x7f040057;
-        public static final int StaticField=0x7f04002b;
-        public static final int SummonTibbers=0x7f040021;
-        public static final int Tantrum=0x7f040016;
-        public static final int Terrify=0x7f040069;
-        public static final int Trample=0x7f04000e;
-        public static final int TriumphantRoar=0x7f040011;
-        public static final int TrueshotBarrage=0x7f040067;
-        public static final int TwilightShroud=0x7f04000b;
-        public static final int TwinDisciplines=0x7f040009;
-        public static final int TwinFang=0x7f040039;
-        public static final int UnbreakableWill=0x7f040012;
-        public static final int UrchinStrike=0x7f040073;
-        public static final int Valkyrie=0x7f040042;
-        public static final int Volley=0x7f040024;
-        public static final int VorpalSpikes=0x7f04003e;
-        public static final int WhirlingDeath=0x7f040058;
-        public static final int WickedBlades=0x7f040054;
-        public static final int YordleSnapTrap=0x7f040033;
-        public static final int app_name=0x7f040000;
-        public static final int hello_world=0x7f040001;
-        public static final int menu_settings=0x7f040002;
-        public static final int title_activity_ability_details=0x7f040095;
-        public static final int title_activity_ability_fragment=0x7f040093;
-        public static final int title_activity_champion_page=0x7f040090;
-        public static final int title_activity_champs=0x7f04008c;
-        public static final int title_activity_epopup=0x7f04009b;
-        public static final int title_activity_list_view_test=0x7f040098;
-        public static final int title_activity_lore_fragment=0x7f040094;
-        public static final int title_activity_match_history_fragment=0x7f040097;
-        public static final int title_activity_passive_popup=0x7f040099;
-        public static final int title_activity_profile=0x7f040096;
-        public static final int title_activity_rpopup=0x7f04009c;
-        public static final int title_activity_stats=0x7f040092;
-        public static final int title_activity_wpopup=0x7f04009a;
-        public static final int title_section1=0x7f04008f;
-        public static final int title_section2=0x7f04008e;
-        public static final int title_section3=0x7f04008d;
-        public static final int title_section4=0x7f040091;
+        public static final int AceInTheHole=0x7f090042;
+        public static final int AdrenalineRush=0x7f09005c;
+        public static final int AgonysEmbrace=0x7f09006f;
+        public static final int AhriLore=0x7f090010;
+        public static final int Apprehend=0x7f090055;
+        public static final int ArcaneShift=0x7f090073;
+        public static final int BandageToss=0x7f090021;
+        public static final int BarrelRoll=0x7f090094;
+        public static final int BladeWaltz=0x7f09007e;
+        public static final int Blaze=0x7f090039;
+        public static final int BloodRush=0x7f090063;
+        public static final int BodySlam=0x7f090096;
+        public static final int Bulwark=0x7f090086;
+        public static final int BurningAgony=0x7f09005e;
+        public static final int BurstofSpeed=0x7f09007d;
+        public static final int CannonBarrage=0x7f09008d;
+        public static final int Carnivore=0x7f090048;
+        public static final int ChampionsButton=0x7f090098;
+        public static final int Charm=0x7f090014;
+        public static final int ChumtheWaters=0x7f090083;
+        public static final int Conflagration=0x7f09003c;
+        public static final int Courage=0x7f090090;
+        public static final int CrescentSlash=0x7f090019;
+        public static final int CrescentStrike=0x7f090058;
+        public static final int CripplingStrike=0x7f090054;
+        public static final int Crowstorm=0x7f090079;
+        public static final int Crystallize=0x7f090027;
+        public static final int CurseOfTheSadMummy=0x7f090024;
+        public static final int CursedTouch=0x7f090020;
+        public static final int DarkFrenzy=0x7f09006d;
+        public static final int DarkWind=0x7f090078;
+        public static final int DeadlyCadence=0x7f090043;
+        public static final int Decimate=0x7f090053;
+        public static final int DecisiveStrike=0x7f09008f;
+        public static final int DemacianJustice=0x7f090092;
+        public static final int Despair=0x7f090022;
+        public static final int Disintegrate=0x7f09002b;
+        public static final int Drain=0x7f090077;
+        public static final int Dread=0x7f090075;
+        public static final int DrunkenRage=0x7f090095;
+        public static final int Duelist=0x7f09007a;
+        public static final int EliseE=0x7f090069;
+        public static final int EliseQ=0x7f090067;
+        public static final int EliseR=0x7f09006a;
+        public static final int EliseW=0x7f090068;
+        public static final int EnchantedCrystalArrow=0x7f090033;
+        public static final int EssenceFlux=0x7f090072;
+        public static final int EssenceTheft=0x7f090011;
+        public static final int ExplosiveCask=0x7f090097;
+        public static final int Feast=0x7f09004c;
+        public static final int FeralScream=0x7f09004a;
+        public static final int FlashFrost=0x7f090026;
+        public static final int Focus=0x7f09002f;
+        public static final int FoxFire=0x7f090013;
+        public static final int FrostShot=0x7f090030;
+        public static final int Frostbite=0x7f090028;
+        public static final int GatlingGun=0x7f090050;
+        public static final int GlacialStorm=0x7f090029;
+        public static final int GrogSoakedBlade=0x7f090089;
+        public static final int HappyHour=0x7f090093;
+        public static final int HateSpike=0x7f09006c;
+        public static final int Hawkshot=0x7f090032;
+        public static final int Headbutt=0x7f09001d;
+        public static final int Headshot=0x7f09003e;
+        public static final int Hemorrhage=0x7f090052;
+        public static final int HextechShrapnelShells=0x7f09004d;
+        public static final int IdolofDurand=0x7f090088;
+        public static final int Incinerate=0x7f09002c;
+        public static final int InfectedCleaver=0x7f09005d;
+        public static final int Judgment=0x7f090091;
+        public static final int LunarRush=0x7f09005b;
+        public static final int Lunge=0x7f09007b;
+        public static final int ManaBarrier=0x7f090034;
+        public static final int MarkOfTheAssassin=0x7f090017;
+        public static final int Masochism=0x7f09005f;
+        public static final int Miasma=0x7f090045;
+        public static final int MissileBarrage=0x7f090051;
+        public static final int MoltenShield=0x7f09002d;
+        public static final int Moonfall=0x7f09005a;
+        public static final int MoonsilverBlade=0x7f090057;
+        public static final int MysticShot=0x7f090071;
+        public static final int NimbleFighter=0x7f09007f;
+        public static final int NinetyCaliberNet=0x7f090041;
+        public static final int NoxianGuillotine=0x7f090056;
+        public static final int NoxiousBlast=0x7f090044;
+        public static final int OrbOfDeception=0x7f090012;
+        public static final int Overdrive=0x7f090036;
+        public static final int PaleCascade=0x7f090059;
+        public static final int Parrrley=0x7f09008a;
+        public static final int Perseverance=0x7f09008e;
+        public static final int PetrifyingGaze=0x7f090047;
+        public static final int PhosphorusBomb=0x7f09004e;
+        public static final int PillarOfFlame=0x7f09003b;
+        public static final int PiltoverPeacemaker=0x7f09003f;
+        public static final int PlayfulTrickster=0x7f090082;
+        public static final int PowerFist=0x7f090037;
+        public static final int Pulverize=0x7f09001c;
+        public static final int Pyroclasm=0x7f09003d;
+        public static final int Pyromania=0x7f09002a;
+        public static final int RaiseMorale=0x7f09008c;
+        public static final int Ravage=0x7f09006e;
+        public static final int Rebirth=0x7f090025;
+        public static final int RemoveScurvy=0x7f09008b;
+        public static final int ResoluteSmite=0x7f090085;
+        public static final int RighteousGust=0x7f090087;
+        public static final int Riposte=0x7f09007c;
+        public static final int RisingSpellForce=0x7f090070;
+        public static final int RocketGrab=0x7f090035;
+        public static final int RunicSkin=0x7f090084;
+        public static final int Rupture=0x7f090049;
+        public static final int Sadism=0x7f090060;
+        public static final int Sear=0x7f09003a;
+        public static final int SeastoneTrident=0x7f090081;
+        public static final int ShadowDance=0x7f09001a;
+        public static final int ShadowWalk=0x7f09006b;
+        public static final int SpiderSwarm=0x7f090066;
+        public static final int SpinningAxe=0x7f090062;
+        public static final int SpiritRush=0x7f090015;
+        public static final int StandAside=0x7f090064;
+        public static final int StaticField=0x7f090038;
+        public static final int SummonTibbers=0x7f09002e;
+        public static final int Tantrum=0x7f090023;
+        public static final int Terrify=0x7f090076;
+        public static final int Trample=0x7f09001b;
+        public static final int TriumphantRoar=0x7f09001e;
+        public static final int TrueshotBarrage=0x7f090074;
+        public static final int TwilightShroud=0x7f090018;
+        public static final int TwinDisciplines=0x7f090016;
+        public static final int TwinFang=0x7f090046;
+        public static final int UnbreakableWill=0x7f09001f;
+        public static final int UrchinStrike=0x7f090080;
+        public static final int Valkyrie=0x7f09004f;
+        public static final int Volley=0x7f090031;
+        public static final int VorpalSpikes=0x7f09004b;
+        public static final int WhirlingDeath=0x7f090065;
+        public static final int WickedBlades=0x7f090061;
+        public static final int YordleSnapTrap=0x7f090040;
+        /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
+         */
+        public static final int abs__action_bar_home_description=0x7f090000;
+        /**  Content description for the action bar "up" affordance. [CHAR LIMIT=NONE] 
+         */
+        public static final int abs__action_bar_up_description=0x7f090001;
+        /**  Content description for the action menu overflow button. [CHAR LIMIT=NONE] 
+         */
+        public static final int abs__action_menu_overflow_description=0x7f090002;
+        /**  Label for the "Done" button on the far left of action mode toolbars. 
+         */
+        public static final int abs__action_mode_done=0x7f090003;
+        /**  Title for a button to expand the list of activities in ActivityChooserView [CHAR LIMIT=25] 
+         */
+        public static final int abs__activity_chooser_view_see_all=0x7f090004;
+        /**  Description of the shwoing of a popup window with activities to choose from. [CHAR LIMIT=NONE] 
+         */
+        public static final int abs__activitychooserview_choose_application=0x7f090005;
+        /**  SearchView accessibility description for clear button [CHAR LIMIT=NONE] 
+         */
+        public static final int abs__searchview_description_clear=0x7f09000a;
+        /**  SearchView accessibility description for search text field [CHAR LIMIT=NONE] 
+         */
+        public static final int abs__searchview_description_query=0x7f090009;
+        /**  SearchView accessibility description for search button [CHAR LIMIT=NONE] 
+         */
+        public static final int abs__searchview_description_search=0x7f090008;
+        /**  SearchView accessibility description for submit button [CHAR LIMIT=NONE] 
+         */
+        public static final int abs__searchview_description_submit=0x7f09000b;
+        /**  SearchView accessibility description for voice button [CHAR LIMIT=NONE] 
+         */
+        public static final int abs__searchview_description_voice=0x7f09000c;
+        /**  Description of the choose target button in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
+         */
+        public static final int abs__shareactionprovider_share_with=0x7f090006;
+        /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
+         */
+        public static final int abs__shareactionprovider_share_with_application=0x7f090007;
+        public static final int app_name=0x7f09000d;
+        public static final int hello_world=0x7f09000e;
+        public static final int menu_settings=0x7f09000f;
+        public static final int title_activity_ability_details=0x7f0900a2;
+        public static final int title_activity_ability_fragment=0x7f0900a0;
+        public static final int title_activity_champion_page=0x7f09009d;
+        public static final int title_activity_champs=0x7f090099;
+        public static final int title_activity_epopup=0x7f0900a8;
+        public static final int title_activity_list_view_test=0x7f0900a5;
+        public static final int title_activity_lore_fragment=0x7f0900a1;
+        public static final int title_activity_match_history_fragment=0x7f0900a4;
+        public static final int title_activity_passive_popup=0x7f0900a6;
+        public static final int title_activity_profile=0x7f0900a3;
+        public static final int title_activity_rpopup=0x7f0900a9;
+        public static final int title_activity_stats=0x7f09009f;
+        public static final int title_activity_wpopup=0x7f0900a7;
+        public static final int title_section1=0x7f09009c;
+        public static final int title_section2=0x7f09009b;
+        public static final int title_section3=0x7f09009a;
+        public static final int title_section4=0x7f09009e;
     }
     public static final class style {
         /** 
@@ -1184,11 +2191,2237 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f0a0059;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
-        public static final int DialogNoTitleBar=0x7f060002;
+        public static final int AppTheme=0x7f0a005a;
+        public static final int DialogNoTitleBar=0x7f0a005b;
+        public static final int Sherlock___TextAppearance_Small=0x7f0a0046;
+        public static final int Sherlock___Theme=0x7f0a0051;
+        public static final int Sherlock___Theme_DarkActionBar=0x7f0a0053;
+        public static final int Sherlock___Theme_Light=0x7f0a0052;
+        public static final int Sherlock___Widget_ActionBar=0x7f0a0001;
+        public static final int Sherlock___Widget_ActionMode=0x7f0a0016;
+        public static final int Sherlock___Widget_ActivityChooserView=0x7f0a001e;
+        public static final int Sherlock___Widget_Holo_DropDownItem=0x7f0a0029;
+        public static final int Sherlock___Widget_Holo_ListView=0x7f0a0026;
+        public static final int Sherlock___Widget_Holo_Spinner=0x7f0a0023;
+        public static final int Sherlock___Widget_SearchAutoCompleteTextView=0x7f0a0033;
+        public static final int TextAppearance_Sherlock=0x7f0a004a;
+        public static final int TextAppearance_Sherlock_Light_SearchResult=0x7f0a004e;
+        public static final int TextAppearance_Sherlock_Light_SearchResult_Subtitle=0x7f0a0050;
+        public static final int TextAppearance_Sherlock_Light_SearchResult_Title=0x7f0a004f;
+        public static final int TextAppearance_Sherlock_Light_Small=0x7f0a0048;
+        public static final int TextAppearance_Sherlock_Light_Widget_PopupMenu_Large=0x7f0a0041;
+        public static final int TextAppearance_Sherlock_Light_Widget_PopupMenu_Small=0x7f0a0043;
+        public static final int TextAppearance_Sherlock_SearchResult=0x7f0a004b;
+        public static final int TextAppearance_Sherlock_SearchResult_Subtitle=0x7f0a004d;
+        public static final int TextAppearance_Sherlock_SearchResult_Title=0x7f0a004c;
+        public static final int TextAppearance_Sherlock_Small=0x7f0a0047;
+        public static final int TextAppearance_Sherlock_Widget_ActionBar_Menu=0x7f0a0036;
+        public static final int TextAppearance_Sherlock_Widget_ActionBar_Subtitle=0x7f0a0039;
+        public static final int TextAppearance_Sherlock_Widget_ActionBar_Subtitle_Inverse=0x7f0a003a;
+        public static final int TextAppearance_Sherlock_Widget_ActionBar_Title=0x7f0a0037;
+        public static final int TextAppearance_Sherlock_Widget_ActionBar_Title_Inverse=0x7f0a0038;
+        public static final int TextAppearance_Sherlock_Widget_ActionMode_Subtitle=0x7f0a003d;
+        public static final int TextAppearance_Sherlock_Widget_ActionMode_Subtitle_Inverse=0x7f0a003e;
+        public static final int TextAppearance_Sherlock_Widget_ActionMode_Title=0x7f0a003b;
+        public static final int TextAppearance_Sherlock_Widget_ActionMode_Title_Inverse=0x7f0a003c;
+        public static final int TextAppearance_Sherlock_Widget_DropDownHint=0x7f0a0049;
+        public static final int TextAppearance_Sherlock_Widget_DropDownItem=0x7f0a0045;
+        public static final int TextAppearance_Sherlock_Widget_PopupMenu=0x7f0a003f;
+        public static final int TextAppearance_Sherlock_Widget_PopupMenu_Large=0x7f0a0040;
+        public static final int TextAppearance_Sherlock_Widget_PopupMenu_Small=0x7f0a0042;
+        public static final int TextAppearance_Sherlock_Widget_TextView_SpinnerItem=0x7f0a0044;
+        public static final int Theme_Sherlock=0x7f0a0054;
+        public static final int Theme_Sherlock_Light=0x7f0a0055;
+        public static final int Theme_Sherlock_Light_DarkActionBar=0x7f0a0056;
+        public static final int Theme_Sherlock_Light_NoActionBar=0x7f0a0058;
+        public static final int Theme_Sherlock_NoActionBar=0x7f0a0057;
+        public static final int Widget=0x7f0a0000;
+        public static final int Widget_Sherlock_ActionBar=0x7f0a0002;
+        public static final int Widget_Sherlock_ActionBar_Solid=0x7f0a0003;
+        public static final int Widget_Sherlock_ActionBar_TabBar=0x7f0a000a;
+        public static final int Widget_Sherlock_ActionBar_TabText=0x7f0a000d;
+        public static final int Widget_Sherlock_ActionBar_TabView=0x7f0a0007;
+        public static final int Widget_Sherlock_ActionButton=0x7f0a0010;
+        public static final int Widget_Sherlock_ActionButton_CloseMode=0x7f0a0012;
+        public static final int Widget_Sherlock_ActionButton_Overflow=0x7f0a0014;
+        public static final int Widget_Sherlock_ActionMode=0x7f0a0017;
+        public static final int Widget_Sherlock_ActivityChooserView=0x7f0a001f;
+        public static final int Widget_Sherlock_Button_Small=0x7f0a0021;
+        public static final int Widget_Sherlock_DropDownItem_Spinner=0x7f0a002a;
+        public static final int Widget_Sherlock_Light_ActionBar=0x7f0a0004;
+        public static final int Widget_Sherlock_Light_ActionBar_Solid=0x7f0a0005;
+        public static final int Widget_Sherlock_Light_ActionBar_Solid_Inverse=0x7f0a0006;
+        public static final int Widget_Sherlock_Light_ActionBar_TabBar=0x7f0a000b;
+        public static final int Widget_Sherlock_Light_ActionBar_TabBar_Inverse=0x7f0a000c;
+        public static final int Widget_Sherlock_Light_ActionBar_TabText=0x7f0a000e;
+        public static final int Widget_Sherlock_Light_ActionBar_TabText_Inverse=0x7f0a000f;
+        public static final int Widget_Sherlock_Light_ActionBar_TabView=0x7f0a0008;
+        public static final int Widget_Sherlock_Light_ActionBar_TabView_Inverse=0x7f0a0009;
+        public static final int Widget_Sherlock_Light_ActionButton=0x7f0a0011;
+        public static final int Widget_Sherlock_Light_ActionButton_CloseMode=0x7f0a0013;
+        public static final int Widget_Sherlock_Light_ActionButton_Overflow=0x7f0a0015;
+        public static final int Widget_Sherlock_Light_ActionMode=0x7f0a0018;
+        public static final int Widget_Sherlock_Light_ActionMode_Inverse=0x7f0a0019;
+        public static final int Widget_Sherlock_Light_ActivityChooserView=0x7f0a0020;
+        public static final int Widget_Sherlock_Light_Button_Small=0x7f0a0022;
+        public static final int Widget_Sherlock_Light_DropDownItem_Spinner=0x7f0a002b;
+        public static final int Widget_Sherlock_Light_ListPopupWindow=0x7f0a001b;
+        public static final int Widget_Sherlock_Light_ListView_DropDown=0x7f0a0028;
+        public static final int Widget_Sherlock_Light_PopupMenu=0x7f0a001d;
+        public static final int Widget_Sherlock_Light_PopupWindow_ActionMode=0x7f0a002d;
+        public static final int Widget_Sherlock_Light_ProgressBar=0x7f0a002f;
+        public static final int Widget_Sherlock_Light_ProgressBar_Horizontal=0x7f0a0031;
+        public static final int Widget_Sherlock_Light_SearchAutoCompleteTextView=0x7f0a0035;
+        public static final int Widget_Sherlock_Light_Spinner_DropDown_ActionBar=0x7f0a0025;
+        public static final int Widget_Sherlock_ListPopupWindow=0x7f0a001a;
+        public static final int Widget_Sherlock_ListView_DropDown=0x7f0a0027;
+        public static final int Widget_Sherlock_PopupMenu=0x7f0a001c;
+        public static final int Widget_Sherlock_PopupWindow_ActionMode=0x7f0a002c;
+        public static final int Widget_Sherlock_ProgressBar=0x7f0a002e;
+        public static final int Widget_Sherlock_ProgressBar_Horizontal=0x7f0a0030;
+        public static final int Widget_Sherlock_SearchAutoCompleteTextView=0x7f0a0034;
+        public static final int Widget_Sherlock_Spinner_DropDown_ActionBar=0x7f0a0024;
+        public static final int Widget_Sherlock_TextView_SpinnerItem=0x7f0a0032;
     }
+    public static final class styleable {
+        /**  Attributes used to style the Action Bar. 
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SherlockActionBar_background com.jt.getdunked2:background}</code></td><td> Specifies a background drawable for the action bar.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_backgroundSplit com.jt.getdunked2:backgroundSplit}</code></td><td> Specifies a background drawable for the bottom component of a split action bar.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_backgroundStacked com.jt.getdunked2:backgroundStacked}</code></td><td> Specifies a background drawable for a second stacked row of the action bar.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_customNavigationLayout com.jt.getdunked2:customNavigationLayout}</code></td><td> Specifies a layout for custom navigation.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_displayOptions com.jt.getdunked2:displayOptions}</code></td><td> Options affecting how the action bar is displayed.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_divider com.jt.getdunked2:divider}</code></td><td> Specifies the drawable used for item dividers.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_height com.jt.getdunked2:height}</code></td><td> Specifies a fixed height.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_homeLayout com.jt.getdunked2:homeLayout}</code></td><td> Specifies a layout to use for the "home" section of the action bar.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_icon com.jt.getdunked2:icon}</code></td><td> Specifies the drawable used for the application icon.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_indeterminateProgressStyle com.jt.getdunked2:indeterminateProgressStyle}</code></td><td> Specifies a style resource to use for an indeterminate progress spinner.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_itemPadding com.jt.getdunked2:itemPadding}</code></td><td> Specifies padding that should be applied to the left and right sides of
+             system-provided items in the bar.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_logo com.jt.getdunked2:logo}</code></td><td> Specifies the drawable used for the application logo.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_navigationMode com.jt.getdunked2:navigationMode}</code></td><td> The type of navigation to use.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_progressBarPadding com.jt.getdunked2:progressBarPadding}</code></td><td> Specifies the horizontal padding on either end for an embedded progress bar.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_progressBarStyle com.jt.getdunked2:progressBarStyle}</code></td><td> Specifies a style resource to use for an embedded progress bar.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_subtitle com.jt.getdunked2:subtitle}</code></td><td> Specifies subtitle text used for navigationMode="normal" </td></tr>
+           <tr><td><code>{@link #SherlockActionBar_subtitleTextStyle com.jt.getdunked2:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
+           <tr><td><code>{@link #SherlockActionBar_title com.jt.getdunked2:title}</code></td><td> Specifies title text used for navigationMode="normal" </td></tr>
+           <tr><td><code>{@link #SherlockActionBar_titleTextStyle com.jt.getdunked2:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
+           </table>
+           @see #SherlockActionBar_background
+           @see #SherlockActionBar_backgroundSplit
+           @see #SherlockActionBar_backgroundStacked
+           @see #SherlockActionBar_customNavigationLayout
+           @see #SherlockActionBar_displayOptions
+           @see #SherlockActionBar_divider
+           @see #SherlockActionBar_height
+           @see #SherlockActionBar_homeLayout
+           @see #SherlockActionBar_icon
+           @see #SherlockActionBar_indeterminateProgressStyle
+           @see #SherlockActionBar_itemPadding
+           @see #SherlockActionBar_logo
+           @see #SherlockActionBar_navigationMode
+           @see #SherlockActionBar_progressBarPadding
+           @see #SherlockActionBar_progressBarStyle
+           @see #SherlockActionBar_subtitle
+           @see #SherlockActionBar_subtitleTextStyle
+           @see #SherlockActionBar_title
+           @see #SherlockActionBar_titleTextStyle
+         */
+        public static final int[] SherlockActionBar = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004, 0x7f010005, 0x7f010049, 0x7f01004a,
+            0x7f01004b, 0x7f01004c, 0x7f01004d, 0x7f01004e,
+            0x7f01004f, 0x7f010050, 0x7f010051, 0x7f010052,
+            0x7f010053, 0x7f010054, 0x7f010055
+        };
+        /**
+          <p>
+          @attr description
+           Specifies a background drawable for the action bar. 
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          <p>This is a private symbol.
+          @attr name android:background
+        */
+        public static final int SherlockActionBar_background = 2;
+        /**
+          <p>
+          @attr description
+           Specifies a background drawable for the bottom component of a split action bar. 
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          <p>This is a private symbol.
+          @attr name android:backgroundSplit
+        */
+        public static final int SherlockActionBar_backgroundSplit = 3;
+        /**
+          <p>
+          @attr description
+           Specifies a background drawable for a second stacked row of the action bar. 
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          <p>This is a private symbol.
+          @attr name android:backgroundStacked
+        */
+        public static final int SherlockActionBar_backgroundStacked = 12;
+        /**
+          <p>
+          @attr description
+           Specifies a layout for custom navigation. Overrides navigationMode. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:customNavigationLayout
+        */
+        public static final int SherlockActionBar_customNavigationLayout = 13;
+        /**
+          <p>
+          @attr description
+           Options affecting how the action bar is displayed. 
+
+
+          <p>Must be one or more (separated by '|') of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>useLogo</code></td><td>0x1</td><td></td></tr>
+<tr><td><code>showHome</code></td><td>0x2</td><td></td></tr>
+<tr><td><code>homeAsUp</code></td><td>0x4</td><td></td></tr>
+<tr><td><code>showTitle</code></td><td>0x8</td><td></td></tr>
+<tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
+<tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
+</table>
+          <p>This is a private symbol.
+          @attr name android:displayOptions
+        */
+        public static final int SherlockActionBar_displayOptions = 7;
+        /**
+          <p>
+          @attr description
+           Specifies the drawable used for item dividers. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:divider
+        */
+        public static final int SherlockActionBar_divider = 5;
+        /**
+          <p>
+          @attr description
+           Specifies a fixed height. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:height
+        */
+        public static final int SherlockActionBar_height = 4;
+        /**
+          <p>
+          @attr description
+           Specifies a layout to use for the "home" section of the action bar. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:homeLayout
+        */
+        public static final int SherlockActionBar_homeLayout = 14;
+        /**
+          <p>
+          @attr description
+           Specifies the drawable used for the application icon. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:icon
+        */
+        public static final int SherlockActionBar_icon = 10;
+        /**
+          <p>
+          @attr description
+           Specifies a style resource to use for an indeterminate progress spinner. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:indeterminateProgressStyle
+        */
+        public static final int SherlockActionBar_indeterminateProgressStyle = 16;
+        /**
+          <p>
+          @attr description
+           Specifies padding that should be applied to the left and right sides of
+             system-provided items in the bar. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:itemPadding
+        */
+        public static final int SherlockActionBar_itemPadding = 18;
+        /**
+          <p>
+          @attr description
+           Specifies the drawable used for the application logo. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:logo
+        */
+        public static final int SherlockActionBar_logo = 11;
+        /**
+          <p>
+          @attr description
+           The type of navigation to use. 
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>normal</code></td><td>0</td><td> Normal static title text </td></tr>
+<tr><td><code>listMode</code></td><td>1</td><td> The action bar will use a selection list for navigation. </td></tr>
+<tr><td><code>tabMode</code></td><td>2</td><td> The action bar will use a series of horizontal tabs for navigation. </td></tr>
+</table>
+          <p>This is a private symbol.
+          @attr name android:navigationMode
+        */
+        public static final int SherlockActionBar_navigationMode = 6;
+        /**
+          <p>
+          @attr description
+           Specifies the horizontal padding on either end for an embedded progress bar. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:progressBarPadding
+        */
+        public static final int SherlockActionBar_progressBarPadding = 17;
+        /**
+          <p>
+          @attr description
+           Specifies a style resource to use for an embedded progress bar. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:progressBarStyle
+        */
+        public static final int SherlockActionBar_progressBarStyle = 15;
+        /**
+          <p>
+          @attr description
+           Specifies subtitle text used for navigationMode="normal" 
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:subtitle
+        */
+        public static final int SherlockActionBar_subtitle = 9;
+        /**
+          <p>
+          @attr description
+           Specifies a style to use for subtitle text. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:subtitleTextStyle
+        */
+        public static final int SherlockActionBar_subtitleTextStyle = 1;
+        /**
+          <p>
+          @attr description
+           Specifies title text used for navigationMode="normal" 
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:title
+        */
+        public static final int SherlockActionBar_title = 8;
+        /**
+          <p>
+          @attr description
+           Specifies a style to use for title text. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:titleTextStyle
+        */
+        public static final int SherlockActionBar_titleTextStyle = 0;
+        /** Attributes that can be used with a SherlockActionMenuItemView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SherlockActionMenuItemView_android_minWidth com.jt.getdunked2:android_minWidth}</code></td><td></td></tr>
+           </table>
+           @see #SherlockActionMenuItemView_android_minWidth
+         */
+        public static final int[] SherlockActionMenuItemView = {
+            0x0101013f
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#android_minWidth}
+          attribute's value can be found in the {@link #SherlockActionMenuItemView} array.
+          @attr name android:android_minWidth
+        */
+        public static final int SherlockActionMenuItemView_android_minWidth = 0;
+        /** Attributes that can be used with a SherlockActionMode.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SherlockActionMode_background com.jt.getdunked2:background}</code></td><td> Specifies a background for the action mode bar.</td></tr>
+           <tr><td><code>{@link #SherlockActionMode_backgroundSplit com.jt.getdunked2:backgroundSplit}</code></td><td> Specifies a background for the split action mode bar.</td></tr>
+           <tr><td><code>{@link #SherlockActionMode_height com.jt.getdunked2:height}</code></td><td> Specifies a fixed height for the action mode bar.</td></tr>
+           <tr><td><code>{@link #SherlockActionMode_subtitleTextStyle com.jt.getdunked2:subtitleTextStyle}</code></td><td> Specifies a style to use for subtitle text.</td></tr>
+           <tr><td><code>{@link #SherlockActionMode_titleTextStyle com.jt.getdunked2:titleTextStyle}</code></td><td> Specifies a style to use for title text.</td></tr>
+           </table>
+           @see #SherlockActionMode_background
+           @see #SherlockActionMode_backgroundSplit
+           @see #SherlockActionMode_height
+           @see #SherlockActionMode_subtitleTextStyle
+           @see #SherlockActionMode_titleTextStyle
+         */
+        public static final int[] SherlockActionMode = {
+            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
+            0x7f010004
+        };
+        /**
+          <p>
+          @attr description
+           Specifies a background for the action mode bar. 
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          <p>This is a private symbol.
+          @attr name android:background
+        */
+        public static final int SherlockActionMode_background = 2;
+        /**
+          <p>
+          @attr description
+           Specifies a background for the split action mode bar. 
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          <p>This is a private symbol.
+          @attr name android:backgroundSplit
+        */
+        public static final int SherlockActionMode_backgroundSplit = 3;
+        /**
+          <p>
+          @attr description
+           Specifies a fixed height for the action mode bar. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:height
+        */
+        public static final int SherlockActionMode_height = 4;
+        /**
+          <p>
+          @attr description
+           Specifies a style to use for subtitle text. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:subtitleTextStyle
+        */
+        public static final int SherlockActionMode_subtitleTextStyle = 1;
+        /**
+          <p>
+          @attr description
+           Specifies a style to use for title text. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:titleTextStyle
+        */
+        public static final int SherlockActionMode_titleTextStyle = 0;
+        /** Attributes that can be used with a SherlockActivityChooserView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SherlockActivityChooserView_android_background com.jt.getdunked2:android_background}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockActivityChooserView_expandActivityOverflowButtonDrawable com.jt.getdunked2:expandActivityOverflowButtonDrawable}</code></td><td> The drawable to show in the button for expanding the activities overflow popup.</td></tr>
+           <tr><td><code>{@link #SherlockActivityChooserView_initialActivityCount com.jt.getdunked2:initialActivityCount}</code></td><td> The maximal number of items initially shown in the activity list.</td></tr>
+           </table>
+           @see #SherlockActivityChooserView_android_background
+           @see #SherlockActivityChooserView_expandActivityOverflowButtonDrawable
+           @see #SherlockActivityChooserView_initialActivityCount
+         */
+        public static final int[] SherlockActivityChooserView = {
+            0x010100d4, 0x7f01005e, 0x7f01005f
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#android_background}
+          attribute's value can be found in the {@link #SherlockActivityChooserView} array.
+          @attr name android:android_background
+        */
+        public static final int SherlockActivityChooserView_android_background = 0;
+        /**
+          <p>
+          @attr description
+           The drawable to show in the button for expanding the activities overflow popup.
+             <strong>Note:</strong> Clients would like to set this drawable
+             as a clue about the action the chosen activity will perform. For
+             example, if share activity is to be chosen the drawable should
+             give a clue that sharing is to be performed.
+         
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:expandActivityOverflowButtonDrawable
+        */
+        public static final int SherlockActivityChooserView_expandActivityOverflowButtonDrawable = 2;
+        /**
+          <p>
+          @attr description
+           The maximal number of items initially shown in the activity list. 
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:initialActivityCount
+        */
+        public static final int SherlockActivityChooserView_initialActivityCount = 1;
+        /**  Base attributes that are available to all groups. 
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SherlockMenuGroup_android_checkableBehavior com.jt.getdunked2:android_checkableBehavior}</code></td><td> Whether the items are capable of displaying a check mark.</td></tr>
+           <tr><td><code>{@link #SherlockMenuGroup_android_enabled com.jt.getdunked2:android_enabled}</code></td><td> Whether the items are enabled.</td></tr>
+           <tr><td><code>{@link #SherlockMenuGroup_android_id com.jt.getdunked2:android_id}</code></td><td> The ID of the group.</td></tr>
+           <tr><td><code>{@link #SherlockMenuGroup_android_menuCategory com.jt.getdunked2:android_menuCategory}</code></td><td> The category applied to all items within this group.</td></tr>
+           <tr><td><code>{@link #SherlockMenuGroup_android_orderInCategory com.jt.getdunked2:android_orderInCategory}</code></td><td> The order within the category applied to all items within this group.</td></tr>
+           <tr><td><code>{@link #SherlockMenuGroup_android_visible com.jt.getdunked2:android_visible}</code></td><td> Whether the items are shown/visible.</td></tr>
+           </table>
+           @see #SherlockMenuGroup_android_checkableBehavior
+           @see #SherlockMenuGroup_android_enabled
+           @see #SherlockMenuGroup_android_id
+           @see #SherlockMenuGroup_android_menuCategory
+           @see #SherlockMenuGroup_android_orderInCategory
+           @see #SherlockMenuGroup_android_visible
+         */
+        public static final int[] SherlockMenuGroup = {
+            0x0101000e, 0x010100d0, 0x01010194, 0x010101de,
+            0x010101df, 0x010101e0
+        };
+        /**
+          <p>
+          @attr description
+           Whether the items are capable of displaying a check mark. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_checkableBehavior}.
+          @attr name android:android_checkableBehavior
+        */
+        public static final int SherlockMenuGroup_android_checkableBehavior = 5;
+        /**
+          <p>
+          @attr description
+           Whether the items are enabled. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_enabled}.
+          @attr name android:android_enabled
+        */
+        public static final int SherlockMenuGroup_android_enabled = 0;
+        /**
+          <p>
+          @attr description
+           The ID of the group. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_id}.
+          @attr name android:android_id
+        */
+        public static final int SherlockMenuGroup_android_id = 1;
+        /**
+          <p>
+          @attr description
+           The category applied to all items within this group.
+             (This will be or'ed with the orderInCategory attribute.) 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_menuCategory}.
+          @attr name android:android_menuCategory
+        */
+        public static final int SherlockMenuGroup_android_menuCategory = 3;
+        /**
+          <p>
+          @attr description
+           The order within the category applied to all items within this group.
+             (This will be or'ed with the category attribute.) 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_orderInCategory}.
+          @attr name android:android_orderInCategory
+        */
+        public static final int SherlockMenuGroup_android_orderInCategory = 4;
+        /**
+          <p>
+          @attr description
+           Whether the items are shown/visible. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_visible}.
+          @attr name android:android_visible
+        */
+        public static final int SherlockMenuGroup_android_visible = 2;
+        /**  Base attributes that are available to all Item objects. 
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_actionLayout com.jt.getdunked2:android_actionLayout}</code></td><td> An optional layout to be used as an action view.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_actionProviderClass com.jt.getdunked2:android_actionProviderClass}</code></td><td> The name of an optional ActionProvider class to instantiate an action view
+             and perform operations such as default action for that menu item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_actionViewClass com.jt.getdunked2:android_actionViewClass}</code></td><td> The name of an optional View class to instantiate and use as an
+             action view.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_alphabeticShortcut com.jt.getdunked2:android_alphabeticShortcut}</code></td><td> The alphabetic shortcut key.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_checkable com.jt.getdunked2:android_checkable}</code></td><td> Whether the item is capable of displaying a check mark.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_checked com.jt.getdunked2:android_checked}</code></td><td> Whether the item is checked.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_enabled com.jt.getdunked2:android_enabled}</code></td><td> Whether the item is enabled.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_icon com.jt.getdunked2:android_icon}</code></td><td> The icon associated with this item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_id com.jt.getdunked2:android_id}</code></td><td> The ID of the item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_menuCategory com.jt.getdunked2:android_menuCategory}</code></td><td> The category applied to the item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_numericShortcut com.jt.getdunked2:android_numericShortcut}</code></td><td> The numeric shortcut key.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_onClick com.jt.getdunked2:android_onClick}</code></td><td> Name of a method on the Context used to inflate the menu that will be
+             called when the item is clicked.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_orderInCategory com.jt.getdunked2:android_orderInCategory}</code></td><td> The order within the category applied to the item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_showAsAction com.jt.getdunked2:android_showAsAction}</code></td><td> How this item should display in the Action Bar, if present.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_title com.jt.getdunked2:android_title}</code></td><td> The title associated with the item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_titleCondensed com.jt.getdunked2:android_titleCondensed}</code></td><td> The condensed title associated with the item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuItem_android_visible com.jt.getdunked2:android_visible}</code></td><td> Whether the item is shown/visible.</td></tr>
+           </table>
+           @see #SherlockMenuItem_android_actionLayout
+           @see #SherlockMenuItem_android_actionProviderClass
+           @see #SherlockMenuItem_android_actionViewClass
+           @see #SherlockMenuItem_android_alphabeticShortcut
+           @see #SherlockMenuItem_android_checkable
+           @see #SherlockMenuItem_android_checked
+           @see #SherlockMenuItem_android_enabled
+           @see #SherlockMenuItem_android_icon
+           @see #SherlockMenuItem_android_id
+           @see #SherlockMenuItem_android_menuCategory
+           @see #SherlockMenuItem_android_numericShortcut
+           @see #SherlockMenuItem_android_onClick
+           @see #SherlockMenuItem_android_orderInCategory
+           @see #SherlockMenuItem_android_showAsAction
+           @see #SherlockMenuItem_android_title
+           @see #SherlockMenuItem_android_titleCondensed
+           @see #SherlockMenuItem_android_visible
+         */
+        public static final int[] SherlockMenuItem = {
+            0x01010002, 0x0101000e, 0x010100d0, 0x01010106,
+            0x01010194, 0x010101de, 0x010101df, 0x010101e1,
+            0x010101e2, 0x010101e3, 0x010101e4, 0x010101e5,
+            0x0101026f, 0x010102d9, 0x010102fb, 0x010102fc,
+            0x01010389
+        };
+        /**
+          <p>
+          @attr description
+           An optional layout to be used as an action view.
+             See {@link android.view.MenuItem#setActionView(android.view.View)}
+             for more info. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_actionLayout}.
+          @attr name android:android_actionLayout
+        */
+        public static final int SherlockMenuItem_android_actionLayout = 14;
+        /**
+          <p>
+          @attr description
+           The name of an optional ActionProvider class to instantiate an action view
+             and perform operations such as default action for that menu item.
+             See {@link android.view.MenuItem#setActionProvider(android.view.ActionProvider)}
+             for more info. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_actionProviderClass}.
+          @attr name android:android_actionProviderClass
+        */
+        public static final int SherlockMenuItem_android_actionProviderClass = 16;
+        /**
+          <p>
+          @attr description
+           The name of an optional View class to instantiate and use as an
+             action view. See {@link android.view.MenuItem#setActionView(android.view.View)}
+             for more info. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_actionViewClass}.
+          @attr name android:android_actionViewClass
+        */
+        public static final int SherlockMenuItem_android_actionViewClass = 15;
+        /**
+          <p>
+          @attr description
+           The alphabetic shortcut key.  This is the shortcut when using a keyboard
+             with alphabetic keys. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_alphabeticShortcut}.
+          @attr name android:android_alphabeticShortcut
+        */
+        public static final int SherlockMenuItem_android_alphabeticShortcut = 9;
+        /**
+          <p>
+          @attr description
+           Whether the item is capable of displaying a check mark. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_checkable}.
+          @attr name android:android_checkable
+        */
+        public static final int SherlockMenuItem_android_checkable = 11;
+        /**
+          <p>
+          @attr description
+           Whether the item is checked.  Note that you must first have enabled checking with
+             the checkable attribute or else the check mark will not appear. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_checked}.
+          @attr name android:android_checked
+        */
+        public static final int SherlockMenuItem_android_checked = 3;
+        /**
+          <p>
+          @attr description
+           Whether the item is enabled. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_enabled}.
+          @attr name android:android_enabled
+        */
+        public static final int SherlockMenuItem_android_enabled = 1;
+        /**
+          <p>
+          @attr description
+           The icon associated with this item.  This icon will not always be shown, so
+             the title should be sufficient in describing this item. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_icon}.
+          @attr name android:android_icon
+        */
+        public static final int SherlockMenuItem_android_icon = 0;
+        /**
+          <p>
+          @attr description
+           The ID of the item. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_id}.
+          @attr name android:android_id
+        */
+        public static final int SherlockMenuItem_android_id = 2;
+        /**
+          <p>
+          @attr description
+           The category applied to the item.
+             (This will be or'ed with the orderInCategory attribute.) 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_menuCategory}.
+          @attr name android:android_menuCategory
+        */
+        public static final int SherlockMenuItem_android_menuCategory = 5;
+        /**
+          <p>
+          @attr description
+           The numeric shortcut key.  This is the shortcut when using a numeric (e.g., 12-key)
+             keyboard. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_numericShortcut}.
+          @attr name android:android_numericShortcut
+        */
+        public static final int SherlockMenuItem_android_numericShortcut = 10;
+        /**
+          <p>
+          @attr description
+           Name of a method on the Context used to inflate the menu that will be
+             called when the item is clicked. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_onClick}.
+          @attr name android:android_onClick
+        */
+        public static final int SherlockMenuItem_android_onClick = 12;
+        /**
+          <p>
+          @attr description
+           The order within the category applied to the item.
+             (This will be or'ed with the category attribute.) 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_orderInCategory}.
+          @attr name android:android_orderInCategory
+        */
+        public static final int SherlockMenuItem_android_orderInCategory = 6;
+        /**
+          <p>
+          @attr description
+           How this item should display in the Action Bar, if present. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_showAsAction}.
+          @attr name android:android_showAsAction
+        */
+        public static final int SherlockMenuItem_android_showAsAction = 13;
+        /**
+          <p>
+          @attr description
+           The title associated with the item. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_title}.
+          @attr name android:android_title
+        */
+        public static final int SherlockMenuItem_android_title = 7;
+        /**
+          <p>
+          @attr description
+           The condensed title associated with the item.  This is used in situations where the
+             normal title may be too long to be displayed. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_titleCondensed}.
+          @attr name android:android_titleCondensed
+        */
+        public static final int SherlockMenuItem_android_titleCondensed = 8;
+        /**
+          <p>
+          @attr description
+           Whether the item is shown/visible. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_visible}.
+          @attr name android:android_visible
+        */
+        public static final int SherlockMenuItem_android_visible = 4;
+        /** Attributes that can be used with a SherlockMenuView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SherlockMenuView_headerBackground com.jt.getdunked2:headerBackground}</code></td><td> Default background for the menu header.</td></tr>
+           <tr><td><code>{@link #SherlockMenuView_horizontalDivider com.jt.getdunked2:horizontalDivider}</code></td><td> Default horizontal divider between rows of menu items.</td></tr>
+           <tr><td><code>{@link #SherlockMenuView_itemBackground com.jt.getdunked2:itemBackground}</code></td><td> Default background for each menu item.</td></tr>
+           <tr><td><code>{@link #SherlockMenuView_itemIconDisabledAlpha com.jt.getdunked2:itemIconDisabledAlpha}</code></td><td> Default disabled icon alpha for each menu item that shows an icon.</td></tr>
+           <tr><td><code>{@link #SherlockMenuView_itemTextAppearance com.jt.getdunked2:itemTextAppearance}</code></td><td> Default appearance of menu item text.</td></tr>
+           <tr><td><code>{@link #SherlockMenuView_preserveIconSpacing com.jt.getdunked2:preserveIconSpacing}</code></td><td> Whether space should be reserved in layout when an icon is missing.</td></tr>
+           <tr><td><code>{@link #SherlockMenuView_verticalDivider com.jt.getdunked2:verticalDivider}</code></td><td> Default vertical divider between menu items.</td></tr>
+           <tr><td><code>{@link #SherlockMenuView_windowAnimationStyle com.jt.getdunked2:windowAnimationStyle}</code></td><td> Default animations for the menu.</td></tr>
+           </table>
+           @see #SherlockMenuView_headerBackground
+           @see #SherlockMenuView_horizontalDivider
+           @see #SherlockMenuView_itemBackground
+           @see #SherlockMenuView_itemIconDisabledAlpha
+           @see #SherlockMenuView_itemTextAppearance
+           @see #SherlockMenuView_preserveIconSpacing
+           @see #SherlockMenuView_verticalDivider
+           @see #SherlockMenuView_windowAnimationStyle
+         */
+        public static final int[] SherlockMenuView = {
+            0x7f010056, 0x7f010057, 0x7f010058, 0x7f010059,
+            0x7f01005a, 0x7f01005b, 0x7f01005c, 0x7f01005d
+        };
+        /**
+          <p>
+          @attr description
+           Default background for the menu header. 
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          <p>This is a private symbol.
+          @attr name android:headerBackground
+        */
+        public static final int SherlockMenuView_headerBackground = 3;
+        /**
+          <p>
+          @attr description
+           Default horizontal divider between rows of menu items. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:horizontalDivider
+        */
+        public static final int SherlockMenuView_horizontalDivider = 1;
+        /**
+          <p>
+          @attr description
+           Default background for each menu item. 
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          <p>This is a private symbol.
+          @attr name android:itemBackground
+        */
+        public static final int SherlockMenuView_itemBackground = 4;
+        /**
+          <p>
+          @attr description
+           Default disabled icon alpha for each menu item that shows an icon. 
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:itemIconDisabledAlpha
+        */
+        public static final int SherlockMenuView_itemIconDisabledAlpha = 6;
+        /**
+          <p>
+          @attr description
+           Default appearance of menu item text. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:itemTextAppearance
+        */
+        public static final int SherlockMenuView_itemTextAppearance = 0;
+        /**
+          <p>
+          @attr description
+           Whether space should be reserved in layout when an icon is missing. 
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:preserveIconSpacing
+        */
+        public static final int SherlockMenuView_preserveIconSpacing = 7;
+        /**
+          <p>
+          @attr description
+           Default vertical divider between menu items. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:verticalDivider
+        */
+        public static final int SherlockMenuView_verticalDivider = 2;
+        /**
+          <p>
+          @attr description
+           Default animations for the menu. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:windowAnimationStyle
+        */
+        public static final int SherlockMenuView_windowAnimationStyle = 5;
+        /** Attributes that can be used with a SherlockSearchView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SherlockSearchView_android_imeOptions com.jt.getdunked2:android_imeOptions}</code></td><td> The IME options to set on the query text field.</td></tr>
+           <tr><td><code>{@link #SherlockSearchView_android_inputType com.jt.getdunked2:android_inputType}</code></td><td> The input type to set on the query text field.</td></tr>
+           <tr><td><code>{@link #SherlockSearchView_android_maxWidth com.jt.getdunked2:android_maxWidth}</code></td><td> An optional maximum width of the SearchView.</td></tr>
+           <tr><td><code>{@link #SherlockSearchView_iconifiedByDefault com.jt.getdunked2:iconifiedByDefault}</code></td><td> The default state of the SearchView.</td></tr>
+           <tr><td><code>{@link #SherlockSearchView_queryHint com.jt.getdunked2:queryHint}</code></td><td> An optional query hint string to be displayed in the empty query field.</td></tr>
+           </table>
+           @see #SherlockSearchView_android_imeOptions
+           @see #SherlockSearchView_android_inputType
+           @see #SherlockSearchView_android_maxWidth
+           @see #SherlockSearchView_iconifiedByDefault
+           @see #SherlockSearchView_queryHint
+         */
+        public static final int[] SherlockSearchView = {
+            0x0101011f, 0x01010220, 0x01010264, 0x7f010060,
+            0x7f010061
+        };
+        /**
+          <p>
+          @attr description
+           The IME options to set on the query text field. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_imeOptions}.
+          @attr name android:android_imeOptions
+        */
+        public static final int SherlockSearchView_android_imeOptions = 2;
+        /**
+          <p>
+          @attr description
+           The input type to set on the query text field. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_inputType}.
+          @attr name android:android_inputType
+        */
+        public static final int SherlockSearchView_android_inputType = 1;
+        /**
+          <p>
+          @attr description
+           An optional maximum width of the SearchView. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_maxWidth}.
+          @attr name android:android_maxWidth
+        */
+        public static final int SherlockSearchView_android_maxWidth = 0;
+        /**
+          <p>
+          @attr description
+           The default state of the SearchView. If true, it will be iconified when not in
+             use and expanded when clicked. 
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:iconifiedByDefault
+        */
+        public static final int SherlockSearchView_iconifiedByDefault = 3;
+        /**
+          <p>
+          @attr description
+           An optional query hint string to be displayed in the empty query field. 
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:queryHint
+        */
+        public static final int SherlockSearchView_queryHint = 4;
+        /** Attributes that can be used with a SherlockSpinner.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_dropDownHorizontalOffset com.jt.getdunked2:android_dropDownHorizontalOffset}</code></td><td> Horizontal offset from the spinner widget for positioning the dropdown
+             in spinnerMode="dropdown".</td></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_dropDownSelector com.jt.getdunked2:android_dropDownSelector}</code></td><td> List selector to use for spinnerMode="dropdown" display.</td></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_dropDownVerticalOffset com.jt.getdunked2:android_dropDownVerticalOffset}</code></td><td> Vertical offset from the spinner widget for positioning the dropdown in
+             spinnerMode="dropdown".</td></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_dropDownWidth com.jt.getdunked2:android_dropDownWidth}</code></td><td> Width of the dropdown in spinnerMode="dropdown".</td></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_gravity com.jt.getdunked2:android_gravity}</code></td><td> Gravity setting for positioning the currently selected item.</td></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_popupBackground com.jt.getdunked2:android_popupBackground}</code></td><td> Background drawable to use for the dropdown in spinnerMode="dropdown".</td></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_popupPromptView com.jt.getdunked2:android_popupPromptView}</code></td><td> Reference to a layout to use for displaying a prompt in the dropdown for
+             spinnerMode="dropdown".</td></tr>
+           <tr><td><code>{@link #SherlockSpinner_android_prompt com.jt.getdunked2:android_prompt}</code></td><td> The prompt to display when the spinner's dialog is shown.</td></tr>
+           </table>
+           @see #SherlockSpinner_android_dropDownHorizontalOffset
+           @see #SherlockSpinner_android_dropDownSelector
+           @see #SherlockSpinner_android_dropDownVerticalOffset
+           @see #SherlockSpinner_android_dropDownWidth
+           @see #SherlockSpinner_android_gravity
+           @see #SherlockSpinner_android_popupBackground
+           @see #SherlockSpinner_android_popupPromptView
+           @see #SherlockSpinner_android_prompt
+         */
+        public static final int[] SherlockSpinner = {
+            0x010100af, 0x01010175, 0x01010176, 0x0101017b,
+            0x01010262, 0x010102ac, 0x010102ad, 0x010103ef
+        };
+        /**
+          <p>
+          @attr description
+           Horizontal offset from the spinner widget for positioning the dropdown
+             in spinnerMode="dropdown". 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_dropDownHorizontalOffset}.
+          @attr name android:android_dropDownHorizontalOffset
+        */
+        public static final int SherlockSpinner_android_dropDownHorizontalOffset = 5;
+        /**
+          <p>
+          @attr description
+           List selector to use for spinnerMode="dropdown" display. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_dropDownSelector}.
+          @attr name android:android_dropDownSelector
+        */
+        public static final int SherlockSpinner_android_dropDownSelector = 1;
+        /**
+          <p>
+          @attr description
+           Vertical offset from the spinner widget for positioning the dropdown in
+             spinnerMode="dropdown". 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_dropDownVerticalOffset}.
+          @attr name android:android_dropDownVerticalOffset
+        */
+        public static final int SherlockSpinner_android_dropDownVerticalOffset = 6;
+        /**
+          <p>
+          @attr description
+           Width of the dropdown in spinnerMode="dropdown". 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_dropDownWidth}.
+          @attr name android:android_dropDownWidth
+        */
+        public static final int SherlockSpinner_android_dropDownWidth = 4;
+        /**
+          <p>
+          @attr description
+           Gravity setting for positioning the currently selected item. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_gravity}.
+          @attr name android:android_gravity
+        */
+        public static final int SherlockSpinner_android_gravity = 0;
+        /**
+          <p>
+          @attr description
+           Background drawable to use for the dropdown in spinnerMode="dropdown". 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_popupBackground}.
+          @attr name android:android_popupBackground
+        */
+        public static final int SherlockSpinner_android_popupBackground = 2;
+        /**
+          <p>
+          @attr description
+           Reference to a layout to use for displaying a prompt in the dropdown for
+             spinnerMode="dropdown". This layout must contain a TextView with the id
+             @android:id/text1 to be populated with the prompt text. 
+          <p>This is a private symbol.
+          @attr name android:android_popupPromptView
+        */
+        public static final int SherlockSpinner_android_popupPromptView = 7;
+        /**
+          <p>
+          @attr description
+           The prompt to display when the spinner's dialog is shown. 
+          <p>This corresponds to the global attribute          resource symbol {@link com.jt.getdunked2.R.attr#android_prompt}.
+          @attr name android:android_prompt
+        */
+        public static final int SherlockSpinner_android_prompt = 3;
+        /** Attributes that can be used with a SherlockTheme.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SherlockTheme_actionBarDivider com.jt.getdunked2:actionBarDivider}</code></td><td> Custom divider drawable to use for elements in the action bar.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionBarItemBackground com.jt.getdunked2:actionBarItemBackground}</code></td><td> Custom item state list drawable background for action bar items.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionBarSize com.jt.getdunked2:actionBarSize}</code></td><td> Size of the Action Bar, including the contextual
+             bar used to present Action Modes.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionBarSplitStyle com.jt.getdunked2:actionBarSplitStyle}</code></td><td> Reference to a style for the split Action Bar.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionBarStyle com.jt.getdunked2:actionBarStyle}</code></td><td> Reference to a style for the Action Bar </td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionBarTabBarStyle com.jt.getdunked2:actionBarTabBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionBarTabStyle com.jt.getdunked2:actionBarTabStyle}</code></td><td> Default style for tabs within an action bar </td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionBarTabTextStyle com.jt.getdunked2:actionBarTabTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionBarWidgetTheme com.jt.getdunked2:actionBarWidgetTheme}</code></td><td> Reference to a theme that should be used to inflate widgets
+             and layouts destined for the action bar.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionButtonStyle com.jt.getdunked2:actionButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionDropDownStyle com.jt.getdunked2:actionDropDownStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionMenuTextAppearance com.jt.getdunked2:actionMenuTextAppearance}</code></td><td> TextAppearance style that will be applied to text that
+             appears within action menu items.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionMenuTextColor com.jt.getdunked2:actionMenuTextColor}</code></td><td> Color for text that appears within action menu items.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionModeBackground com.jt.getdunked2:actionModeBackground}</code></td><td> Background drawable to use for action mode UI </td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionModeCloseButtonStyle com.jt.getdunked2:actionModeCloseButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionModeCloseDrawable com.jt.getdunked2:actionModeCloseDrawable}</code></td><td> Drawable to use for the close action mode button </td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionModePopupWindowStyle com.jt.getdunked2:actionModePopupWindowStyle}</code></td><td> PopupWindow style to use for action modes when showing as a window overlay.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionModeShareDrawable com.jt.getdunked2:actionModeShareDrawable}</code></td><td> Drawable to use for the Share action button in WebView selection action modes </td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionModeSplitBackground com.jt.getdunked2:actionModeSplitBackground}</code></td><td> Background drawable to use for action mode UI in the lower split bar </td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionModeStyle com.jt.getdunked2:actionModeStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionOverflowButtonStyle com.jt.getdunked2:actionOverflowButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_actionSpinnerItemStyle com.jt.getdunked2:actionSpinnerItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_activatedBackgroundIndicator com.jt.getdunked2:activatedBackgroundIndicator}</code></td><td> Drawable used as a background for activated items.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_activityChooserViewStyle com.jt.getdunked2:activityChooserViewStyle}</code></td><td> Default ActivityChooserView style.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_buttonStyleSmall com.jt.getdunked2:buttonStyleSmall}</code></td><td> Small Button style.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_dividerVertical com.jt.getdunked2:dividerVertical}</code></td><td> Drawable to use for generic vertical dividers.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_dropDownHintAppearance com.jt.getdunked2:dropDownHintAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_dropDownListViewStyle com.jt.getdunked2:dropDownListViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_dropdownListPreferredItemHeight com.jt.getdunked2:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_homeAsUpIndicator com.jt.getdunked2:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_listPopupWindowStyle com.jt.getdunked2:listPopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_listPreferredItemHeightSmall com.jt.getdunked2:listPreferredItemHeightSmall}</code></td><td> A smaller, sleeker list item height.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_listPreferredItemPaddingLeft com.jt.getdunked2:listPreferredItemPaddingLeft}</code></td><td> The preferred padding along the left edge of list items.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_listPreferredItemPaddingRight com.jt.getdunked2:listPreferredItemPaddingRight}</code></td><td> The preferred padding along the right edge of list items.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_popupMenuStyle com.jt.getdunked2:popupMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_searchAutoCompleteTextView com.jt.getdunked2:searchAutoCompleteTextView}</code></td><td> SearchView AutoCompleteTextView style </td></tr>
+           <tr><td><code>{@link #SherlockTheme_searchDropdownBackground com.jt.getdunked2:searchDropdownBackground}</code></td><td> SearchView dropdown background </td></tr>
+           <tr><td><code>{@link #SherlockTheme_searchResultListItemHeight com.jt.getdunked2:searchResultListItemHeight}</code></td><td> The list item height for search results.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_searchViewCloseIcon com.jt.getdunked2:searchViewCloseIcon}</code></td><td> SearchView close button icon </td></tr>
+           <tr><td><code>{@link #SherlockTheme_searchViewEditQuery com.jt.getdunked2:searchViewEditQuery}</code></td><td> SearchView query refinement icon </td></tr>
+           <tr><td><code>{@link #SherlockTheme_searchViewEditQueryBackground com.jt.getdunked2:searchViewEditQueryBackground}</code></td><td> SearchView query refinement icon background </td></tr>
+           <tr><td><code>{@link #SherlockTheme_searchViewGoIcon com.jt.getdunked2:searchViewGoIcon}</code></td><td> SearchView Go button icon </td></tr>
+           <tr><td><code>{@link #SherlockTheme_searchViewSearchIcon com.jt.getdunked2:searchViewSearchIcon}</code></td><td> SearchView Search icon </td></tr>
+           <tr><td><code>{@link #SherlockTheme_searchViewTextField com.jt.getdunked2:searchViewTextField}</code></td><td> SearchView text field background for the left section </td></tr>
+           <tr><td><code>{@link #SherlockTheme_searchViewTextFieldRight com.jt.getdunked2:searchViewTextFieldRight}</code></td><td> SearchView text field background for the right section </td></tr>
+           <tr><td><code>{@link #SherlockTheme_searchViewVoiceIcon com.jt.getdunked2:searchViewVoiceIcon}</code></td><td> SearchView Voice button icon </td></tr>
+           <tr><td><code>{@link #SherlockTheme_selectableItemBackground com.jt.getdunked2:selectableItemBackground}</code></td><td> Background drawable for standalone items that need focus/pressed states.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_spinnerDropDownItemStyle com.jt.getdunked2:spinnerDropDownItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_spinnerItemStyle com.jt.getdunked2:spinnerItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_textAppearanceLargePopupMenu com.jt.getdunked2:textAppearanceLargePopupMenu}</code></td><td> Text color, typeface, size, and style for the text inside of a popup menu.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_textAppearanceListItemSmall com.jt.getdunked2:textAppearanceListItemSmall}</code></td><td> The preferred TextAppearance for the primary text of small list items.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_textAppearanceSearchResultSubtitle com.jt.getdunked2:textAppearanceSearchResultSubtitle}</code></td><td> Text color, typeface, size, and style for system search result subtitle.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_textAppearanceSearchResultTitle com.jt.getdunked2:textAppearanceSearchResultTitle}</code></td><td> Text color, typeface, size, and style for system search result title.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_textAppearanceSmall com.jt.getdunked2:textAppearanceSmall}</code></td><td> Text color, typeface, size, and style for "small" text.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_textAppearanceSmallPopupMenu com.jt.getdunked2:textAppearanceSmallPopupMenu}</code></td><td> Text color, typeface, size, and style for small text inside of a popup menu.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_textColorPrimary com.jt.getdunked2:textColorPrimary}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_textColorPrimaryDisableOnly com.jt.getdunked2:textColorPrimaryDisableOnly}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_textColorPrimaryInverse com.jt.getdunked2:textColorPrimaryInverse}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_textColorSearchUrl com.jt.getdunked2:textColorSearchUrl}</code></td><td> Text color for urls in search suggestions, used by things like global search and the browser.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_windowActionBar com.jt.getdunked2:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_windowActionBarOverlay com.jt.getdunked2:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_windowActionModeOverlay com.jt.getdunked2:windowActionModeOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_windowContentOverlay com.jt.getdunked2:windowContentOverlay}</code></td><td> This Drawable is overlaid over the foreground of the Window's content area, usually
+             to place a shadow below the title.</td></tr>
+           <tr><td><code>{@link #SherlockTheme_windowMinWidthMajor com.jt.getdunked2:windowMinWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_windowMinWidthMinor com.jt.getdunked2:windowMinWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_windowNoTitle com.jt.getdunked2:windowNoTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #SherlockTheme_windowSplitActionBar com.jt.getdunked2:windowSplitActionBar}</code></td><td></td></tr>
+           </table>
+           @see #SherlockTheme_actionBarDivider
+           @see #SherlockTheme_actionBarItemBackground
+           @see #SherlockTheme_actionBarSize
+           @see #SherlockTheme_actionBarSplitStyle
+           @see #SherlockTheme_actionBarStyle
+           @see #SherlockTheme_actionBarTabBarStyle
+           @see #SherlockTheme_actionBarTabStyle
+           @see #SherlockTheme_actionBarTabTextStyle
+           @see #SherlockTheme_actionBarWidgetTheme
+           @see #SherlockTheme_actionButtonStyle
+           @see #SherlockTheme_actionDropDownStyle
+           @see #SherlockTheme_actionMenuTextAppearance
+           @see #SherlockTheme_actionMenuTextColor
+           @see #SherlockTheme_actionModeBackground
+           @see #SherlockTheme_actionModeCloseButtonStyle
+           @see #SherlockTheme_actionModeCloseDrawable
+           @see #SherlockTheme_actionModePopupWindowStyle
+           @see #SherlockTheme_actionModeShareDrawable
+           @see #SherlockTheme_actionModeSplitBackground
+           @see #SherlockTheme_actionModeStyle
+           @see #SherlockTheme_actionOverflowButtonStyle
+           @see #SherlockTheme_actionSpinnerItemStyle
+           @see #SherlockTheme_activatedBackgroundIndicator
+           @see #SherlockTheme_activityChooserViewStyle
+           @see #SherlockTheme_buttonStyleSmall
+           @see #SherlockTheme_dividerVertical
+           @see #SherlockTheme_dropDownHintAppearance
+           @see #SherlockTheme_dropDownListViewStyle
+           @see #SherlockTheme_dropdownListPreferredItemHeight
+           @see #SherlockTheme_homeAsUpIndicator
+           @see #SherlockTheme_listPopupWindowStyle
+           @see #SherlockTheme_listPreferredItemHeightSmall
+           @see #SherlockTheme_listPreferredItemPaddingLeft
+           @see #SherlockTheme_listPreferredItemPaddingRight
+           @see #SherlockTheme_popupMenuStyle
+           @see #SherlockTheme_searchAutoCompleteTextView
+           @see #SherlockTheme_searchDropdownBackground
+           @see #SherlockTheme_searchResultListItemHeight
+           @see #SherlockTheme_searchViewCloseIcon
+           @see #SherlockTheme_searchViewEditQuery
+           @see #SherlockTheme_searchViewEditQueryBackground
+           @see #SherlockTheme_searchViewGoIcon
+           @see #SherlockTheme_searchViewSearchIcon
+           @see #SherlockTheme_searchViewTextField
+           @see #SherlockTheme_searchViewTextFieldRight
+           @see #SherlockTheme_searchViewVoiceIcon
+           @see #SherlockTheme_selectableItemBackground
+           @see #SherlockTheme_spinnerDropDownItemStyle
+           @see #SherlockTheme_spinnerItemStyle
+           @see #SherlockTheme_textAppearanceLargePopupMenu
+           @see #SherlockTheme_textAppearanceListItemSmall
+           @see #SherlockTheme_textAppearanceSearchResultSubtitle
+           @see #SherlockTheme_textAppearanceSearchResultTitle
+           @see #SherlockTheme_textAppearanceSmall
+           @see #SherlockTheme_textAppearanceSmallPopupMenu
+           @see #SherlockTheme_textColorPrimary
+           @see #SherlockTheme_textColorPrimaryDisableOnly
+           @see #SherlockTheme_textColorPrimaryInverse
+           @see #SherlockTheme_textColorSearchUrl
+           @see #SherlockTheme_windowActionBar
+           @see #SherlockTheme_windowActionBarOverlay
+           @see #SherlockTheme_windowActionModeOverlay
+           @see #SherlockTheme_windowContentOverlay
+           @see #SherlockTheme_windowMinWidthMajor
+           @see #SherlockTheme_windowMinWidthMinor
+           @see #SherlockTheme_windowNoTitle
+           @see #SherlockTheme_windowSplitActionBar
+         */
+        public static final int[] SherlockTheme = {
+            0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009,
+            0x7f01000a, 0x7f01000b, 0x7f01000c, 0x7f01000d,
+            0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011,
+            0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015,
+            0x7f010016, 0x7f010017, 0x7f010018, 0x7f010019,
+            0x7f01001a, 0x7f01001b, 0x7f01001c, 0x7f01001d,
+            0x7f01001e, 0x7f01001f, 0x7f010020, 0x7f010021,
+            0x7f010022, 0x7f010023, 0x7f010024, 0x7f010025,
+            0x7f010026, 0x7f010027, 0x7f010028, 0x7f010029,
+            0x7f01002a, 0x7f01002b, 0x7f01002c, 0x7f01002d,
+            0x7f01002e, 0x7f01002f, 0x7f010030, 0x7f010031,
+            0x7f010032, 0x7f010033, 0x7f010034, 0x7f010035,
+            0x7f010036, 0x7f010037, 0x7f010038, 0x7f010039,
+            0x7f01003a, 0x7f01003b, 0x7f01003c, 0x7f01003d,
+            0x7f01003e, 0x7f01003f, 0x7f010040, 0x7f010041,
+            0x7f010042, 0x7f010043, 0x7f010044, 0x7f010045,
+            0x7f010046, 0x7f010047, 0x7f010048
+        };
+        /**
+          <p>
+          @attr description
+           Custom divider drawable to use for elements in the action bar. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionBarDivider
+        */
+        public static final int SherlockTheme_actionBarDivider = 8;
+        /**
+          <p>
+          @attr description
+           Custom item state list drawable background for action bar items. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionBarItemBackground
+        */
+        public static final int SherlockTheme_actionBarItemBackground = 9;
+        /**
+          <p>
+          @attr description
+           Size of the Action Bar, including the contextual
+             bar used to present Action Modes. 
+
+
+          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
+</table>
+          <p>This is a private symbol.
+          @attr name android:actionBarSize
+        */
+        public static final int SherlockTheme_actionBarSize = 7;
+        /**
+          <p>
+          @attr description
+           Reference to a style for the split Action Bar. This style
+             controls the split component that holds the menu/action
+             buttons. actionBarStyle is still used for the primary
+             bar. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionBarSplitStyle
+        */
+        public static final int SherlockTheme_actionBarSplitStyle = 5;
+        /**
+          <p>
+          @attr description
+           Reference to a style for the Action Bar 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionBarStyle
+        */
+        public static final int SherlockTheme_actionBarStyle = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#actionBarTabBarStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionBarTabBarStyle
+        */
+        public static final int SherlockTheme_actionBarTabBarStyle = 1;
+        /**
+          <p>
+          @attr description
+           Default style for tabs within an action bar 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionBarTabStyle
+        */
+        public static final int SherlockTheme_actionBarTabStyle = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#actionBarTabTextStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionBarTabTextStyle
+        */
+        public static final int SherlockTheme_actionBarTabTextStyle = 2;
+        /**
+          <p>
+          @attr description
+           Reference to a theme that should be used to inflate widgets
+             and layouts destined for the action bar. Most of the time
+             this will be a reference to the current theme, but when
+             the action bar has a significantly different contrast
+             profile than the rest of the activity the difference
+             can become important. If this is set to @null the current
+             theme will be used.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionBarWidgetTheme
+        */
+        public static final int SherlockTheme_actionBarWidgetTheme = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#actionButtonStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionButtonStyle
+        */
+        public static final int SherlockTheme_actionButtonStyle = 52;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#actionDropDownStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionDropDownStyle
+        */
+        public static final int SherlockTheme_actionDropDownStyle = 51;
+        /**
+          <p>
+          @attr description
+           TextAppearance style that will be applied to text that
+             appears within action menu items. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionMenuTextAppearance
+        */
+        public static final int SherlockTheme_actionMenuTextAppearance = 10;
+        /**
+          <p>
+          @attr description
+           Color for text that appears within action menu items. 
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionMenuTextColor
+        */
+        public static final int SherlockTheme_actionMenuTextColor = 11;
+        /**
+          <p>
+          @attr description
+           Background drawable to use for action mode UI 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionModeBackground
+        */
+        public static final int SherlockTheme_actionModeBackground = 14;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#actionModeCloseButtonStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionModeCloseButtonStyle
+        */
+        public static final int SherlockTheme_actionModeCloseButtonStyle = 13;
+        /**
+          <p>
+          @attr description
+           Drawable to use for the close action mode button 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionModeCloseDrawable
+        */
+        public static final int SherlockTheme_actionModeCloseDrawable = 16;
+        /**
+          <p>
+          @attr description
+           PopupWindow style to use for action modes when showing as a window overlay. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionModePopupWindowStyle
+        */
+        public static final int SherlockTheme_actionModePopupWindowStyle = 18;
+        /**
+          <p>
+          @attr description
+           Drawable to use for the Share action button in WebView selection action modes 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionModeShareDrawable
+        */
+        public static final int SherlockTheme_actionModeShareDrawable = 17;
+        /**
+          <p>
+          @attr description
+           Background drawable to use for action mode UI in the lower split bar 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:actionModeSplitBackground
+        */
+        public static final int SherlockTheme_actionModeSplitBackground = 15;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#actionModeStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionModeStyle
+        */
+        public static final int SherlockTheme_actionModeStyle = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#actionOverflowButtonStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionOverflowButtonStyle
+        */
+        public static final int SherlockTheme_actionOverflowButtonStyle = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#actionSpinnerItemStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:actionSpinnerItemStyle
+        */
+        public static final int SherlockTheme_actionSpinnerItemStyle = 57;
+        /**
+          <p>
+          @attr description
+           Drawable used as a background for activated items. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:activatedBackgroundIndicator
+        */
+        public static final int SherlockTheme_activatedBackgroundIndicator = 65;
+        /**
+          <p>
+          @attr description
+           Default ActivityChooserView style. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:activityChooserViewStyle
+        */
+        public static final int SherlockTheme_activityChooserViewStyle = 64;
+        /**
+          <p>
+          @attr description
+           Small Button style. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:buttonStyleSmall
+        */
+        public static final int SherlockTheme_buttonStyleSmall = 19;
+        /**
+          <p>
+          @attr description
+           Drawable to use for generic vertical dividers. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:dividerVertical
+        */
+        public static final int SherlockTheme_dividerVertical = 50;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#dropDownHintAppearance}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:dropDownHintAppearance
+        */
+        public static final int SherlockTheme_dropDownHintAppearance = 66;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#dropDownListViewStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:dropDownListViewStyle
+        */
+        public static final int SherlockTheme_dropDownListViewStyle = 54;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#dropdownListPreferredItemHeight}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:dropdownListPreferredItemHeight
+        */
+        public static final int SherlockTheme_dropdownListPreferredItemHeight = 56;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#homeAsUpIndicator}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:homeAsUpIndicator
+        */
+        public static final int SherlockTheme_homeAsUpIndicator = 53;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#listPopupWindowStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:listPopupWindowStyle
+        */
+        public static final int SherlockTheme_listPopupWindowStyle = 63;
+        /**
+          <p>
+          @attr description
+           A smaller, sleeker list item height. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:listPreferredItemHeightSmall
+        */
+        public static final int SherlockTheme_listPreferredItemHeightSmall = 44;
+        /**
+          <p>
+          @attr description
+           The preferred padding along the left edge of list items. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:listPreferredItemPaddingLeft
+        */
+        public static final int SherlockTheme_listPreferredItemPaddingLeft = 45;
+        /**
+          <p>
+          @attr description
+           The preferred padding along the right edge of list items. 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:listPreferredItemPaddingRight
+        */
+        public static final int SherlockTheme_listPreferredItemPaddingRight = 46;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#popupMenuStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:popupMenuStyle
+        */
+        public static final int SherlockTheme_popupMenuStyle = 55;
+        /**
+          <p>
+          @attr description
+           SearchView AutoCompleteTextView style 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:searchAutoCompleteTextView
+        */
+        public static final int SherlockTheme_searchAutoCompleteTextView = 30;
+        /**
+          <p>
+          @attr description
+           SearchView dropdown background 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:searchDropdownBackground
+        */
+        public static final int SherlockTheme_searchDropdownBackground = 31;
+        /**
+          <p>
+          @attr description
+           The list item height for search results. @hide 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name android:searchResultListItemHeight
+        */
+        public static final int SherlockTheme_searchResultListItemHeight = 41;
+        /**
+          <p>
+          @attr description
+           SearchView close button icon 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:searchViewCloseIcon
+        */
+        public static final int SherlockTheme_searchViewCloseIcon = 32;
+        /**
+          <p>
+          @attr description
+           SearchView query refinement icon 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:searchViewEditQuery
+        */
+        public static final int SherlockTheme_searchViewEditQuery = 36;
+        /**
+          <p>
+          @attr description
+           SearchView query refinement icon background 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:searchViewEditQueryBackground
+        */
+        public static final int SherlockTheme_searchViewEditQueryBackground = 37;
+        /**
+          <p>
+          @attr description
+           SearchView Go button icon 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:searchViewGoIcon
+        */
+        public static final int SherlockTheme_searchViewGoIcon = 33;
+        /**
+          <p>
+          @attr description
+           SearchView Search icon 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:searchViewSearchIcon
+        */
+        public static final int SherlockTheme_searchViewSearchIcon = 34;
+        /**
+          <p>
+          @attr description
+           SearchView text field background for the left section 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:searchViewTextField
+        */
+        public static final int SherlockTheme_searchViewTextField = 38;
+        /**
+          <p>
+          @attr description
+           SearchView text field background for the right section 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:searchViewTextFieldRight
+        */
+        public static final int SherlockTheme_searchViewTextFieldRight = 39;
+        /**
+          <p>
+          @attr description
+           SearchView Voice button icon 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:searchViewVoiceIcon
+        */
+        public static final int SherlockTheme_searchViewVoiceIcon = 35;
+        /**
+          <p>
+          @attr description
+           Background drawable for standalone items that need focus/pressed states. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:selectableItemBackground
+        */
+        public static final int SherlockTheme_selectableItemBackground = 20;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#spinnerDropDownItemStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:spinnerDropDownItemStyle
+        */
+        public static final int SherlockTheme_spinnerDropDownItemStyle = 29;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#spinnerItemStyle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name android:spinnerItemStyle
+        */
+        public static final int SherlockTheme_spinnerItemStyle = 28;
+        /**
+          <p>
+          @attr description
+           Text color, typeface, size, and style for the text inside of a popup menu. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:textAppearanceLargePopupMenu
+        */
+        public static final int SherlockTheme_textAppearanceLargePopupMenu = 22;
+        /**
+          <p>
+          @attr description
+           The preferred TextAppearance for the primary text of small list items. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:textAppearanceListItemSmall
+        */
+        public static final int SherlockTheme_textAppearanceListItemSmall = 47;
+        /**
+          <p>
+          @attr description
+           Text color, typeface, size, and style for system search result subtitle. Defaults to primary inverse text color. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:textAppearanceSearchResultSubtitle
+        */
+        public static final int SherlockTheme_textAppearanceSearchResultSubtitle = 43;
+        /**
+          <p>
+          @attr description
+           Text color, typeface, size, and style for system search result title. Defaults to primary inverse text color. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:textAppearanceSearchResultTitle
+        */
+        public static final int SherlockTheme_textAppearanceSearchResultTitle = 42;
+        /**
+          <p>
+          @attr description
+           Text color, typeface, size, and style for "small" text. Defaults to secondary text color. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:textAppearanceSmall
+        */
+        public static final int SherlockTheme_textAppearanceSmall = 24;
+        /**
+          <p>
+          @attr description
+           Text color, typeface, size, and style for small text inside of a popup menu. 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:textAppearanceSmallPopupMenu
+        */
+        public static final int SherlockTheme_textAppearanceSmallPopupMenu = 23;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#textColorPrimary}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:textColorPrimary
+        */
+        public static final int SherlockTheme_textColorPrimary = 25;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#textColorPrimaryDisableOnly}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:textColorPrimaryDisableOnly
+        */
+        public static final int SherlockTheme_textColorPrimaryDisableOnly = 26;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#textColorPrimaryInverse}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:textColorPrimaryInverse
+        */
+        public static final int SherlockTheme_textColorPrimaryInverse = 27;
+        /**
+          <p>
+          @attr description
+           Text color for urls in search suggestions, used by things like global search and the browser. @hide 
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          <p>This is a private symbol.
+          @attr name android:textColorSearchUrl
+        */
+        public static final int SherlockTheme_textColorSearchUrl = 40;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#windowActionBar}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:windowActionBar
+        */
+        public static final int SherlockTheme_windowActionBar = 59;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#windowActionBarOverlay}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:windowActionBarOverlay
+        */
+        public static final int SherlockTheme_windowActionBarOverlay = 60;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#windowActionModeOverlay}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:windowActionModeOverlay
+        */
+        public static final int SherlockTheme_windowActionModeOverlay = 61;
+        /**
+          <p>
+          @attr description
+           This Drawable is overlaid over the foreground of the Window's content area, usually
+             to place a shadow below the title.  
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name android:windowContentOverlay
+        */
+        public static final int SherlockTheme_windowContentOverlay = 21;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#windowMinWidthMajor}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:windowMinWidthMajor
+        */
+        public static final int SherlockTheme_windowMinWidthMajor = 48;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#windowMinWidthMinor}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:windowMinWidthMinor
+        */
+        public static final int SherlockTheme_windowMinWidthMinor = 49;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#windowNoTitle}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:windowNoTitle
+        */
+        public static final int SherlockTheme_windowNoTitle = 58;
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#windowSplitActionBar}
+          attribute's value can be found in the {@link #SherlockTheme} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:windowSplitActionBar
+        */
+        public static final int SherlockTheme_windowSplitActionBar = 62;
+        /** Attributes that can be used with a SherlockView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SherlockView_android_focusable com.jt.getdunked2:android_focusable}</code></td><td></td></tr>
+           </table>
+           @see #SherlockView_android_focusable
+         */
+        public static final int[] SherlockView = {
+            0x010100da
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.jt.getdunked2.R.attr#android_focusable}
+          attribute's value can be found in the {@link #SherlockView} array.
+          @attr name android:android_focusable
+        */
+        public static final int SherlockView_android_focusable = 0;
+    };
 }
