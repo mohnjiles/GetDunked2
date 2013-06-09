@@ -100,7 +100,7 @@
     <string name="Hawkshot" formatted="false">    PASSIVE: Ashe gains bonus gold whenever she kills a unit or destroys a structure. \nACTIVE: Ashe animates a hawk to scout for her, 
     revealing terrain for 2 seconds as it flies towards a target location. Hawkshot reveals a wide area for 5 seconds 
     when it reaches its destination.</string>
-    <string name="EnchantedCrystalArrow">    ACTIVE: Ashe fires a large arrow in a straight line. If it hits an enemy champion, it will deal magic damage and stun 
+    <string name="EnchantedCrystalArrow">ACTIVE: Ashe fires a large arrow in a straight line. If it hits an enemy champion, it will deal magic damage and stun 
     that champion for 1 to 3.5 seconds based on the distance the arrow traveled. Additionally, surrounding units take half the 
     damage and are slowed by 50% for 3 seconds.</string>
     <string name="ManaBarrier" formatted="false">    PASSIVE: When Blitzcrank\'s life is brought below 20%  health he activates Mana Barrier, creating a damage shield that lasts for 

@@ -25,6 +25,7 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/button1"
         android:text="Jungle Timers"
+        android:onClick="profileButtonPressed"
         android:textColor="#FFFFFF" />
 
 </RelativeLayout>

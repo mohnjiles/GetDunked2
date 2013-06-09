@@ -1,66 +1,61 @@
 package com.jt.getdunked2;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-
-import com.jt.getdunked2.R.string;
  
-import android.app.Activity;
+import java.util.List;
+ 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
-
-public class LazyAdapter extends BaseAdapter {
  
-    private Activity activity;
-    private ArrayList<HashMap<String, String>> data;
-    private static LayoutInflater inflater=null;
  
-    public LazyAdapter(Activity a, ArrayList<HashMap<String, String>> d) {
-        activity = a;
-        data=d;
-        inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+public class LazyAdapter extends ArrayAdapter {
+ 
+    int resource;
+    String response;
+    Context context;
+    private LayoutInflater mInflater;
+ 
+    public LazyAdapter(Context context, int resource, List objects) {
+        super(context, resource, objects);
+        this.resource = resource;
+        mInflater = LayoutInflater.from(context);
     }
  
-    public int getCount() {
-        return data.size();
+    static class ViewHolder {
+        TextView title;
+        TextView description;
     }
  
-    public Object getItem(int position) {
-        return position;
-    }
+    public View getView(int position, View convertView, ViewGroup parent)
+    {
+        ViewHolder holder;
+        //Get the current location object
+        Response pcs = (Response) getItem(position);
  
-    public long getItemId(int position) {
-        return position;
-    }
- 
-    public View getView(int position, View convertView, ViewGroup parent) {
-        View vi=convertView;
+        //Inflate the view
         if(convertView==null)
-            vi = inflater.inflate(R.layout.custom_list_view, null);
+        {
+            convertView = mInflater.inflate(R.layout.custom_list_view, null);
+            holder = new ViewHolder();
+            holder.title = (TextView) convertView
+                    .findViewById(R.id.gameType);
+            holder.description = (TextView) convertView
+                    .findViewById(R.id.tvResult);
  
-        TextView gameType = (TextView)vi.findViewById(R.id.gameType); // title
-        TextView tvResult = (TextView)vi.findViewById(R.id.tvResult); // artist name
-        TextView tvKills = (TextView)vi.findViewById(R.id.tvScoreKills); // duration
-        TextView tvDeaths = (TextView)vi.findViewById(R.id.tvScoreDeaths);
-        TextView tvAssists = (TextView)vi.findViewById(R.id.tvScoreAssists);
-        ImageView thumb_image=(ImageView)vi.findViewById(R.id.list_image); // thumb image
+            convertView.setTag(holder);
  
-        HashMap<String, String> song = new HashMap<String, String>();
-        song = data.get(position);
+        }
+        else
+        {
+            holder = (ViewHolder) convertView.getTag();
+        }
  
-        // Setting all values in listview
-        tvDeaths.setText(song.get(ProfileActivity.KEY_DEATHS));
-        tvKills.setText(song.get(ProfileActivity.KEY_KILLS));
-        //gameType.setText(song.get(ProfileActivity.KEY_GAME_TYPE));
-        //tvResult.setText(song.get(ProfileActivity.KEY_RESULT));
-        
-
-        return vi;
+        //holder.title.setText();
+        //holder.description.setText(pcs.getChampionId().toString());
+ 
+        return convertView;
     }
+ 
 }

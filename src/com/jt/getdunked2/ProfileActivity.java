@@ -4,564 +4,158 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.ResponseCache;
+import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Arrays;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
+import org.apache.http.HttpStatus;
+import org.apache.http.NameValuePair;
+import org.apache.http.StatusLine;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONArray;
-import org.json.JSONException;
+import org.apache.http.protocol.DefaultedHttpContext;
 import org.json.JSONObject;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-
+import com.actionbarsherlock.app.SherlockActivity;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonIOException;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.database.CursorJoiner.Result;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.NavUtils;
-import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.AdapterView.OnItemClickListener;
 
-public class ProfileActivity extends SherlockFragmentActivity {
-
-	public class StatsInfo {
-		
-		public String kills;
-	}
-	// url to make request
-	public static String url = "";
-	 
-	// JSON Node names
-	private static final String TAG_SUMMONER_NAME = "name";
-	private static final String TAG_ACCTID = "acctId";
-	private static final String TAG_PROFILEICONID = "profileIconId";
-	private static final String TAG_SUMMONER_LEVEL = "summonerLevel";
-	private static final String TAG_SUCCESS = "success";
+public class ProfileActivity extends SherlockActivity {
 	
-    static String KEY_RANKED = "song"; // parent node
-    static String KEY_SKIN_INDEX = "id";
-    static String KEY_SUB_TYPE = "title";
-    static String KEY_TEAM_ID = "artist";
-    static String KEY_GAME_TYPE = "duration";
-    static String KEY_QUEUE_TYPE = "thumb_url";
-    static String KEY_RESULT = "result";
-    static String KEY_KILLS = "1";
-    static String KEY_DEATHS = "1";
-    static String KEY_ASSISTS = "1";
-    static String KEY_STAT_TYPE = "1";
-    static String KEY_VALUE = "1";
-    
-	 
-	String summName = "noob";
-	String summLevel = "fail";
-	String ranked = "derp";
-	public static String acctId = "";
-	TextView tvSummName;
-	public static String value;
+	LocationManager lm;
+	
+	ArrayList someArrayList = null;
+	LazyAdapter lazyAdapter;
+	Response response;
+	
 	ListView lv;
-	TextView tvKills;
+	TextView loadingText;
+	static EditText evSummName;
+	String url;
+	Button btnSearch;
 	
 	
-	/**
-	 * The {@link android.support.v4.view.PagerAdapter} that will provide
-	 * fragments for each of the sections. We use a
-	 * {@link android.support.v4.app.FragmentPagerAdapter} derivative, which
-	 * will keep every loaded fragment in memory. If this becomes too memory
-	 * intensive, it may be best to switch to a
-	 * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-	 */
-	SectionsPagerAdapter mSectionsPagerAdapter;
-
-	/**
-	 * The {@link ViewPager} that will host the section contents.
-	 */
-	ViewPager mViewPager;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_profile);
+		// Show the Up button in the action bar.
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		
-		Button btnSearch = (Button) findViewById(R.id.btnSearch);
-		btnSearch.setOnClickListener(myhandler);
 		lv = (ListView) findViewById(R.id.listViewStats);
-		tvKills = (TextView) findViewById(R.id.tvKills);
+		evSummName = (EditText) findViewById(R.id.etSearch);
+		url = "http://api.elophant.com/v2/NA/in_progress_game_info/" + evSummName.getText().toString() + "?key=eS4XmrLVhc7EhPson8dV";
 		
-	}
-	
-	View.OnClickListener myhandler = new View.OnClickListener() {
-	    public void onClick(View v) {
-			TextView tvDebug = (TextView) findViewById(R.id.tvDebug);
+		someArrayList = new ArrayList();
+		lazyAdapter = new LazyAdapter(ProfileActivity.this, R.layout.custom_list_view, someArrayList);
+		btnSearch = (Button) findViewById(R.id.btnSearch);
+		
+		lv.setTextFilterEnabled(true);
+		lv.setAdapter(lazyAdapter);
+		
+		btnSearch.setOnClickListener(new View.OnClickListener() {
 			
-			EditText etSearch = (EditText) findViewById(R.id.etSearch);
-	    	String summonerUrl = "http://api.elophant.com/v2/NA/summoner/" + etSearch.getText().toString() + "?key=eS4XmrLVhc7EhPson8dV";
-	    	
-	    	JSONClient client = new JSONClient();
-			client.execute(summonerUrl);
+			@Override
+			public void onClick(View v) {	
+				new PostFetcher().execute(url);
+				
+			}
+		});
+		
+		
+		
 
-	    }
-	  };
-
-/****************** GET recent_games *****************************************************/	  
-		public class JSONClientTwo extends AsyncTask<String, Void, JSONObject>{
-		    /*public JSONClient(Context context, GetJSONListener listener){
-		        this.getJSONListener = listener;
-		        curContext = context;
-		    }*/
-		    private String convertStreamToString(InputStream is) {
-		        /*
-		         * To convert the InputStream to String we use the BufferedReader.readLine()
-		         * method. We iterate until the BufferedReader return null which means
-		         * there's no more data to read. Each line will appended to a StringBuilder
-		         * and returned as String.
-		         */
-		        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-		        StringBuilder sb = new StringBuilder();
-
-		        String line = null;
-		        try {
-		            while ((line = reader.readLine()) != null) {
-		                sb.append(line + "\n");
-		            }
-		        } catch (IOException e) {
-		            e.printStackTrace();
-		        } finally {
-		            try {
-		                is.close();
-		            } catch (IOException e) {
-		                e.printStackTrace();
-		            }
-		        }
-
-		        return sb.toString();
-		    }
-
-
-		    public JSONObject connect(String url)
-		    {
-		        HttpClient httpclient = new DefaultHttpClient();
-
-		        // Prepare a request object
-		        HttpGet httpget = new HttpGet(url); 
-
-		        // Execute the request
-		        HttpResponse response;
-		        try {
-		            response = httpclient.execute(httpget);
-		            // Examine the response status
-		            Log.i("Praeda",response.getStatusLine().toString());
-
-		            // Get hold of the response entity
-		            HttpEntity entity = response.getEntity();
-
-		            if (entity != null) {
-
-		                // A Simple JSON Response Read
-		                InputStream instream = entity.getContent();
-		                String result= convertStreamToString(instream);
-
-		                // A Simple JSONObject Creation
-		                JSONObject json=new JSONObject(result);
-
-		                // Closing the input stream will trigger connection release
-		                instream.close();
-
-		                return json;
-		            }
-
-
-		        } catch (ClientProtocolException e) {
-		            // TODO Auto-generated catch block
-		            e.printStackTrace();
-		        } catch (IOException e) {
-		            // TODO Auto-generated catch block
-		            e.printStackTrace();
-		        } catch (JSONException e) {
-		            // TODO Auto-generated catch block
-		            e.printStackTrace();
-		        }
-
-		        return null;
-		    }
-	/*	    @Override
-		    public void onPreExecute() {
-		        progressDialog = new ProgressDialog(curContext);
-		        progressDialog.setMessage("Loading..Please wait..");
-		        progressDialog.setCancelable(false);
-		        progressDialog.setIndeterminate(true);
-		        progressDialog.show();
-
-		    }*/
-
-		    @Override
-		    protected JSONObject doInBackground(String... urls) {
-		        return connect(urls[0]);
-		    }
-
-		    @Override
-		    protected void onPostExecute(JSONObject json ) {
-
-		    	
-
-		    	
-		        TextView tvSummLevel = (TextView) ProfileActivity.this.findViewById(R.id.tvSummonerLevel);
-		        TextView tvDebug = (TextView) ProfileActivity.this.findViewById(R.id.tvDebug);
-		        TextView tvKills = (TextView) findViewById(R.id.tvScoreKills); // duration
-		        TextView tvDeaths = (TextView) findViewById(R.id.tvScoreDeaths);
-		        ArrayList<HashMap<String, String>> listForStuff = new ArrayList<HashMap<String, String>>();
-		        try {
-		        	JSONObject jObj = json.getJSONObject("data");
-		        	JSONArray jArray = jObj.getJSONArray("gameStatistics");
-		        	
-		        	
-		        	
-		        	for (int i = 0; i < jArray.length(); i++) {
-		        		
-		        		JSONObject obj = jArray.getJSONObject(i);
-		        		
-		        		JSONArray arrayStats = obj.getJSONArray("statistics");
-		        		int count = arrayStats.length();
-		        		String kills = "";
-		        		for (int j = 0; j < count; j++)
-		        		{
-		        			
-		        			JSONObject value = arrayStats.getJSONObject(j);
-		        			kills = value.getString("value");
-		        			
-		        			
-		        		}
-		        		HashMap<String, String> map = new HashMap<String, String>();
-		        		map.put(KEY_KILLS, kills);
-		        		 
-		        		listForStuff.add(map);
-		        		//summonerNames.add(gamesMap);
-		        		
-		        	}
-		        	
-/*	        		for (int k = 0; k < statsArray.length(); k++)
-	        		{
-	        			HashMap<String, String> statsMap = new HashMap<String, String>();
-	        			//statType = new String[statsArray.length()];
-	        			value = new String[statsArray.length()];
-	        			
-	        			JSONObject jObjStats = statsArray.getJSONObject(k);
-	        			
-	        			//statType[k] = jObjStats.getString("statType");
-	        			
-	        			
-	        			statsMap.put(KEY_KILLS, value[26]);
-	        			statsMap.put(KEY_DEATHS, value[8]);
-	        			summonerNames.add(statsMap);
-	        		}*/
-		        }
-				catch (JSONException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+		
+		//String json = "{"data":{"lastModifiedDate":"\/Date(-62135568000000-0800)\/","game":{"gameStartTime":"\/Date(1370584778000-0700)\/","spectatorsAllowed":"NONE","passwordSet":false,"gameType":"NORMAL_GAME","gameTypeConfigId":1,"gameState":"IN_PROGRESS","observers":[],"statusOfParticipants":"1111111111","id":907503190,"teamOne":[{"timeAddedToQueue":1370584536145,"index":0,"accountId":39202757,"botDifficulty":"NONE","summonerInternalName":"beelzeb1","lastSelectedSkinIndex":0,"profileIconId":13,"teamOwner":false,"summonerId":24806628,"pickTurn":1,"summonerName":"Beelzeb1","pickMode":0,"originalPlatformId":"NA"},{"timeAddedToQueue":1370584519874,"index":0,"accountId":44735992,"botDifficulty":"NONE","summonerInternalName":"snakesisisisisi","lastSelectedSkinIndex":5,"profileIconId":502,"teamOwner":false,"summonerId":30457712,"pickTurn":1,"summonerName":"Snake SiSiSiSiSi","pickMode":0,"originalPlatformId":"NA1"},{"timeAddedToQueue":1370584519874,"index":0,"accountId":44746140,"botDifficulty":"NONE","summonerInternalName":"brucelv","lastSelectedSkinIndex":0,"profileIconId":502,"teamOwner":true,"summonerId":30377776,"pickTurn":1,"summonerName":"BruceLV","pickMode":0,"originalPlatformId":"NA1"},{"timeAddedToQueue":1370584522894,"index":0,"accountId":35254611,"botDifficulty":"NONE","summonerInternalName":"daralex","lastSelectedSkinIndex":0,"profileIconId":545,"teamOwner":false,"summonerId":21748409,"pickTurn":1,"summonerName":"Daralex","pickMode":0,"originalPlatformId":"NA"},{"timeAddedToQueue":1370584519874,"index":0,"accountId":45480424,"botDifficulty":"NONE","summonerInternalName":"beanyang","lastSelectedSkinIndex":0,"profileIconId":6,"teamOwner":false,"summonerId":31034110,"pickTurn":1,"summonerName":"BeanYang","pickMode":0,"originalPlatformId":"NA1"}],"teamTwo":[{"timeAddedToQueue":1370584522702,"index":0,"accountId":33564286,"botDifficulty":"NONE","summonerInternalName":"ghosthin","lastSelectedSkinIndex":4,"profileIconId":518,"teamOwner":true,"summonerId":20550448,"pickTurn":1,"summonerName":"Ghost Hin","pickMode":0,"originalPlatformId":"NA"},{"timeAddedToQueue":1370584516141,"index":0,"accountId":46994824,"botDifficulty":"NONE","summonerInternalName":"warrtu4n","lastSelectedSkinIndex":3,"profileIconId":12,"teamOwner":false,"summonerId":32153136,"pickTurn":1,"summonerName":"WarrTu4n","pickMode":0,"originalPlatformId":"NA1"},{"timeAddedToQueue":1370584522702,"index":0,"accountId":39664317,"botDifficulty":"NONE","summonerInternalName":"xeneria","lastSelectedSkinIndex":0,"profileIconId":28,"teamOwner":false,"summonerId":25126590,"pickTurn":1,"summonerName":"Xeneria","pickMode":0,"originalPlatformId":"NA"},{"timeAddedToQueue":1370584522702,"index":0,"accountId":32624077,"botDifficulty":"NONE","summonerInternalName":"trooprm32","lastSelectedSkinIndex":0,"profileIconId":539,"teamOwner":false,"summonerId":19875107,"pickTurn":1,"summonerName":"Trooprm32","pickMode":0,"originalPlatformId":"NA"},{"timeAddedToQueue":1370584522702,"index":0,"accountId":36849883,"botDifficulty":"NONE","summonerInternalName":"stevefrenchjr","lastSelectedSkinIndex":0,"profileIconId":538,"teamOwner":false,"summonerId":22907290,"pickTurn":1,"summonerName":"Steve French Jr","pickMode":0,"originalPlatformId":"NA"}],"bannedChampions":[],"name":"Match-907503190","spectatorDelay":0,"terminatedCondition":"NOT_TERMINATED","queueTypeName":"NORMAL","optimisticLock":22,"maxNumPlayers":10,"queuePosition":0,"gameMode":"CLASSIC","mapId":1,"pickTurn":3,"playerChampionSelections":[{"summonerInternalName":"ghosthin","spell1Id":14,"spell2Id":12,"selectedSkinIndex":0,"championId":17},{"summonerInternalName":"warrtu4n","spell1Id":11,"spell2Id":4,"selectedSkinIndex":0,"championId":64},{"summonerInternalName":"snakesisisisisi","spell1Id":4,"spell2Id":14,"selectedSkinIndex":0,"championId":11},{"summonerInternalName":"stevefrenchjr","spell1Id":3,"spell2Id":4,"selectedSkinIndex":0,"championId":80},{"summonerInternalName":"beelzeb1","spell1Id":4,"spell2Id":11,"selectedSkinIndex":0,"championId":154},{"summonerInternalName":"xeneria","spell1Id":4,"spell2Id":14,"selectedSkinIndex":6,"championId":39},{"summonerInternalName":"beanyang","spell1Id":3,"spell2Id":4,"selectedSkinIndex":0,"championId":412},{"summonerInternalName":"trooprm32","spell1Id":14,"spell2Id":4,"selectedSkinIndex":0,"championId":105},{"summonerInternalName":"brucelv","spell1Id":12,"spell2Id":6,"selectedSkinIndex":0,"championId":27},{"summonerInternalName":"daralex","spell1Id":4,"spell2Id":21,"selectedSkinIndex":0,"championId":119}]},"playerCredentials":{"gameId":907503190,"lastSelectedSkinIndex":0,"observer":true,"observerServerIp":"216.133.234.17","playerId":35254611,"observerServerPort":8088,"observerEncryptionKey":"qK3C03Pl+wI4qMPCqu1OETAqNsL3V9Rd"},"gameName":"match-907503190"},"success":true}";
+		
+		//InGameStats data = new Gson().fromJson(json, InGameStats.class);
+	    
+		
+	}
+	
+	
+	private class PostFetcher extends AsyncTask<String, Void, String> {
+		private static final String TAG = "PostFetcher";
+		public final String SERVER_URL = "http://api.elophant.com/v2/NA/in_progress_game_info/" + evSummName.getText().toString() + "?key=eS4XmrLVhc7EhPson8dV";
+		public String jsonString = "";
+		
+		
+		@Override
+		protected String doInBackground(String... urls) {  
+			try {
+				  URL url = new URL(SERVER_URL);
+					BufferedReader in = new BufferedReader(
+						new InputStreamReader(url.openStream()));
+					String inputLine;
+					while ((inputLine = in.readLine()) != null) {
+						jsonString = inputLine;
+					}
+					in.close();
+					//Create gson
+			        Gson gson = new Gson();
+					response = gson.fromJson(jsonString, Response.class);
+					//Log.w("json", gson.toJson(response).toString()); 
+				} catch (IOException e) {
+			  		e.getMessage();
+						e.printStackTrace();
+				} catch (Exception e) {
+						e.getMessage();
+						e.printStackTrace();
 				}
-		        LazyAdapter adapter = new LazyAdapter(ProfileActivity.this, listForStuff);
-		        lv.setAdapter(adapter);
-     
-		    }
+			return jsonString;
+			
 		}
 		
-		
-		
-public class ListviewAdapter extends BaseAdapter
-{
-    public List<StatsInfo> list;
-    Activity activity;
-
-    public ListviewAdapter(Activity activity, List<StatsInfo> listForSearchConcepts) {
-        super();
-        this.activity = activity;
-        this.list = listForSearchConcepts;
-    }
-
-    public int getCount() {
-        return list.size();
-    }
-
-    public Object getItem(int position) {
-        return list.get(position);
-    }
-
-    public long getItemId(int position) {
-        return 0;
-    }
-
-    private class ViewHolder {
-        TextView txtFirst;
-        TextView txtSecond;
-        TextView txtThird;
-        TextView txtFourth;
-    }
-
-
-    public View getView(int position, View convertView, ViewGroup parent) {
-        // TODO Auto-generated method stub
-
-        // TODO Auto-generated method stub
-        ViewHolder holder;
-        LayoutInflater inflater =  activity.getLayoutInflater();
-
-        if (convertView == null)
-        {
-            convertView = inflater.inflate(R.layout.custom_list_view, null);
-            holder = new ViewHolder();
-            holder.txtFirst = (TextView) convertView.findViewById(R.id.tvKills);
-            holder.txtSecond = (TextView) convertView.findViewById(R.id.tvDeaths);
-            convertView.setTag(holder);
-        }
-        else
-        {
-            holder = (ViewHolder) convertView.getTag();
-        }
-
-        StatsInfo statInfo = list.get(position);
-        holder.txtFirst.setText(statInfo.kills);
-
-        return convertView;
-    }
-}
-
-  
-/********************** GET summoner ********************************************************/
-	public class JSONClient extends AsyncTask<String, Void, JSONObject>{
-	    /*public JSONClient(Context context, GetJSONListener listener){
-	        this.getJSONListener = listener;
-	        curContext = context;
-	    }*/
-	    private String convertStreamToString(InputStream is) {
-	        /*
-	         * To convert the InputStream to String we use the BufferedReader.readLine()
-	         * method. We iterate until the BufferedReader return null which means
-	         * there's no more data to read. Each line will appended to a StringBuilder
-	         * and returned as String.
-	         */
-	        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-	        StringBuilder sb = new StringBuilder();
-
-	        String line = null;
-	        try {
-	            while ((line = reader.readLine()) != null) {
-	                sb.append(line + "\n");
-	            }
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        } finally {
-	            try {
-	                is.close();
-	            } catch (IOException e) {
-	                e.printStackTrace();
-	            }
-	        }
-
-	        return sb.toString();
-	    }
-
-
-	    public JSONObject connect(String url)
-	    {
-	        HttpClient httpclient = new DefaultHttpClient();
-
-	        // Prepare a request object
-	        HttpGet httpget = new HttpGet(url); 
-
-	        // Execute the request
-	        HttpResponse response;
-	        try {
-	            response = httpclient.execute(httpget);
-	            // Examine the response status
-	            Log.i("Praeda",response.getStatusLine().toString());
-
-	            // Get hold of the response entity
-	            HttpEntity entity = response.getEntity();
-
-	            if (entity != null) {
-
-	                // A Simple JSON Response Read
-	                InputStream instream = entity.getContent();
-	                String result= convertStreamToString(instream);
-
-	                // A Simple JSONObject Creation
-	                JSONObject json=new JSONObject(result);
-
-	                // Closing the input stream will trigger connection release
-	                instream.close();
-
-	                return json;
-	            }
-
-
-	        } catch (ClientProtocolException e) {
-	            // TODO Auto-generated catch block
-	            e.printStackTrace();
-	        } catch (IOException e) {
-	            // TODO Auto-generated catch block
-	            e.printStackTrace();
-	        } catch (JSONException e) {
-	            // TODO Auto-generated catch block
-	            e.printStackTrace();
-	        }
-
-	        return null;
-	    }
-/*	    @Override
-	    public void onPreExecute() {
-	        progressDialog = new ProgressDialog(curContext);
-	        progressDialog.setMessage("Loading..Please wait..");
-	        progressDialog.setCancelable(false);
-	        progressDialog.setIndeterminate(true);
-	        progressDialog.show();
-
-	    }*/
-
-	    @Override
-	    protected JSONObject doInBackground(String... urls) {
-	        return connect(urls[0]);
-	    }
-
-	    @Override
-	    protected void onPostExecute(JSONObject json ) {
-
-	        tvSummName = (TextView) ProfileActivity.this.findViewById(R.id.tvSummonerName);
-	    	//JSONClientTwo clientTwo = new JSONClientTwo();
-	    	TextView tvDebug  = (TextView) ProfileActivity.this.findViewById(R.id.tvDebug);
-	        try {
-	        	JSONObject jObj = json.getJSONObject("data");
-				summName = jObj.getString(TAG_SUMMONER_NAME);
-				summLevel = jObj.getString(TAG_SUMMONER_LEVEL);
-				acctId = jObj.getString(TAG_ACCTID);
-				
-				
-				
-			} catch (JSONException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		@Override
+		protected void onPostExecute(String jsonString)
+		{
+			
+			TextView tvSummName = (TextView) findViewById(R.id.tvSummonerName);
+			if (response != null && response.getData() != null)
+			{
+				tvSummName.setText(response.getData().getGame().getGameMode());
 			}
-	        
-			tvSummName.setText(summName + "\n" + summLevel);
-			String gamesUrl = "http://api.elophant.com/v2/na/recent_games/" + acctId + "?key=eS4XmrLVhc7EhPson8dV";
-			tvDebug.setText(gamesUrl);
-			JSONClientTwo clientTwo = new JSONClientTwo();
-			clientTwo.execute(gamesUrl);
-	    }
-	}
-    
-	@Override
-	public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getSupportMenuInflater().inflate(R.menu.activity_profile, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(com.actionbarsherlock.view.MenuItem item) {
-		switch (item.getItemId()) {
-		case android.R.id.home:
-			// This ID represents the Home or Up button. In the case of this
-			// activity, the Up button is shown. Use NavUtils to allow users
-			// to navigate up one level in the application structure. For
-			// more details, see the Navigation pattern on Android Design:
-			//
-			// http://developer.android.com/design/patterns/navigation.html#up-vs-back
-			//
-			NavUtils.navigateUpFromSameTask(this);
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
-
-	/**
-	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-	 * one of the sections/tabs/pages.
-	 */
-	public class SectionsPagerAdapter extends FragmentPagerAdapter {
-
-		public SectionsPagerAdapter(FragmentManager fm) {
-			super(fm);
-		}
-
-		@Override
-		public Fragment getItem(int position) {
-			// getItem is called to instantiate the fragment for the given page.
-			// Return a DummySectionFragment (defined as a static inner class
-			// below) with the page number as its lone argument.
-			Fragment fragment = new DummySectionFragment();
-			Bundle args = new Bundle();
-			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
-			fragment.setArguments(args);
-			return fragment;
-		}
-
-		@Override
-		public int getCount() {
-			// Show 3 total pages.
-			return 3;
-		}
-
-		@Override
-		public CharSequence getPageTitle(int position) {
-			switch (position) {
-			case 0:
-				return getString(R.string.title_section1).toUpperCase();
-			case 1:
-				return getString(R.string.title_section2).toUpperCase();
-			case 2:
-				return getString(R.string.title_section3).toUpperCase();
+			else {
+				Toast.makeText(ProfileActivity.this, "" + evSummName.getText().toString() + " is not in a game", Toast.LENGTH_LONG).show();
 			}
-			return null;
 		}
 	}
-
-	/**
-	 * A dummy fragment representing a section of the app, but that simply
-	 * displays dummy t)ext.
-	 */
-	public static class DummySectionFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
-
-		public DummySectionFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			// Create a new TextView and set its text to the fragment's section
-			// number argument value.
-			TextView textView = new TextView(getActivity());
-			textView.setGravity(Gravity.CENTER);
-			textView.setText(Integer.toString(getArguments().getInt(
-					ARG_SECTION_NUMBER)));
-			return textView;
-		}
-	}
-
 }
 
 
-	
-	
