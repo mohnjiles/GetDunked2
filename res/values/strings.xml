@@ -23,15 +23,15 @@
     of Legends.\n\n\t"Mercy is a human luxury... and responsibility."\n\t
     ―Ahri</string>
     <string name="EssenceTheft">    Ahri gains a charge of Essence Theft with each enemy unit hit by any of her spells, with a cap of 3 
-    charges per spell cast. Upon reaching 9 charges, Ahri\'s next spell will have 35% bonus spell vamp.</string>
+    charges per spell cast. Upon reaching 9 charges, Ahri\'s next spell will have 35%%; bonus spell vamp.</string>
     <string name="OrbOfDeception">ACTIVE: Ahri sends out an orb in a line in front of her and then pulls it back, 
   dealing magic damage on the way out and true damage on the way back.</string>
     <string name="FoxFire">    ACTIVE: Ahri releases three fox-fires to surround her for up to 5 seconds. 
     After a short delay after cast, each flame will target the closest enemy unit to itself, 
     prioritizing champions, and deal magic damage to the target.
     Additional fox-fires that hit the same target will only deal 50% damage.</string>
-    <string name="Charm">    ACTIVE: Ahri will blow a kiss that travels in a line in front of her. It will deal magic damage and charm 
-    the first enemy it encounters, forcing them to walk harmlessly towards her, while being slowed by 50% for 
+    <string name="Charm" formatted="false">ACTIVE: Ahri will blow a kiss that travels in a line in front of her. It will deal magic damage and charm 
+    the first enemy it encounters, forcing them to walk harmlessly towards her, while being slowed by 50%% for 
     the duration.</string>
     <string name="SpiritRush">    ACTIVE: Ahri dashes towards the cursor and fires essence bolts, dealing magic damage to up to 3 
     nearby enemies, prioritizing champions. In the next 10 seconds, Spirit Rush can be cast two additional 
@@ -49,7 +49,7 @@
     periodically, affected by cooldown reduction, up to a maximum of 3. Additionally, Akali gains an Essence of Shadow for each kill or
     assist she obtains.</string>
     <string name="Trample">    Each time Alistar casts a spell, for 3 seconds afterwards he gains the ability to ignore unit collision and will 
-    deal 3 + (1 × level) (+ 10% AP) magic damage to nearby enemy units and structures each second. Trample deals double damage to minions 
+    deal 3 + (1 × level) (+ 10%% AP) magic damage to nearby enemy units and structures each second. Trample deals double damage to minions 
     and monsters.</string>
     <string name="Pulverize">    ACTIVE: Alistar smashes the ground where he is standing, dealing magic damage to all surrounding enemies and knocking them up 
     for 1 second, additionally stunning them upon landing for 0.5 seconds.</string>
@@ -91,7 +91,7 @@
     within range. Tibbers remains on the field for up to 45 seconds, and Annie can control his movement and his 
     physical attacks. Tibbers is also surrounded by a flaming aura that deals magic damage every second to enemies 
     around himself.</string>
-    <string name="Focus">    Ashe\'s critical strike chance increases by 3 / 6 / 9 / 12 / 15 / 18% every 3 seconds while not attacking. Focus\' 
+    <string name="Focus">    Ashe\'s critical strike chance increases by 3 / 6 / 9 / 12 / 15 / 18%% every 3 seconds while not attacking. Focus\' 
     bonus is expended with her next basic attack.</string>
     <string name="FrostShot">    TOGGLE: Ashe\'s basic attacks slow her targets for 2 seconds.</string>
     <string name="Volley">    ACTIVE: Ashe fires 7 arrows in a cone, dealing physical damage to each target hit. Each arrow will only hit 
@@ -102,7 +102,7 @@
     when it reaches its destination.</string>
     <string name="EnchantedCrystalArrow">ACTIVE: Ashe fires a large arrow in a straight line. If it hits an enemy champion, it will deal magic damage and stun 
     that champion for 1 to 3.5 seconds based on the distance the arrow traveled. Additionally, surrounding units take half the 
-    damage and are slowed by 50% for 3 seconds.</string>
+    damage and are slowed by 50%% for 3 seconds.</string>
     <string name="ManaBarrier" formatted="false">    PASSIVE: When Blitzcrank\'s life is brought below 20%  health he activates Mana Barrier, creating a damage shield that lasts for 
     10 seconds. The shield strength is equal to 50% of Blitzcrank\'s current mana.</string>
     <string name="RocketGrab">    ACTIVE: Blitzcrank fires his right hand at a straight line to the target area. If his hand encounters an enemy unit it will 

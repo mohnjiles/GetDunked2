@@ -1,8 +1,9 @@
 
 package com.jt.getdunked2;
 
+import java.util.List;
 
-public class Response{
+public class Summoner{
    	private Data data;
    	private boolean success;
 

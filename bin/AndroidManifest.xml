@@ -55,14 +55,6 @@
                 android:value="com.jt.getdunked2.MainActivity" />
         </activity>
         <activity
-            android:name="com.jt.getdunked2.MatchHistoryFragment"
-            android:label="@string/title_activity_match_history_fragment" >
-        </activity>
-        <activity
-            android:name="com.jt.getdunked2.ListViewTest"
-            android:label="@string/title_activity_list_view_test" >
-        </activity>
-        <activity
             android:name="com.jt.getdunked2.PassivePopup"
             android:label="@string/title_activity_passive_popup" >
         </activity>
