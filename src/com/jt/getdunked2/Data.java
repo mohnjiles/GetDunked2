@@ -17,6 +17,7 @@ public class Data{
    	private Number summonerLevel;
    	private List<GameStatistics> gameStatistics;
    	private Number userId;
+   	private Number id;
 
  	public Game getGame(){
 		return this.game;
@@ -96,5 +97,11 @@ public class Data{
 	}
 	public void setUserId(Number userId){
 		this.userId = userId;
+	}
+	public Number getId() {
+		return id;
+	}
+	public void setId(Number id) {
+		this.id = id;
 	}
 }

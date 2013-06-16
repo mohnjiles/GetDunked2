@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeList"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/list_selector"
@@ -14,12 +15,12 @@
         android:layout_alignParentLeft="true"
         android:background="@drawable/image_bg"
         android:layout_marginRight="5dip">
- 
+
         <ImageView
             android:id="@+id/list_image"
-            android:layout_width="50dip"
-            android:layout_height="50dip"
-            android:src="@drawable/ahrisquare"/>
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ahrisquare" />
  
     </LinearLayout>
  
@@ -32,7 +33,7 @@
         android:layout_alignTop="@+id/thumbnail"
         android:layout_toRightOf="@+id/thumbnail"
         android:text="Game Type"
-        android:textColor="#040404"
+        android:textColor="#FFFFFF"
         android:textSize="15dip"
         android:textStyle="bold"
         android:typeface="sans" />
@@ -48,71 +49,127 @@
         android:layout_alignLeft="@+id/gameType"
         android:layout_below="@+id/gameType"
         android:text="Victory"
-        android:textColor="#343434"
-        android:textSize="12sp" />
-
-    <TextView
-        android:id="@+id/tvScoreKills"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvResult"
-        android:layout_below="@+id/tvResult"
-        android:text="1"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="12sp" />
-
-    <TextView
-        android:id="@+id/tvKills"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvScoreKills"
-        android:layout_alignBottom="@+id/tvScoreKills"
-        android:layout_toRightOf="@+id/tvScoreKills"
-        android:text=" Kills /"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="12sp" />
-
-    <TextView
-        android:id="@+id/tvScoreDeaths"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/tvKills"
-        android:layout_toRightOf="@+id/tvKills"
-        android:text=" 2"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="12sp" />
-
-    <TextView
-        android:id="@+id/tvDeaths"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvScoreDeaths"
-        android:layout_alignBottom="@+id/tvScoreDeaths"
-        android:layout_toRightOf="@+id/tvScoreDeaths"
-        android:text=" Deaths /"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF"
         android:textSize="12sp" />
 
     <TextView
         android:id="@+id/tvScoreAssists"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvDeaths"
-        android:layout_alignBottom="@+id/tvDeaths"
-        android:layout_toRightOf="@+id/tvDeaths"
+        android:layout_alignRight="@+id/tvScoreDeaths"
+        android:layout_below="@+id/tvScoreDeaths"
         android:text=" 3"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="12sp" />
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/TextView01"
+        android:id="@+id/tvScoreDeaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/tvScoreKills"
+        android:layout_below="@+id/tvScoreKills"
+        android:text=" 2"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvKillsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvScoreKills"
+        android:layout_alignBottom="@+id/tvScoreKills"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/tvScoreKills"
+        android:text="kills"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#BBBBBB" />
+
+    <TextView
+        android:id="@+id/tvDeathsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvScoreDeaths"
+        android:layout_alignBottom="@+id/tvScoreDeaths"
+        android:layout_alignLeft="@+id/tvKillsText"
+        android:text="deaths"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#BBBBBB" />
+
+    <TextView
+        android:id="@+id/tvAssistText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tvScoreAssists"
         android:layout_alignBottom="@+id/tvScoreAssists"
-        android:layout_toRightOf="@+id/tvScoreAssists"
-        android:text=" Assists"
+        android:layout_alignLeft="@+id/tvDeathsText"
+        android:text="assists"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textSize="12sp" />
+        android:textColor="#BBBBBB" />
+
+    <TextView
+        android:id="@+id/tvScoreKills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gameType"
+        android:layout_marginLeft="175dp"
+        android:text="1"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/ivItemOne"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/tvScoreKills"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@+id/tvAssistText"
+        android:src="@drawable/ability" />
+
+    <ImageView
+        android:id="@+id/ivItemTwo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/ivItemOne"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/ivItemOne"
+        android:src="@drawable/ability" />
+
+    <ImageView
+        android:id="@+id/ivItemThree"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/ivItemTwo"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/ivItemTwo"
+        android:src="@drawable/ability" />
+
+    <ImageView
+        android:id="@+id/ivItemFour"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/ivItemOne"
+        android:layout_below="@+id/ivItemOne"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/ability" />
+
+    <ImageView
+        android:id="@+id/ivItemFive"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/ivItemFour"
+        android:layout_toLeftOf="@+id/ivItemThree"
+        android:src="@drawable/ability" />
+
+    <ImageView
+        android:id="@+id/ivItemSix"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/ivItemThree"
+        android:layout_alignTop="@+id/ivItemFive"
+        android:src="@drawable/ability" />
  
 </RelativeLayout>

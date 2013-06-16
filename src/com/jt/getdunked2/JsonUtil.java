@@ -32,8 +32,8 @@ public class JsonUtil {
 		} finally {
 			try {
 				in.close();
-			} catch (Throwable t) {
-
+			} catch (Exception e) {
+				Log.w("oops", e.getMessage()); 
 			}
 		}
 	}

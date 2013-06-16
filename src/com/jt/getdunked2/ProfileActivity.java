@@ -7,11 +7,13 @@ import java.util.Comparator;
 import java.util.List;
 
 import com.actionbarsherlock.app.SherlockActivity;
+import com.google.gson.JsonParseException;
 
 import android.R.integer;
 import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -83,23 +85,24 @@ public class ProfileActivity extends SherlockActivity {
 				+ etSummName.getText().toString() + "?key=eS4XmrLVhc7EhPson8dV";
 		public final String SERVER_URL_SUMMONER = "http://api.elophant.com/v2/NA/summoner/"
 				+ etSummName.getText().toString().replace(" ", "") + "?key=eS4XmrLVhc7EhPson8dV";
-		
 
 		@Override
 		protected PostFetchResult doInBackground(String... urls) {
 			PostFetchResult result = new PostFetchResult();
-			
-			
+
 			result.igs = JsonUtil.fromJsonUrl(SERVER_URL_IN_GAME_STATS,
 					InGameStats.class);
 			result.summoner = JsonUtil.fromJsonUrl(SERVER_URL_SUMMONER,
 					Summoner.class);			
-			result.recentGames = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + result.summoner.getData().getAcctId().toString() 
-					+ "?key=eS4XmrLVhc7EhPson8dV", 
-					SoData.class).data.getGameStatistics();
-			
-			
+			try {
+				result.recentGames = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + result.summoner.getData().getAcctId().toString() 
+						+ "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getGameStatistics();
+			} catch (NullPointerException e) {
+				Log.w("NPE recentGames", "Recent Games error: " + e.getMessage());
+				
+			}
 			return result;
+			
 		}
 
 		@Override
@@ -109,6 +112,10 @@ public class ProfileActivity extends SherlockActivity {
 			TextView tvSummLevel = (TextView) findViewById(R.id.tvSummonerLevel);
 			TextView tvDebug = (TextView) findViewById(R.id.tvDebug);
 
+			if(result == null) {
+				Toast.makeText(getApplicationContext(), "Null result, aborting", Toast.LENGTH_LONG);
+			}
+			
 			// Set InGameStats data to TextView
 			if (result.igs != null && result.igs.getData() != null) {
 				tvSummName.setText(result.igs.getData().getGame().getGameMode());
@@ -124,39 +131,35 @@ public class ProfileActivity extends SherlockActivity {
 				Toast.makeText(ProfileActivity.this, "An error occured", Toast.LENGTH_LONG).show();
 			}
 			
-			
-			if (result.recentGames.size() > 0)
-			{
-				
-				Number gameHeal = null;
-				Number gameId = result.recentGames.get(0).getGameId();
-							
-				for (int i = 0; i < 10; i++)
+			try {
+				if (result.recentGames.size() > 0)
 				{
 					
-				}
-				
-				for(Statistics statistic : result.recentGames.get(0).getStatistics()) {
-					if(statistic.getStatType().equals("TOTAL_HEAL")) {
-						gameHeal = statistic.getValue();
+					Number gameHeal = null;
+					Number gameId = result.recentGames.get(0).getGameId();
+								
+
+					for(Statistics statistic : result.recentGames.get(0).getStatistics()) {
+						if(statistic.getStatType().equals("TOTAL_HEAL")) {
+							gameHeal = statistic.getValue();
+						}
 					}
-				}
-				
-				tvDebug.setText(gameId.toString());
-				
-				
-				
-				for(GameStatistics stats : result.recentGames)
-				{
-					someArrayList.add(stats);
+					
+					tvDebug.setText(gameId.toString());
 					
 					
+					
+					for(GameStatistics stats : result.recentGames)
+					{
+						someArrayList.add(stats);
+						
+						
+					}					
 				}
-				
-			
-				
-				
+			} catch (NullPointerException e){
+				Log.w("Oops", "An error occured: " + e.getMessage());
 			}
+			
 		}
 	}
 }
