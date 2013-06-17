@@ -130,8 +130,8 @@ public class LazyAdapter extends ArrayAdapter {
 		}
 		// Set Game Mode
 
-		if (gs.getGameMode() != null) {
-			holder.gameType.setText(gs.getGameMode());
+		if (gs.getGameType() != null) {
+			holder.gameType.setText(gs.getGameType());
 		}
 
 		// Set Item Icons
@@ -588,6 +588,9 @@ public class LazyAdapter extends ArrayAdapter {
 				break;
 			case 254:
 				holder.champIcon.setImageResource(R.drawable.visquare);
+				break;
+			case 266:
+				holder.champIcon.setImageResource(R.drawable.aatroxsquare);
 				break;
 			case 267:
 				holder.champIcon.setImageResource(R.drawable.namisquare);
