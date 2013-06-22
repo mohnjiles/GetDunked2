@@ -1,93 +1,48 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:alpha="75"
+    android:background="#333333"
     android:orientation="vertical" >
-    
-<android.support.v4.view.ViewPager
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/pager2"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ProfileActivity" >
 
-    <!--
-    This title strip will display the currently visible page title, as well as the page
-    titles for adjacent pages.
-    -->
-
-    <android.support.v4.view.PagerTitleStrip
-        android:id="@+id/pager_title_strip2"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top"
-        android:background="#33b5e5"
-        android:paddingBottom="4dp"
-        android:paddingTop="4dp"
-        android:textColor="#fff" />
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="Summoner Name:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
 
-</android.support.v4.view.ViewPager>
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="#FFFFFF" >
 
-<TextView
-    android:id="@+id/tvSummonerName"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentTop="true"
-    android:layout_marginLeft="47dp"
-    android:layout_marginTop="93dp"
-    android:text="Large Text"
-    android:textAppearance="?android:attr/textAppearanceLarge" />
+        <requestFocus />
+    </EditText>
 
-<TextView
-    android:id="@+id/tvSummonerLevel"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignRight="@+id/tvSummonerName"
-    android:layout_below="@+id/tvSummonerName"
-    android:layout_marginTop="11dp"
-    android:text="Large Text"
-    android:textAppearance="?android:attr/textAppearanceLarge" />
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Search"
+        android:textColor="#FFFFFF" />
 
-<Button
-    android:id="@+id/btnSearch"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignBaseline="@+id/etSearch"
-    android:layout_alignBottom="@+id/etSearch"
-    android:layout_alignParentRight="true"
-    android:text="Search" />
+    <ListView
+        android:id="@id/android:list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:descendantFocusability="beforeDescendants" >
 
-<EditText
-    android:id="@+id/etSearch"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_marginRight="33dp"
-    android:layout_marginTop="38dp"
-    android:layout_toLeftOf="@+id/button1"
-    android:ems="10" >
+    </ListView>
 
-    <requestFocus />
-</EditText>
-
-<ListView
-    android:id="@+id/listViewStats"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_alignParentLeft="true"
-    android:layout_below="@+id/tvDebug" >
-
-</ListView>
-
-<TextView
-    android:id="@+id/tvDebug"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentRight="true"
-    android:layout_below="@+id/tvSummonerLevel"
-    android:text="debug"
-    android:textAppearance="?android:attr/textAppearanceLarge" />
-
-</RelativeLayout>
+</LinearLayout>

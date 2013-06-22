@@ -6,25 +6,29 @@
     android:background="@drawable/list_selector"
     android:orientation="horizontal"
     android:padding="5dip" >
- 
-    <!--  ListRow Left sied Thumbnail image -->
-    <LinearLayout android:id="@+id/thumbnail"
+
+    <!-- ListRow Left sied Thumbnail image -->
+
+    <LinearLayout
+        android:id="@+id/thumbnail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="3dip"
         android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dip"
+        android:layout_marginTop="2dp"
         android:background="@drawable/image_bg"
-        android:layout_marginRight="5dip">
+        android:padding="3dip" >
 
         <ImageView
             android:id="@+id/list_image"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/ahrisquare" />
- 
+
     </LinearLayout>
- 
-    <!-- Title Of Song-->
+
+    <!-- Title Of Song -->
 
     <TextView
         android:id="@+id/gameType"
@@ -37,9 +41,10 @@
         android:textSize="15dip"
         android:textStyle="bold"
         android:typeface="sans" />
- 
+
     <!-- Artist Name -->
- 
+
+
     <!-- Rightend Duration -->
 
     <TextView
@@ -108,31 +113,10 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="#BBBBBB" />
 
-    <TextView
-        android:id="@+id/tvScoreKills"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/gameType"
-        android:layout_marginLeft="175dp"
-        android:text="1"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
-
-    <ImageView
-        android:id="@+id/ivItemOne"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_alignTop="@+id/tvScoreKills"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="12dp"
-        android:layout_toRightOf="@+id/tvAssistText"
-        android:src="@drawable/ability" />
-
     <ImageView
         android:id="@+id/ivItemTwo"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_alignTop="@+id/ivItemOne"
         android:layout_marginLeft="2dp"
         android:layout_toRightOf="@+id/ivItemOne"
@@ -140,8 +124,8 @@
 
     <ImageView
         android:id="@+id/ivItemThree"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_alignTop="@+id/ivItemTwo"
         android:layout_marginLeft="2dp"
         android:layout_toRightOf="@+id/ivItemTwo"
@@ -149,8 +133,8 @@
 
     <ImageView
         android:id="@+id/ivItemFour"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_alignLeft="@+id/ivItemOne"
         android:layout_below="@+id/ivItemOne"
         android:layout_marginTop="2dp"
@@ -158,18 +142,233 @@
 
     <ImageView
         android:id="@+id/ivItemFive"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_alignTop="@+id/ivItemFour"
         android:layout_toLeftOf="@+id/ivItemThree"
         android:src="@drawable/ability" />
 
     <ImageView
         android:id="@+id/ivItemSix"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_alignLeft="@+id/ivItemThree"
         android:layout_alignTop="@+id/ivItemFive"
         android:src="@drawable/ability" />
- 
+
+    <ImageView
+        android:id="@+id/ivItemOne"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/tvKillsText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-5dp"
+        android:layout_toRightOf="@+id/tvAssistText"
+        android:src="@drawable/ability" />
+
+    <TextView
+        android:id="@+id/tvDamageDealt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/thumbnail"
+        android:layout_below="@+id/tvScoreAssists"
+        android:layout_marginTop="5dp"
+        android:text="Damage Dealt"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvDamageRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvDamageDealt"
+        android:layout_below="@+id/tvDamageDealt"
+        android:layout_marginTop="5dp"
+        android:text="Damage Recieved"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvHealingDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvDamageRec"
+        android:layout_below="@+id/tvDamageRec"
+        android:layout_marginTop="5dp"
+        android:text="Healing Done"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvDRecNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvDamageRec"
+        android:layout_alignBottom="@+id/tvDamageRec"
+        android:layout_alignLeft="@+id/tvDDealtNum"
+        android:text="9001"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvDDealtNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvDamageDealt"
+        android:layout_alignBottom="@+id/tvDamageDealt"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/tvDamageRec"
+        android:text="9001"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvHDoneNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvHealingDone"
+        android:layout_alignBottom="@+id/tvDamageDealt"
+        android:layout_alignLeft="@+id/tvDRecNum"
+        android:text="9001"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvGoldTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvHealingDone"
+        android:layout_below="@+id/tvHealingDone"
+        android:layout_marginTop="5dp"
+        android:text="Gold"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvGold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvGoldTitle"
+        android:layout_alignBottom="@+id/tvGoldTitle"
+        android:layout_alignLeft="@+id/tvHDoneNum"
+        android:text="9001"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvTimeDeadTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvDRecNum"
+        android:layout_alignBottom="@+id/tvDRecNum"
+        android:layout_alignLeft="@+id/tvMultiKillTitle"
+        android:text="Time Spent Dead"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvWardsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvHDoneNum"
+        android:layout_alignBottom="@+id/tvHDoneNum"
+        android:layout_alignLeft="@+id/tvTimeDeadTitle"
+        android:text="Wards Placed"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvMinionsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvGold"
+        android:layout_alignLeft="@+id/tvWardsTitle"
+        android:text="Minions Killed"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/ivSummonerOne"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignLeft="@+id/gameType"
+        android:layout_below="@+id/tvResult"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/tvDamageDealt"
+        android:src="@drawable/ability" />
+
+    <ImageView
+        android:id="@+id/ivSummonerTwo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@+id/ivSummonerOne"
+        android:layout_marginLeft="2dp"
+        android:layout_toRightOf="@+id/ivSummonerOne"
+        android:src="@drawable/ability" />
+
+    <TextView
+        android:id="@+id/tvScoreKills"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/gameType"
+        android:layout_centerHorizontal="true"
+        android:text="1"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvWardsPlacedValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvGoldTitle"
+        android:layout_alignLeft="@+id/tvTimeDeadValue"
+        android:text="9001"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvTimeDeadValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTimeDeadTitle"
+        android:layout_alignBottom="@+id/tvTimeDeadTitle"
+        android:layout_alignLeft="@+id/tvMultiKillValue"
+        android:text="9001"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvMinionsValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvMinionsTitle"
+        android:layout_alignBottom="@+id/tvMinionsTitle"
+        android:layout_alignLeft="@+id/tvWardsPlacedValue"
+        android:text="9001"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvMultiKillTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvDamageRec"
+        android:layout_alignLeft="@+id/tvScoreKills"
+        android:layout_marginLeft="10dp"
+        android:text="Largest Multi-Kill"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tvMultiKillValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvDamageRec"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/tvTimeDeadTitle"
+        android:text="9001"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
 </RelativeLayout>

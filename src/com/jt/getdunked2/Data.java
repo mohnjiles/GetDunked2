@@ -18,6 +18,14 @@ public class Data{
    	private List<GameStatistics> gameStatistics;
    	private Number userId;
    	private Number id;
+   	private List<SummonerLeagues> summonerLeagues;
+
+ 	public List getSummonerLeagues(){
+		return this.summonerLeagues;
+	}
+	public void setSummonerLeagues(List summonerLeagues){
+		this.summonerLeagues = summonerLeagues;
+	}
 
  	public Game getGame(){
 		return this.game;
@@ -104,4 +112,5 @@ public class Data{
 	public void setId(Number id) {
 		this.id = id;
 	}
+
 }

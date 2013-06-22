@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileMainActivity" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="96dp"
+        android:text="Button" />
+
+    <android.support.v4.view.ViewPager
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/profileMainPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="#000000"
+        android:paddingTop="60dp"
+        tools:context=".AbilityDetails" >
+
+        <android.support.v4.view.PagerTitleStrip
+            android:id="@+id/pager_title_strip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:background="#111111"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textColor="#fff" >
+        </android.support.v4.view.PagerTitleStrip>
+    </android.support.v4.view.ViewPager>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/button1"
+        android:layout_marginRight="62dp"
+        android:text="Button"
+        android:textColor="#FFFFFF" />
+
+    <EditText
+        android:id="@+id/etSummName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_marginLeft="31dp"
+        android:ems="10"
+        android:textColor="#FFFFFF" >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>

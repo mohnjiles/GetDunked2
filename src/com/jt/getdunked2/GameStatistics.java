@@ -11,7 +11,7 @@ public class GameStatistics{
    	private String createDate;
    	private boolean eligibleFirstWinOfDay;
    	private Number experienceEarned;
-   	private FellowPlayers[] fellowPlayers;
+   	private List<FellowPlayers> fellowPlayers;
    	private Number gameId;
    	private Number gameMapId;
    	private String gameMode;
@@ -77,11 +77,10 @@ public class GameStatistics{
 	public void setExperienceEarned(Number experienceEarned){
 		this.experienceEarned = experienceEarned;
 	}
- 	
- 	public FellowPlayers[] getFellowPlayers() {
+	public List<FellowPlayers> getFellowPlayers() {
 		return fellowPlayers;
 	}
-	public void setFellowPlayers(FellowPlayers[] fellowPlayers) {
+	public void setFellowPlayers(List<FellowPlayers> fellowPlayers) {
 		this.fellowPlayers = fellowPlayers;
 	}
 	public Number getGameId(){

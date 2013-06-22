@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333333"
+    tools:context=".ProfileFragment" >
+
+    <ImageView
+        android:id="@+id/ivTeamThreeIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="39dp"
+        android:src="@drawable/challenger_1" />
+
+    <ImageView
+        android:id="@+id/ivSoloFiveIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@+id/ivTeamThreeIcon"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/challenger_1" />
+
+    <ImageView
+        android:id="@+id/ivTeamFiveIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ivSoloFiveIcon"
+        android:src="@drawable/challenger_1" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:text="Solo 5v5"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ivSoloFiveIcon"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="17dp"
+        android:text="Team 3v3"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="17dp"
+        android:text="Team 5v5"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

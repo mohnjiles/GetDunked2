@@ -341,27 +341,17 @@
 	    spinning, but moves 20% slower when traveling directly through minions. Garen can deactivate Judgment early by activating the ability again after 0.5 seconds.</string>
     <string name="DemacianJustice" formatted="false">ACTIVE: Garen calls upon the might of Demacia to attempt to execute an enemy champion, dealing magic 
 	    damage plus additional damage based on his target\'s missing health.</string>
-	<string name="HappyHour" formatted="false">Gragas takes a drink from his cask every time he uses an ability, restoring 2% of his 
-	    maximum health over 4 seconds.
-	    
-	</string>
-	<string name="BarrelRoll" formatted="false">ACTIVE: Gragas rolls his cask to a location, which can be activated again to explode or will 
-	    explode on its own after 5 seconds. Enemies within 350 range of the cask take magic damage and have their attack speed reduced for 3 seconds.
-	    
-	</string>
-	<string name="DrunkenRage" formatted="false">ACTIVE: Gragas guzzles down brew from his cask, gaining mana and starting a 1 second channel. 
+    <string name="HappyHour" formatted="false">Gragas takes a drink from his cask every time he uses an ability, restoring 2% of his 
+	    maximum health over 4 seconds.</string>
+    <string name="BarrelRoll" formatted="false">ACTIVE: Gragas rolls his cask to a location, which can be activated again to explode or will 
+	    explode on its own after 5 seconds. Enemies within 350 range of the cask take magic damage and have their attack speed reduced for 3 seconds.</string>
+    <string name="DrunkenRage" formatted="false">ACTIVE: Gragas guzzles down brew from his cask, gaining mana and starting a 1 second channel. 
 	    If the channel is completed he gains additional mana and becomes empowered, increasing attack damage and reducing physical 
-	    and magic damage taken for 20 seconds.
-	    
-	</string>
-	<string name="BodySlam" formatted="false">ACTIVE: Gragas charges forward, stopping the charge if he collides with an enemy unit. 
-	    Enemy units in an area around Gragas then take magic damage and are slowed by 35% for 2.5 seconds. Damage is split amongst targets hit.
-	    
-	</string>
-	<string name="ExplosiveCask" formatted="false">ACTIVE: Gragas throws his cask to target 400-radius area, damaging and knocking back 
-	    enemies in the area up to 600 distance, and briefly gives vision within 500 range.
-	    
-	</string>
+	    and magic damage taken for 20 seconds.</string>
+    <string name="BodySlam" formatted="false">ACTIVE: Gragas charges forward, stopping the charge if he collides with an enemy unit. 
+	    Enemy units in an area around Gragas then take magic damage and are slowed by 35% for 2.5 seconds. Damage is split amongst targets hit.</string>
+    <string name="ExplosiveCask" formatted="false">ACTIVE: Gragas throws his cask to target 400-radius area, damaging and knocking back 
+	    enemies in the area up to 600 distance, and briefly gives vision within 500 range.</string>
     <string name="ChampionsButton">Champions</string>
     <string name="title_activity_champs">Champions</string>
     <string name="title_section3">lore</string>
@@ -494,5 +484,9 @@
     <string name="title_activity_wpopup">WPopup</string>
     <string name="title_activity_epopup">EPopup</string>
     <string name="title_activity_rpopup">RPopup</string>
+    <string name="title_activity_match_history">MatchHistoryActivity</string>
+    <string name="title_activity_match_fragment_one">MatchFragmentOne</string>
+    <string name="title_activity_profile_main">ProfileMainActivity</string>
+    <string name="title_activity_profile_fragment">ProfileFragment</string>
 
 </resources>

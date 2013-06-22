@@ -74,6 +74,22 @@
             android:name="com.jt.getdunked2.RPopup"
             android:label="@string/title_activity_rpopup" >
         </activity>
+        <activity
+            android:name="com.jt.getdunked2.MatchHistoryActivity"
+            android:label="@string/title_activity_match_history" >
+        </activity>
+        <activity
+            android:name="com.jt.getdunked2.MatchFragmentOne"
+            android:label="@string/title_activity_match_fragment_one" >
+        </activity>
+        <activity
+            android:name="com.jt.getdunked2.ProfileMainActivity"
+            android:label="@string/title_activity_profile_main" >
+        </activity>
+        <activity
+            android:name="com.jt.getdunked2.ProfileFragment"
+            android:label="@string/title_activity_profile_fragment" >
+        </activity>
     </application>
 
 </manifest>
