@@ -64,7 +64,7 @@ public class LazyAdapter extends ArrayAdapter {
 	}
 
 	public View getView(int position, View convertView, ViewGroup parent) {
-		GameStatistics gs = (GameStatistics) getItem(position);
+		GameStatistics gs = (GameStatistics) getItem(9 - position);
 		ViewHolder holder;
 		// Get the current location object
 
@@ -202,12 +202,40 @@ public class LazyAdapter extends ArrayAdapter {
 		// Set Game Mode
 
 		if (gs.getGameType() != null) {
-			if (gs.getGameType().equals("MATCHED_GAME") && gs.getGameMode().equals("CLASSIC")) {
+			if (gs.getGameType().equals("MATCHED_GAME") && gs.getGameMode().equals("CLASSIC") && gs.getQueueType().equals("NORMAL")) {
 				holder.gameType.setText("Normal 5v5");
 			}
-			if (gs.getGameType().equals("MATCHED_GAME") && gs.getGameMode().equals("ARAM")) {
+			else if (gs.getQueueType().equals("RANKED_TEAM_5x5")) {
+				holder.gameType.setText("Ranked Team 5v5");
+			}
+			else if (gs.getQueueType().equals("RANKED_SOLO_5x5")) {
+				holder.gameType.setText("Ranked Solo 5v5");
+			}
+			else if (gs.getGameMode().equals("CLASSIC") && gs.getQueueType().equals("BOT")) {
+				holder.gameType.setText("Co-op vs. AI 5v5");
+			}
+			else if (gs.getQueueType().equals("RANKED_TEAM_3x3")) {
+				holder.gameType.setText("Ranked Team 3v3");
+			}
+			else if (gs.getQueueType().equals("NORMAL_3x3")) {
+				holder.gameType.setText("Normal 3v3");
+			}
+			else if (gs.getQueueType().equals("BOT_3x3")) {
+				holder.gameType.setText("Co-op vs. AI 3v3");
+			}
+			else if (gs.getGameMode().equals("ODIN") && gs.getQueueType().equals("NORMAL")) {
+				holder.gameType.setText("Dominion");
+			}
+			else if (gs.getGameMode().equals("ODIN") && gs.getQueueType().equals("BOT")) {
+				holder.gameType.setText("Co-op vs. AI Dominion");
+			}
+			else if (gs.getGameType().equals("MATCHED_GAME") && gs.getGameMode().equals("ARAM")) {
 				holder.gameType.setText("ARAM");
 			}
+			else if (gs.getGameType().equals("CUSTOM_GAME")) {
+				holder.gameType.setText("Custom Game");
+			}
+			
 			
 		}
 

@@ -19,6 +19,21 @@ public class Data{
    	private Number userId;
    	private Number id;
    	private List<SummonerLeagues> summonerLeagues;
+	private List<LifetimeStatistics> lifetimeStatistics;
+   	private String modifyDate;
+	
+	public List<LifetimeStatistics> getLifetimeStatistics(){
+		return this.lifetimeStatistics;
+	}
+	public void setLifetimeStatistics(List<LifetimeStatistics> lifetimeStatistics){
+		this.lifetimeStatistics = lifetimeStatistics;
+	}
+ 	public String getModifyDate(){
+		return this.modifyDate;
+	}
+	public void setModifyDate(String modifyDate){
+		this.modifyDate = modifyDate;
+	}
 
  	public List getSummonerLeagues(){
 		return this.summonerLeagues;

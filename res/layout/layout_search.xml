@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EditText xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/abs__item_background_holo_dark"
+    android:cursorVisible="true"
+    android:hint="Summoner Name"
+    android:imeOptions="actionDone"
+    android:inputType="text"
+    android:textColor="@android:color/white"
+    android:textCursorDrawable="@android:color/white" />

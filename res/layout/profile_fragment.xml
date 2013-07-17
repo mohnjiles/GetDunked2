@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#333333"
+    android:background="#222222"
     tools:context=".ProfileFragment" >
 
     <ImageView
@@ -11,6 +11,7 @@
         android:layout_height="100dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
         android:layout_marginTop="39dp"
         android:src="@drawable/challenger_1" />
 
@@ -28,6 +29,7 @@
         android:layout_height="100dp"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/ivSoloFiveIcon"
+        android:layout_marginRight="8dp"
         android:src="@drawable/challenger_1" />
 
     <TextView
@@ -38,17 +40,21 @@
         android:layout_alignBottom="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:text="Solo 5v5"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="19sp" />
 
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/ivSoloFiveIcon"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="17dp"
+        android:layout_alignLeft="@+id/ivTeamThreeIcon"
+        android:layout_alignRight="@+id/ivTeamThreeIcon"
+        android:gravity="center"
         android:text="Team 3v3"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        android:typeface="normal" />
 
     <TextView
         android:id="@+id/TextView02"
@@ -56,9 +62,231 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/TextView01"
         android:layout_alignBottom="@+id/TextView01"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="17dp"
+        android:layout_alignLeft="@+id/ivTeamFiveIcon"
+        android:layout_alignRight="@+id/ivTeamFiveIcon"
+        android:gravity="center"
+        android:scrollHorizontally="true"
         android:text="Team 5v5"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="19sp" />
+
+    <TextView
+        android:id="@+id/tvThreeLeague"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivTeamThreeIcon"
+        android:layout_alignRight="@+id/ivTeamThreeIcon"
+        android:layout_below="@+id/ivTeamThreeIcon"
+        android:gravity="center"
+        android:text="League"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvFiveLeague"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvSoloLeague"
+        android:layout_alignBottom="@+id/tvSoloLeague"
+        android:layout_alignLeft="@+id/ivTeamFiveIcon"
+        android:layout_alignRight="@+id/ivTeamFiveIcon"
+        android:gravity="center"
+        android:text="League"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvThreeLP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvThreeLeague"
+        android:layout_alignRight="@+id/tvThreeLeague"
+        android:layout_below="@+id/tvThreeLeague"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:text="100 League Points"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvSoloLeague"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvThreeLeague"
+        android:layout_alignBottom="@+id/tvThreeLeague"
+        android:layout_alignLeft="@+id/ivSoloFiveIcon"
+        android:layout_alignRight="@+id/ivSoloFiveIcon"
+        android:gravity="center"
+        android:text="League"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvSoloLP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvThreeLP"
+        android:layout_alignBottom="@+id/tvThreeLP"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="100 League Points"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvFiveLP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvSoloLP"
+        android:layout_alignBottom="@+id/tvSoloLP"
+        android:layout_alignLeft="@+id/tvFiveLeague"
+        android:layout_alignRight="@+id/tvFiveLeague"
+        android:gravity="center"
+        android:text="100 League Points"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvThreeLosses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvThreeLP"
+        android:layout_below="@+id/tvWins"
+        android:layout_marginRight="4dp"
+        android:layout_toLeftOf="@+id/TextView04"
+        android:gravity="right"
+        android:text="200"
+        android:textColor="#ff0000" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvThreeLosses"
+        android:layout_alignBottom="@+id/tvThreeLosses"
+        android:layout_alignLeft="@+id/tvWins"
+        android:text="Losses"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvThreeWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvThreeLosses"
+        android:layout_alignRight="@+id/tvThreeLosses"
+        android:layout_below="@+id/tvThreeLP"
+        android:layout_marginTop="2dp"
+        android:gravity="right"
+        android:text="400"
+        android:textColor="#1be800" />
+
+    <TextView
+        android:id="@+id/tvWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvThreeWins"
+        android:layout_alignBottom="@+id/tvThreeWins"
+        android:layout_alignRight="@+id/tvThreeLP"
+        android:layout_marginRight="29dp"
+        android:text="Wins"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvSoloWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvWins"
+        android:layout_alignBottom="@+id/tvWins"
+        android:layout_alignLeft="@+id/tvSoloLeague"
+        android:layout_marginRight="4dp"
+        android:layout_toLeftOf="@+id/TextView03"
+        android:gravity="right"
+        android:text="400"
+        android:textColor="#1be800" />
+
+    <TextView
+        android:id="@+id/tvSoloLosses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView04"
+        android:layout_alignBottom="@+id/TextView04"
+        android:layout_alignLeft="@+id/tvSoloLP"
+        android:layout_marginRight="4dp"
+        android:layout_toLeftOf="@+id/TextView06"
+        android:gravity="right"
+        android:text="200"
+        android:textColor="#ff0000" />
+
+    <TextView
+        android:id="@+id/TextView06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvSoloLosses"
+        android:layout_alignBottom="@+id/tvSoloLosses"
+        android:layout_alignLeft="@+id/TextView03"
+        android:text="Losses"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvFiveWins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView03"
+        android:layout_alignBottom="@+id/TextView03"
+        android:layout_alignLeft="@+id/tvFiveLP"
+        android:layout_marginRight="4dp"
+        android:layout_toLeftOf="@+id/TextView05"
+        android:gravity="right"
+        android:text="400"
+        android:textColor="#1be800" />
+
+    <TextView
+        android:id="@+id/TextView05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvFiveWins"
+        android:layout_alignBottom="@+id/tvFiveWins"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="36dp"
+        android:text="Wins"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/tvFiveLosses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/TextView06"
+        android:layout_alignLeft="@+id/tvFiveWins"
+        android:layout_alignRight="@+id/tvFiveWins"
+        android:gravity="right"
+        android:text="200"
+        android:textColor="#ff0000" />
+
+    <TextView
+        android:id="@+id/TextView08"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvFiveLosses"
+        android:layout_alignBottom="@+id/tvFiveLosses"
+        android:layout_alignLeft="@+id/TextView05"
+        android:text="Losses"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvSoloWins"
+        android:layout_alignBottom="@+id/tvSoloWins"
+        android:layout_alignRight="@+id/tvSoloLeague"
+        android:layout_marginRight="29dp"
+        android:text="Wins"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp" />
 
 </RelativeLayout>

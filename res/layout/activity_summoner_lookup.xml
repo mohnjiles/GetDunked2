@@ -39,21 +39,26 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/button1"
-        android:layout_marginRight="62dp"
-        android:text="Button"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Search"
         android:textColor="#FFFFFF" />
 
     <EditText
         android:id="@+id/etSummName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_marginLeft="31dp"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/button2"
         android:ems="10"
+        android:hint="Summoner Name"
+        android:imeOptions="actionDone"
         android:textColor="#FFFFFF" >
 
         <requestFocus />

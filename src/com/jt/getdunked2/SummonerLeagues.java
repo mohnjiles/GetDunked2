@@ -4,17 +4,17 @@ package com.jt.getdunked2;
 import java.util.List;
 
 public class SummonerLeagues{
-   	private List entries;
+   	private List<Entries> entries;
    	private String name;
    	private String queue;
    	private String requestorsName;
    	private String requestorsRank;
    	private String tier;
 
- 	public List getEntries(){
+ 	public List<Entries> getEntries(){
 		return this.entries;
 	}
-	public void setEntries(List entries){
+	public void setEntries(List<Entries> entries){
 		this.entries = entries;
 	}
  	public String getName(){
