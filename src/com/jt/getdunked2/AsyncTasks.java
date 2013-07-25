@@ -1,16 +1,27 @@
 package com.jt.getdunked2;
 
+import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.security.auth.PrivateCredentialPermission;
 
+
+import de.keyboardsurfer.android.widget.crouton.Crouton;
+import de.keyboardsurfer.android.widget.crouton.Style.Builder;
+
+
+import android.R.anim;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.app.Notification.Style;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -20,8 +31,7 @@ import android.widget.Toast;
 
 
 public class AsyncTasks {
-	
-	
+
 	LazyAdapter lazyAdapter;
 	ArrayList<GameStatistics> someArrayList;
 	EditText etSummName = ProfileMainActivity.etSummName;
@@ -45,7 +55,13 @@ public class AsyncTasks {
 	TextView tvFiveWins = ProfileFragment.tvFiveWins;
 	TextView tvFiveLosses = ProfileFragment.tvFiveLosses;
 	TextView tvThreeLosses = ProfileFragment.tvThreeLosses;
-
+	TextView winsThree = ProfileFragment.winsThree;
+	TextView winsSolo = ProfileFragment.winsSolo;
+	TextView winsFive = ProfileFragment.winsFive;
+	TextView lossesFive = ProfileFragment.lossesFive;
+	TextView lossesThree = ProfileFragment.lossesThree;
+	TextView lossesSolo = ProfileFragment.lossesSolo;
+	
 	String soloFiveLeague;
 	String soloFiveTier;
 	String soloFiveRank;
@@ -59,6 +75,8 @@ public class AsyncTasks {
 	String teamFiveLP;
 	String teamThreeLP;
 	
+	
+	
 	private static class PostFetchResult {
 		InGameStats igs;
 		Summoner summoner;
@@ -71,13 +89,17 @@ public class AsyncTasks {
 		public Data data;
 	}
 	
+	
 	public class PostFetcher extends AsyncTask<String, Void, PostFetchResult> {
+		private Activity ownerActivity;
 		private ProgressDialog dialog;
 		private Context context;
-		public PostFetcher(Context cxt) {
+		public PostFetcher(Context cxt, Activity activity) {
 			context = cxt;
 			dialog = new ProgressDialog(context);
+			this.ownerActivity = activity;
 		}
+		
 		
 		
 		public final String SERVER_URL_IN_GAME_STATS = "http://api.elophant.com/v2/NA/in_progress_game_info/"
@@ -98,8 +120,6 @@ public class AsyncTasks {
 				result.recentGames = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + result.summoner.getData().getAcctId().toString() 
 						+ "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getGameStatistics();
 				result.sLeagues = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/leagues/" + result.summoner.getData().getSummonerId().toString() 
-						+ "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getSummonerLeagues();
-				result.entries = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/leagues/" + result.summoner.getData().getSummonerId().toString() 
 						+ "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getSummonerLeagues();
 			} catch (Exception e) {
 				Log.w("doInBackground recentGames", "Recent Games error: " + e.getMessage());
@@ -508,21 +528,41 @@ public class AsyncTasks {
 				lazyAdapter.notifyDataSetChanged();
 				}
 				
+				InputMethodManager imm = (InputMethodManager)context.getSystemService(Activity.INPUT_METHOD_SERVICE);
+				imm.hideSoftInputFromWindow(etSummName.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+				
+				ivSoloFive.setVisibility(View.VISIBLE);
+				ivTeamFive.setVisibility(View.VISIBLE);
+				ivTeamThree.setVisibility(View.VISIBLE);
+				tvDebugOne.setVisibility(View.VISIBLE);
+				tvDebugTwo.setVisibility(View.VISIBLE);
+				tvDebugThree.setVisibility(View.VISIBLE);
+				tvThreeDivision.setVisibility(View.VISIBLE);
+				tvSoloDivision.setVisibility(View.VISIBLE);
+				tvFiveDivision.setVisibility(View.VISIBLE);
+				tvThreeLP.setVisibility(View.VISIBLE);
+				tvSoloLP.setVisibility(View.VISIBLE);
+				tvFiveLP.setVisibility(View.VISIBLE);
+				tvThreeWins.setVisibility(View.VISIBLE);
+				tvSoloWins.setVisibility(View.VISIBLE);
+				tvFiveWins.setVisibility(View.VISIBLE);
+				tvFiveLosses.setVisibility(View.VISIBLE);
+				tvThreeLosses.setVisibility(View.VISIBLE);
+				tvSoloLosses.setVisibility(View.VISIBLE);
+				winsThree.setVisibility(View.VISIBLE);
+				winsSolo.setVisibility(View.VISIBLE);
+				winsFive.setVisibility(View.VISIBLE);
+				lossesFive.setVisibility(View.VISIBLE);
+				lossesThree.setVisibility(View.VISIBLE);
+				lossesSolo.setVisibility(View.VISIBLE);
+				
 			} catch (Exception e){
 				
-				AlertDialog aDialog = new AlertDialog.Builder(context).create();
-				aDialog.setTitle("Error");
-				aDialog.setMessage("Unable to get summoner match history. Please try again in a few seconds.");
-				aDialog.setButton(DialogInterface.BUTTON_NEUTRAL, "OK", new DialogInterface.OnClickListener() {	
-					@Override
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.cancel();
-						
-					}
-				});
+				Crouton.showText(ownerActivity, "Error loading " + etSummName.getText() + "'s summoner info." +
+						" Please try again in a few seconds.", 
+						de.keyboardsurfer.android.widget.crouton.Style.ALERT);
 				 InputMethodManager imm = (InputMethodManager)context.getSystemService(Activity.INPUT_METHOD_SERVICE);
 						imm.hideSoftInputFromWindow(etSummName.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
-				aDialog.show();
 				
 				
 				Log.w("Oops", "An error occured: " + e.getMessage());
@@ -531,4 +571,5 @@ public class AsyncTasks {
 			
 		}
 	}
+
 }

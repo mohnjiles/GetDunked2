@@ -2,7 +2,6 @@ package com.jt.getdunked2;
 
 import java.util.Vector;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,14 +11,18 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class AbilityDetails extends SherlockFragmentActivity{
+public class AbilityDetails extends ActionBarActivity{
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -93,14 +96,14 @@ public class AbilityDetails extends SherlockFragmentActivity{
 
 	
 	@Override
-	public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
+	public boolean onCreateOptionsMenu(Menu menu) {
 		// TODO Auto-generated method stub
-		getSupportMenuInflater().inflate(R.menu.activity_ability_details, (com.actionbarsherlock.view.Menu) menu);
+		getMenuInflater().inflate(R.menu.activity_ability_details, (Menu) menu);
 		return super.onCreateOptionsMenu(menu);
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(com.actionbarsherlock.view.MenuItem item) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	        case android.R.id.home:
 	            // This is called when the Home (Up) button is pressed

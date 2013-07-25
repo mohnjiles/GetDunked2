@@ -1,11 +1,13 @@
-package com.jt.getdunked2;
+ package com.jt.getdunked2;
 
-import com.actionbarsherlock.app.SherlockActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBarActivity;
 import android.util.TypedValue;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -13,7 +15,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 
-public class ChampsActivity extends SherlockActivity {
+public class ChampsActivity extends ActionBarActivity {
 
 	public static int myInt  = 0;
 	
@@ -46,14 +48,14 @@ public class ChampsActivity extends SherlockActivity {
 	}
 
 	@Override
-	public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
+	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getSupportMenuInflater().inflate(R.menu.activity_champs, menu);
+		getMenuInflater().inflate(R.menu.activity_champs, menu);
 		return true;
 	}
 
 	@Override
-	public boolean onOptionsItemSelected(com.actionbarsherlock.view.MenuItem item) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
 			// This ID represents the Home or Up button. In the case of this

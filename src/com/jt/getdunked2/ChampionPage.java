@@ -2,7 +2,6 @@ package com.jt.getdunked2;
 
 import java.util.Vector;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,11 +11,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-public class ChampionPage extends SherlockFragmentActivity {
+public class ChampionPage extends ActionBarActivity {
 
 	int position = ChampsActivity.myInt;
 	@Override
@@ -84,14 +86,14 @@ public class ChampionPage extends SherlockFragmentActivity {
 		
 
 	@Override
-	public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
+	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getSupportMenuInflater().inflate(R.menu.activity_champion_page, menu);
+		getMenuInflater().inflate(R.menu.activity_champion_page, menu);
 		return true;
 	}
 	
 	@Override
-	public boolean onOptionsItemSelected(com.actionbarsherlock.view.MenuItem item) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 	    switch (item.getItemId()) {
 	        case android.R.id.home:
 	            // This is called when the Home (Up) button is pressed

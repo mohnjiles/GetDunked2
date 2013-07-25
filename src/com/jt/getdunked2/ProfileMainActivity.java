@@ -3,9 +3,6 @@ package com.jt.getdunked2;
 import java.util.ArrayList;
 import java.util.Vector;
 
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.widget.SearchView;
-
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -13,6 +10,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.SearchView;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -20,7 +20,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ProfileMainActivity extends SherlockFragmentActivity {
+public class ProfileMainActivity extends ActionBarActivity{
 
 	SearchView mSearchView;
     TextView mStatusView;
@@ -38,6 +38,7 @@ public class ProfileMainActivity extends SherlockFragmentActivity {
 	String urlTwo;
 	Button btnSearch;
 	TextView tvOne;
+	TextView tvDebug;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,8 @@ public class ProfileMainActivity extends SherlockFragmentActivity {
 		
 		etSummName = (EditText) findViewById(R.id.etSummName);
 		lv = (ListView) findViewById(android.R.id.list);
+		tvDebug = ProfileFragment.tvDebugOne;
+		
 		
 		
 		Vector<Fragment> fragments = new Vector<Fragment>();
@@ -77,9 +80,9 @@ public class ProfileMainActivity extends SherlockFragmentActivity {
 	}
 	
 	@Override
-	public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
+	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getSupportMenuInflater().inflate(R.menu.activity_profile_main, menu);
+		getMenuInflater().inflate(R.menu.activity_profile_main, menu);
 		return true;
 	}
 	
@@ -139,4 +142,6 @@ public class ProfileMainActivity extends SherlockFragmentActivity {
 			 return null;
 		    }
 	}
+	
+
 }

@@ -7,6 +7,7 @@ public class Statistics{
    	private String statType;
    	private Number value;
 
+
  	public String getStatType(){
 		return this.statType;
 	}

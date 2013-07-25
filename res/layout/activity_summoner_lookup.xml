@@ -53,11 +53,13 @@
         android:layout_alignBaseline="@+id/button2"
         android:layout_alignBottom="@+id/button2"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginRight="8dp"
         android:layout_toLeftOf="@+id/button2"
+        android:background="#000000"
         android:ems="10"
         android:hint="Summoner Name"
+        android:singleLine="true"
         android:imeOptions="actionDone"
         android:textColor="#FFFFFF" >
 

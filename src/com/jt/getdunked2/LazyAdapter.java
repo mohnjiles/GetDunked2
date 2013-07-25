@@ -1,20 +1,25 @@
 package com.jt.getdunked2;
 
+import java.security.PublicKey;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.actionbarsherlock.app.SherlockExpandableListActivity;
+import javax.security.auth.PrivateCredentialPermission;
 
+
+import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.graphics.drawable.StateListDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -22,6 +27,29 @@ import android.widget.TextView;
 
 public class LazyAdapter extends ArrayAdapter {
 
+
+	Number killsValue = null;
+	Number deathsValue = null;
+	Number assistsValue = null;
+	Number itemOneId = null;
+	Number itemTwoId = null;
+	Number itemThreeId = null;
+	Number itemFourId = null;
+	Number itemFiveId = null;
+	Number itemSixId = null;
+	public static Number damageDealt = null;
+	Number damageRec = null;
+	Number healingDone = null;
+	Number gold = null;
+	Number multiKill = null;
+	Number timeDead = null;
+	Number wardsPlaced = null;
+	Number minionsKilled = null;
+	Number neutralMinionsKilled = null;
+	Number summSpellOne = null;
+	Number summSpellTwo = null;
+	int itemNumber = 0;
+	
 	int resource;
 	String response;
 	Context context;
@@ -51,6 +79,9 @@ public class LazyAdapter extends ArrayAdapter {
 		TextView timeSpentDead;
 		TextView wards;
 		TextView minions;
+		TextView titleOne;
+		TextView titleTwo;
+		TextView tvDebug;
 		ImageView champIcon;
 		ImageView itemOne;
 		ImageView itemTwo;
@@ -73,22 +104,11 @@ public class LazyAdapter extends ArrayAdapter {
 			convertView = mInflater.inflate(R.layout.custom_list_view, parent,
 					false);
 			holder = new ViewHolder();
+			
 			holder.gameType = (TextView) convertView
 					.findViewById(R.id.gameType);
 			holder.winOrLose = (TextView) convertView
 					.findViewById(R.id.tvResult);
-			holder.killsTxt = (TextView) convertView
-					.findViewById(R.id.tvKillsText);
-			holder.deathsTxt = (TextView) convertView
-					.findViewById(R.id.tvDeathsText);
-			holder.assistsTxt = (TextView) convertView
-					.findViewById(R.id.tvAssistText);
-			holder.kills = (TextView) convertView
-					.findViewById(R.id.tvScoreKills);
-			holder.deaths = (TextView) convertView
-					.findViewById(R.id.tvScoreDeaths);
-			holder.assists = (TextView) convertView
-					.findViewById(R.id.tvScoreAssists);
 			holder.dDealt = (TextView) convertView
 					.findViewById(R.id.tvDDealtNum);
 			holder.dRec = (TextView) convertView
@@ -125,7 +145,7 @@ public class LazyAdapter extends ArrayAdapter {
 					.findViewById(R.id.ivSummonerOne);
 			holder.summonerTwo = (ImageView) convertView
 					.findViewById(R.id.ivSummonerTwo);
-
+					
 			convertView.setTag(holder);
 
 		} else {
@@ -134,28 +154,7 @@ public class LazyAdapter extends ArrayAdapter {
 
 		// define some shit
 		Number win = null;
-		Number killsValue = null;
-		Number deathsValue = null;
-		Number assistsValue = null;
-		Number itemOneId = null;
-		Number itemTwoId = null;
-		Number itemThreeId = null;
-		Number itemFourId = null;
-		Number itemFiveId = null;
-		Number itemSixId = null;
-		Number damageDealt = null;
-		Number damageRec = null;
-		Number healingDone = null;
-		Number gold = null;
-		Number multiKill = null;
-		Number timeDead = null;
-		Number wardsPlaced = null;
-		Number minionsKilled = null;
-		Number neutralMinionsKilled = null;
-		Number summSpellOne = null;
-		Number summSpellTwo = null;
-		int itemNumber = 0;
-
+		
 		// Get Statistics
 		for (Statistics statistic : gs.getStatistics()) {
 			if (statistic.getStatType().equals("WIN")) {
@@ -223,7 +222,7 @@ public class LazyAdapter extends ArrayAdapter {
 			else if (gs.getQueueType().equals("BOT_3x3")) {
 				holder.gameType.setText("Co-op vs. AI 3v3");
 			}
-			else if (gs.getGameMode().equals("ODIN") && gs.getQueueType().equals("NORMAL")) {
+			else if (gs.getGameMode().equals("ODIN") && gs.getQueueType().equals("ODIN_UNRANKED")) {
 				holder.gameType.setText("Dominion");
 			}
 			else if (gs.getGameMode().equals("ODIN") && gs.getQueueType().equals("BOT")) {
@@ -4146,11 +4145,16 @@ public class LazyAdapter extends ArrayAdapter {
 				break;
 			}
 		}
+		
+		
+		// Set KDA
+		if (killsValue != null && deathsValue != null && assistsValue != null) {
+			holder.winOrLose.setText(getKda());
+			holder.winOrLose.setTypeface(MatchHistoryFragment.tf);
+		}
 
 		// Set Victory/Defeat
 		if (win != null) {
-			holder.winOrLose.setText("Victory");
-
 			StateListDrawable states = new StateListDrawable();
 			states.addState(
 					new int[] { android.R.attr.state_pressed },
@@ -4167,7 +4171,6 @@ public class LazyAdapter extends ArrayAdapter {
 			
 			holder.background.setBackgroundDrawable(states);
 		} else {
-			holder.winOrLose.setText("Defeat");
 
 			StateListDrawable states = new StateListDrawable();
 			states.addState(
@@ -4185,88 +4188,17 @@ public class LazyAdapter extends ArrayAdapter {
 			
 			holder.background.setBackgroundDrawable(states);
 		}
-
-		// Set Kills
-		if (killsValue != null) {
-			if (killsValue.toString().equals("1")) {
-				holder.killsTxt.setText("kill");
-			}
-			holder.kills.setText(killsValue.toString());
-		}
-
-		// Set Deaths
-		if (deathsValue != null) {
-			holder.deaths.setText(deathsValue.toString());
-		}
-
-		// Set Assists
-		if (assistsValue != null) {
-			holder.assists.setText(assistsValue.toString());
-		}
-		
-		// Set Minions Killed
-		if (minionsKilled != null && neutralMinionsKilled != null) {
-			int totalMinions = minionsKilled.intValue() + neutralMinionsKilled.intValue();
-			holder.minions.setText("" + totalMinions);
-		}
-		
-		// Set Damage Dealt
-		if (damageDealt != null) {
-			String number = damageDealt.toString();
-			double amount = Double.parseDouble(number);
-			DecimalFormat formatter = new DecimalFormat("#,###");
-			
-			holder.dDealt.setText(formatter.format(amount).toString());
-		}
-
-		// Set Damage Taken
-		if (damageRec != null) {
-			String number = damageRec.toString();
-			double amount = Double.parseDouble(number);
-			DecimalFormat formatter = new DecimalFormat("#,###");
-			
-			holder.dRec.setText(formatter.format(amount).toString());
-		}
-		
-		//Set Healing Done
-		if (healingDone != null) {
-			String number = healingDone.toString();
-			double amount = Double.parseDouble(number);
-			DecimalFormat formatter = new DecimalFormat("#,###");
-			
-			holder.hDone.setText(formatter.format(amount).toString());
-		}
-		
-		// Set Gold
-		if (gold != null) {
-			String number = gold.toString();
-			double amount = Double.parseDouble(number);
-			DecimalFormat formatter = new DecimalFormat("#,###");
-			
-			holder.goldValue.setText(formatter.format(amount).toString());
-		}
-		
-		// Set Largest Multi-Kill
-		if (multiKill != null) {
-			
-			holder.lrgMultiKill.setText(multiKill.toString());
-		}
-		
-		// Set Time Spent Dead
-		if (timeDead != null) {
-			holder.timeSpentDead.setText(timeDead.toString());
-		}
-		
-		// Set Wards Placed
-		if (wardsPlaced != null) {
-			holder.wards.setText(wardsPlaced.toString());
-		}
-		
+	
 		
 		
 		
 		
 		return convertView;
+	}
+	
+	private String getKda() {
+		String kda = "KDA: " + killsValue + " / " + deathsValue + " / " + assistsValue;
+		return kda;
 	}
 	
 }
