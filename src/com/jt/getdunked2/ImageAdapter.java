@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;
+    
 
     public ImageAdapter(Context c) {
         mContext = c;
@@ -52,7 +53,7 @@ public class ImageAdapter extends BaseAdapter {
     }
 
     // references to our images
-    private Integer[] mThumbIds = {
+    public static Integer[] mThumbIds = {
             R.drawable.ahrisquare, R.drawable.akalisquare, 
             R.drawable.alistarsquare, R.drawable.amumusquare,
             R.drawable.aniviasquare, R.drawable.anniesquare,

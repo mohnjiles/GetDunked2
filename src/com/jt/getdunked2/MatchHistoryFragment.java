@@ -5,7 +5,9 @@ import com.jt.getdunked2.AnotherAsyncTask.PostFetcherTwo;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Typeface;
+import android.graphics.drawable.GradientDrawable.Orientation;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -44,7 +46,7 @@ public class MatchHistoryFragment extends ListFragment {
 	public static ListView lv;
 	public static int pos;
 	TextView loadingText;
-	static EditText etSummName;
+	String name = ProfileMainActivity.name;
 	String url;
 	String urlTwo;
 	String urlThree;
@@ -71,10 +73,10 @@ public class MatchHistoryFragment extends ListFragment {
 		// Inflate the layout for this fragment    
 	    View V = inflater.inflate(R.layout.match_history_fragment, container, false);
 	    
-		etSummName = (EditText) getActivity().findViewById(R.id.etSummName);
 		tf = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Roboto-BoldCondensed.ttf");
 		url = "http://api.elophant.com/v2/NA/in_progress_game_info/"
-				+ etSummName.getText().toString() + "?key=eS4XmrLVhc7EhPson8dV";
+				+ name + "?key=eS4XmrLVhc7EhPson8dV";
+		
 		
 		
 		return V;	
@@ -102,14 +104,10 @@ public class MatchHistoryFragment extends ListFragment {
 	private void initiatePopupWindow(int position) {
 		try {
 			// convert px to dips
-			int dipsWidth = (int) TypedValue.applyDimension(
-	        	    TypedValue.COMPLEX_UNIT_DIP, 
-	        	    200 , 
-	        	    getActivity().getResources().getDisplayMetrics()); 
-			int dipsHeight = (int) TypedValue.applyDimension(
-	        	    TypedValue.COMPLEX_UNIT_DIP, 
-	        	    300 , 
-	        	    getActivity().getResources().getDisplayMetrics()); 
+			int dipsWidthPortrait = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 200, getActivity().getResources().getDisplayMetrics()); 
+			int dipsHeightPortrait = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 300, getActivity().getResources().getDisplayMetrics());
+			int dipsWidthLandscape = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 400, getActivity().getResources().getDisplayMetrics()); 
+			int dipsHeightLandscape = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 250, getActivity().getResources().getDisplayMetrics());
 			
 			// We need to get the instance of the LayoutInflater
 			LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -117,10 +115,17 @@ public class MatchHistoryFragment extends ListFragment {
 			
 			pos = 9 - position;
 			
+			if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+				pwindo = new PopupWindow(layout, dipsWidthLandscape, dipsHeightLandscape, true);
+				pwindo.showAtLocation(layout, Gravity.CENTER, 0, 0);
+				pwindo.setFocusable(true);
+			} else {
+				pwindo = new PopupWindow(layout, dipsWidthPortrait, dipsHeightPortrait, true);
+				pwindo.showAtLocation(layout, Gravity.CENTER, 0, 0);
+				pwindo.setFocusable(true);
+			}
 			// Make a new popupwindow, 200 x 300 dp
-			pwindo = new PopupWindow(layout, dipsWidth, dipsHeight, true);
-			pwindo.showAtLocation(layout, Gravity.CENTER, 0, 0);
-			pwindo.setFocusable(true);
+			
 			
 			// Set TextView variables
 			tvDamageDone = (TextView) pwindo.getContentView().findViewById(R.id.tvDDealtNum);

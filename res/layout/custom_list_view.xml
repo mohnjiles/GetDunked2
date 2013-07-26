@@ -22,8 +22,8 @@
 
         <ImageView
             android:id="@+id/list_image"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/champ_image"
+            android:layout_height="@dimen/champ_image"
             android:src="@drawable/ahrisquare" />
     </LinearLayout>
 
@@ -37,7 +37,7 @@
         android:layout_toRightOf="@+id/thumbnail"
         android:text="Game Type"
         android:textColor="#FFFFFF"
-        android:textSize="12sp"
+        android:textSize="@dimen/game_type"
         android:textStyle="bold"
         android:typeface="sans" />
 
@@ -54,12 +54,12 @@
         android:layout_below="@+id/gameType"
         android:text="KDA: "
         android:textColor="#FFFFFF"
-        android:textSize="10sp" />
+        android:textSize="@dimen/kda" />
 
     <ImageView
         android:id="@+id/ivSummonerOne"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="@dimen/summoner_image"
+        android:layout_height="@dimen/summoner_image"
         android:layout_alignBottom="@+id/thumbnail"
         android:layout_alignLeft="@+id/tvResult"
         android:layout_marginRight="2dp"
@@ -67,16 +67,16 @@
 
     <ImageView
         android:id="@+id/ivSummonerTwo"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="@dimen/summoner_image"
+        android:layout_height="@dimen/summoner_image"
         android:layout_alignTop="@+id/ivSummonerOne"
         android:layout_toRightOf="@+id/ivSummonerOne"
         android:src="@drawable/ability" />
 
     <ImageView
         android:id="@+id/ivItemThree"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/item_image"
+        android:layout_height="@dimen/item_image"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="2dp"
@@ -84,8 +84,8 @@
 
     <ImageView
         android:id="@+id/ivItemTwo"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/item_image"
+        android:layout_height="@dimen/item_image"
         android:layout_alignTop="@+id/ivItemThree"
         android:layout_marginRight="2dp"
         android:layout_toLeftOf="@+id/ivItemThree"
@@ -93,8 +93,8 @@
 
     <ImageView
         android:id="@+id/ivItemOne"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/item_image"
+        android:layout_height="@dimen/item_image"
         android:layout_alignTop="@+id/ivItemTwo"
         android:layout_marginRight="2dp"
         android:layout_toLeftOf="@+id/ivItemTwo"
@@ -102,8 +102,8 @@
 
     <ImageView
         android:id="@+id/ivItemFive"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/item_image"
+        android:layout_height="@dimen/item_image"
         android:layout_below="@+id/ivItemThree"
         android:layout_marginRight="2dp"
         android:layout_marginTop="2dp"
@@ -112,8 +112,8 @@
 
     <ImageView
         android:id="@+id/ivItemSix"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/item_image"
+        android:layout_height="@dimen/item_image"
         android:layout_alignLeft="@+id/ivItemThree"
         android:layout_below="@+id/ivItemThree"
         android:layout_marginTop="2dp"
@@ -121,8 +121,8 @@
 
     <ImageView
         android:id="@+id/ivItemFour"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/item_image"
+        android:layout_height="@dimen/item_image"
         android:layout_below="@+id/ivItemTwo"
         android:layout_marginRight="2dp"
         android:layout_marginTop="2dp"

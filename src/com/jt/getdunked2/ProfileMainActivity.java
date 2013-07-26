@@ -3,20 +3,27 @@ package com.jt.getdunked2;
 import java.util.ArrayList;
 import java.util.Vector;
 
+import com.jt.getdunked2.AsyncTasks.PostFetcher;
+
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
+import android.support.v7.widget.SearchView.OnQueryTextListener;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -24,6 +31,7 @@ public class ProfileMainActivity extends ActionBarActivity{
 
 	SearchView mSearchView;
     TextView mStatusView;
+    
 	
 	ViewPager mViewPager;
 	LocationManager lm;
@@ -33,24 +41,32 @@ public class ProfileMainActivity extends ActionBarActivity{
 
 	ListView lv;
 	TextView loadingText;
-	public static EditText etSummName;
+	public static String name;
+	public static EditText editTxt;
+	public static MenuItem searchItem;
 	String url;
 	String urlTwo;
 	Button btnSearch;
 	TextView tvOne;
 	TextView tvDebug;
+	org.jsoup.nodes.Document doc;
+	
+
+	
+	
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_summoner_lookup);
+		ActionBar actionBar = getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.show();
 		
-		etSummName = (EditText) findViewById(R.id.etSummName);
 		lv = (ListView) findViewById(android.R.id.list);
 		tvDebug = ProfileFragment.tvDebugOne;
-		
-		
-		
+
 		Vector<Fragment> fragments = new Vector<Fragment>();
 		  ProfileFragment fragmentOne = new ProfileFragment();
 		  Bundle bundle = new Bundle();
@@ -79,10 +95,36 @@ public class ProfileMainActivity extends ActionBarActivity{
 		 
 	}
 	
+	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_profile_main, menu);
+		searchItem = menu.findItem(R.id.action_search);
+		SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+		
+		
+		searchView.setOnQueryTextListener(new OnQueryTextListener() {
+			
+			@Override
+			public boolean onQueryTextSubmit(String arg0) {
+				name = arg0;
+				url = "http://api.elophant.com/v2/NA/in_progress_game_info/"
+						+ name + "?key=eS4XmrLVhc7EhPson8dV";
+				AsyncTasks tasks = new AsyncTasks();
+				PostFetcher pf = tasks.new PostFetcher(ProfileMainActivity.this, ProfileMainActivity.this);
+				pf.execute(url);
+				setTitle(name);
+				return false;
+			}
+			
+			@Override
+			public boolean onQueryTextChange(String arg0) {
+				// TODO Auto-generated method stub
+				return false;
+			}
+		});
 		return true;
 	}
 	

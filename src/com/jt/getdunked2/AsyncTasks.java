@@ -1,10 +1,16 @@
 package com.jt.getdunked2;
 
+import java.io.IOException;
 import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.security.auth.PrivateCredentialPermission;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
@@ -19,8 +25,11 @@ import android.app.Notification.Style;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
+import android.support.v4.view.MenuItemCompat;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -32,9 +41,9 @@ import android.widget.Toast;
 
 public class AsyncTasks {
 
+	EditText searchView = ProfileMainActivity.editTxt;
 	LazyAdapter lazyAdapter;
 	ArrayList<GameStatistics> someArrayList;
-	EditText etSummName = ProfileMainActivity.etSummName;
 	ListView lv = MatchHistoryFragment.lv;
 	//TextView tvOne = MatchHistoryFragment.tvOne;
 	TextView tvDebugOne = ProfileFragment.tvDebugOne;
@@ -61,6 +70,9 @@ public class AsyncTasks {
 	TextView lossesFive = ProfileFragment.lossesFive;
 	TextView lossesThree = ProfileFragment.lossesThree;
 	TextView lossesSolo = ProfileFragment.lossesSolo;
+	MenuItem searchItem = ProfileMainActivity.searchItem;
+	
+	String name = ProfileMainActivity.name;
 	
 	String soloFiveLeague;
 	String soloFiveTier;
@@ -74,7 +86,9 @@ public class AsyncTasks {
 	String soloFiveLP;
 	String teamFiveLP;
 	String teamThreeLP;
-	
+	Document doc;
+	ArrayList urlList;
+	Elements images;
 	
 	
 	private static class PostFetchResult {
@@ -92,8 +106,8 @@ public class AsyncTasks {
 	
 	public class PostFetcher extends AsyncTask<String, Void, PostFetchResult> {
 		private Activity ownerActivity;
-		private ProgressDialog dialog;
 		private Context context;
+		private ProgressDialog dialog;
 		public PostFetcher(Context cxt, Activity activity) {
 			context = cxt;
 			dialog = new ProgressDialog(context);
@@ -103,9 +117,9 @@ public class AsyncTasks {
 		
 		
 		public final String SERVER_URL_IN_GAME_STATS = "http://api.elophant.com/v2/NA/in_progress_game_info/"
-				+ etSummName.getText().toString() + "?key=eS4XmrLVhc7EhPson8dV";
+				+ name + "?key=eS4XmrLVhc7EhPson8dV";
 		public final String SERVER_URL_SUMMONER = "http://api.elophant.com/v2/NA/summoner/"
-				+ etSummName.getText().toString().replace(" ", "") + "?key=eS4XmrLVhc7EhPson8dV";
+				+ name.replace(" ", "") + "?key=eS4XmrLVhc7EhPson8dV";
 		
 
 		@Override
@@ -125,6 +139,14 @@ public class AsyncTasks {
 				Log.w("doInBackground recentGames", "Recent Games error: " + e.getMessage());
 				
 			}
+			try {
+				doc = Jsoup.connect("http://leagueoflegends.wikia.com/wiki/Free_champion_rotation").get();
+				images = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
+				
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
 			return result;
 			
 		}
@@ -132,16 +154,22 @@ public class AsyncTasks {
 		@Override
 		protected void onPreExecute(){
 			super.onPreExecute();
-			dialog = ProgressDialog.show(context, "", "Loading " + etSummName.getText().toString() + "'s match history...", true);
+			dialog = ProgressDialog.show(context, "", "Loading " + name + "'s match history...", true);
 			dialog.show();
 		}
 
 		@Override
 		protected void onPostExecute(PostFetchResult result) {
 			// TextView declarations -- may not keep
+			
+			for (Element image : images) {
+				if(image.attr("data-image-name").equals("AsheSquare.png")) {
+					ivSoloFive.setImageResource(R.drawable.ashesquare);
+				}
+			}
 
 			someArrayList = new ArrayList<GameStatistics>();
-			dialog.dismiss();
+			dialog.cancel();
 			try {
 				if (result.recentGames.size() > 0)
 				{		
@@ -528,8 +556,8 @@ public class AsyncTasks {
 				lazyAdapter.notifyDataSetChanged();
 				}
 				
-				InputMethodManager imm = (InputMethodManager)context.getSystemService(Activity.INPUT_METHOD_SERVICE);
-				imm.hideSoftInputFromWindow(etSummName.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+//				InputMethodManager imm = (InputMethodManager)context.getSystemService(Activity.INPUT_METHOD_SERVICE);
+//				imm.hideSoftInputFromWindow(etSummName.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 				
 				ivSoloFive.setVisibility(View.VISIBLE);
 				ivTeamFive.setVisibility(View.VISIBLE);
@@ -555,14 +583,13 @@ public class AsyncTasks {
 				lossesFive.setVisibility(View.VISIBLE);
 				lossesThree.setVisibility(View.VISIBLE);
 				lossesSolo.setVisibility(View.VISIBLE);
+				MenuItemCompat.collapseActionView(searchItem);
 				
 			} catch (Exception e){
 				
-				Crouton.showText(ownerActivity, "Error loading " + etSummName.getText() + "'s summoner info." +
+				Crouton.showText(ownerActivity, "Error loading " + name + "'s summoner info." +
 						" Please try again in a few seconds.", 
 						de.keyboardsurfer.android.widget.crouton.Style.ALERT);
-				 InputMethodManager imm = (InputMethodManager)context.getSystemService(Activity.INPUT_METHOD_SERVICE);
-						imm.hideSoftInputFromWindow(etSummName.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 				
 				
 				Log.w("Oops", "An error occured: " + e.getMessage());

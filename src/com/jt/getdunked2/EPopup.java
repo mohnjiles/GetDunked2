@@ -36,7 +36,7 @@ public class EPopup extends Fragment {
     	
 		
 		tvSpellName = (TextView)V.findViewById(R.id.tvSpellName);
-		ivPassiveIcon = (ImageView)V.findViewById(R.id.imageView1);
+		ivPassiveIcon = (ImageView)V.findViewById(R.id.ivFreeThree);
 		tvHeader1 = (TextView)V.findViewById(R.id.tvHeader1);
 		tvHeader2 = (TextView)V.findViewById(R.id.tvHeader2);
 		tvHeader3 = (TextView)V.findViewById(R.id.tvHeader3);

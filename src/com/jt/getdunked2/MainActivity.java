@@ -1,13 +1,27 @@
 package com.jt.getdunked2;
 
 
+import com.jt.getdunked2.FreeWeekAsync.PostFetcher;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ImageView;
 
 public class MainActivity extends ActionBarActivity {
+	
+	public static ImageView ivFreeOne;
+	public static ImageView ivFreeTwo;
+	public static ImageView ivFreeThree;
+	public static ImageView ivFreeFour;
+	public static ImageView ivFreeFive;
+	public static ImageView ivFreeSix;
+	public static ImageView ivFreeSeven;
+	public static ImageView ivFreeEight;
+	public static ImageView ivFreeNine;
+	public static ImageView ivFreeTen;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -15,8 +29,23 @@ public class MainActivity extends ActionBarActivity {
 		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		String url = "http://leagueoflegends.wikia.com/wiki/Free_champion_rotation";
 		
 		
+		ivFreeOne = (ImageView) findViewById(R.id.ivFreeOne);
+		ivFreeTwo = (ImageView) findViewById(R.id.ivFreeTwo);
+		ivFreeThree = (ImageView) findViewById(R.id.ivFreeThree);
+		ivFreeFour = (ImageView) findViewById(R.id.ivFreeFour);
+		ivFreeFive = (ImageView) findViewById(R.id.ivFreeFive);
+		ivFreeSix = (ImageView) findViewById(R.id.ivFreeSix);
+		ivFreeSeven = (ImageView) findViewById(R.id.ivFreeSeven);
+		ivFreeEight = (ImageView) findViewById(R.id.ivFreeEight);
+		ivFreeNine = (ImageView) findViewById(R.id.ivFreeNine);
+		ivFreeTen = (ImageView) findViewById(R.id.ivFreeTen);
+		
+		FreeWeekAsync fwa = new FreeWeekAsync();
+		PostFetcher pFetcher = fwa.new PostFetcher(this, this);
+		pFetcher.execute(url);
 		
 	}
 
@@ -25,6 +54,7 @@ public class MainActivity extends ActionBarActivity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
+		
 	}
 	
 	public void champButtonPressed(View view) {

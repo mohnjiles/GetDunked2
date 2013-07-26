@@ -20,8 +20,8 @@ public class AbilityFragment extends Fragment {
     	View V = inflater.inflate(R.layout.ability_fragment, container, false);
     	
   	  // imageview variables
-  	  ImageView ivPassive = (ImageView)V.findViewById(R.id.imageView1);
-  	  ImageView ivQ = (ImageView) V.findViewById(R.id.imageView2);
+  	  ImageView ivPassive = (ImageView)V.findViewById(R.id.ivFreeThree);
+  	  ImageView ivQ = (ImageView) V.findViewById(R.id.ivFreeTwo);
   	  ImageView ivW = (ImageView) V.findViewById(R.id.imageView3);
   	  ImageView ivE = (ImageView) V.findViewById(R.id.imageView4);
   	  ImageView ivR = (ImageView) V.findViewById(R.id.imageView5);

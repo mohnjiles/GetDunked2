@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -21,6 +22,8 @@ import android.widget.Toast;
 public class ChampionPage extends ActionBarActivity {
 
 	int position = ChampsActivity.myInt;
+	Integer[] mThumbIds = ImageAdapter.mThumbIds;
+	
 	@Override
 	 protected void onCreate(Bundle arg0) {
 		
@@ -31,7 +34,9 @@ public class ChampionPage extends ActionBarActivity {
 	  
 	  
 	  setContentView(R.layout.activity_champion_page);
-	  getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+	  ActionBar aBar = getSupportActionBar();
+	  aBar.setDisplayHomeAsUpEnabled(true);
+	  aBar.setIcon(mThumbIds[position]);
 
 	  
 	  

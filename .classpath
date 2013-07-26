@@ -5,8 +5,9 @@
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/JT/git/Get Dunked/google-gson-2.2.4/gson-2.2.4.jar"/>
-	<classpathentry kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
-	<classpathentry kind="lib" path="C:/Users/JT/android-sdks/extras/android/support/v7/appcompat/libs/android-support-v7-appcompat.jar"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/JT/android-sdks/extras/android/support/v7/appcompat/libs/android-support-v7-appcompat.jar"/>
 	<classpathentry exported="true" kind="lib" path="C:/Users/JT/android-sdks/extras/android/support/v4/android-support-v4.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/JT/git/jsoup-1.7.2.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

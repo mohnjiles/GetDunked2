@@ -28,7 +28,6 @@ public class ProfileFragment extends Fragment {
 
 	ListView lv = MatchHistoryFragment.lv;
 	TextView loadingText;
-	static EditText etSummName;
 	String url;
 	String urlTwo;
 	Button btnSearch;
@@ -64,7 +63,11 @@ public class ProfileFragment extends Fragment {
 	public static Number champId[];
 	public static Number teamId[];
 
-	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setRetainInstance(true);
+	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, 
@@ -73,7 +76,6 @@ public class ProfileFragment extends Fragment {
 	    	
 	    
 	    View V = inflater.inflate(R.layout.profile_fragment, container, false);
-		etSummName = (EditText) getActivity().findViewById(R.id.etSummName);
 		ivSoloFive = (ImageView) V.findViewById(R.id.ivSoloFiveIcon);
 		ivTeamFive = (ImageView) V.findViewById(R.id.ivTeamFiveIcon);
 		ivTeamThree = (ImageView) V.findViewById(R.id.ivTeamThreeIcon);
@@ -134,38 +136,6 @@ public class ProfileFragment extends Fragment {
 		lossesThree.setVisibility(View.GONE);
 		lossesSolo.setVisibility(View.GONE);
 		
-		btnSearch = (Button) getActivity().findViewById(R.id.button2);
-		
-		
-		((Button)btnSearch).setOnClickListener(new View.OnClickListener() {
-			
-			
-			
-			@Override
-			public void onClick(View v) {
-				
-				AsyncTasks tasks = new AsyncTasks();
-				PostFetcher pf = tasks.new PostFetcher(getActivity(), getActivity());
-				pf.execute(url);
-				
-				
-			}
-		});	
-		
-		((EditText)etSummName).setOnEditorActionListener(new OnEditorActionListener() {
-			
-			@Override
-			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-				if (actionId == EditorInfo.IME_ACTION_DONE) {
-					AsyncTasks tasks = new AsyncTasks();
-					PostFetcher pf = tasks.new PostFetcher(getActivity(), getActivity());
-					pf.execute(url);
-					
-					return true;
-				}		
-				return false;
-			}
-		});
 	}
 
 

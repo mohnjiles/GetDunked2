@@ -8,7 +8,7 @@
         android:layout_height="462dp" >
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/ivFreeThree"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_alignParentLeft="true"
@@ -21,9 +21,9 @@
             android:id="@+id/tvPassiveName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/imageView1"
+            android:layout_alignTop="@+id/ivFreeThree"
             android:layout_marginLeft="7dp"
-            android:layout_toRightOf="@+id/imageView1"
+            android:layout_toRightOf="@+id/ivFreeThree"
             android:text="Essence Theft"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#FFFFFF"
@@ -127,7 +127,7 @@
             android:textSize="20sp" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/ivFreeTwo"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:layout_alignTop="@+id/tvQName"

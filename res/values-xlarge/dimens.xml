@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_dimens">200dip</dimen>
+    <dimen name="champ_image">140dp</dimen>
+    <dimen name="item_image">64dip</dimen>
+    <dimen name="summoner_image">60dip</dimen>
+    <dimen name="game_type">24sp</dimen>
+    <dimen name="kda">20sp</dimen>
+    <dimen name="wins_padding">60dip</dimen>
+    <dimen name="wins_padding_two">60dip</dimen>
+    <dimen name="free_week_image">128dip</dimen>
+</resources>

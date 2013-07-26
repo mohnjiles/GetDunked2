@@ -24,8 +24,7 @@ public class AnotherAsyncTask {
 	ArrayList<GameStatistics> someArrayList;
 	
 	PopupWindow pWindow = MatchHistoryFragment.pwindo;
-	
-	EditText etSummName = ProfileMainActivity.etSummName;
+
 	TextView tvDamageDealt = MatchHistoryFragment.tvDamageDone;
 	TextView tvDamageRec = MatchHistoryFragment.dRec;
 	TextView tvHealingDone = MatchHistoryFragment.hDone;
@@ -34,6 +33,8 @@ public class AnotherAsyncTask {
 	TextView tvTimeDead = MatchHistoryFragment.timeSpentDead;
 	TextView tvWardsPlaced = MatchHistoryFragment.wards;
 	TextView tvMinionsKilled = MatchHistoryFragment.minions;
+	
+	String name = ProfileMainActivity.name;
 	
 	Number damageDealt = null;
 	Number damageRec = null;
@@ -73,9 +74,9 @@ public class AnotherAsyncTask {
 		
 		
 		public final String SERVER_URL_IN_GAME_STATS = "http://api.elophant.com/v2/NA/in_progress_game_info/"
-				+ etSummName.getText().toString() + "?key=eS4XmrLVhc7EhPson8dV";
+				+ name + "?key=eS4XmrLVhc7EhPson8dV";
 		public final String SERVER_URL_SUMMONER = "http://api.elophant.com/v2/NA/summoner/"
-				+ etSummName.getText().toString().replace(" ", "") + "?key=eS4XmrLVhc7EhPson8dV";
+				+ name.replace(" ", "") + "?key=eS4XmrLVhc7EhPson8dV";
 		
 
 		@Override
@@ -100,7 +101,7 @@ public class AnotherAsyncTask {
 		@Override
 		protected void onPreExecute(){
 			super.onPreExecute();
-			dialog = ProgressDialog.show(context, "", "Loading " + etSummName.getText().toString() + "'s match history...", true);
+			dialog = ProgressDialog.show(context, "", "Loading " + name + "'s match history...", true);
 			dialog.show();
 		}
 
@@ -197,7 +198,7 @@ public class AnotherAsyncTask {
 					}
 				}
 			} catch (Exception e) {
-				Crouton.showText(ownerActivity, "Error loading " + etSummName.getText() + "'s match info." +
+				Crouton.showText(ownerActivity, "Error loading " + name + "'s match info." +
 						" Please try again in a few seconds.", 
 						de.keyboardsurfer.android.widget.crouton.Style.ALERT);
 				Log.w("onPostExecute", "" + e.getMessage() + e.getStackTrace()[2].getLineNumber());
