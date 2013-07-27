@@ -26,15 +26,15 @@
         android:id="@+id/TextView01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignBaseline="@+id/tvWeekNum"
+        android:layout_alignBottom="@+id/tvWeekNum"
         android:layout_centerHorizontal="true"
         android:text="Solo 5v5"
         android:textColor="#FFFFFF"
         android:textSize="19sp" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tvWeekNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/ivSoloFiveIcon"

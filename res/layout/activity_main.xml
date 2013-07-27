@@ -33,8 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="4dp" >
+        android:layout_alignParentLeft="true" >
 
         <RelativeLayout
             android:layout_width="536dp"
@@ -130,5 +129,29 @@
 
         </RelativeLayout>
     </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/tvWeekNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/horizontalScrollView1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tvWeekNum"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="Free Champion Rotation"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
 </RelativeLayout>

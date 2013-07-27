@@ -9,4 +9,5 @@
     <dimen name="wins_padding">50dip</dimen>
     <dimen name="wins_padding_two">50dip</dimen>
     <dimen name="free_week_image">96dip</dimen>
+    <dimen name="free_week_text">21sp</dimen>
 </resources>

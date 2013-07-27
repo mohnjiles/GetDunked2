@@ -8,7 +8,9 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 	
@@ -22,6 +24,7 @@ public class MainActivity extends ActionBarActivity {
 	public static ImageView ivFreeEight;
 	public static ImageView ivFreeNine;
 	public static ImageView ivFreeTen;
+	public static TextView tvWeekNum;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,9 +45,10 @@ public class MainActivity extends ActionBarActivity {
 		ivFreeEight = (ImageView) findViewById(R.id.ivFreeEight);
 		ivFreeNine = (ImageView) findViewById(R.id.ivFreeNine);
 		ivFreeTen = (ImageView) findViewById(R.id.ivFreeTen);
+		tvWeekNum = (TextView) findViewById(R.id.tvWeekNum);
 		
 		FreeWeekAsync fwa = new FreeWeekAsync();
-		PostFetcher pFetcher = fwa.new PostFetcher(this, this);
+		PostFetcher pFetcher = fwa.new PostFetcher();
 		pFetcher.execute(url);
 		
 	}

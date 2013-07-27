@@ -80,7 +80,7 @@ public class ProfileFragment extends Fragment {
 		ivTeamFive = (ImageView) V.findViewById(R.id.ivTeamFiveIcon);
 		ivTeamThree = (ImageView) V.findViewById(R.id.ivTeamThreeIcon);
 		tvDebugOne = (TextView) V.findViewById(R.id.TextView01);
-		tvDebugTwo = (TextView) V.findViewById(R.id.textView1);
+		tvDebugTwo = (TextView) V.findViewById(R.id.tvWeekNum);
 		tvDebugThree = (TextView) V.findViewById(R.id.TextView02);
 		tvThreeDivision = (TextView) V.findViewById(R.id.tvThreeLeague);
 		tvSoloDivision = (TextView) V.findViewById(R.id.tvSoloLeague);
