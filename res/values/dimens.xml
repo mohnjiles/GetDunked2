@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <dimen name="image_dimens">100dip</dimen>
     <dimen name="champ_image">60dip</dimen>
     <dimen name="item_image">32dip</dimen>
@@ -10,4 +11,8 @@
     <dimen name="wins_padding_two">30dip</dimen>
     <dimen name="free_week_image">64dip</dimen>
     <dimen name="free_week_text">14sp</dimen>
+    <dimen name="free_name">12sp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
 </resources>

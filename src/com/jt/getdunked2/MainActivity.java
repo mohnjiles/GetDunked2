@@ -25,6 +25,16 @@ public class MainActivity extends ActionBarActivity {
 	public static ImageView ivFreeNine;
 	public static ImageView ivFreeTen;
 	public static TextView tvWeekNum;
+	public static TextView tvFreeOne;
+	public static TextView tvFreeTwo;
+	public static TextView tvFreeThree;
+	public static TextView tvFreeFour;
+	public static TextView tvFreeFive;
+	public static TextView tvFreeSix;
+	public static TextView tvFreeSeven;
+	public static TextView tvFreeEight;
+	public static TextView tvFreeNine;
+	public static TextView tvFreeTen;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +56,17 @@ public class MainActivity extends ActionBarActivity {
 		ivFreeNine = (ImageView) findViewById(R.id.ivFreeNine);
 		ivFreeTen = (ImageView) findViewById(R.id.ivFreeTen);
 		tvWeekNum = (TextView) findViewById(R.id.tvWeekNum);
+		
+		tvFreeOne = (TextView) findViewById(R.id.tvNameOne);
+		tvFreeTwo = (TextView) findViewById(R.id.tvNameTwo);
+		tvFreeThree = (TextView) findViewById(R.id.tvNameThree);
+		tvFreeFour = (TextView) findViewById(R.id.tvNameFour);
+		tvFreeFive = (TextView) findViewById(R.id.tvFreeNameFive);
+		tvFreeSix = (TextView) findViewById(R.id.tvNameSix);
+		tvFreeSeven = (TextView) findViewById(R.id.tvNameSeven);
+		tvFreeEight = (TextView) findViewById(R.id.tvNameEight);
+		tvFreeNine = (TextView) findViewById(R.id.tvNameNine);
+		tvFreeTen = (TextView) findViewById(R.id.tvNameTen);
 		
 		FreeWeekAsync fwa = new FreeWeekAsync();
 		PostFetcher pFetcher = fwa.new PostFetcher();

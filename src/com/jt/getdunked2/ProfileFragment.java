@@ -81,7 +81,7 @@ public class ProfileFragment extends Fragment {
 		ivTeamThree = (ImageView) V.findViewById(R.id.ivTeamThreeIcon);
 		tvDebugOne = (TextView) V.findViewById(R.id.TextView01);
 		tvDebugTwo = (TextView) V.findViewById(R.id.tvWeekNum);
-		tvDebugThree = (TextView) V.findViewById(R.id.TextView02);
+		tvDebugThree = (TextView) V.findViewById(R.id.tvNameTwo);
 		tvThreeDivision = (TextView) V.findViewById(R.id.tvThreeLeague);
 		tvSoloDivision = (TextView) V.findViewById(R.id.tvSoloLeague);
 		tvFiveDivision = (TextView) V.findViewById(R.id.tvFiveLeague);
@@ -95,7 +95,7 @@ public class ProfileFragment extends Fragment {
 		tvFiveWins = (TextView) V.findViewById(R.id.tvFiveWins);
 		tvFiveLosses = (TextView) V.findViewById(R.id.tvFiveLosses);
 		winsThree = (TextView) V.findViewById(R.id.tvWins);
-		winsSolo = (TextView) V.findViewById(R.id.TextView03);
+		winsSolo = (TextView) V.findViewById(R.id.tvNameFour);
 		winsFive = (TextView) V.findViewById(R.id.TextView04);
 		lossesFive = (TextView) V.findViewById(R.id.TextView05);
 		lossesThree = (TextView) V.findViewById(R.id.TextView06);

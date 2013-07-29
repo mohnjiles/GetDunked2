@@ -53,7 +53,6 @@ public class AnotherAsyncTask {
 
 	
 	private static class PostFetchResult {
-		InGameStats igs;
 		Summoner summoner;
 		List<GameStatistics> recentGames;
 	}
@@ -83,8 +82,6 @@ public class AnotherAsyncTask {
 		protected PostFetchResult doInBackground(String... urls) {
 			PostFetchResult result = new PostFetchResult();
 
-			result.igs = JsonUtil.fromJsonUrl(SERVER_URL_IN_GAME_STATS,
-					InGameStats.class);
 			result.summoner = JsonUtil.fromJsonUrl(SERVER_URL_SUMMONER,
 					Summoner.class);			
 			try {

@@ -1,11 +1,8 @@
 package com.jt.getdunked2;
 
 import java.io.IOException;
-import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.security.auth.PrivateCredentialPermission;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -18,6 +15,7 @@ import de.keyboardsurfer.android.widget.crouton.Style.Builder;
 
 
 import android.R.anim;
+import android.R.integer;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -44,7 +42,6 @@ public class AsyncTasks {
 	EditText searchView = ProfileMainActivity.editTxt;
 	LazyAdapter lazyAdapter;
 	ArrayList<GameStatistics> someArrayList;
-	ListView lv = MatchHistoryFragment.lv;
 	//TextView tvOne = MatchHistoryFragment.tvOne;
 	TextView tvDebugOne = ProfileFragment.tvDebugOne;
 	TextView tvDebugTwo = ProfileFragment.tvDebugTwo;
@@ -72,6 +69,33 @@ public class AsyncTasks {
 	TextView lossesSolo = ProfileFragment.lossesSolo;
 	MenuItem searchItem = ProfileMainActivity.searchItem;
 	
+	TextView tvDoubleKills = LifetimeStatsFragment.tvDoubleKills;
+	TextView tvTripleKills = LifetimeStatsFragment.tvTripleKills;
+	TextView tvQuadraKills = LifetimeStatsFragment.tvQuadraKills;
+	TextView tvPentaKills = LifetimeStatsFragment.tvPentaKills;
+	TextView tvKills = LifetimeStatsFragment.tvKills;
+	TextView tvDeaths = LifetimeStatsFragment.tvDeaths;
+	TextView tvAssists = LifetimeStatsFragment.tvAssists;
+	TextView tvKillingSprees = LifetimeStatsFragment.tvKillingSprees;
+	TextView tvMostKills = LifetimeStatsFragment.tvMostKills;
+	TextView tvMostDeaths = LifetimeStatsFragment.tvMostDeaths;
+	TextView tvGold = LifetimeStatsFragment.tvGold;
+	TextView tvMinions = LifetimeStatsFragment.tvMinions;
+	TextView tvNeutralMonsters = LifetimeStatsFragment.tvNeutralMonsters;
+	TextView tvDamageDealt = LifetimeStatsFragment.tvDamageDealt;
+	TextView tvMagicDamage = LifetimeStatsFragment.tvMagicDamage;
+	TextView tvPhysicalDamage = LifetimeStatsFragment.tvPhysicalDamage;
+	TextView tvHealingDone = LifetimeStatsFragment.tvHealingDone;
+	TextView tvDamageTaken = LifetimeStatsFragment.tvDamageTaken;
+	TextView tvLargestCrit = LifetimeStatsFragment.tvLargestCrit;
+	TextView tvKillingSpree = LifetimeStatsFragment.tvKillingSpree;
+	TextView tvTimeDead = LifetimeStatsFragment.tvTimeDead;
+	TextView tvLifespan = LifetimeStatsFragment.tvLifespan;
+	TextView tvLongestGame = LifetimeStatsFragment.tvLongestGame;
+	TextView tvGamesPlayed = LifetimeStatsFragment.tvGamesPlayed;
+	TextView tvGamesWon = LifetimeStatsFragment.tvGamesWon;
+	TextView tvGamesLost = LifetimeStatsFragment.tvGamesLost;
+	
 	String name = ProfileMainActivity.name;
 	
 	String soloFiveLeague;
@@ -87,7 +111,6 @@ public class AsyncTasks {
 	String teamFiveLP;
 	String teamThreeLP;
 	Document doc;
-	ArrayList urlList;
 	Elements images;
 	
 	
@@ -96,7 +119,7 @@ public class AsyncTasks {
 		Summoner summoner;
 		List<GameStatistics> recentGames;
 		List<SummonerLeagues> sLeagues;
-		List<Entries> entries;
+		List<LifetimeStatistics> stats;
 	}
 	
 	public static class SoData {
@@ -126,26 +149,30 @@ public class AsyncTasks {
 		protected PostFetchResult doInBackground(String... urls) {
 			PostFetchResult result = new PostFetchResult();
 
-			result.igs = JsonUtil.fromJsonUrl(SERVER_URL_IN_GAME_STATS,
-					InGameStats.class);
+			//result.igs = JsonUtil.fromJsonUrl(SERVER_URL_IN_GAME_STATS,
+			//		InGameStats.class);
 			result.summoner = JsonUtil.fromJsonUrl(SERVER_URL_SUMMONER,
-					Summoner.class);			
+					Summoner.class);
+			
 			try {
-				result.recentGames = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + result.summoner.getData().getAcctId().toString() 
-						+ "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getGameStatistics();
-				result.sLeagues = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/leagues/" + result.summoner.getData().getSummonerId().toString() 
-						+ "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getSummonerLeagues();
+				if (result.summoner != null) {
+					String acctId = result.summoner.getData().getAcctId().toString();
+					String summonerId = result.summoner.getData().getSummonerId().toString();
+					
+					if (acctId != null && summonerId != null) {
+						result.recentGames = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + acctId + "?key=eS4XmrLVhc7EhPson8dV", Data.class).getGameStatistics();
+						result.sLeagues = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/leagues/" + summonerId + "?key=eS4XmrLVhc7EhPson8dV", Data.class).getSummonerLeagues();
+						result.stats = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/ranked_stats/" + acctId+ "?key=eS4XmrLVhc7EhPson8dV", Data.class).getLifetimeStatistics();
+					}
+					
+				}
+				
 			} catch (Exception e) {
 				Log.w("doInBackground recentGames", "Recent Games error: " + e.getMessage());
-				
-			}
-			try {
-				doc = Jsoup.connect("http://leagueoflegends.wikia.com/wiki/Free_champion_rotation").get();
-				images = doc.select("img[src~=(?i)\\.(png|jpe?g|gif)]");
-				
-			} catch (IOException e) {
 				e.printStackTrace();
+				
 			}
+			
 			
 			return result;
 			
@@ -160,18 +187,107 @@ public class AsyncTasks {
 
 		@Override
 		protected void onPostExecute(PostFetchResult result) {
-			// TextView declarations -- may not keep
-			
-			for (Element image : images) {
-				if(image.attr("data-image-name").equals("AsheSquare.png")) {
-					ivSoloFive.setImageResource(R.drawable.ashesquare);
-				}
-			}
+			ListView lv = MatchHistoryFragment.lv;
 
 			someArrayList = new ArrayList<GameStatistics>();
 			dialog.cancel();
+			
+			int gamesPlayed = 0;
+			int gamesWon = 0;
+			int gamesLost = 0;
+			
 			try {
-				if (result.recentGames.size() > 0)
+				
+				if (result.stats != null) {
+					for (LifetimeStatistics stats : result.stats) {
+						if (stats.getChampionId().toString().equals("0")) {
+							if (stats.getStatType().equals("TOTAL_DOUBLE_KILLS")) {
+								tvDoubleKills.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_TRIPLE_KILLS")) {
+								tvTripleKills.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_QUADRA_KILLS")) {
+								tvQuadraKills.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_PENTA_KILLS")) {
+								tvPentaKills.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_CHAMPION_KILLS")) {
+								tvKills.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_DEATHS_PER_SESSION")) {
+								tvDeaths.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_ASSISTS")) {
+								tvAssists.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("KILLING_SPREE")) {
+								tvKillingSprees.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("MOST_CHAMPION_KILLS_PER_SESSION")) {
+								tvMostKills.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("MAX_NUM_DEATHS")) {
+								tvMostDeaths.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_GOLD_EARNED")) {
+								tvGold.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_MINION_KILLS")) {
+								tvMinions.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_NEUTRAL_MINIONS_KILLED")) {
+								tvNeutralMonsters.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_DAMAGE_DEALT")) {
+								tvDamageDealt.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_MAGIC_DAMAGE_DEALT")) {
+								tvMagicDamage.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_PHYSICAL_DAMAGE_DEALT")) {
+								tvPhysicalDamage.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_TRIPLE_KILLS")) {
+								tvTripleKills.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_HEAL")) {
+								tvHealingDone.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_DAMAGE_TAKEN")) {
+								tvDamageTaken.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("MAX_TIME_SPENT_LIVING")) {
+								tvLifespan.setText(stats.getValue().toString() + " s");
+								
+							} else if (stats.getStatType().equals("MAX_TIME_PLAYED")) {
+								tvLongestGame.setText(stats.getValue().toString() + " s");
+								
+							} else if (stats.getStatType().equals("TOTAL_SESSIONS_PLAYED")) {
+								tvGamesPlayed.setText(stats.getValue().toString());
+								gamesPlayed = stats.getValue().intValue();
+								
+							} else if (stats.getStatType().equals("MAX_LARGEST_CRITICAL_STRIKE")) {
+								tvLargestCrit.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("MAX_LARGEST_KILLING_SPREE")) {
+								tvKillingSpree.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_TIME_SPENT_DEAD")) {
+								tvTimeDead.setText(stats.getValue().toString());
+								
+							} else if (stats.getStatType().equals("TOTAL_SESSIONS_WON")) {
+								tvGamesWon.setText(stats.getValue().toString());
+								gamesWon = stats.getValue().intValue();
+								gamesLost = gamesPlayed - gamesWon;
+								tvGamesLost.setText("" + gamesLost);
+							} 
+						}
+					}
+				}
+				
+				if (result.recentGames != null)
 				{		
 					for(GameStatistics stats : result.recentGames)
 					{
@@ -180,7 +296,7 @@ public class AsyncTasks {
 					
 				}
 				
-				if (result.sLeagues.size() > 0)
+				if (result.sLeagues != null)
 				{		
 					for(SummonerLeagues summonerLeagues : result.sLeagues)
 					{
@@ -547,13 +663,19 @@ public class AsyncTasks {
 						}
 					}	
 				
-				
-				lazyAdapter = new LazyAdapter(context,
-						R.layout.custom_list_view, someArrayList);
-
-				lv.setAdapter(lazyAdapter);
-				//tvOne.setText("Summoner Name:");
-				lazyAdapter.notifyDataSetChanged();
+					if (someArrayList.size() > 0) {
+						lazyAdapter = new LazyAdapter(context,
+								R.layout.custom_list_view, someArrayList);
+						if (lv != null) {
+							lv.setAdapter(lazyAdapter);
+							//tvOne.setText("Summoner Name:");
+							lazyAdapter.notifyDataSetChanged();
+						} else {
+							Log.w("ListView", "STUPID LISTVIEW WAS NULL AGAIN WTF");
+						}
+						
+					}
+					
 				}
 				
 //				InputMethodManager imm = (InputMethodManager)context.getSystemService(Activity.INPUT_METHOD_SERVICE);
@@ -593,6 +715,7 @@ public class AsyncTasks {
 				
 				
 				Log.w("Oops", "An error occured: " + e.getMessage());
+				e.printStackTrace();
 				
 			}
 			

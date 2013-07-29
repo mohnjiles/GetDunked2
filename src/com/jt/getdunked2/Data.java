@@ -35,10 +35,10 @@ public class Data{
 		this.modifyDate = modifyDate;
 	}
 
- 	public List getSummonerLeagues(){
+ 	public List<SummonerLeagues> getSummonerLeagues(){
 		return this.summonerLeagues;
 	}
-	public void setSummonerLeagues(List summonerLeagues){
+	public void setSummonerLeagues(List<SummonerLeagues> summonerLeagues){
 		this.summonerLeagues = summonerLeagues;
 	}
 

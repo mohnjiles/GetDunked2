@@ -1,6 +1,5 @@
 package com.jt.getdunked2;
 
-import java.util.ArrayList;
 import java.util.Vector;
 
 import com.jt.getdunked2.AsyncTasks.PostFetcher;
@@ -23,8 +22,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 public class ProfileMainActivity extends ActionBarActivity{
@@ -36,10 +33,8 @@ public class ProfileMainActivity extends ActionBarActivity{
 	ViewPager mViewPager;
 	LocationManager lm;
 	FragmentAdapter adapter;
-	public static ArrayList<GameStatistics> someArrayList = new ArrayList();
 	LazyAdapter lazyAdapter;
 
-	ListView lv;
 	TextView loadingText;
 	public static String name;
 	public static EditText editTxt;
@@ -64,19 +59,20 @@ public class ProfileMainActivity extends ActionBarActivity{
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.show();
 		
-		lv = (ListView) findViewById(android.R.id.list);
 		tvDebug = ProfileFragment.tvDebugOne;
 
 		Vector<Fragment> fragments = new Vector<Fragment>();
+			
+		  MatchHistoryFragment fragmenttwo = new MatchHistoryFragment();
+		  fragments.add(fragmenttwo);
+		
 		  ProfileFragment fragmentOne = new ProfileFragment();
 		  Bundle bundle = new Bundle();
 		  fragmentOne.setArguments(bundle);
 		  fragments.add(fragmentOne);
-
-
-		  MatchHistoryFragment fragmenttwo = new MatchHistoryFragment();
-		  fragmenttwo.setArguments(bundle);
-		  fragments.add(fragmenttwo);
+		  
+		  LifetimeStatsFragment fragmentZero = new LifetimeStatsFragment();
+		  fragments.add(fragmentZero);
 
 		  EPopup fragmenthree = new EPopup();
 		  fragmenthree.setArguments(bundle);
@@ -173,12 +169,14 @@ public class ProfileMainActivity extends ActionBarActivity{
 		     switch (position)
 		     {
 		     case 0:
-		    	 return "Profile";
-		     case 1:
 		    	 return "Match History";
+		     case 1:
+		    	 return "Profile";
 		     case 2:
-		    	 return "Masteries";
+		    	 return "Ranked Statistics";
 		     case 3:
+		    	 return "Masteries";
+		     case 4:
 		    	 return "Runes";
 		     }
 			 return null;

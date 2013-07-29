@@ -10,6 +10,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable.Orientation;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.util.TypedValue;
@@ -25,7 +26,7 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;;
 
-public class MatchHistoryFragment extends ListFragment {
+public class MatchHistoryFragment extends Fragment {
 // paige jones object oriented programming *** remember plz ***
 	LocationManager lm;
 
@@ -72,6 +73,7 @@ public class MatchHistoryFragment extends ListFragment {
 	        Bundle savedInstanceState) {
 		// Inflate the layout for this fragment    
 	    View V = inflater.inflate(R.layout.match_history_fragment, container, false);
+	    lv = (ListView) V.findViewById(R.id.lvMatchHistory);
 	    
 		tf = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Roboto-BoldCondensed.ttf");
 		url = "http://api.elophant.com/v2/NA/in_progress_game_info/"
@@ -86,7 +88,6 @@ public class MatchHistoryFragment extends ListFragment {
 		super.onActivityCreated(savedInstanceState);
 		
 		btnSearch = (Button) getActivity().findViewById(R.id.button2);
-		lv = getListView();
 		lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
 			@Override

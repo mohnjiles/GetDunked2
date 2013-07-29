@@ -488,5 +488,7 @@
     <string name="title_activity_match_fragment_one">MatchFragmentOne</string>
     <string name="title_activity_profile_main">ProfileMainActivity</string>
     <string name="title_activity_profile_fragment">ProfileFragment</string>
+    <string name="title_activity_lifetime_stats_fragment">LifetimeStatsFragment</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
