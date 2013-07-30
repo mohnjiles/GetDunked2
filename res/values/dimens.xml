@@ -11,8 +11,11 @@
     <dimen name="wins_padding_two">30dip</dimen>
     <dimen name="free_week_image">64dip</dimen>
     <dimen name="free_week_text">14sp</dimen>
-    <dimen name="free_name">12sp</dimen>
+    <dimen name="free_name">11sp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="popup_champ_icon">48dip</dimen>
+    <dimen name="close_button_size">18sp</dimen>
+    <dimen name="close_button_height">48dip</dimen>
 
 </resources>

@@ -3,15 +3,15 @@ package com.jt.getdunked2;
 import java.util.ArrayList;
 import com.jt.getdunked2.AnotherAsyncTask.PostFetcherTwo;
 
-import de.keyboardsurfer.android.widget.crouton.Crouton;
+import android.R.integer;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
-import android.graphics.drawable.GradientDrawable.Orientation;
+import android.graphics.drawable.BitmapDrawable;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -21,10 +21,11 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.PopupWindow;
-import android.widget.TextView;;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MatchHistoryFragment extends Fragment {
 // paige jones object oriented programming *** remember plz ***
@@ -34,14 +35,33 @@ public class MatchHistoryFragment extends Fragment {
 	LazyAdapter lazyAdapter;
 	
 	public static TextView tvDamageDone;
-	public static TextView dDealt;
-	public static TextView dRec;
-	public static TextView hDone;
-	public static TextView goldValue;
-	public static TextView lrgMultiKill;
-	public static TextView timeSpentDead;
-	public static TextView wards;
-	public static TextView minions;
+	public static TextView tvChampKills;
+	public static TextView tvDeaths;
+	public static TextView tvAssists;
+	public static TextView tvKillingSpree;
+	public static TextView tvDamageToChamps;
+	public static TextView tvPhysicalToChamps;
+	public static TextView tvMagicToChamps;
+	public static TextView tvDamageDealt;
+	public static TextView tvPhysicalDamage;
+	public static TextView tvPhysicalTaken;
+	public static TextView tvMagicTaken;
+	public static TextView tvMagicDamage;
+	public static TextView tvLargestCrit;
+	public static TextView tvTurrets;
+	public static TextView tvInhibitors;
+	public static TextView tvDamageTaken;
+	public static TextView tvHealingDone;
+	public static TextView tvGold;
+	public static TextView tvMultiKill;
+	public static TextView tvTimeDead;
+	public static TextView tvWardsPlaced;
+	public static TextView tvWardsKilled;
+	public static TextView tvMinionsKilled;
+	public static TextView tvNeutralMinionsKilled;
+	public static TextView tvChampName;
+	
+	public static ImageView ivChampIcon;
 
 	public static Typeface tf;
 	public static ListView lv;
@@ -73,9 +93,9 @@ public class MatchHistoryFragment extends Fragment {
 	        Bundle savedInstanceState) {
 		// Inflate the layout for this fragment    
 	    View V = inflater.inflate(R.layout.match_history_fragment, container, false);
-	    lv = (ListView) V.findViewById(R.id.lvMatchHistory);
 	    
-		tf = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Roboto-BoldCondensed.ttf");
+	    
+		tf = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Roboto-Regular.ttf");
 		url = "http://api.elophant.com/v2/NA/in_progress_game_info/"
 				+ name + "?key=eS4XmrLVhc7EhPson8dV";
 		
@@ -86,7 +106,7 @@ public class MatchHistoryFragment extends Fragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		
+		lv = (ListView) getView().findViewById(R.id.lvMatchHistory);
 		btnSearch = (Button) getActivity().findViewById(R.id.button2);
 		lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -104,11 +124,23 @@ public class MatchHistoryFragment extends Fragment {
 	
 	private void initiatePopupWindow(int position) {
 		try {
-			// convert px to dips
-			int dipsWidthPortrait = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 200, getActivity().getResources().getDisplayMetrics()); 
-			int dipsHeightPortrait = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 300, getActivity().getResources().getDisplayMetrics());
-			int dipsWidthLandscape = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 400, getActivity().getResources().getDisplayMetrics()); 
-			int dipsHeightLandscape = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 250, getActivity().getResources().getDisplayMetrics());
+			// get screen size of device
+			int screenSize = getResources().getConfiguration().screenLayout &
+			        Configuration.SCREENLAYOUT_SIZE_MASK;
+			
+			// convert px to dips for multiple screens
+			int dipsWidthPortrait_Normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 270, getActivity().getResources().getDisplayMetrics()); 
+			int dipsHeightPortrait_Normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 400, getActivity().getResources().getDisplayMetrics());
+			int dipsWidthLandscape_Normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 400, getActivity().getResources().getDisplayMetrics()); 
+			int dipsHeightLandscape_Normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 270, getActivity().getResources().getDisplayMetrics());
+			int dipsWidthPortrait_Large = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 400, getActivity().getResources().getDisplayMetrics()); 
+			int dipsHeightPortrait_Large = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 550, getActivity().getResources().getDisplayMetrics());
+			int dipsWidthLandscape_Large = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 550, getActivity().getResources().getDisplayMetrics()); 
+			int dipsHeightLandscape_Large = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 400, getActivity().getResources().getDisplayMetrics());
+			int dipsWidthPortrait_Small = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 200, getActivity().getResources().getDisplayMetrics()); 
+			int dipsHeightPortrait_Small = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 350, getActivity().getResources().getDisplayMetrics());
+			int dipsWidthLandscape_Small = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 350, getActivity().getResources().getDisplayMetrics()); 
+			int dipsHeightLandscape_Small = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 200, getActivity().getResources().getDisplayMetrics());
 			
 			// We need to get the instance of the LayoutInflater
 			LayoutInflater inflater = (LayoutInflater) getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -116,42 +148,52 @@ public class MatchHistoryFragment extends Fragment {
 			
 			pos = 9 - position;
 			
-			if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-				pwindo = new PopupWindow(layout, dipsWidthLandscape, dipsHeightLandscape, true);
-				pwindo.showAtLocation(layout, Gravity.CENTER, 0, 0);
-				pwindo.setFocusable(true);
-			} else {
-				pwindo = new PopupWindow(layout, dipsWidthPortrait, dipsHeightPortrait, true);
-				pwindo.showAtLocation(layout, Gravity.CENTER, 0, 0);
-				pwindo.setFocusable(true);
+			// make different popupwindows for different screen sizes
+			switch (screenSize) {
+				case Configuration.SCREENLAYOUT_SIZE_XLARGE:
+					doSomeWindow(
+			        		layout, 
+			        		dipsWidthLandscape_Large, 
+			        		dipsHeightLandscape_Large,
+			        		dipsWidthPortrait_Large,  
+			        		dipsHeightPortrait_Large); 
+					break;
+				case Configuration.SCREENLAYOUT_SIZE_LARGE:
+					doSomeWindow(
+			        		layout, // View of the popupwindow
+			        		dipsWidthLandscape_Large, // Width for landscape orientation
+			        		dipsHeightLandscape_Large, // Height for landscape
+			        		dipsWidthPortrait_Large,  // Width for portrait orientation
+			        		dipsHeightPortrait_Large); // Height for portrait
+					break;
+			    case Configuration.SCREENLAYOUT_SIZE_NORMAL:
+			        doSomeWindow(
+			        		layout, 
+			        		dipsWidthLandscape_Normal, 
+			        		dipsHeightLandscape_Normal,
+			        		dipsWidthPortrait_Normal, 
+			        		dipsHeightPortrait_Normal);
+			        break;
+			    default:
+			    	doSomeWindow(
+			        		layout, 
+			        		dipsWidthLandscape_Small, 
+			        		dipsHeightLandscape_Small,
+			        		dipsWidthPortrait_Small, 
+			        		dipsHeightPortrait_Small);
+			        break;
 			}
-			// Make a new popupwindow, 200 x 300 dp
 			
 			
-			// Set TextView variables
-			tvDamageDone = (TextView) pwindo.getContentView().findViewById(R.id.tvDDealtNum);
-			dRec = (TextView) pwindo.getContentView().findViewById(R.id.tvDRecNum);
-			hDone = (TextView) pwindo.getContentView().findViewById(R.id.tvHDoneNum);
-			goldValue = (TextView) pwindo.getContentView().findViewById(R.id.tvGold);
-			lrgMultiKill = (TextView) pwindo.getContentView().findViewById(R.id.tvMultiKillValue);
-			timeSpentDead = (TextView) pwindo.getContentView().findViewById(R.id.tvTimeDeadValue);
-			wards = (TextView) pwindo.getContentView().findViewById(R.id.tvWardsPlacedValue);
-			minions = (TextView) pwindo.getContentView().findViewById(R.id.tvMinionsValue);
 			
-			// Start up dat asynctask
-			AnotherAsyncTask anotherAsyncTask = new AnotherAsyncTask();
-			PostFetcherTwo pft = anotherAsyncTask.new PostFetcherTwo(getActivity(), getActivity());
-			pft.execute(url);
-		
-			// Set close button
-			Button btnClosePopup = (Button) pwindo.getContentView().findViewById(R.id.btn_close_popup);
-			btnClosePopup.setOnClickListener(cancel_button_click_listener);
 			
 			// If we ran in to a problem
 			} catch (Exception e) {
 				Log.w("PopupWindow", "" + e.getMessage() + e.getStackTrace()[2].getLineNumber());
 			}
 		}
+	
+
 	private OnClickListener cancel_button_click_listener = new OnClickListener() {
 		public void onClick(View v) {
 		pwindo.dismiss();
@@ -159,6 +201,69 @@ public class MatchHistoryFragment extends Fragment {
 		}
 
 		};
+		
+		// Runs the popupwindow, getting view from inflater & dimensions based on screen size
+		private void doSomeWindow(View layout, int widthLandscape, int heightLandscape, 
+				int widthPortrait, int heightPortrait) {
+			
+			if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
+				pwindo = new PopupWindow(layout, widthLandscape, heightLandscape, true);
+				pwindo.setBackgroundDrawable(new BitmapDrawable());
+				pwindo.setOutsideTouchable(true);
+				pwindo.showAtLocation(layout, Gravity.CENTER, 0, 0);
+				pwindo.setFocusable(true);
+				
+			} else {
+				pwindo = new PopupWindow(layout, widthPortrait, heightPortrait, true);
+				pwindo.setBackgroundDrawable(new BitmapDrawable());
+				pwindo.setOutsideTouchable(true);
+				pwindo.showAtLocation(layout, Gravity.CENTER, 0, 0);
+				pwindo.setFocusable(true);
+				
+			}
+			
+			// Set TextView variables
+			tvChampKills = (TextView) pwindo.getContentView().findViewById(R.id.tvChampKills);
+			tvDeaths = (TextView) pwindo.getContentView().findViewById(R.id.tvDeaths);
+			tvAssists = (TextView) pwindo.getContentView().findViewById(R.id.tvAssists);
+			tvKillingSpree = (TextView) pwindo.getContentView().findViewById(R.id.tvKillingSpree);
+			tvDamageToChamps = (TextView) pwindo.getContentView().findViewById(R.id.tvDamageToChamps);
+			tvPhysicalToChamps = (TextView) pwindo.getContentView().findViewById(R.id.tvPhysicalToChamps);
+			tvMagicToChamps = (TextView) pwindo.getContentView().findViewById(R.id.tvMagicToChamps);
+			tvDamageDealt = (TextView) pwindo.getContentView().findViewById(R.id.tvDamageDealt);
+			tvPhysicalDamage = (TextView) pwindo.getContentView().findViewById(R.id.tvPhysicalDealt);
+			tvMagicDamage = (TextView) pwindo.getContentView().findViewById(R.id.tvMagicDealt);
+			tvLargestCrit = (TextView) pwindo.getContentView().findViewById(R.id.tvLargestCrit);
+			tvDamageTaken = (TextView) pwindo.getContentView().findViewById(R.id.tvDamageTaken);
+			tvMagicTaken = (TextView) pwindo.getContentView().findViewById(R.id.tvMagicDamage);
+			tvPhysicalTaken = (TextView) pwindo.getContentView().findViewById(R.id.tvPhysicalTaken);
+			tvTurrets = (TextView) pwindo.getContentView().findViewById(R.id.tvTurrets);
+			tvInhibitors = (TextView) pwindo.getContentView().findViewById(R.id.tvInhibitors);
+			tvHealingDone = (TextView) pwindo.getContentView().findViewById(R.id.tvHealingValue);
+			tvGold = (TextView) pwindo.getContentView().findViewById(R.id.tvGoldEarned);
+			tvMultiKill = (TextView) pwindo.getContentView().findViewById(R.id.tvMultiKill);
+			tvTimeDead = (TextView) pwindo.getContentView().findViewById(R.id.tvTimeDead);
+			tvWardsPlaced = (TextView) pwindo.getContentView().findViewById(R.id.tvWardsPlaced);
+			tvWardsKilled = (TextView) pwindo.getContentView().findViewById(R.id.tvWardsKilled);
+			tvMinionsKilled = (TextView) pwindo.getContentView().findViewById(R.id.tvMinionsSlain);
+			tvNeutralMinionsKilled = (TextView) pwindo.getContentView().findViewById(R.id.tvNeutralMonsters);
+			tvChampName = (TextView) pwindo.getContentView().findViewById(R.id.tvChampName);
+			
+			ivChampIcon = (ImageView) pwindo.getContentView().findViewById(R.id.ivChampIcon);
+			
+			// Start up dat asynctask
+			AnotherAsyncTask anotherAsyncTask = new AnotherAsyncTask();
+			PostFetcherTwo pft = anotherAsyncTask.new PostFetcherTwo(getActivity(), getActivity());
+			pft.execute(url);
+		
+			// Set close button
+			//Button btnClosePopup = (Button) pwindo.getContentView().findViewById(R.id.btn_close_popup);
+			Button btnCloseTwo = (Button) pwindo.getContentView().findViewById(R.id.Button01);
+			//btnClosePopup.setOnClickListener(cancel_button_click_listener);
+			btnCloseTwo.setOnClickListener(cancel_button_click_listener);
+			
+		}
 
 }
+	
 

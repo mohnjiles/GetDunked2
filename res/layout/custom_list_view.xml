@@ -38,8 +38,7 @@
         android:text="Game Type"
         android:textColor="#FFFFFF"
         android:textSize="@dimen/game_type"
-        android:textStyle="bold"
-        android:typeface="sans" />
+        android:textStyle="bold" />
 
     <!-- Artist Name -->
 
@@ -54,7 +53,8 @@
         android:layout_below="@+id/gameType"
         android:text="KDA: "
         android:textColor="#FFFFFF"
-        android:textSize="@dimen/kda" />
+        android:textSize="@dimen/kda"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/ivSummonerOne"

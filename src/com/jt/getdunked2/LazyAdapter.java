@@ -26,15 +26,6 @@ public class LazyAdapter extends ArrayAdapter {
 	Number itemFourId = null;
 	Number itemFiveId = null;
 	Number itemSixId = null;
-	public static Number damageDealt = null;
-	Number damageRec = null;
-	Number healingDone = null;
-	Number gold = null;
-	Number multiKill = null;
-	Number timeDead = null;
-	Number wardsPlaced = null;
-	Number minionsKilled = null;
-	Number neutralMinionsKilled = null;
 	Number summSpellOne = null;
 	Number summSpellTwo = null;
 	int itemNumber = 0;
@@ -98,22 +89,6 @@ public class LazyAdapter extends ArrayAdapter {
 					.findViewById(R.id.gameType);
 			holder.winOrLose = (TextView) convertView
 					.findViewById(R.id.tvResult);
-			holder.dDealt = (TextView) convertView
-					.findViewById(R.id.tvDDealtNum);
-			holder.dRec = (TextView) convertView
-					.findViewById(R.id.tvDRecNum);
-			holder.hDone = (TextView) convertView
-					.findViewById(R.id.tvHDoneNum);
-			holder.goldValue = (TextView) convertView
-					.findViewById(R.id.tvGold);
-			holder.lrgMultiKill = (TextView) convertView
-					.findViewById(R.id.tvMultiKillValue);
-			holder.timeSpentDead = (TextView) convertView
-					.findViewById(R.id.tvTimeDeadValue);
-			holder.wards = (TextView) convertView
-					.findViewById(R.id.tvWardsPlacedValue);
-			holder.minions = (TextView) convertView
-					.findViewById(R.id.tvMinionsValue);
 			holder.champIcon = (ImageView) convertView
 					.findViewById(R.id.list_image);
 			holder.background = (RelativeLayout) convertView
@@ -166,24 +141,6 @@ public class LazyAdapter extends ArrayAdapter {
 				itemFiveId = statistic.getValue();
 			} else if (statistic.getStatType().equals("ITEM5")) {
 				itemSixId = statistic.getValue();
-			} else if (statistic.getStatType().equals("TOTAL_DAMAGE_DEALT")) {
-				damageDealt = statistic.getValue();
-			} else if (statistic.getStatType().equals("TOTAL_DAMAGE_TAKEN")) {
-				damageRec = statistic.getValue();
-			} else if (statistic.getStatType().equals("TOTAL_HEAL")) {
-				healingDone = statistic.getValue();
-			} else if (statistic.getStatType().equals("GOLD_EARNED")) {
-				gold = statistic.getValue();
-			} else if (statistic.getStatType().equals("LARGEST_MULTI_KILL")) {
-				multiKill = statistic.getValue();
-			} else if (statistic.getStatType().equals("TOTAL_TIME_SPENT_DEAD")) {
-				timeDead = statistic.getValue();
-			} else if (statistic.getStatType().equals("WARD_PLACED")) {
-				wardsPlaced = statistic.getValue();
-			} else if (statistic.getStatType().equals("MINIONS_KILLED")) {
-				minionsKilled = statistic.getValue();
-			} else if (statistic.getStatType().equals("NEUTRAL_MINIONS_KILLED")) {
-				neutralMinionsKilled = statistic.getValue();
 			}
 
 		}

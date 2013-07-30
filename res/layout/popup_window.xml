@@ -1,206 +1,592 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/popup_element"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="#111111"
-    android:orientation="vertical"
-    android:padding="10sp" >
+    android:layout_height="wrap_content" >
 
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/tvDamageRec"
-        android:layout_marginTop="4dp"
-        android:text="Damage Dealt"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	<RelativeLayout
+	    android:id="@+id/popup_element"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:background="#111111"
+	    android:orientation="vertical"
+	    android:padding="10sp" >
 
-    <TextView
-        android:id="@+id/tvDDealtNum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView01"
-        android:layout_alignBottom="@+id/TextView01"
-        android:layout_alignParentRight="true"
-        android:layout_toRightOf="@+id/btn_close_popup"
-        android:gravity="right"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/tvHealingDone"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/tvDamageRec"
+	        android:layout_below="@+id/tvDamageRec"
+	        android:text="Assists"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvHealingDone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvDamageRec"
-        android:layout_below="@+id/tvDamageRec"
-        android:text="Healing Done"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/tvGoldTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/tvHealingDone"
+	        android:layout_below="@+id/tvHealingDone"
+	        android:text="Largest Killing Spree"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvDRecNum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvDamageRec"
-        android:layout_alignBottom="@+id/tvDamageRec"
-        android:layout_alignLeft="@+id/tvDDealtNum"
-        android:layout_alignParentRight="true"
-        android:gravity="right"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/tvMultiKillTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/tvGoldTitle"
+	        android:layout_below="@+id/tvGoldTitle"
+	        android:text="Largest Multi-Kill"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvGoldTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvHealingDone"
-        android:layout_below="@+id/tvHealingDone"
-        android:text="Gold"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/tvDamageRec"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/TextView01"
+	        android:text="Deaths"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvMultiKillTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvGoldTitle"
-        android:layout_below="@+id/tvGoldTitle"
-        android:text="Largest Multi-Kill"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/tvWardsTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/tvTimeDeadTitle"
+	        android:text="Physical Damage Dealt"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvDamageRec"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/TextView01"
-        android:text="Damage Recieved"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/tvMinionsTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/tvWardsTitle"
+	        android:text="Magic Damage Dealt"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvTimeDeadTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tvMultiKillTitle"
-        android:text="Time Spent Dead"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/TextView02"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/tvMinionsTitle"
+	        android:layout_below="@+id/tvMinionsTitle"
+	        android:text="Largest Critical Strike"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvWardsTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tvTimeDeadTitle"
-        android:text="Wards Placed"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/TextView03"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView02"
+	        android:layout_below="@+id/TextView02"
+	        android:layout_marginTop="8dp"
+	        android:text="Healing Done"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvMinionsTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/tvWardsTitle"
-        android:text="Minions Killed"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/tvChampKills"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView01"
+	        android:layout_alignBottom="@+id/TextView01"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvDeaths"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/tvDamageRec"
+	        android:layout_alignBottom="@+id/tvDamageRec"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvAssists"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/tvHealingDone"
+	        android:layout_alignBottom="@+id/tvHealingDone"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvKillingSpree"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/tvGoldTitle"
+	        android:layout_alignBottom="@+id/tvGoldTitle"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvMultiKill"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/tvMultiKillTitle"
+	        android:layout_alignBottom="@+id/tvMultiKillTitle"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvDamageDealt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/tvTimeDeadTitle"
+	        android:layout_alignBottom="@+id/tvTimeDeadTitle"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvPhysicalDealt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/tvWardsTitle"
+	        android:layout_alignBottom="@+id/tvWardsTitle"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvMagicDealt"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/tvMinionsTitle"
+	        android:layout_alignBottom="@+id/tvMinionsTitle"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvLargestCrit"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView02"
+	        android:layout_alignBottom="@+id/TextView02"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvGold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvGoldTitle"
-        android:layout_alignBottom="@+id/tvGoldTitle"
-        android:layout_alignLeft="@+id/tvHDoneNum"
-        android:layout_alignParentRight="true"
-        android:gravity="right"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/TextView04"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView03"
+	        android:layout_below="@+id/TextView03"
+	        android:text="Damage Taken"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/TextView05"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView04"
+	        android:layout_below="@+id/TextView04"
+	        android:text="Physical Damage Taken"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvMultiKillValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvMultiKillTitle"
-        android:layout_alignBottom="@+id/tvMultiKillTitle"
-        android:layout_alignLeft="@+id/tvGold"
-        android:layout_alignParentRight="true"
-        android:gravity="right"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/TextView06"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView05"
+	        android:layout_below="@+id/TextView05"
+	        android:text="Magic Damage Taken"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvHealingValue"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView03"
+	        android:layout_alignBottom="@+id/TextView03"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvHDoneNum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvHealingDone"
-        android:layout_alignBottom="@+id/tvHealingDone"
-        android:layout_alignLeft="@+id/tvDRecNum"
-        android:layout_alignParentRight="true"
-        android:gravity="right"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/tvDamageTaken"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView04"
+	        android:layout_alignBottom="@+id/TextView04"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvPhysicalTaken"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView05"
+	        android:layout_alignBottom="@+id/TextView05"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvMagicDamage"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView06"
+	        android:layout_alignBottom="@+id/TextView06"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvWardsPlacedValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvWardsTitle"
-        android:layout_alignBottom="@+id/tvWardsTitle"
-        android:layout_alignLeft="@+id/tvMultiKillValue"
-        android:layout_alignParentRight="true"
-        android:gravity="right"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/TextView07"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView06"
+	        android:layout_below="@+id/tvMagicDamage"
+	        android:layout_marginTop="8dp"
+	        android:text="Gold Earned"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvMinionsValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvMinionsTitle"
-        android:layout_alignBottom="@+id/tvMinionsTitle"
-        android:layout_alignLeft="@+id/tvWardsPlacedValue"
-        android:layout_alignParentRight="true"
-        android:gravity="right"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/TextView08"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView07"
+	        android:layout_below="@+id/TextView07"
+	        android:text="Turrets Destroyed"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <TextView
-        android:id="@+id/tvTimeDeadValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tvTimeDeadTitle"
-        android:layout_alignBottom="@+id/tvTimeDeadTitle"
-        android:layout_alignLeft="@+id/tvMultiKillValue"
-        android:layout_alignParentRight="true"
-        android:gravity="right"
-        android:text="0"
-        android:textColor="#FFFFFF"
-        android:textSize="12sp" />
+	    <TextView
+	        android:id="@+id/TextView09"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView08"
+	        android:layout_below="@+id/TextView08"
+	        android:text="Inhibitors Destroyed"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-    <Button
-        android:id="@+id/btn_close_popup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvMinionsValue"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:text="Close"
-        android:textColor="#FFFFFF" />
+	    <TextView
+	        android:id="@+id/TextView10"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView09"
+	        android:layout_below="@+id/TextView09"
+	        android:text="Minions Slain"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
 
-</RelativeLayout>
+	    <TextView
+	        android:id="@+id/TextView11"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView10"
+	        android:layout_below="@+id/TextView10"
+	        android:text="Neutral Monsters Killed"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	    <TextView
+	        android:id="@+id/TextView12"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView11"
+	        android:layout_below="@+id/TextView11"
+	        android:text="Time Spent Dead"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvGoldEarned"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView07"
+	        android:layout_alignBottom="@+id/TextView07"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvTurrets"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView08"
+	        android:layout_alignBottom="@+id/TextView08"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvInhibitors"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView09"
+	        android:layout_alignBottom="@+id/TextView09"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvMinionsSlain"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView10"
+	        android:layout_alignBottom="@+id/TextView10"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvNeutralMonsters"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView11"
+	        android:layout_alignBottom="@+id/TextView11"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvTimeDead"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView12"
+	        android:layout_alignBottom="@+id/TextView12"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	    <TextView
+	        android:id="@+id/TextView13"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView12"
+	        android:layout_below="@+id/tvTimeDead"
+	        android:text="Wards Placed"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvWardsPlaced"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView13"
+	        android:layout_alignBottom="@+id/TextView13"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	    <TextView
+	        android:id="@+id/TextView14"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView13"
+	        android:layout_below="@+id/TextView13"
+	        android:text="Wards Killed"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvWardsKilled"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView14"
+	        android:layout_alignBottom="@+id/TextView14"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvDamageToChamps"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView15"
+	        android:layout_alignBottom="@+id/TextView15"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvMagicToChamps"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView16"
+	        android:layout_alignBottom="@+id/TextView16"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+	    
+	    <TextView
+	        android:id="@+id/tvPhysicalToChamps"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/TextView17"
+	        android:layout_alignBottom="@+id/TextView17"
+	        android:layout_alignParentRight="true"
+	        android:gravity="right"
+	        android:text="0"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	    <Button
+	        android:id="@+id/Button01"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/TextView14"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="8dp"
+	        android:minHeight="@dimen/close_button_height"
+	        android:text="Close"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/close_button_size" />
+
+	    <TextView
+	        android:id="@+id/TextView15"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/tvTimeDeadTitle"
+	        android:layout_below="@+id/tvMultiKill"
+	        android:layout_marginTop="8dp"
+	        android:text="Damage Dealt to Champions"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	    <TextView
+	        android:id="@+id/TextView16"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView15"
+	        android:layout_below="@+id/TextView15"
+	        android:text="Physical Damage to Champions"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	    <TextView
+	        android:id="@+id/TextView17"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/TextView16"
+	        android:layout_below="@+id/TextView16"
+	        android:text="Magic Damage to Champions"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	    <TextView
+	        android:id="@+id/tvTimeDeadTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/tvWardsTitle"
+	        android:layout_below="@+id/TextView17"
+	        android:text="Damage Dealt"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	    <ImageView
+	        android:id="@+id/ivChampIcon"
+	        android:layout_width="@dimen/popup_champ_icon"
+	        android:layout_height="@dimen/popup_champ_icon"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_alignRight="@+id/tvHealingDone"
+	        android:src="@drawable/ability" />
+
+	    <TextView
+	        android:id="@+id/TextView01"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/ivChampIcon"
+	        android:text="Champion Kills"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	    <TextView
+	        android:id="@+id/tvChampName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignTop="@+id/ivChampIcon"
+	        android:layout_marginLeft="4dp"
+	        android:layout_marginTop="3dp"
+	        android:layout_toRightOf="@+id/ivChampIcon"
+	        android:text="TextView"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	    <TextView
+	        android:id="@+id/TextView18"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/TextView01"
+	        android:layout_marginBottom="3dp"
+	        android:layout_marginLeft="4dp"
+	        android:layout_toRightOf="@+id/ivChampIcon"
+	        android:text="TextView"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	</RelativeLayout>
+
+</ScrollView>

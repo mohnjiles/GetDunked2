@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class LifetimeStatsFragment extends Fragment {
@@ -43,33 +45,43 @@ public class LifetimeStatsFragment extends Fragment {
         // Inflate the layout for this fragment
     	View v = inflater.inflate(R.layout.fragment_lifetime_stats, container, false);
     	
-    	tvDoubleKills = (TextView) v.findViewById(R.id.tvDoubleKills);
-    	tvTripleKills = (TextView) v.findViewById(R.id.tvTripleKills);
-    	tvQuadraKills = (TextView) v.findViewById(R.id.tvQuadraKills);
-    	tvPentaKills = (TextView) v.findViewById(R.id.tvPentaKills);
-    	tvKills = (TextView) v.findViewById(R.id.tvLifetimeKills);
-    	tvDeaths = (TextView) v.findViewById(R.id.tvLifetimeDeaths);
-    	tvAssists = (TextView) v.findViewById(R.id.tvLifetimeAssists);
-    	tvKillingSprees = (TextView) v.findViewById(R.id.tvKillingSprees);
-    	tvMostKills = (TextView) v.findViewById(R.id.tvMostKills);
-    	tvMostDeaths = (TextView) v.findViewById(R.id.tvMostDeaths);
-    	tvGold = (TextView) v.findViewById(R.id.tvGold);
-    	tvMinions = (TextView) v.findViewById(R.id.tvMinions);
-    	tvNeutralMonsters = (TextView) v.findViewById(R.id.tvNeutralMonsters);
-    	tvDamageDealt = (TextView) v.findViewById(R.id.tvLifetimeDamageDealt);
-    	tvMagicDamage = (TextView) v.findViewById(R.id.tvMagicDamageDealt);
-    	tvPhysicalDamage = (TextView) v.findViewById(R.id.tvPhysicalDamageDealt);
-    	tvHealingDone = (TextView) v.findViewById(R.id.tvHealingDone);
-    	tvDamageTaken = (TextView) v.findViewById(R.id.tvDamageTaken);
-    	tvLargestCrit = (TextView) v.findViewById(R.id.tvLargestCrit);
-    	tvKillingSpree = (TextView) v.findViewById(R.id.tvLargestKillingSpree);
-    	tvTimeDead = (TextView) v.findViewById(R.id.tvTimeDead);
-    	tvLifespan = (TextView) v.findViewById(R.id.tvLongestAlive);
-    	tvLongestGame = (TextView) v.findViewById(R.id.tvLongestGame);
-    	tvGamesPlayed = (TextView) v.findViewById(R.id.tvGamesPlayed);
-    	tvGamesWon = (TextView) v.findViewById(R.id.tvGamesWon);
-    	tvGamesLost = (TextView) v.findViewById(R.id.tvGamesLost);
+    	
     	
     	return v;
+	}
+    
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		
+		tvDoubleKills = (TextView) getView().findViewById(R.id.tvDoubleKills);
+    	tvTripleKills = (TextView) getView().findViewById(R.id.tvTripleKills);
+    	tvQuadraKills = (TextView) getView().findViewById(R.id.tvQuadraKills);
+    	tvPentaKills = (TextView) getView().findViewById(R.id.tvPentaKills);
+    	tvKills = (TextView) getView().findViewById(R.id.tvLifetimeKills);
+    	tvDeaths = (TextView) getView().findViewById(R.id.tvLifetimeDeaths);
+    	tvAssists = (TextView) getView().findViewById(R.id.tvLifetimeAssists);
+    	tvKillingSprees = (TextView) getView().findViewById(R.id.tvKillingSprees);
+    	tvMostKills = (TextView) getView().findViewById(R.id.tvMostKills);
+    	tvMostDeaths = (TextView) getView().findViewById(R.id.tvMostDeaths);
+    	tvGold = (TextView) getView().findViewById(R.id.tvGold);
+    	tvMinions = (TextView) getView().findViewById(R.id.tvMinions);
+    	tvNeutralMonsters = (TextView) getView().findViewById(R.id.tvNeutralMonsters);
+    	tvDamageDealt = (TextView) getView().findViewById(R.id.tvLifetimeDamageDealt);
+    	tvMagicDamage = (TextView) getView().findViewById(R.id.tvMagicDamageDealt);
+    	tvPhysicalDamage = (TextView) getView().findViewById(R.id.tvPhysicalDamageDealt);
+    	tvHealingDone = (TextView) getView().findViewById(R.id.tvHealingDone);
+    	tvDamageTaken = (TextView) getView().findViewById(R.id.tvDamageTaken);
+    	tvLargestCrit = (TextView) getView().findViewById(R.id.tvLargestCrit);
+    	tvKillingSpree = (TextView) getView().findViewById(R.id.tvLargestKillingSpree);
+    	tvTimeDead = (TextView) getView().findViewById(R.id.tvTimeDead);
+    	tvLifespan = (TextView) getView().findViewById(R.id.tvLongestAlive);
+    	tvLongestGame = (TextView) getView().findViewById(R.id.tvLongestGame);
+    	tvGamesPlayed = (TextView) getView().findViewById(R.id.tvGamesPlayed);
+    	tvGamesWon = (TextView) getView().findViewById(R.id.tvGamesWon);
+    	tvGamesLost = (TextView) getView().findViewById(R.id.tvGamesLost);
+		
+		
+		
 	}
 }

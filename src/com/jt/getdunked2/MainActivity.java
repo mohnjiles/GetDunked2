@@ -3,8 +3,13 @@ package com.jt.getdunked2;
 
 import com.jt.getdunked2.FreeWeekAsync.PostFetcher;
 
+import android.R.anim;
+import android.R.integer;
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.View;
@@ -36,6 +41,7 @@ public class MainActivity extends ActionBarActivity {
 	public static TextView tvFreeNine;
 	public static TextView tvFreeTen;
 
+	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		

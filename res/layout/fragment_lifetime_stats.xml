@@ -14,7 +14,7 @@
 	    android:paddingTop="@dimen/activity_vertical_margin" >
 	
 	    <TextView
-	        android:id="@+id/textView1"
+	        android:id="@+id/tvChampKills"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignParentLeft="true"
@@ -27,8 +27,8 @@
 	        android:id="@+id/textView2"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/textView1"
-	        android:layout_below="@+id/textView1"
+	        android:layout_alignLeft="@+id/tvChampKills"
+	        android:layout_below="@+id/tvChampKills"
 	        android:text="Triple Kills"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/free_week_text" />
@@ -277,8 +277,8 @@
 	        android:id="@+id/tvDoubleKills"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/textView1"
-	        android:layout_alignBottom="@+id/textView1"
+	        android:layout_alignBaseline="@+id/tvChampKills"
+	        android:layout_alignBottom="@+id/tvChampKills"
 	        android:layout_alignParentRight="true"
 	        android:text="0"
 	        android:textColor="#FFFFFF" 

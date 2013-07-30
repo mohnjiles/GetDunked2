@@ -62,31 +62,32 @@ public class ProfileMainActivity extends ActionBarActivity{
 		tvDebug = ProfileFragment.tvDebugOne;
 
 		Vector<Fragment> fragments = new Vector<Fragment>();
-			
-		  MatchHistoryFragment fragmenttwo = new MatchHistoryFragment();
-		  fragments.add(fragmenttwo);
 		
-		  ProfileFragment fragmentOne = new ProfileFragment();
-		  Bundle bundle = new Bundle();
-		  fragmentOne.setArguments(bundle);
-		  fragments.add(fragmentOne);
-		  
-		  LifetimeStatsFragment fragmentZero = new LifetimeStatsFragment();
-		  fragments.add(fragmentZero);
-
-		  EPopup fragmenthree = new EPopup();
-		  fragmenthree.setArguments(bundle);
-		  fragments.add(fragmenthree);
-		  
-		  RPopup fragmentfour = new RPopup();
-		  fragmenthree.setArguments(bundle);
-		  fragments.add(fragmentfour);
-
-		  ViewPager myPager = (ViewPager) findViewById(R.id.profileMainPager);
-		  adapter = new FragmentAdapter(
-		    getSupportFragmentManager(), fragments);
-		  myPager.setAdapter(adapter);
-		  myPager.setCurrentItem(0);
+		ProfileFragment fragmentOne = new ProfileFragment();
+		Bundle bundle = new Bundle();
+		fragmentOne.setArguments(bundle);
+		fragments.add(fragmentOne);
+		
+		MatchHistoryFragment fragmentTwo = new MatchHistoryFragment();
+		fragments.add(fragmentTwo);
+		
+		LifetimeStatsFragment fragmentZero = new LifetimeStatsFragment();
+		fragments.add(fragmentZero);
+		
+		EPopup fragmenthree = new EPopup();
+		fragmenthree.setArguments(bundle);
+		fragments.add(fragmenthree);
+		
+		RPopup fragmentfour = new RPopup();
+		fragmenthree.setArguments(bundle);
+		fragments.add(fragmentfour);
+		
+		ViewPager myPager = (ViewPager) findViewById(R.id.profileMainPager);
+		myPager.setOffscreenPageLimit(4);
+		adapter = new FragmentAdapter(
+		getSupportFragmentManager(), fragments);
+		myPager.setAdapter(adapter);
+		myPager.setCurrentItem(0);
 		  
 		 
 	}
@@ -169,9 +170,9 @@ public class ProfileMainActivity extends ActionBarActivity{
 		     switch (position)
 		     {
 		     case 0:
-		    	 return "Match History";
-		     case 1:
 		    	 return "Profile";
+		     case 1:
+		    	 return "Match History";
 		     case 2:
 		    	 return "Ranked Statistics";
 		     case 3:

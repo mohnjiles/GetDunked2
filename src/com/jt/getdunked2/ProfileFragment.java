@@ -3,21 +3,15 @@ package com.jt.getdunked2;
 import java.util.ArrayList;
 
 import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBar;
-import com.jt.getdunked2.AsyncTasks.PostFetcher;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.TextView.OnEditorActionListener;
-import android.view.inputmethod.EditorInfo;;
+import android.widget.TextView;;
 
 public class ProfileFragment extends Fragment {
 // paige jones object oriented programming *** remember plz ***

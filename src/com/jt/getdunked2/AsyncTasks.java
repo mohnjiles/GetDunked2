@@ -1,40 +1,26 @@
 package com.jt.getdunked2;
 
-import java.io.IOException;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
-import de.keyboardsurfer.android.widget.crouton.Style.Builder;
-
-
-import android.R.anim;
-import android.R.integer;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.app.Notification.Style;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.support.v4.view.MenuItemCompat;
-import android.support.v7.widget.SearchView;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class AsyncTasks {
@@ -115,7 +101,7 @@ public class AsyncTasks {
 	
 	
 	private static class PostFetchResult {
-		InGameStats igs;
+		//InGameStats igs;
 		Summoner summoner;
 		List<GameStatistics> recentGames;
 		List<SummonerLeagues> sLeagues;
@@ -149,22 +135,18 @@ public class AsyncTasks {
 		protected PostFetchResult doInBackground(String... urls) {
 			PostFetchResult result = new PostFetchResult();
 
-			//result.igs = JsonUtil.fromJsonUrl(SERVER_URL_IN_GAME_STATS,
-			//		InGameStats.class);
-			result.summoner = JsonUtil.fromJsonUrl(SERVER_URL_SUMMONER,
-					Summoner.class);
+			//result.igs = JsonUtil.fromJsonUrl(SERVER_URL_IN_GAME_STATS, InGameStats.class);
+			result.summoner = JsonUtil.fromJsonUrl(SERVER_URL_SUMMONER, Summoner.class);
 			
 			try {
-				if (result.summoner != null) {
+				if (result.summoner.getSuccess() == true) {
 					String acctId = result.summoner.getData().getAcctId().toString();
 					String summonerId = result.summoner.getData().getSummonerId().toString();
 					
-					if (acctId != null && summonerId != null) {
-						result.recentGames = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + acctId + "?key=eS4XmrLVhc7EhPson8dV", Data.class).getGameStatistics();
-						result.sLeagues = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/leagues/" + summonerId + "?key=eS4XmrLVhc7EhPson8dV", Data.class).getSummonerLeagues();
-						result.stats = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/ranked_stats/" + acctId+ "?key=eS4XmrLVhc7EhPson8dV", Data.class).getLifetimeStatistics();
-					}
-					
+					result.recentGames = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + acctId.toString() + "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getGameStatistics();
+					result.sLeagues = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/leagues/" + summonerId.toString() + "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getSummonerLeagues();
+					result.stats = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/ranked_stats/" + acctId.toString() + "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getLifetimeStatistics();
+				
 				}
 				
 			} catch (Exception e) {
@@ -201,90 +183,197 @@ public class AsyncTasks {
 				if (result.stats != null) {
 					for (LifetimeStatistics stats : result.stats) {
 						if (stats.getChampionId().toString().equals("0")) {
-							if (stats.getStatType().equals("TOTAL_DOUBLE_KILLS")) {
-								tvDoubleKills.setText(stats.getValue().toString());
+							if (stats.getStatType().equals("TOTAL_DOUBLE_KILLS")) {						
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvDoubleKills.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_TRIPLE_KILLS")) {
-								tvTripleKills.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvTripleKills.setText(formatter.format(amount).toString());		
 								
 							} else if (stats.getStatType().equals("TOTAL_QUADRA_KILLS")) {
-								tvQuadraKills.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvQuadraKills.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_PENTA_KILLS")) {
-								tvPentaKills.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvPentaKills.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_CHAMPION_KILLS")) {
-								tvKills.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvKills.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_DEATHS_PER_SESSION")) {
-								tvDeaths.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvDeaths.setText(formatter.format(amount).toString());	
 								
 							} else if (stats.getStatType().equals("TOTAL_ASSISTS")) {
-								tvAssists.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvAssists.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("KILLING_SPREE")) {
-								tvKillingSprees.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvKillingSprees.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("MOST_CHAMPION_KILLS_PER_SESSION")) {
-								tvMostKills.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvMostKills.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("MAX_NUM_DEATHS")) {
-								tvMostDeaths.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvMostDeaths.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_GOLD_EARNED")) {
-								tvGold.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvGold.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_MINION_KILLS")) {
-								tvMinions.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvMinions.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_NEUTRAL_MINIONS_KILLED")) {
-								tvNeutralMonsters.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvNeutralMonsters.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_DAMAGE_DEALT")) {
-								tvDamageDealt.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvDamageDealt.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_MAGIC_DAMAGE_DEALT")) {
-								tvMagicDamage.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvMagicDamage.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_PHYSICAL_DAMAGE_DEALT")) {
-								tvPhysicalDamage.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
 								
-							} else if (stats.getStatType().equals("TOTAL_TRIPLE_KILLS")) {
-								tvTripleKills.setText(stats.getValue().toString());
+								tvPhysicalDamage.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_HEAL")) {
-								tvHealingDone.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvHealingDone.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_DAMAGE_TAKEN")) {
-								tvDamageTaken.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvDamageTaken.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("MAX_TIME_SPENT_LIVING")) {
-								tvLifespan.setText(stats.getValue().toString() + " s");
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvLifespan.setText(formatter.format(amount).toString() + " s");
 								
 							} else if (stats.getStatType().equals("MAX_TIME_PLAYED")) {
-								tvLongestGame.setText(stats.getValue().toString() + " s");
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvTripleKills.setText(formatter.format(amount).toString() + " s");
 								
 							} else if (stats.getStatType().equals("TOTAL_SESSIONS_PLAYED")) {
-								tvGamesPlayed.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvGamesPlayed.setText(formatter.format(amount).toString());
 								gamesPlayed = stats.getValue().intValue();
 								
 							} else if (stats.getStatType().equals("MAX_LARGEST_CRITICAL_STRIKE")) {
-								tvLargestCrit.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvLargestCrit.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("MAX_LARGEST_KILLING_SPREE")) {
-								tvKillingSpree.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvKillingSpree.setText(formatter.format(amount).toString());
 								
 							} else if (stats.getStatType().equals("TOTAL_TIME_SPENT_DEAD")) {
-								tvTimeDead.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvTimeDead.setText(formatter.format(amount).toString() + " s");
 								
 							} else if (stats.getStatType().equals("TOTAL_SESSIONS_WON")) {
-								tvGamesWon.setText(stats.getValue().toString());
+								String number = stats.getValue().toString();
+								double amount = Double.parseDouble(number);
+								DecimalFormat formatter = new DecimalFormat("#,###");
+								
+								tvGamesWon.setText(formatter.format(amount).toString());
 								gamesWon = stats.getValue().intValue();
-								gamesLost = gamesPlayed - gamesWon;
-								tvGamesLost.setText("" + gamesLost);
+								if (gamesPlayed != 0) {
+									gamesLost = (gamesPlayed - gamesWon);
+									String numberTwo = String.valueOf(gamesLost);
+									double amountTwo = Double.parseDouble(numberTwo);
+									DecimalFormat formatterTwo = new DecimalFormat("#,###");
+									
+									tvGamesLost.setText("" + formatterTwo.format(amountTwo).toString());
+								}
+								
 							} 
 						}
 					}
+				} else {
+					Crouton.showText(ownerActivity, "Summoner \"" + name + "\" not found, or server is busy.", 
+							de.keyboardsurfer.android.widget.crouton.Style.ALERT);
 				}
 				
 				if (result.recentGames != null)
@@ -660,8 +749,35 @@ public class AsyncTasks {
 								ivSoloFive.setImageResource(R.drawable.challenger_1);
 								tvSoloDivision.setText("Challenger I");
 							}
-						}
-					}	
+							
+							ivSoloFive.setVisibility(View.VISIBLE);
+							ivTeamFive.setVisibility(View.VISIBLE);
+							ivTeamThree.setVisibility(View.VISIBLE);
+							tvDebugOne.setVisibility(View.VISIBLE);
+							tvDebugTwo.setVisibility(View.VISIBLE);
+							tvDebugThree.setVisibility(View.VISIBLE);
+							tvThreeDivision.setVisibility(View.VISIBLE);
+							tvSoloDivision.setVisibility(View.VISIBLE);
+							tvFiveDivision.setVisibility(View.VISIBLE);
+							tvThreeLP.setVisibility(View.VISIBLE);
+							tvSoloLP.setVisibility(View.VISIBLE);
+							tvFiveLP.setVisibility(View.VISIBLE);
+							tvThreeWins.setVisibility(View.VISIBLE);
+							tvSoloWins.setVisibility(View.VISIBLE);
+							tvFiveWins.setVisibility(View.VISIBLE);
+							tvFiveLosses.setVisibility(View.VISIBLE);
+							tvThreeLosses.setVisibility(View.VISIBLE);
+							tvSoloLosses.setVisibility(View.VISIBLE);
+							winsThree.setVisibility(View.VISIBLE);
+							winsSolo.setVisibility(View.VISIBLE);
+							winsFive.setVisibility(View.VISIBLE);
+							lossesFive.setVisibility(View.VISIBLE);
+							lossesThree.setVisibility(View.VISIBLE);
+							lossesSolo.setVisibility(View.VISIBLE);
+							MenuItemCompat.collapseActionView(searchItem);
+							
+						} 
+					} 	
 				
 					if (someArrayList.size() > 0) {
 						lazyAdapter = new LazyAdapter(context,
@@ -674,44 +790,17 @@ public class AsyncTasks {
 							Log.w("ListView", "STUPID LISTVIEW WAS NULL AGAIN WTF");
 						}
 						
-					}
+					} 
 					
 				}
 				
 //				InputMethodManager imm = (InputMethodManager)context.getSystemService(Activity.INPUT_METHOD_SERVICE);
 //				imm.hideSoftInputFromWindow(etSummName.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
 				
-				ivSoloFive.setVisibility(View.VISIBLE);
-				ivTeamFive.setVisibility(View.VISIBLE);
-				ivTeamThree.setVisibility(View.VISIBLE);
-				tvDebugOne.setVisibility(View.VISIBLE);
-				tvDebugTwo.setVisibility(View.VISIBLE);
-				tvDebugThree.setVisibility(View.VISIBLE);
-				tvThreeDivision.setVisibility(View.VISIBLE);
-				tvSoloDivision.setVisibility(View.VISIBLE);
-				tvFiveDivision.setVisibility(View.VISIBLE);
-				tvThreeLP.setVisibility(View.VISIBLE);
-				tvSoloLP.setVisibility(View.VISIBLE);
-				tvFiveLP.setVisibility(View.VISIBLE);
-				tvThreeWins.setVisibility(View.VISIBLE);
-				tvSoloWins.setVisibility(View.VISIBLE);
-				tvFiveWins.setVisibility(View.VISIBLE);
-				tvFiveLosses.setVisibility(View.VISIBLE);
-				tvThreeLosses.setVisibility(View.VISIBLE);
-				tvSoloLosses.setVisibility(View.VISIBLE);
-				winsThree.setVisibility(View.VISIBLE);
-				winsSolo.setVisibility(View.VISIBLE);
-				winsFive.setVisibility(View.VISIBLE);
-				lossesFive.setVisibility(View.VISIBLE);
-				lossesThree.setVisibility(View.VISIBLE);
-				lossesSolo.setVisibility(View.VISIBLE);
-				MenuItemCompat.collapseActionView(searchItem);
+				
 				
 			} catch (Exception e){
 				
-				Crouton.showText(ownerActivity, "Error loading " + name + "'s summoner info." +
-						" Please try again in a few seconds.", 
-						de.keyboardsurfer.android.widget.crouton.Style.ALERT);
 				
 				
 				Log.w("Oops", "An error occured: " + e.getMessage());
