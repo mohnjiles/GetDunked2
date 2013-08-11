@@ -7,7 +7,7 @@
 	    android:id="@+id/popup_element"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
-	    android:background="#111111"
+	    android:background="@drawable/gradient"
 	    android:orientation="vertical"
 	    android:padding="10sp" >
 
@@ -103,7 +103,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvDeaths"
 	        android:layout_width="wrap_content"
@@ -115,7 +115,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvAssists"
 	        android:layout_width="wrap_content"
@@ -127,7 +127,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvKillingSpree"
 	        android:layout_width="wrap_content"
@@ -139,7 +139,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvMultiKill"
 	        android:layout_width="wrap_content"
@@ -151,7 +151,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvDamageDealt"
 	        android:layout_width="wrap_content"
@@ -163,7 +163,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvPhysicalDealt"
 	        android:layout_width="wrap_content"
@@ -175,7 +175,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvMagicDealt"
 	        android:layout_width="wrap_content"
@@ -187,7 +187,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvLargestCrit"
 	        android:layout_width="wrap_content"
@@ -209,7 +209,7 @@
 	        android:text="Damage Taken"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/TextView05"
 	        android:layout_width="wrap_content"
@@ -229,7 +229,7 @@
 	        android:text="Magic Damage Taken"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvHealingValue"
 	        android:layout_width="wrap_content"
@@ -253,7 +253,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvPhysicalTaken"
 	        android:layout_width="wrap_content"
@@ -265,7 +265,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvMagicDamage"
 	        android:layout_width="wrap_content"
@@ -338,7 +338,7 @@
 	        android:text="Time Spent Dead"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvGoldEarned"
 	        android:layout_width="wrap_content"
@@ -350,7 +350,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvTurrets"
 	        android:layout_width="wrap_content"
@@ -362,7 +362,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvInhibitors"
 	        android:layout_width="wrap_content"
@@ -374,7 +374,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvMinionsSlain"
 	        android:layout_width="wrap_content"
@@ -386,7 +386,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvNeutralMonsters"
 	        android:layout_width="wrap_content"
@@ -398,7 +398,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvTimeDead"
 	        android:layout_width="wrap_content"
@@ -420,7 +420,7 @@
 	        android:text="Wards Placed"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvWardsPlaced"
 	        android:layout_width="wrap_content"
@@ -442,7 +442,7 @@
 	        android:text="Wards Killed"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvWardsKilled"
 	        android:layout_width="wrap_content"
@@ -454,7 +454,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvDamageToChamps"
 	        android:layout_width="wrap_content"
@@ -466,7 +466,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvMagicToChamps"
 	        android:layout_width="wrap_content"
@@ -478,7 +478,7 @@
 	        android:text="0"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
-	    
+
 	    <TextView
 	        android:id="@+id/tvPhysicalToChamps"
 	        android:layout_width="wrap_content"
@@ -500,7 +500,7 @@
 	        android:layout_marginTop="8dp"
 	        android:minHeight="@dimen/close_button_height"
 	        android:text="Close"
-	        android:textColor="#FFFFFF"
+	        android:textColor="#000000"
 	        android:textSize="@dimen/close_button_size" />
 
 	    <TextView
@@ -554,16 +554,6 @@
 	        android:src="@drawable/ability" />
 
 	    <TextView
-	        android:id="@+id/TextView01"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_alignParentLeft="true"
-	        android:layout_below="@+id/ivChampIcon"
-	        android:text="Champion Kills"
-	        android:textColor="#FFFFFF"
-	        android:textSize="@dimen/game_type" />
-
-	    <TextView
 	        android:id="@+id/tvChampName"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
@@ -576,16 +566,251 @@
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView18"
+	        android:id="@+id/tvKDA"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_above="@+id/TextView01"
-	        android:layout_marginBottom="3dp"
-	        android:layout_marginLeft="4dp"
-	        android:layout_toRightOf="@+id/ivChampIcon"
+	        android:layout_alignLeft="@+id/tvChampName"
+	        android:layout_below="@+id/tvChampName"
 	        android:text="TextView"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
+
+	    <ImageView
+	        android:id="@+id/ivTeamOneChampTwo"
+	        android:layout_width="@dimen/team_champs"
+	        android:layout_height="@dimen/team_champs"
+	        android:layout_alignLeft="@+id/ivTeamOneChampOne"
+	        android:layout_below="@+id/ivTeamOneChampOne"
+	        android:layout_marginTop="4dp"
+	        android:src="@drawable/ability" />
+
+	    <ImageView
+	        android:id="@+id/ivTeamOneChampThree"
+	        android:layout_width="@dimen/team_champs"
+	        android:layout_height="@dimen/team_champs"
+	        android:layout_alignLeft="@+id/ivTeamOneChampTwo"
+	        android:layout_below="@+id/ivTeamOneChampTwo"
+	        android:layout_marginTop="4dp"
+	        android:src="@drawable/ability" />
+
+	    <ImageView
+	        android:id="@+id/ivTeamOneChampFour"
+	        android:layout_width="@dimen/team_champs"
+	        android:layout_height="@dimen/team_champs"
+	        android:layout_alignLeft="@+id/ivTeamOneChampThree"
+	        android:layout_below="@+id/ivTeamOneChampThree"
+	        android:layout_marginTop="4dp"
+	        android:src="@drawable/ability" />
+
+	    <ImageView
+	        android:id="@+id/ivTeamOneChampFive"
+	        android:layout_width="@dimen/team_champs"
+	        android:layout_height="@dimen/team_champs"
+	        android:layout_alignLeft="@+id/ivTeamOneChampFour"
+	        android:layout_below="@+id/ivTeamOneChampFour"
+	        android:layout_marginTop="4dp"
+	        android:src="@drawable/ability" />
+
+	    <ImageView
+	        android:id="@+id/ivTeamOneChampOne"
+	        android:layout_width="@dimen/team_champs"
+	        android:layout_height="@dimen/team_champs"
+	        android:layout_alignParentLeft="true"
+	        android:layout_below="@+id/ivChampIcon"
+	        android:layout_marginTop="24dp"
+	        android:src="@drawable/ability" />
+
+	    <TextView
+	        android:id="@+id/tvTeamOnePlayerOne"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/ivTeamOneChampOne"
+	        android:layout_alignTop="@+id/ivTeamOneChampOne"
+	        android:layout_marginLeft="4dp"
+	        android:layout_toRightOf="@+id/ivTeamOneChampOne"
+	        android:gravity="center_vertical"
+	        android:text="OMG LONGEST NAME"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/teams_text" />
+
+	    <TextView
+	        android:id="@+id/tvTeamOnePlayerTwo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/ivTeamOneChampTwo"
+	        android:layout_alignLeft="@+id/tvTeamOnePlayerOne"
+	        android:layout_alignTop="@+id/ivTeamOneChampTwo"
+	        android:gravity="center_vertical"
+	        android:text="name mofo"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/teams_text" />
+
+	    <TextView
+	        android:id="@+id/tvTeamOnePlayerThree"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/ivTeamOneChampThree"
+	        android:layout_alignLeft="@+id/tvTeamOnePlayerTwo"
+	        android:layout_alignTop="@+id/ivTeamOneChampThree"
+	        android:gravity="center_vertical"
+	        android:text="name mofo"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/teams_text" />
+
+	    <TextView
+	        android:id="@+id/tvTeamOnePlayerFour"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/ivTeamOneChampFour"
+	        android:layout_alignLeft="@+id/tvTeamOnePlayerThree"
+	        android:layout_alignTop="@+id/ivTeamOneChampFour"
+	        android:gravity="center_vertical"
+	        android:text="name mofo"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/teams_text" />
+
+	    <TextView
+	        android:id="@+id/tvTeamOnePlayerFive"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/ivTeamOneChampFive"
+	        android:layout_alignLeft="@+id/tvTeamOnePlayerFour"
+	        android:layout_alignTop="@+id/ivTeamOneChampFive"
+	        android:gravity="center_vertical"
+	        android:text="name mofo"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/teams_text" />
+
+	    <ImageView
+	        android:id="@+id/ivTeamTwoChampTwo"
+	        android:layout_width="@dimen/team_champs"
+	        android:layout_height="@dimen/team_champs"
+	        android:layout_alignLeft="@+id/ivTeamTwoChampOne"
+	        android:layout_below="@+id/ivTeamTwoChampOne"
+	        android:layout_marginTop="4dp"
+	        android:src="@drawable/ability" />
+
+	    <ImageView
+	        android:id="@+id/ivTeamTwoChampFour"
+	        android:layout_width="@dimen/team_champs"
+	        android:layout_height="@dimen/team_champs"
+	        android:layout_alignLeft="@+id/ivTeamTwoChampThree"
+	        android:layout_below="@+id/ivTeamTwoChampThree"
+	        android:layout_marginTop="4dp"
+	        android:src="@drawable/ability" />
+
+	    <ImageView
+	        android:id="@+id/ivTeamTwoChampFive"
+	        android:layout_width="@dimen/team_champs"
+	        android:layout_height="@dimen/team_champs"
+	        android:layout_alignLeft="@+id/ivTeamTwoChampFour"
+	        android:layout_below="@+id/ivTeamTwoChampFour"
+	        android:layout_marginTop="4dp"
+	        android:src="@drawable/ability" />
+
+	    <ImageView
+	        android:id="@+id/ivTeamTwoChampThree"
+	        android:layout_width="@dimen/team_champs"
+	        android:layout_height="@dimen/team_champs"
+	        android:layout_alignLeft="@+id/ivTeamTwoChampTwo"
+	        android:layout_below="@+id/ivTeamTwoChampTwo"
+	        android:layout_marginTop="4dp"
+	        android:src="@drawable/ability" />
+
+	    <TextView
+	        android:id="@+id/TextView01"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignLeft="@+id/ivTeamOneChampFive"
+	        android:layout_below="@+id/ivTeamOneChampFive"
+	        android:layout_marginTop="24dp"
+	        android:text="Champion Kills"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	    <ImageView
+	        android:id="@+id/ivTeamTwoChampOne"
+	        android:layout_width="@dimen/team_champs"
+	        android:layout_height="@dimen/team_champs"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignTop="@+id/tvTeamOnePlayerOne"
+	        android:src="@drawable/ability" />
+
+	    <TextView
+	        android:id="@+id/tvTeamTwoPlayerOne"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/ivTeamTwoChampTwo"
+	        android:layout_alignTop="@+id/ivTeamTwoChampOne"
+	        android:layout_marginRight="4dp"
+	        android:layout_toLeftOf="@+id/ivTeamTwoChampOne"
+	        android:gravity="center_vertical"
+	        android:text="name mofo"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/teams_text" />
+
+	    <TextView
+	        android:id="@+id/tvTeamTwoPlayerFive"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBottom="@+id/ivTeamTwoChampFive"
+	        android:layout_alignTop="@+id/ivTeamTwoChampFive"
+	        android:layout_marginRight="4dp"
+	        android:layout_toLeftOf="@+id/ivTeamTwoChampFive"
+	        android:gravity="center_vertical"
+	        android:text="OMG LONGEST NAME"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/teams_text" />
+
+	    <TextView
+	        android:id="@+id/tvTeamTwoPlayerFour"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/ivTeamTwoChampFive"
+	        android:layout_alignTop="@+id/ivTeamTwoChampFour"
+	        android:layout_marginRight="4dp"
+	        android:layout_toLeftOf="@+id/ivTeamTwoChampFour"
+	        android:gravity="center_vertical"
+	        android:text="name mofo"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/teams_text" />
+
+	    <TextView
+	        android:id="@+id/tvTeamTwoPlayerTwo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/ivTeamTwoChampThree"
+	        android:layout_alignTop="@+id/ivTeamTwoChampTwo"
+	        android:layout_marginRight="4dp"
+	        android:layout_toLeftOf="@+id/ivTeamTwoChampTwo"
+	        android:gravity="center_vertical"
+	        android:text="name mofo"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/teams_text" />
+
+	    <TextView
+	        android:id="@+id/tvVs"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignBaseline="@+id/tvTeamOnePlayerThree"
+	        android:layout_alignBottom="@+id/tvTeamOnePlayerThree"
+	        android:layout_centerHorizontal="true"
+	        android:text="vs"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/game_type" />
+
+	    <TextView
+	        android:id="@+id/tvTeamTwoPlayerThree"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/ivTeamTwoChampFour"
+	        android:layout_alignTop="@+id/ivTeamTwoChampThree"
+	        android:layout_marginRight="4dp"
+	        android:layout_toLeftOf="@+id/ivTeamTwoChampThree"
+	        android:gravity="center_vertical"
+	        android:text="name mofo"
+	        android:textColor="#FFFFFF"
+	        android:textSize="@dimen/teams_text" />
 
 	</RelativeLayout>
 

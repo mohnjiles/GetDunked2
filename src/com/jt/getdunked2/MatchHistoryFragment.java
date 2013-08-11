@@ -3,9 +3,11 @@ package com.jt.getdunked2;
 import java.util.ArrayList;
 import com.jt.getdunked2.AnotherAsyncTask.PostFetcherTwo;
 
+import android.R.anim;
 import android.R.integer;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.location.LocationManager;
@@ -32,8 +34,7 @@ public class MatchHistoryFragment extends Fragment {
 	LocationManager lm;
 
 	ArrayList<GameStatistics> someArrayList = null;
-	LazyAdapter lazyAdapter;
-	
+
 	public static TextView tvDamageDone;
 	public static TextView tvChampKills;
 	public static TextView tvDeaths;
@@ -60,7 +61,28 @@ public class MatchHistoryFragment extends Fragment {
 	public static TextView tvMinionsKilled;
 	public static TextView tvNeutralMinionsKilled;
 	public static TextView tvChampName;
+	public static TextView tvKDA;
+	public static TextView tvTeamOnePlayerOne;
+	public static TextView tvTeamOnePlayerTwo;
+	public static TextView tvTeamOnePlayerThree;
+	public static TextView tvTeamOnePlayerFour;
+	public static TextView tvTeamOnePlayerFive;
+	public static TextView tvTeamTwoPlayerOne;
+	public static TextView tvTeamTwoPlayerTwo;
+	public static TextView tvTeamTwoPlayerThree;
+	public static TextView tvTeamTwoPlayerFour;
+	public static TextView tvTeamTwoPlayerFive;
 	
+	public static ImageView ivTeamOneChampOne;
+	public static ImageView ivTeamOneChampTwo;
+	public static ImageView ivTeamOneChampThree;
+	public static ImageView ivTeamOneChampFour;
+	public static ImageView ivTeamOneChampFive;
+	public static ImageView ivTeamTwoChampOne;
+	public static ImageView ivTeamTwoChampTwo;
+	public static ImageView ivTeamTwoChampThree;
+	public static ImageView ivTeamTwoChampFour;
+	public static ImageView ivTeamTwoChampFive;
 	public static ImageView ivChampIcon;
 
 	public static Typeface tf;
@@ -79,6 +101,8 @@ public class MatchHistoryFragment extends Fragment {
 	public static TextView tvOne;
 	TextView tvDebug = ProfileFragment.tvDebugOne;
 	MatchHistoryFragment our_context;
+	
+	LazyAdapter lazyAdapter;
 	
 	
 	
@@ -121,6 +145,7 @@ public class MatchHistoryFragment extends Fragment {
 		
 		
 	}
+
 	
 	private void initiatePopupWindow(int position) {
 		try {
@@ -129,14 +154,14 @@ public class MatchHistoryFragment extends Fragment {
 			        Configuration.SCREENLAYOUT_SIZE_MASK;
 			
 			// convert px to dips for multiple screens
-			int dipsWidthPortrait_Normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 270, getActivity().getResources().getDisplayMetrics()); 
-			int dipsHeightPortrait_Normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 400, getActivity().getResources().getDisplayMetrics());
-			int dipsWidthLandscape_Normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 400, getActivity().getResources().getDisplayMetrics()); 
-			int dipsHeightLandscape_Normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 270, getActivity().getResources().getDisplayMetrics());
-			int dipsWidthPortrait_Large = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 400, getActivity().getResources().getDisplayMetrics()); 
+			int dipsWidthPortrait_Normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 300, getActivity().getResources().getDisplayMetrics()); 
+			int dipsHeightPortrait_Normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 450, getActivity().getResources().getDisplayMetrics());
+			int dipsWidthLandscape_Normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 450, getActivity().getResources().getDisplayMetrics()); 
+			int dipsHeightLandscape_Normal = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 300, getActivity().getResources().getDisplayMetrics());
+			int dipsWidthPortrait_Large = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 425, getActivity().getResources().getDisplayMetrics()); 
 			int dipsHeightPortrait_Large = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 550, getActivity().getResources().getDisplayMetrics());
 			int dipsWidthLandscape_Large = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 550, getActivity().getResources().getDisplayMetrics()); 
-			int dipsHeightLandscape_Large = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 400, getActivity().getResources().getDisplayMetrics());
+			int dipsHeightLandscape_Large = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 425, getActivity().getResources().getDisplayMetrics());
 			int dipsWidthPortrait_Small = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 200, getActivity().getResources().getDisplayMetrics()); 
 			int dipsHeightPortrait_Small = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 350, getActivity().getResources().getDisplayMetrics());
 			int dipsWidthLandscape_Small = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 350, getActivity().getResources().getDisplayMetrics()); 
@@ -189,7 +214,7 @@ public class MatchHistoryFragment extends Fragment {
 			
 			// If we ran in to a problem
 			} catch (Exception e) {
-				Log.w("PopupWindow", "" + e.getMessage() + e.getStackTrace()[2].getLineNumber());
+				Log.w("PopupWindow", "" + e.getMessage() + e.getStackTrace()[0].getLineNumber());
 			}
 		}
 	
@@ -248,6 +273,28 @@ public class MatchHistoryFragment extends Fragment {
 			tvMinionsKilled = (TextView) pwindo.getContentView().findViewById(R.id.tvMinionsSlain);
 			tvNeutralMinionsKilled = (TextView) pwindo.getContentView().findViewById(R.id.tvNeutralMonsters);
 			tvChampName = (TextView) pwindo.getContentView().findViewById(R.id.tvChampName);
+			tvKDA = (TextView) pwindo.getContentView().findViewById(R.id.tvKDA);
+			tvTeamOnePlayerOne = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamOnePlayerOne); 
+			tvTeamOnePlayerTwo = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamOnePlayerTwo); 
+			tvTeamOnePlayerThree = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamOnePlayerThree); 
+			tvTeamOnePlayerFour = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamOnePlayerFour); 
+			tvTeamOnePlayerFive = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamOnePlayerFive); 
+			tvTeamTwoPlayerOne = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamTwoPlayerOne); 
+			tvTeamTwoPlayerTwo = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamTwoPlayerTwo); 
+			tvTeamTwoPlayerThree = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamTwoPlayerThree); 
+			tvTeamTwoPlayerFour = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamTwoPlayerFour); 
+			tvTeamTwoPlayerFive = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamTwoPlayerFive); 
+			
+			ivTeamOneChampOne = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamOneChampOne); 
+			ivTeamOneChampTwo = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamOneChampTwo); 
+			ivTeamOneChampThree = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamOneChampThree); 
+			ivTeamOneChampFour = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamOneChampFour); 
+			ivTeamOneChampFive = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamOneChampFive); 
+			ivTeamTwoChampOne = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamTwoChampOne); 
+			ivTeamTwoChampTwo = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamTwoChampTwo); 
+			ivTeamTwoChampThree = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamTwoChampThree); 
+			ivTeamTwoChampFour = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamTwoChampFour); 
+			ivTeamTwoChampFive = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamTwoChampFive); 
 			
 			ivChampIcon = (ImageView) pwindo.getContentView().findViewById(R.id.ivChampIcon);
 			
@@ -255,6 +302,7 @@ public class MatchHistoryFragment extends Fragment {
 			AnotherAsyncTask anotherAsyncTask = new AnotherAsyncTask();
 			PostFetcherTwo pft = anotherAsyncTask.new PostFetcherTwo(getActivity(), getActivity());
 			pft.execute(url);
+			
 		
 			// Set close button
 			//Button btnClosePopup = (Button) pwindo.getContentView().findViewById(R.id.btn_close_popup);

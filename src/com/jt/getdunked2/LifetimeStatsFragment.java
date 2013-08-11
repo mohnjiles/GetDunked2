@@ -2,6 +2,10 @@ package com.jt.getdunked2;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -9,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 public class LifetimeStatsFragment extends Fragment {
@@ -45,6 +50,7 @@ public class LifetimeStatsFragment extends Fragment {
         // Inflate the layout for this fragment
     	View v = inflater.inflate(R.layout.fragment_lifetime_stats, container, false);
     	
+    	RelativeLayout relativeStats = (RelativeLayout) v.findViewById(R.id.relativeStats);
     	
     	
     	return v;
@@ -84,4 +90,5 @@ public class LifetimeStatsFragment extends Fragment {
 		
 		
 	}
+
 }

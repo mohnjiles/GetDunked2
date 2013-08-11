@@ -2,6 +2,9 @@ package com.jt.getdunked2;
 
 import java.util.Vector;
 
+import com.jfeinstein.jazzyviewpager.JazzyViewPager;
+import com.jfeinstein.jazzyviewpager.JazzyViewPager.TransitionEffect;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,17 +13,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.Toast;
 
 public class AbilityDetails extends ActionBarActivity{
 
@@ -36,7 +33,7 @@ public class AbilityDetails extends ActionBarActivity{
 	/**
 	 * The {@link ViewPager} that will host the section contents.
 	 */
-	ViewPager mViewPager;
+	JazzyViewPager myPager;
 	int position = ChampsActivity.myInt;
 	
 	@Override
@@ -66,29 +63,12 @@ public class AbilityDetails extends ActionBarActivity{
 		  fragmenthree.setArguments(bundle);
 		  fragments.add(fragmentfour);
 
-		  ViewPager myPager = (ViewPager) findViewById(R.id.pager);
+		  myPager = (JazzyViewPager) findViewById(R.id.pager);
 		  FragmentAdapter adapter = new FragmentAdapter(
 		    getSupportFragmentManager(), fragments);
 		  myPager.setAdapter(adapter);
 		  myPager.setCurrentItem(0);
-		 
-
-		  myPager.setOnPageChangeListener(new OnPageChangeListener() {
-
-		   @Override
-		   public void onPageSelected(int arg0) {
-		    Toast.makeText(AbilityDetails.this,
-		      "Page Selected " + arg0, Toast.LENGTH_LONG).show();
-		   }
-
-		   @Override
-		   public void onPageScrolled(int arg0, float arg1, int arg2) {
-		   }
-
-		   @Override
-		   public void onPageScrollStateChanged(int arg0) {
-		   }
-		  });
+		  myPager.setTransitionEffect(TransitionEffect.CubeOut);
 		  
 		  
 
@@ -152,7 +132,9 @@ public class AbilityDetails extends ActionBarActivity{
 
 		 @Override
 		 public Object instantiateItem(ViewGroup container, int position) {
-		  return super.instantiateItem(container, position);
+			 Object obj = super.instantiateItem(container, position);
+			    myPager.setObjectForPosition(obj, position);
+			    return obj;
 		 }
 
 		 @Override
@@ -181,33 +163,4 @@ public class AbilityDetails extends ActionBarActivity{
 		    }
 
 		}
-
-
-	/**
-	 * A dummy fragment representing a section of the app, but that simply
-	 * displays dummy text.
-	 */
-	public static class DummySectionFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
-
-		public DummySectionFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			// Create a new TextView and set its text to the fragment's section
-			// number argument value.
-			TextView textView = new TextView(getActivity());
-			textView.setGravity(Gravity.CENTER);
-			textView.setText(Integer.toString(getArguments().getInt(
-					ARG_SECTION_NUMBER)));
-			return textView;
-		}
-	}
-
 }

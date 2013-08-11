@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../ActionBarSherlock/ActionBarSherlock.iml" filepath="$PROJECT_DIR$/../ActionBarSherlock/ActionBarSherlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Crouton-master/Crouton-master.iml" filepath="$PROJECT_DIR$/../../Crouton-master/Crouton-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Get Dunked.iml" filepath="$PROJECT_DIR$/../Get Dunked.iml" />
       <module fileurl="file://$PROJECT_DIR$/GetDunked2.iml" filepath="$PROJECT_DIR$/GetDunked2.iml" />
+      <module fileurl="file://$USER_HOME$/JT.iml" filepath="$USER_HOME$/JT.iml" />
+      <module fileurl="file://$USER_HOME$/android-sdks/extras/android/android.iml" filepath="$USER_HOME$/android-sdks/extras/android/android.iml" />
+      <module fileurl="file://$USER_HOME$/android-sdks/android-sdks.iml" filepath="$USER_HOME$/android-sdks/android-sdks.iml" />
+      <module fileurl="file://$USER_HOME$/android-sdks/extras/android/support/v7/appcompat/appcompat.iml" filepath="$USER_HOME$/android-sdks/extras/android/support/v7/appcompat/appcompat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Crouton-master/sample/de.keyboardsurfer.app.demo.crouton.iml" filepath="$PROJECT_DIR$/../../Crouton-master/sample/de.keyboardsurfer.app.demo.crouton.iml" />
+      <module fileurl="file://$USER_HOME$/android-sdks/extras/extras.iml" filepath="$USER_HOME$/android-sdks/extras/extras.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../git.iml" filepath="$PROJECT_DIR$/../../git.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Crouton-master/library/library.iml" filepath="$PROJECT_DIR$/../../Crouton-master/library/library.iml" />
+      <module fileurl="file://$USER_HOME$/android-sdks/extras/android/support/support.iml" filepath="$USER_HOME$/android-sdks/extras/android/support/support.iml" />
+      <module fileurl="file://$USER_HOME$/android-sdks/extras/android/support/v7/v7.iml" filepath="$USER_HOME$/android-sdks/extras/android/support/v7/v7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Crouton-master/sample/gen-external-apklibs/~apklib-com.actionbarsherlock_actionbarsherlock_4.2.0.iml" filepath="$PROJECT_DIR$/../../Crouton-master/sample/gen-external-apklibs/~apklib-com.actionbarsherlock_actionbarsherlock_4.2.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Crouton-master/sample/gen-external-apklibs/~apklib-com.viewpagerindicator_library_2.4.1.iml" filepath="$PROJECT_DIR$/../../Crouton-master/sample/gen-external-apklibs/~apklib-com.viewpagerindicator_library_2.4.1.iml" />
     </modules>
   </component>
 </project>

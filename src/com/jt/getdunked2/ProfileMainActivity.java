@@ -2,26 +2,30 @@ package com.jt.getdunked2;
 
 import java.util.Vector;
 
+import com.jfeinstein.jazzyviewpager.JazzyViewPager;
+import com.jfeinstein.jazzyviewpager.JazzyViewPager.TransitionEffect;
 import com.jt.getdunked2.AsyncTasks.PostFetcher;
 
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.provider.UserDictionary.Words;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.MenuItemCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.SearchView.OnQueryTextListener;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class ProfileMainActivity extends ActionBarActivity{
@@ -30,10 +34,9 @@ public class ProfileMainActivity extends ActionBarActivity{
     TextView mStatusView;
     
 	
-	ViewPager mViewPager;
+	JazzyViewPager mViewPager;
 	LocationManager lm;
 	FragmentAdapter adapter;
-	LazyAdapter lazyAdapter;
 
 	TextView loadingText;
 	public static String name;
@@ -44,7 +47,9 @@ public class ProfileMainActivity extends ActionBarActivity{
 	Button btnSearch;
 	TextView tvOne;
 	TextView tvDebug;
-	org.jsoup.nodes.Document doc;
+	ListView lv;
+	JazzyViewPager myPager;
+	String summonerName = AsyncTasks.summonerName;
 	
 
 	
@@ -58,6 +63,8 @@ public class ProfileMainActivity extends ActionBarActivity{
 		ActionBar actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.show();
+		
+
 		
 		tvDebug = ProfileFragment.tvDebugOne;
 
@@ -82,16 +89,15 @@ public class ProfileMainActivity extends ActionBarActivity{
 		fragmenthree.setArguments(bundle);
 		fragments.add(fragmentfour);
 		
-		ViewPager myPager = (ViewPager) findViewById(R.id.profileMainPager);
+		myPager = (JazzyViewPager) findViewById(R.id.profileMainPager);
 		myPager.setOffscreenPageLimit(4);
 		adapter = new FragmentAdapter(
 		getSupportFragmentManager(), fragments);
 		myPager.setAdapter(adapter);
 		myPager.setCurrentItem(0);
+		myPager.setTransitionEffect(TransitionEffect.CubeOut);
 		  
-		 
 	}
-	
 	
 	
 	@Override
@@ -114,6 +120,7 @@ public class ProfileMainActivity extends ActionBarActivity{
 				pf.execute(url);
 				setTitle(name);
 				return false;
+				
 			}
 			
 			@Override
@@ -153,7 +160,9 @@ public class ProfileMainActivity extends ActionBarActivity{
 
 		 @Override
 		 public Object instantiateItem(ViewGroup container, int position) {
-		  return super.instantiateItem(container, position);
+			 Object obj = super.instantiateItem(container, position);
+			    myPager.setObjectForPosition(obj, position);
+			    return obj;
 		 }
 
 		 @Override

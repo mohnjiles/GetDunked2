@@ -3,7 +3,7 @@
     android:id="@+id/tvNameFive"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blue_texture_wallpaper"
+    android:background="@drawable/gradient"
     tools:context=".MainActivity" >
 
     <Button
@@ -262,7 +262,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:gravity="center"
-        android:text="Failed to Load"
+        android:text="Loading..."
         android:textColor="#FFFFFF"
         android:textSize="@dimen/free_week_text" />
 

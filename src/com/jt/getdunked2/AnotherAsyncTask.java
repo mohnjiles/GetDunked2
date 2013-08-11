@@ -9,11 +9,13 @@ import de.keyboardsurfer.android.widget.crouton.Crouton;
 
 
 
+import android.R.integer;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
@@ -51,6 +53,28 @@ public class AnotherAsyncTask {
 	TextView tvMinionsKilled = MatchHistoryFragment.tvMinionsKilled;
 	TextView tvNeutralMinionsKilled = MatchHistoryFragment.tvNeutralMinionsKilled;
 	TextView tvChampName = MatchHistoryFragment.tvChampName;
+	TextView tvKDA = MatchHistoryFragment.tvKDA;
+	TextView tvTeamOnePlayerOne = MatchHistoryFragment.tvTeamOnePlayerOne;
+	TextView tvTeamOnePlayerTwo = MatchHistoryFragment.tvTeamOnePlayerTwo;
+	TextView tvTeamOnePlayerThree = MatchHistoryFragment.tvTeamOnePlayerThree;
+	TextView tvTeamOnePlayerFour = MatchHistoryFragment.tvTeamOnePlayerFour;
+	TextView tvTeamOnePlayerFive = MatchHistoryFragment.tvTeamOnePlayerFive;
+	TextView tvTeamTwoPlayerOne = MatchHistoryFragment.tvTeamTwoPlayerOne;
+	TextView tvTeamTwoPlayerTwo = MatchHistoryFragment.tvTeamTwoPlayerTwo;
+	TextView tvTeamTwoPlayerThree = MatchHistoryFragment.tvTeamTwoPlayerThree;
+	TextView tvTeamTwoPlayerFour = MatchHistoryFragment.tvTeamTwoPlayerFour;
+	TextView tvTeamTwoPlayerFive = MatchHistoryFragment.tvTeamTwoPlayerFive;
+	
+	ImageView ivTeamOneChampOne = MatchHistoryFragment.ivTeamOneChampOne;
+	ImageView ivTeamOneChampTwo = MatchHistoryFragment.ivTeamOneChampTwo;
+	ImageView ivTeamOneChampThree = MatchHistoryFragment.ivTeamOneChampThree;
+	ImageView ivTeamOneChampFour = MatchHistoryFragment.ivTeamOneChampFour;
+	ImageView ivTeamOneChampFive = MatchHistoryFragment.ivTeamOneChampFive;
+	ImageView ivTeamTwoChampOne = MatchHistoryFragment.ivTeamTwoChampOne;
+	ImageView ivTeamTwoChampTwo = MatchHistoryFragment.ivTeamTwoChampTwo;
+	ImageView ivTeamTwoChampThree = MatchHistoryFragment.ivTeamTwoChampThree;
+	ImageView ivTeamTwoChampFour = MatchHistoryFragment.ivTeamTwoChampFour;
+	ImageView ivTeamTwoChampFive = MatchHistoryFragment.ivTeamTwoChampFive;
 	
 	ImageView ivChampIcon = MatchHistoryFragment.ivChampIcon;
 	
@@ -58,7 +82,7 @@ public class AnotherAsyncTask {
 	
 	Number champKills = null;
 	Number deaths = null;
-	Number assists = null;
+	Number assistsValue = null;
 	Number killingSpree = null;
 	Number damageToChamps = null;
 	Number physicalToChamps = null;
@@ -80,16 +104,21 @@ public class AnotherAsyncTask {
 	Number wardsKilled = null;
 	Number minionsKilled = null;
 	Number neutralMinionsKilled = null;
+	String kda = null;
+	int teamId = 0;
+	int teamOneChamps[] = new int[5];
+	int teamTwoChamps[] = new int[5];
 	
 	ArrayList<HashMap<String, String>> anotherArrayList;
 	int position = MatchHistoryFragment.pos;
-	
+
 
 
 	
 	private static class PostFetchResult {
 		Summoner summoner;
 		List<GameStatistics> recentGames;
+		List<Statistics> stats;
 	}
 	
 	public static class SoData {
@@ -122,6 +151,8 @@ public class AnotherAsyncTask {
 			try {
 				result.recentGames = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + result.summoner.getData().getAcctId().toString() 
 						+ "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getGameStatistics();
+				result.stats = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + result.summoner.getData().getAcctId().toString() 
+						+ "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getGameStatistics().get(position).getStatistics();
 			} catch (Exception e) {
 				Log.w("doInBackground recentGames", "Recent Games error: " + e.getMessage());
 				
@@ -602,7 +633,7 @@ public class AnotherAsyncTask {
 						tvChampName.setText("Thresh");
 						break;
 					}
-					for (Statistics stats : result.recentGames.get(position).getStatistics()) {
+					for (Statistics stats : result.stats) {
 						
 						if (stats.getStatType().equals("TOTAL_DAMAGE_DEALT")) {
 							damageDealt = stats.getValue();
@@ -610,6 +641,8 @@ public class AnotherAsyncTask {
 							damageTaken = stats.getValue();
 						} else if (stats.getStatType().equals("TOTAL_HEAL")) {
 							healingDone = stats.getValue();
+						} else if (stats.getStatType().equals("ASSISTS")) {
+							assistsValue = stats.getValue();
 						} else if (stats.getStatType().equals("GOLD_EARNED")) {
 							gold = stats.getValue();
 						} else if (stats.getStatType().equals("LARGEST_MULTI_KILL")) {
@@ -642,8 +675,6 @@ public class AnotherAsyncTask {
 							champKills = stats.getValue();
 						} else if (stats.getStatType().equals("TOTAL_TIME_SPENT_DEAD")) {
 							timeDead = stats.getValue();
-						} else if (stats.getStatType().equals("ASSISTS")) {
-							assists = stats.getValue();
 						} else if (stats.getStatType().equals("LARGEST_KILLING_SPREE")) {
 							killingSpree = stats.getValue();
 						} else if (stats.getStatType().equals("MAGIC_DAMAGE_TAKEN")) {
@@ -655,6 +686,251 @@ public class AnotherAsyncTask {
 						} else if (stats.getStatType().equals("PHYSICAL_DAMAGE_DEALT_PLAYER")) {
 							physicalDamage = stats.getValue();
 						}
+						
+						String[] teamOneNames = new String[5];
+						String[] teamTwoNames = new String[5];
+						int pos = 0;
+						int posTwo = 0;
+						for(FellowPlayers fPlayers : result.recentGames.get(position).getFellowPlayers()) {
+							if (fPlayers.getSummonerName().equals(result.summoner.getData().getName())) {
+								teamId = fPlayers.getTeamId().intValue();
+							}
+							if (fPlayers.getTeamId().intValue() == 100) {
+								teamOneNames[pos] = fPlayers.getSummonerName();
+								teamOneChamps[pos] = fPlayers.getChampionId().intValue();
+								pos++;
+							} else {
+								teamTwoNames[posTwo] = fPlayers.getSummonerName();
+								teamTwoChamps[posTwo] = fPlayers.getChampionId().intValue();
+								posTwo++;
+							}
+						}
+						// Set Fellow Players (The summoner names & champs played of each team)
+						// If team ID is 100, we don't have to flip the arrays **see below**
+							if (result.recentGames.get(position).getTeamId().intValue() == 100) {
+								setTeamChamps(result.recentGames.get(position).getChampionId().intValue(), ivTeamOneChampOne);
+								setTeamChamps(teamOneChamps[0], ivTeamOneChampTwo);
+								setTeamChamps(teamOneChamps[1], ivTeamOneChampThree);
+								setTeamChamps(teamOneChamps[2], ivTeamOneChampFour);
+								setTeamChamps(teamOneChamps[3], ivTeamOneChampFive);
+								setTeamChamps(teamTwoChamps[0], ivTeamTwoChampOne);
+								setTeamChamps(teamTwoChamps[1], ivTeamTwoChampTwo);
+								setTeamChamps(teamTwoChamps[2], ivTeamTwoChampThree);
+								setTeamChamps(teamTwoChamps[3], ivTeamTwoChampFour);
+								setTeamChamps(teamTwoChamps[4], ivTeamTwoChampFive);
+								tvTeamOnePlayerOne.setText("" + result.summoner.getData().getName());
+								tvTeamOnePlayerTwo.setText("" + teamOneNames[0]);
+								tvTeamOnePlayerThree.setText("" + teamOneNames[1]);
+								tvTeamOnePlayerFour.setText("" + teamOneNames[2]);
+								tvTeamOnePlayerFive.setText("" + teamOneNames[3]);
+								tvTeamTwoPlayerOne.setText("" + teamTwoNames[0]);
+								tvTeamTwoPlayerTwo.setText("" + teamTwoNames[1]);
+								tvTeamTwoPlayerThree.setText("" + teamTwoNames[2]);
+								tvTeamTwoPlayerFour.setText("" + teamTwoNames[3]);
+								tvTeamTwoPlayerFive.setText("" + teamTwoNames[4]);
+								
+								// Hide views that aren't used due to different match types (e.g. custom games, 3v3, bots, etc.)
+								if (teamOneNames[0] == null && teamTwoNames[0] == null) { 
+									tvTeamOnePlayerTwo.setVisibility(View.GONE);
+									tvTeamOnePlayerThree.setVisibility(View.GONE);
+									tvTeamOnePlayerFour.setVisibility(View.GONE);
+									tvTeamOnePlayerFive.setVisibility(View.GONE);
+									ivTeamOneChampTwo.setVisibility(View.GONE);
+									ivTeamOneChampThree.setVisibility(View.GONE);
+									ivTeamOneChampFour.setVisibility(View.GONE);
+									ivTeamOneChampFive.setVisibility(View.GONE);
+									
+									tvTeamTwoPlayerOne.setVisibility(View.GONE);
+									tvTeamTwoPlayerTwo.setVisibility(View.GONE);
+									tvTeamTwoPlayerThree.setVisibility(View.GONE);
+									tvTeamTwoPlayerFour.setVisibility(View.GONE);
+									tvTeamTwoPlayerFive.setVisibility(View.GONE);
+									ivTeamTwoChampOne.setVisibility(View.GONE);
+									ivTeamTwoChampTwo.setVisibility(View.GONE);
+									ivTeamTwoChampThree.setVisibility(View.GONE);
+									ivTeamTwoChampFour.setVisibility(View.GONE);
+									ivTeamTwoChampFive.setVisibility(View.GONE);
+									
+								} else if (teamTwoNames[0] == null) {
+									tvTeamTwoPlayerOne.setVisibility(View.GONE);
+									tvTeamTwoPlayerTwo.setVisibility(View.GONE);
+									tvTeamTwoPlayerThree.setVisibility(View.GONE);
+									tvTeamTwoPlayerFour.setVisibility(View.GONE);
+									tvTeamTwoPlayerFive.setVisibility(View.GONE);
+									ivTeamTwoChampOne.setVisibility(View.GONE);
+									ivTeamTwoChampTwo.setVisibility(View.GONE);
+									ivTeamTwoChampThree.setVisibility(View.GONE);
+									ivTeamTwoChampFour.setVisibility(View.GONE);
+									ivTeamTwoChampFive.setVisibility(View.GONE);
+								} else if (teamTwoNames[1] == null) {
+									tvTeamOnePlayerTwo.setVisibility(View.GONE);
+									tvTeamOnePlayerThree.setVisibility(View.GONE);
+									tvTeamOnePlayerFour.setVisibility(View.GONE);
+									tvTeamOnePlayerFive.setVisibility(View.GONE);
+									ivTeamOneChampTwo.setVisibility(View.GONE);
+									ivTeamOneChampThree.setVisibility(View.GONE);
+									ivTeamOneChampFour.setVisibility(View.GONE);
+									ivTeamOneChampFive.setVisibility(View.GONE);
+									
+									tvTeamTwoPlayerTwo.setVisibility(View.GONE);
+									tvTeamTwoPlayerThree.setVisibility(View.GONE);
+									tvTeamTwoPlayerFour.setVisibility(View.GONE);
+									tvTeamTwoPlayerFive.setVisibility(View.GONE);
+									ivTeamTwoChampTwo.setVisibility(View.GONE);
+									ivTeamTwoChampThree.setVisibility(View.GONE);
+									ivTeamTwoChampFour.setVisibility(View.GONE);
+									ivTeamTwoChampFive.setVisibility(View.GONE);
+									
+								} else if (teamOneNames[1] == null && teamTwoNames[2] == null) {
+									tvTeamOnePlayerThree.setVisibility(View.GONE);
+									tvTeamOnePlayerFour.setVisibility(View.GONE);
+									tvTeamOnePlayerFive.setVisibility(View.GONE);
+									ivTeamOneChampThree.setVisibility(View.GONE);
+									ivTeamOneChampFour.setVisibility(View.GONE);
+									ivTeamOneChampFive.setVisibility(View.GONE);
+									
+
+									tvTeamTwoPlayerThree.setVisibility(View.GONE);
+									tvTeamTwoPlayerFour.setVisibility(View.GONE);
+									tvTeamTwoPlayerFive.setVisibility(View.GONE);
+									ivTeamTwoChampThree.setVisibility(View.GONE);
+									ivTeamTwoChampFour.setVisibility(View.GONE);
+									ivTeamTwoChampFive.setVisibility(View.GONE);
+									
+								} else if (teamOneNames[2] == null && teamTwoNames[3] == null) {
+									tvTeamOnePlayerFour.setVisibility(View.GONE);
+									tvTeamOnePlayerFive.setVisibility(View.GONE);;
+									ivTeamOneChampFour.setVisibility(View.GONE);
+									ivTeamOneChampFive.setVisibility(View.GONE);
+									
+									tvTeamTwoPlayerFour.setVisibility(View.GONE);
+									tvTeamTwoPlayerFive.setVisibility(View.GONE);
+									ivTeamTwoChampFour.setVisibility(View.GONE);
+									ivTeamTwoChampFive.setVisibility(View.GONE);
+								} else if (teamOneNames[3] == null && teamTwoNames[4] == null) {
+									tvTeamOnePlayerFive.setVisibility(View.GONE);;
+									ivTeamOneChampFive.setVisibility(View.GONE);
+									
+									tvTeamTwoPlayerFive.setVisibility(View.GONE);
+									ivTeamTwoChampFive.setVisibility(View.GONE);
+								} 
+								
+							} else {
+								// if Team ID is 200, we need to flip the arrays we created so that the player is always in the top left
+								// Who's "we"????
+								setTeamChamps(result.recentGames.get(position).getChampionId().intValue(), ivTeamOneChampOne);
+								setTeamChamps(teamTwoChamps[0], ivTeamOneChampTwo);
+								setTeamChamps(teamTwoChamps[1], ivTeamOneChampThree);
+								setTeamChamps(teamTwoChamps[2], ivTeamOneChampFour);
+								setTeamChamps(teamTwoChamps[3], ivTeamOneChampFive);
+								setTeamChamps(teamOneChamps[0], ivTeamTwoChampOne);
+								setTeamChamps(teamOneChamps[1], ivTeamTwoChampTwo);
+								setTeamChamps(teamOneChamps[2], ivTeamTwoChampThree);
+								setTeamChamps(teamOneChamps[3], ivTeamTwoChampFour);
+								setTeamChamps(teamOneChamps[4], ivTeamTwoChampFive);
+								tvTeamOnePlayerOne.setText("" + result.summoner.getData().getName());
+								tvTeamOnePlayerTwo.setText("" + teamTwoNames[0]);
+								tvTeamOnePlayerThree.setText("" + teamTwoNames[1]);
+								tvTeamOnePlayerFour.setText("" + teamTwoNames[2]);
+								tvTeamOnePlayerFive.setText("" + teamTwoNames[3]);
+								tvTeamTwoPlayerOne.setText("" + teamOneNames[0]);
+								tvTeamTwoPlayerTwo.setText("" + teamOneNames[1]);
+								tvTeamTwoPlayerThree.setText("" + teamOneNames[2]);
+								tvTeamTwoPlayerFour.setText("" + teamOneNames[3]);
+								tvTeamTwoPlayerFive.setText("" + teamOneNames[4]);
+								
+								// Hide views that aren't used due to different match types (e.g. custom games, 3v3, bots, etc.)
+								if (teamTwoNames[0] == null && teamOneNames[0] == null) {
+									tvTeamOnePlayerTwo.setVisibility(View.GONE);
+									tvTeamOnePlayerThree.setVisibility(View.GONE);
+									tvTeamOnePlayerFour.setVisibility(View.GONE);
+									tvTeamOnePlayerFive.setVisibility(View.GONE);
+									ivTeamOneChampTwo.setVisibility(View.GONE);
+									ivTeamOneChampThree.setVisibility(View.GONE);
+									ivTeamOneChampFour.setVisibility(View.GONE);
+									ivTeamOneChampFive.setVisibility(View.GONE);
+									
+									tvTeamTwoPlayerOne.setVisibility(View.GONE);
+									tvTeamTwoPlayerTwo.setVisibility(View.GONE);
+									tvTeamTwoPlayerThree.setVisibility(View.GONE);
+									tvTeamTwoPlayerFour.setVisibility(View.GONE);
+									tvTeamTwoPlayerFive.setVisibility(View.GONE);
+									ivTeamTwoChampOne.setVisibility(View.GONE);
+									ivTeamTwoChampTwo.setVisibility(View.GONE);
+									ivTeamTwoChampThree.setVisibility(View.GONE);
+									ivTeamTwoChampFour.setVisibility(View.GONE);
+									ivTeamTwoChampFive.setVisibility(View.GONE);
+								} else if (teamOneNames[0] == null) {
+									tvTeamTwoPlayerOne.setVisibility(View.GONE);
+									tvTeamTwoPlayerTwo.setVisibility(View.GONE);
+									tvTeamTwoPlayerThree.setVisibility(View.GONE);
+									tvTeamTwoPlayerFour.setVisibility(View.GONE);
+									tvTeamTwoPlayerFive.setVisibility(View.GONE);
+									ivTeamTwoChampOne.setVisibility(View.GONE);
+									ivTeamTwoChampTwo.setVisibility(View.GONE);
+									ivTeamTwoChampThree.setVisibility(View.GONE);
+									ivTeamTwoChampFour.setVisibility(View.GONE);
+									ivTeamTwoChampFive.setVisibility(View.GONE);
+									
+								} else if (teamOneNames[1] == null) {
+									tvTeamOnePlayerTwo.setVisibility(View.GONE);
+									tvTeamOnePlayerThree.setVisibility(View.GONE);
+									tvTeamOnePlayerFour.setVisibility(View.GONE);
+									tvTeamOnePlayerFive.setVisibility(View.GONE);
+									ivTeamOneChampTwo.setVisibility(View.GONE);
+									ivTeamOneChampThree.setVisibility(View.GONE);
+									ivTeamOneChampFour.setVisibility(View.GONE);
+									ivTeamOneChampFive.setVisibility(View.GONE);
+									
+									tvTeamTwoPlayerTwo.setVisibility(View.GONE);
+									tvTeamTwoPlayerThree.setVisibility(View.GONE);
+									tvTeamTwoPlayerFour.setVisibility(View.GONE);
+									tvTeamTwoPlayerFive.setVisibility(View.GONE);
+									ivTeamTwoChampTwo.setVisibility(View.GONE);
+									ivTeamTwoChampThree.setVisibility(View.GONE);
+									ivTeamTwoChampFour.setVisibility(View.GONE);
+									ivTeamTwoChampFive.setVisibility(View.GONE);
+									
+								} else if (teamTwoNames[1] == null && teamOneNames[2] == null) {
+									tvTeamOnePlayerThree.setVisibility(View.GONE);
+									tvTeamOnePlayerFour.setVisibility(View.GONE);
+									tvTeamOnePlayerFive.setVisibility(View.GONE);
+									ivTeamOneChampThree.setVisibility(View.GONE);
+									ivTeamOneChampFour.setVisibility(View.GONE);
+									ivTeamOneChampFive.setVisibility(View.GONE);
+									
+
+									tvTeamTwoPlayerThree.setVisibility(View.GONE);
+									tvTeamTwoPlayerFour.setVisibility(View.GONE);
+									tvTeamTwoPlayerFive.setVisibility(View.GONE);
+									ivTeamTwoChampThree.setVisibility(View.GONE);
+									ivTeamTwoChampFour.setVisibility(View.GONE);
+									ivTeamTwoChampFive.setVisibility(View.GONE);
+									
+								} else if (teamTwoNames[2] == null && teamOneNames[3] == null) {
+									tvTeamOnePlayerFour.setVisibility(View.GONE);
+									tvTeamOnePlayerFive.setVisibility(View.GONE);;
+									ivTeamOneChampFour.setVisibility(View.GONE);
+									ivTeamOneChampFive.setVisibility(View.GONE);
+									
+									tvTeamTwoPlayerFour.setVisibility(View.GONE);
+									tvTeamTwoPlayerFive.setVisibility(View.GONE);
+									ivTeamTwoChampFour.setVisibility(View.GONE);
+									ivTeamTwoChampFive.setVisibility(View.GONE);
+								} else if (teamTwoNames[3] == null && teamOneNames[4] == null) {
+									tvTeamOnePlayerFive.setVisibility(View.GONE);
+									ivTeamOneChampFive.setVisibility(View.GONE);
+									
+									tvTeamTwoPlayerFive.setVisibility(View.GONE);
+									ivTeamTwoChampFive.setVisibility(View.GONE);
+								} 
+								
+								 
+								
+							}
+							
+						
+						
 						
 						
 						// Set Minions Killed
@@ -743,8 +1019,8 @@ public class AnotherAsyncTask {
 						}
 						
 						// Set Assists
-						if (assists != null) {
-							String number = assists.toString();
+						if (assistsValue != null) {
+							String number = assistsValue.toString();
 							double amount = Double.parseDouble(number);
 							DecimalFormat formatter = new DecimalFormat("#,###");
 							
@@ -860,6 +1136,12 @@ public class AnotherAsyncTask {
 							tvWardsKilled.setText(formatter.format(amount).toString());
 						}
 						
+						if (champKills != null && deaths != null && assistsValue != null) {
+							tvKDA.setText(champKills + " / " + deaths + " / " + assistsValue);
+						} else if (assistsValue == null) {
+							tvKDA.setText(champKills + " / " + deaths + " / 0");
+						}
+						
 						
 					}
 				}
@@ -867,12 +1149,359 @@ public class AnotherAsyncTask {
 				Crouton.showText(ownerActivity, "Error loading " + name + "'s match info." +
 						" Please try again in a few seconds.", 
 						de.keyboardsurfer.android.widget.crouton.Style.ALERT);
-				Log.w("onPostExecute", "" + e.getMessage() + e.getStackTrace()[2].getLineNumber());
+				Log.w("onPostExecute", "" + e.getMessage() + e.getStackTrace()[0].getLineNumber());
 				pWindow.dismiss();
 				
 				e.printStackTrace();
 			}
 		
+		}
+	}
+	
+	public void setTeamChamps(int champNumber, ImageView iv) {
+		switch (champNumber) {
+		case 1:
+			iv.setImageResource(R.drawable.anniesquare);
+			break;
+		case 2:
+			iv.setImageResource(R.drawable.olafsquare);
+			break;
+		case 3:
+			iv.setImageResource(R.drawable.galiosquare);
+			break;
+		case 4:
+			iv.setImageResource(R.drawable.twistedfatesquare);
+			break;
+		case 5:
+			iv.setImageResource(R.drawable.xinzhaosquare);
+			break;
+		case 6:
+			iv.setImageResource(R.drawable.urgotsquare);
+			break;
+		case 7:
+			iv.setImageResource(R.drawable.leblancsquare);
+			break;
+		case 8:
+			iv.setImageResource(R.drawable.vladimirsquare);
+			break;
+		case 9:
+			iv.setImageResource(R.drawable.fiddlestickssquare);
+			break;
+		case 10:
+			iv.setImageResource(R.drawable.kaylesquare);
+			break;
+		case 11:
+			iv.setImageResource(R.drawable.masteryisquare);
+			break;
+		case 12:
+			iv.setImageResource(R.drawable.alistarsquare);
+			break;
+		case 13:
+			iv.setImageResource(R.drawable.ryzesquare);
+			break;
+		case 14:
+			iv.setImageResource(R.drawable.sionsquare);
+			break;
+		case 15:
+			iv.setImageResource(R.drawable.sivirsquare);
+			break;
+		case 16:
+			iv.setImageResource(R.drawable.sorakasquare);
+			break;
+		case 17:
+			iv.setImageResource(R.drawable.teemosquare);
+			break;
+		case 18:
+			iv.setImageResource(R.drawable.tristanasquare);
+			break;
+		case 19:
+			iv.setImageResource(R.drawable.warwicksquare);
+			break;
+		case 20:
+			iv.setImageResource(R.drawable.nunusquare);
+			break;
+		case 21:
+			iv.setImageResource(R.drawable.missfortunesquare);
+			break;
+		case 22:
+			iv.setImageResource(R.drawable.ashesquare);
+			break;
+		case 23:
+			iv.setImageResource(R.drawable.tryndameresquare);
+			break;
+		case 24:
+			iv.setImageResource(R.drawable.jaxsquare);
+			break;
+		case 25:
+			iv.setImageResource(R.drawable.morganasquare);
+			break;
+		case 26:
+			iv.setImageResource(R.drawable.zileansquare);
+			break;
+		case 27:
+			iv.setImageResource(R.drawable.singedsquare);
+			break;
+		case 28:
+			iv.setImageResource(R.drawable.evelynnsquare);
+			break;
+		case 29:
+			iv.setImageResource(R.drawable.twitchsquare);
+			break;
+		case 30:
+			iv.setImageResource(R.drawable.karthussquare);
+			break;
+		case 31:
+			iv.setImageResource(R.drawable.chogathsquare);
+			break;
+		case 32:
+			iv.setImageResource(R.drawable.amumusquare);
+			break;
+		case 33:
+			iv.setImageResource(R.drawable.rammussquare);
+			break;
+		case 34:
+			iv.setImageResource(R.drawable.aniviasquare);
+			break;
+		case 35:
+			iv.setImageResource(R.drawable.shacosquare);
+			break;
+		case 36:
+			iv.setImageResource(R.drawable.drmundosquare);
+			break;
+		case 37:
+			iv.setImageResource(R.drawable.sonasquare);
+			break;
+		case 38:
+			iv.setImageResource(R.drawable.kassadinsquare);
+			break;
+		case 39:
+			iv.setImageResource(R.drawable.ireliasquare);
+			break;
+		case 40:
+			iv.setImageResource(R.drawable.jannasquare);
+			break;
+		case 41:
+			iv.setImageResource(R.drawable.gangplanksquare);
+			break;
+		case 42:
+			iv.setImageResource(R.drawable.corkisquare);
+			break;
+		case 43:
+			iv.setImageResource(R.drawable.karmasquare);
+			break;
+		case 44:
+			iv.setImageResource(R.drawable.taricsquare);
+			break;
+		case 45:
+			iv.setImageResource(R.drawable.veigarsquare);
+			break;
+		case 48:
+			iv.setImageResource(R.drawable.trundlesquare);
+			break;
+		case 50:
+			iv.setImageResource(R.drawable.swainsquare);
+			break;
+		case 51:
+			iv.setImageResource(R.drawable.caitlynsquare);
+			break;
+		case 53:
+			iv.setImageResource(R.drawable.blitzcranksquare);
+			break;
+		case 54:
+			iv.setImageResource(R.drawable.malphitesquare);
+			break;
+		case 55:
+			iv.setImageResource(R.drawable.katarinasquare);
+			break;
+		case 56:
+			iv.setImageResource(R.drawable.nocturnesquare);
+			break;
+		case 57:
+			iv.setImageResource(R.drawable.maokaisquare);
+			break;
+		case 58:
+			iv.setImageResource(R.drawable.renektonsquare);
+			break;
+		case 59:
+			iv.setImageResource(R.drawable.jarvanivsquare);
+			break;
+		case 60:
+			iv.setImageResource(R.drawable.elisesquare);
+			break;
+		case 61:
+			iv.setImageResource(R.drawable.oriannasquare);
+			break;
+		case 62:
+			iv.setImageResource(R.drawable.wukongsquare);
+			break;
+		case 63:
+			iv.setImageResource(R.drawable.brandsquare);
+			break;
+		case 64:
+			iv.setImageResource(R.drawable.leesinsquare);
+			break;
+		case 67:
+			iv.setImageResource(R.drawable.vaynesquare);
+			break;
+		case 68:
+			iv.setImageResource(R.drawable.rumblesquare);
+			break;
+		case 69:
+			iv.setImageResource(R.drawable.cassiopeiasquare);
+			break;
+		case 72:
+			iv.setImageResource(R.drawable.skarnersquare);
+			break;
+		case 74:
+			iv.setImageResource(R.drawable.heimerdingersquare);
+			break;
+		case 75:
+			iv.setImageResource(R.drawable.nasussquare);
+			break;
+		case 76:
+			iv.setImageResource(R.drawable.nidaleesquare);
+			break;
+		case 77:
+			iv.setImageResource(R.drawable.udyrsquare);
+			break;
+		case 78:
+			iv.setImageResource(R.drawable.poppysquare);
+			break;
+		case 79:
+			iv.setImageResource(R.drawable.gragassquare);
+			break;
+		case 80:
+			iv.setImageResource(R.drawable.pantheonsquare);
+			break;
+		case 81:
+			iv.setImageResource(R.drawable.ezrealsquare);
+			break;
+		case 82:
+			iv.setImageResource(R.drawable.mordekaisersquare);
+			break;
+		case 83:
+			iv.setImageResource(R.drawable.yoricksquare);
+			break;
+		case 84:
+			iv.setImageResource(R.drawable.akalisquare);
+			break;
+		case 85:
+			iv.setImageResource(R.drawable.kennensquare);
+			break;
+		case 86:
+			iv.setImageResource(R.drawable.garensquare);
+			break;
+		case 89:
+			iv.setImageResource(R.drawable.leonasquare);
+			break;
+		case 90:
+			iv.setImageResource(R.drawable.malzaharsquare);
+			break;
+		case 91:
+			iv.setImageResource(R.drawable.talonsquare);
+			break;
+		case 92:
+			iv.setImageResource(R.drawable.rivensquare);
+			break;
+		case 96:
+			iv.setImageResource(R.drawable.kogmawsquare);
+			break;
+		case 98:
+			iv.setImageResource(R.drawable.shensquare);
+			break;
+		case 99:
+			iv.setImageResource(R.drawable.luxsquare);
+			break;
+		case 101:
+			iv.setImageResource(R.drawable.xerathsquare);
+			break;
+		case 102:
+			iv.setImageResource(R.drawable.shyvanasquare);
+			break;
+		case 103:
+			iv.setImageResource(R.drawable.ahrisquare);
+			break;
+		case 104:
+			iv.setImageResource(R.drawable.gravessquare);
+			break;
+		case 105:
+			iv.setImageResource(R.drawable.fizzsquare);
+			break;
+		case 106:
+			iv.setImageResource(R.drawable.volibearsquare);
+			break;
+		case 107:
+			iv.setImageResource(R.drawable.rengarsquare);
+			break;
+		case 110:
+			iv.setImageResource(R.drawable.varussquare);
+			break;
+		case 111:
+			iv.setImageResource(R.drawable.nautilussquare);
+			break;
+		case 112:
+			iv.setImageResource(R.drawable.viktorsquare);
+			break;
+		case 113:
+			iv.setImageResource(R.drawable.sejuanisquare);
+			break;
+		case 114:
+			iv.setImageResource(R.drawable.fiorasquare);
+			break;
+		case 115:
+			iv.setImageResource(R.drawable.ziggssquare);
+			break;
+		case 117:
+			iv.setImageResource(R.drawable.lulusquare);
+			break;
+		case 119:
+			iv.setImageResource(R.drawable.dravensquare);
+			break;
+		case 120:
+			iv.setImageResource(R.drawable.hecarimsquare);
+			break;
+		case 121:
+			iv.setImageResource(R.drawable.khazixsquare);
+			break;
+		case 122:
+			iv.setImageResource(R.drawable.dariussquare);
+			break;
+		case 126:
+			iv.setImageResource(R.drawable.jaycesquare);
+			break;
+		case 127:
+			iv.setImageResource(R.drawable.lissandrasquare);
+			break;
+		case 131:
+			iv.setImageResource(R.drawable.dianasquare);
+			break;
+		case 133:
+			iv.setImageResource(R.drawable.quinnsquare);
+			break;
+		case 134:
+			iv.setImageResource(R.drawable.syndrasquare2);
+			break;
+		case 143:
+			iv.setImageResource(R.drawable.zyrasquare);
+			break;
+		case 154:
+			iv.setImageResource(R.drawable.zacsquare);
+			break;
+		case 238:
+			iv.setImageResource(R.drawable.zedsquare);
+			break;
+		case 254:
+			iv.setImageResource(R.drawable.visquare);
+			break;
+		case 266:
+			iv.setImageResource(R.drawable.aatroxsquare);
+			break;
+		case 267:
+			iv.setImageResource(R.drawable.namisquare);
+			break;
+		case 412:
+			iv.setImageResource(R.drawable.threshsquare);
+			break;
 		}
 	}
 }

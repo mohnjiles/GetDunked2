@@ -2,6 +2,7 @@ package com.jt.getdunked2;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.jsoup.nodes.Document;
@@ -9,9 +10,11 @@ import org.jsoup.select.Elements;
 
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.support.v4.view.MenuItemCompat;
 import android.util.Log;
@@ -26,7 +29,7 @@ import android.widget.TextView;
 public class AsyncTasks {
 
 	EditText searchView = ProfileMainActivity.editTxt;
-	LazyAdapter lazyAdapter;
+	public static LazyAdapter lazyAdapter;
 	ArrayList<GameStatistics> someArrayList;
 	//TextView tvOne = MatchHistoryFragment.tvOne;
 	TextView tvDebugOne = ProfileFragment.tvDebugOne;
@@ -98,6 +101,8 @@ public class AsyncTasks {
 	String teamThreeLP;
 	Document doc;
 	Elements images;
+	
+	public static String summonerName;
 	
 	
 	private static class PostFetchResult {
@@ -179,7 +184,7 @@ public class AsyncTasks {
 			int gamesLost = 0;
 			
 			try {
-				
+				summonerName = result.summoner.getData().getName();
 				if (result.stats != null) {
 					for (LifetimeStatistics stats : result.stats) {
 						if (stats.getChampionId().toString().equals("0")) {
@@ -382,7 +387,6 @@ public class AsyncTasks {
 					{
 						someArrayList.add(stats);
 					}					
-					
 				}
 				
 				if (result.sLeagues != null)
@@ -785,6 +789,7 @@ public class AsyncTasks {
 						if (lv != null) {
 							lv.setAdapter(lazyAdapter);
 							//tvOne.setText("Summoner Name:");
+							lv.setBackgroundColor(Color.BLACK);
 							lazyAdapter.notifyDataSetChanged();
 						} else {
 							Log.w("ListView", "STUPID LISTVIEW WAS NULL AGAIN WTF");

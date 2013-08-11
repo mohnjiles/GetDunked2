@@ -43,8 +43,15 @@
     <breakpoint_rules />
     <ui_properties />
   </component>
-  <component name="EntryPointsManager">
-    <entry_points version="2.0" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="android" url="file://$PROJECT_DIR$/../../Crouton-master/sample" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../../Crouton-master/pom.xml" />
+      </list>
+    </option>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />

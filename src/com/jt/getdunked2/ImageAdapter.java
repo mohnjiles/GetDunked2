@@ -54,6 +54,7 @@ public class ImageAdapter extends BaseAdapter {
 
     // references to our images
     public static Integer[] mThumbIds = {
+    		R.drawable.aatroxsquare,
             R.drawable.ahrisquare, R.drawable.akalisquare, 
             R.drawable.alistarsquare, R.drawable.amumusquare,
             R.drawable.aniviasquare, R.drawable.anniesquare,

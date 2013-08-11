@@ -2,6 +2,9 @@ package com.jt.getdunked2;
 
 import java.util.Vector;
 
+import com.jfeinstein.jazzyviewpager.JazzyViewPager;
+import com.jfeinstein.jazzyviewpager.JazzyViewPager.TransitionEffect;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +26,7 @@ public class ChampionPage extends ActionBarActivity {
 
 	int position = ChampsActivity.myInt;
 	Integer[] mThumbIds = ImageAdapter.mThumbIds;
+	JazzyViewPager myPager;
 	
 	@Override
 	 protected void onCreate(Bundle arg0) {
@@ -62,11 +66,12 @@ public class ChampionPage extends ActionBarActivity {
 	  fragmenthree.setArguments(bundle);
 	  fragments.add(fragmenthree);
 
-	  ViewPager myPager = (ViewPager) findViewById(R.id.pager);
+	  myPager = (JazzyViewPager) findViewById(R.id.pager);
 	  FragmentAdapter adapter = new FragmentAdapter(
 	    getSupportFragmentManager(), fragments);
 	  myPager.setAdapter(adapter);
 	  myPager.setCurrentItem(0);
+	  myPager.setTransitionEffect(TransitionEffect.CubeOut);
 	 
 
 	  myPager.setOnPageChangeListener(new OnPageChangeListener() {
@@ -148,7 +153,9 @@ public class ChampionPage extends ActionBarActivity {
 
 		 @Override
 		 public Object instantiateItem(ViewGroup container, int position) {
-		  return super.instantiateItem(container, position);
+			 Object obj = super.instantiateItem(container, position);
+			    myPager.setObjectForPosition(obj, position);
+			    return obj;
 		 }
 
 		 @Override

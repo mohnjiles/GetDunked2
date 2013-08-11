@@ -17,5 +17,8 @@
     <dimen name="popup_champ_icon">48dip</dimen>
     <dimen name="close_button_size">18sp</dimen>
     <dimen name="close_button_height">48dip</dimen>
+    <dimen name="item_image_padding">2dp</dimen>
+    <dimen name="teams_text">11sp</dimen>
+    <dimen name="team_champs">24dip</dimen>
 
 </resources>

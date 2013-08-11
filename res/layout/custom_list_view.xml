@@ -62,7 +62,7 @@
         android:layout_height="@dimen/summoner_image"
         android:layout_alignBottom="@+id/thumbnail"
         android:layout_alignLeft="@+id/tvResult"
-        android:layout_marginRight="2dp"
+        android:layout_marginRight="@dimen/item_image_padding"
         android:src="@drawable/ability" />
 
     <ImageView
@@ -79,7 +79,7 @@
         android:layout_height="@dimen/item_image"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="@dimen/item_image_padding"
         android:src="@drawable/ability" />
 
     <ImageView
@@ -87,7 +87,7 @@
         android:layout_width="@dimen/item_image"
         android:layout_height="@dimen/item_image"
         android:layout_alignTop="@+id/ivItemThree"
-        android:layout_marginRight="2dp"
+        android:layout_marginRight="@dimen/item_image_padding"
         android:layout_toLeftOf="@+id/ivItemThree"
         android:src="@drawable/ability" />
 
@@ -96,7 +96,7 @@
         android:layout_width="@dimen/item_image"
         android:layout_height="@dimen/item_image"
         android:layout_alignTop="@+id/ivItemTwo"
-        android:layout_marginRight="2dp"
+        android:layout_marginRight="@dimen/item_image_padding"
         android:layout_toLeftOf="@+id/ivItemTwo"
         android:src="@drawable/ability" />
 
@@ -105,8 +105,8 @@
         android:layout_width="@dimen/item_image"
         android:layout_height="@dimen/item_image"
         android:layout_below="@+id/ivItemThree"
-        android:layout_marginRight="2dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginRight="@dimen/item_image_padding"
+        android:layout_marginTop="@dimen/item_image_padding"
         android:layout_toLeftOf="@+id/ivItemSix"
         android:src="@drawable/ability" />
 
@@ -116,7 +116,7 @@
         android:layout_height="@dimen/item_image"
         android:layout_alignLeft="@+id/ivItemThree"
         android:layout_below="@+id/ivItemThree"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="@dimen/item_image_padding"
         android:src="@drawable/ability" />
 
     <ImageView
@@ -124,8 +124,8 @@
         android:layout_width="@dimen/item_image"
         android:layout_height="@dimen/item_image"
         android:layout_below="@+id/ivItemTwo"
-        android:layout_marginRight="2dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginRight="@dimen/item_image_padding"
+        android:layout_marginTop="@dimen/item_image_padding"
         android:layout_toLeftOf="@+id/ivItemFive"
         android:src="@drawable/ability" />
 

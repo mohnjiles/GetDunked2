@@ -4096,7 +4096,6 @@ public class LazyAdapter extends ArrayAdapter {
 		// Set KDA
 		if (killsValue != null && deathsValue != null && assistsValue != null) {
 			holder.winOrLose.setText(getKda());
-			holder.winOrLose.setTypeface(MatchHistoryFragment.tf);
 		}
 
 		// Set Victory/Defeat

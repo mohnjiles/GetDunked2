@@ -4,6 +4,28 @@
     <string name="app_name">Get Dunked</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="BloodWell" formatted="false">Whenever Aatrox uses an ability that costs health, he stores 100% of the health 
+        cost into his Blood Well. The maximum amount of health the Blood Well can store is 30 + (45 × level). 
+        If Aatrox has not dealt or received damage in the last 5 seconds, his Blood Well will deplete at a rate of 2% per second.
+        \n\nUpon taking fatal damage, Blood Well activates and places Aatrox in stasis for 3 seconds.
+         Over the stasis duration the Blood Well is emptied and Aatrox restores health equal to its contents plus 10.5 + (15.75 × level). 
+         Blood Well\'s activation has a static cooldown and is unaffected by cooldown reduction.\n\nAlso, 
+         Aatrox passively increases his attack speed by 1% for every 2% in the Blood Well.</string>	
+    <string name="DarkFlight" formatted="false">ACTIVE: Aatrox takes flight and slams down at a targeted area, 
+        dealing physical damage to nearby enemies upon landing. Enemies in the center of the area are also knocked up for 1 second.
+    </string>
+    <string name="BloodThirst" formatted="false">Blood Thirst:\nTOGGLE OFF: Aatrox heals himself on every third attack. 
+        If Aatrox is below 50% health he will heal for three times as much.\n\nBlood Price:\nTOGGLE ON: Aatrox deals bonus physical 
+        damage on every third attack at the cost of health.
+        </string>
+    <string name="BladesofTorment" formatted="false">ACTIVE: Aatrox unleashes and sends forward the power of his blade, 
+        dealing magic damage to enemies in a line and slowing them by 40% for a few seconds.
+    </string>
+    <string name="Massacre" formatted="false">ACTIVE: Aatrox draws in the blood of his foes, dealing magic damage to nearby enemy champions.\n\n
+        For the next 12 seconds, Aatrox gains bonus attack speed and 175 bonus attack range (325 total range). 
+        His attacks are still considered melee.
+    </string>
+         
     <string name="AhriLore" formatted="false">Unlike other foxes that roamed the woods of southern Ionia, Ahri had always felt a strange connection to the magical
     world around her; a connection that was somehow incomplete. Deep inside, she felt the skin she had been born into was
     an ill fit for her and dreamt of one day becoming human. Her goal seemed forever out of reach, until she happened upon
@@ -365,6 +387,7 @@
     <string name="title_activity_ability_details">AbilityDetails</string>
 
     <string-array name="ChampNames">
+        <item>Aatrox</item>
         <item>Ahri</item>
         <item>Akali</item>
         <item>Alistar</item>

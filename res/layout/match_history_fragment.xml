@@ -2,7 +2,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:alpha="75"
-    android:background="#222222"
+    android:background="#230672"
     android:orientation="vertical" >
 
     <ListView
@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:background="@drawable/gradient"
         android:descendantFocusability="beforeDescendants" >
 
     </ListView>
