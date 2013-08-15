@@ -107,6 +107,15 @@
             android:name="com.jt.getdunked2.LifetimeStatsFragment"
             android:label="@string/title_activity_lifetime_stats_fragment" >
         </activity>
+        <activity
+            android:name="com.jt.getdunked2.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/PreferencesTheme" >
+        </activity>
+        <activity
+            android:name="com.jt.getdunked2.DrawerActivity"
+            android:label="@string/title_activity_drawer" >
+        </activity>
     </application>
 
 </manifest>

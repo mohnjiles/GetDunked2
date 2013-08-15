@@ -4,36 +4,55 @@ package com.jt.getdunked2;
 import java.util.List;
 
 public class GameStatistics{
+	private Number adjustedRating;
    	private boolean afk;
    	private Number boostIpEarned;
    	private Number boostXpEarned;
    	private Number championId;
    	private String createDate;
+   	private Number dataVersion;
+   	private String difficultyString;
    	private boolean eligibleFirstWinOfDay;
+   	private Number eloChange;
    	private Number experienceEarned;
    	private List<FellowPlayers> fellowPlayers;
+   	private String futureData;
    	private Number gameId;
    	private Number gameMapId;
    	private String gameMode;
    	private String gameType;
+	private String gameTypeEnum;
    	private boolean invalid;
+   	private String id;
    	private Number ipEarned;
+   	private Number KCoefficient;
    	private boolean leaver;
    	private Number level;
    	private Number premadeSize;
    	private boolean premadeTeam;
+   	private Number predictedWinPct;
    	private String queueType;
    	private boolean ranked;
+   	private Number rating;
+   	private String rawStatsJson;
    	private Number skinIndex;
+   	private String skinName;
    	private Number spell1;
    	private Number spell2;
    	private List<Statistics> statistics;
    	private String subType;
    	private Number summonerId;
    	private Number teamId;
+   	private Number teamRating;
    	private Number timeInQueue;
    	private Number userId;
    	private Number userServerPing;
+   	
+   	
+   
+   	
+   	
+   	
 
  	public boolean getAfk(){
 		return this.afk;
@@ -215,4 +234,84 @@ public class GameStatistics{
 	public void setUserServerPing(Number userServerPing){
 		this.userServerPing = userServerPing;
 	}
+	public Number getAdjustedRating() {
+		return adjustedRating;
+	}
+	public void setAdjustedRating(Number adjustedRating) {
+		this.adjustedRating = adjustedRating;
+	}
+	public Number getDataVersion() {
+		return dataVersion;
+	}
+	public void setDataVersion(Number dataVersion) {
+		this.dataVersion = dataVersion;
+	}
+	public String getDifficultyString() {
+		return difficultyString;
+	}
+	public void setDifficultyString(String difficultyString) {
+		this.difficultyString = difficultyString;
+	}
+	public Number getEloChange() {
+		return eloChange;
+	}
+	public void setEloChange(Number eloChange) {
+		this.eloChange = eloChange;
+	}
+	public String getFutureData() {
+		return futureData;
+	}
+	public void setFutureData(String futureData) {
+		this.futureData = futureData;
+	}
+	public String getGameTypeEnum() {
+		return gameTypeEnum;
+	}
+	public void setGameTypeEnum(String gameTypeEnum) {
+		this.gameTypeEnum = gameTypeEnum;
+	}
+	public Number getKCoefficient() {
+		return KCoefficient;
+	}
+	public void setKCoefficient(Number kCoefficient) {
+		KCoefficient = kCoefficient;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public Number getPredictedWinPct() {
+		return predictedWinPct;
+	}
+	public void setPredictedWinPct(Number predictedWinPct) {
+		this.predictedWinPct = predictedWinPct;
+	}
+	public Number getRating() {
+		return rating;
+	}
+	public void setRating(Number rating) {
+		this.rating = rating;
+	}
+	public String getRawStatsJson() {
+		return rawStatsJson;
+	}
+	public void setRawStatsJson(String rawStatsJson) {
+		this.rawStatsJson = rawStatsJson;
+	}
+	public String getSkinName() {
+		return skinName;
+	}
+	public void setSkinName(String skinName) {
+		this.skinName = skinName;
+	}
+	public Number getTeamRating() {
+		return teamRating;
+	}
+	public void setTeamRating(Number teamRating) {
+		this.teamRating = teamRating;
+	}
+
+
 }

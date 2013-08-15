@@ -66,12 +66,6 @@ public class Data{
 	public void setPlayerCredentials(PlayerCredentials playerCredentials){
 		this.playerCredentials = playerCredentials;
 	}
-	public Number getAcctId(){
-		return this.acctId;
-	}
-	public void setAcctId(Number acctId){
-		this.acctId = acctId;
-	}
  	public String getInternalName(){
 		return this.internalName;
 	}
@@ -126,6 +120,12 @@ public class Data{
 	}
 	public void setId(Number id) {
 		this.id = id;
+	}
+	public Number getAcctId() {
+		return acctId;
+	}
+	public void setAcctId(Number acctId) {
+		this.acctId = acctId;
 	}
 
 }

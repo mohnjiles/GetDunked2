@@ -3,18 +3,19 @@ package com.jt.getdunked2;
 
 import com.jt.getdunked2.FreeWeekAsync.PostFetcher;
 
-import android.R.anim;
-import android.R.integer;
-import android.annotation.TargetApi;
 import android.content.Intent;
-import android.os.Build;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.StrictMode;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
@@ -40,8 +41,10 @@ public class MainActivity extends ActionBarActivity {
 	public static TextView tvFreeEight;
 	public static TextView tvFreeNine;
 	public static TextView tvFreeTen;
+	
+	private String[] mChampNames;
+	private ListView mDrawerList;
 
-	@TargetApi(Build.VERSION_CODES.GINGERBREAD)
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -78,15 +81,34 @@ public class MainActivity extends ActionBarActivity {
 		PostFetcher pFetcher = fwa.new PostFetcher();
 		pFetcher.execute(url);
 		
+		mDrawerList = (ListView) findViewById(R.id.left_drawer);
+		mChampNames = getResources().getStringArray(R.array.drawerStuff);
+		mDrawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.sliding_list, mChampNames));
+		mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
+					long arg3) {
+				switch (arg2) {
+				case 0:
+					startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+					break;
+				}
+				
+			}
+		});	
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.activity_main, menu);
+		MenuInflater menuInflater = getMenuInflater();
+		menuInflater.inflate(R.menu.activity_main, menu);
+		
 		return true;
 		
 	}
+	
 	
 	public void champButtonPressed(View view) {
 		startActivity(new Intent(MainActivity.this, ChampsActivity.class));
@@ -94,6 +116,10 @@ public class MainActivity extends ActionBarActivity {
 	
 	public void profileButtonPressed(View view) {
 		startActivity(new Intent(MainActivity.this, ProfileMainActivity.class));  
+	}
+	
+	public void drawerButtonPressed(View view) {
+		startActivity(new Intent(MainActivity.this, DrawerActivity.class));  
 	}
 	
 

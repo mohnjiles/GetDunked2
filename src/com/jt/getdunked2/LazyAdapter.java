@@ -599,7 +599,7 @@ public class LazyAdapter extends ArrayAdapter {
 				holder.itemOne.setImageResource(R.drawable.nashors_tooth_item);
 				break;
 			case 3116:
-				holder.itemOne.setImageResource(R.drawable.nashors_tooth_item);
+				holder.itemOne.setImageResource(R.drawable.rylais_crystal_scepter_item);
 				break;
 			case 3117:
 				holder.itemOne.setImageResource(R.drawable.boots_of_mobility_item);
@@ -1176,7 +1176,7 @@ public class LazyAdapter extends ArrayAdapter {
 				holder.itemTwo.setImageResource(R.drawable.nashors_tooth_item);
 				break;
 			case 3116:
-				holder.itemTwo.setImageResource(R.drawable.nashors_tooth_item);
+				holder.itemTwo.setImageResource(R.drawable.rylais_crystal_scepter_item);
 				break;
 			case 3117:
 				holder.itemTwo.setImageResource(R.drawable.boots_of_mobility_item);
@@ -1751,7 +1751,7 @@ public class LazyAdapter extends ArrayAdapter {
 				holder.itemThree.setImageResource(R.drawable.nashors_tooth_item);
 				break;
 			case 3116:
-				holder.itemThree.setImageResource(R.drawable.nashors_tooth_item);
+				holder.itemThree.setImageResource(R.drawable.rylais_crystal_scepter_item);
 				break;
 			case 3117:
 				holder.itemThree.setImageResource(R.drawable.boots_of_mobility_item);
@@ -2327,7 +2327,7 @@ public class LazyAdapter extends ArrayAdapter {
 				holder.itemFour.setImageResource(R.drawable.nashors_tooth_item);
 				break;
 			case 3116:
-				holder.itemFour.setImageResource(R.drawable.nashors_tooth_item);
+				holder.itemFour.setImageResource(R.drawable.rylais_crystal_scepter_item);
 				break;
 			case 3117:
 				holder.itemFour.setImageResource(R.drawable.boots_of_mobility_item);
@@ -2904,7 +2904,7 @@ public class LazyAdapter extends ArrayAdapter {
 				holder.itemFive.setImageResource(R.drawable.nashors_tooth_item);
 				break;
 			case 3116:
-				holder.itemFive.setImageResource(R.drawable.nashors_tooth_item);
+				holder.itemFive.setImageResource(R.drawable.rylais_crystal_scepter_item);
 				break;
 			case 3117:
 				holder.itemFive.setImageResource(R.drawable.boots_of_mobility_item);
@@ -3481,7 +3481,7 @@ public class LazyAdapter extends ArrayAdapter {
 				holder.itemSix.setImageResource(R.drawable.nashors_tooth_item);
 				break;
 			case 3116:
-				holder.itemSix.setImageResource(R.drawable.nashors_tooth_item);
+				holder.itemSix.setImageResource(R.drawable.rylais_crystal_scepter_item);
 				break;
 			case 3117:
 				holder.itemSix.setImageResource(R.drawable.boots_of_mobility_item);
@@ -4103,13 +4103,12 @@ public class LazyAdapter extends ArrayAdapter {
 			StateListDrawable states = new StateListDrawable();
 			states.addState(
 					new int[] { android.R.attr.state_pressed },
-					convertView.getResources().getDrawable(
-							R.drawable.gradient_bg_hover));
+					convertView.getResources().getDrawable(R.color.Cyan));
 			
 			states.addState(
 					new int[] { android.R.attr.state_focused },
 					convertView.getResources().getDrawable(
-							R.drawable.gradient_bg_hover));
+							R.color.Cyan));
 			
 			states.addState(new int[] {}, convertView.getResources()
 					.getDrawable(R.drawable.gradient_bg));
@@ -4121,12 +4120,12 @@ public class LazyAdapter extends ArrayAdapter {
 			states.addState(
 					new int[] { android.R.attr.state_pressed },
 					convertView.getResources().getDrawable(
-							R.drawable.gradient_bg_hover));
+							R.color.Cyan));
 			
 			states.addState(
 					new int[] { android.R.attr.state_focused },
 					convertView.getResources().getDrawable(
-							R.drawable.gradient_bg_hover));
+							R.color.Cyan));
 			
 			states.addState(new int[] {}, convertView.getResources()
 					.getDrawable(R.drawable.image_bg_defeat));

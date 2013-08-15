@@ -2,20 +2,19 @@ package com.jt.getdunked2;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-
 import de.keyboardsurfer.android.widget.crouton.Crouton;
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.support.v4.view.MenuItemCompat;
 import android.util.Log;
 import android.view.MenuItem;
@@ -122,35 +121,40 @@ public class AsyncTasks {
 		private Activity ownerActivity;
 		private Context context;
 		private ProgressDialog dialog;
-		public PostFetcher(Context cxt, Activity activity) {
+		private Context cxtTwo;
+		SharedPreferences sharedPrefs;
+		public PostFetcher(Context cxt, Activity activity, Context contextTwo) {
 			context = cxt;
 			dialog = new ProgressDialog(context);
 			this.ownerActivity = activity;
-		}
+			cxtTwo = contextTwo;
+		};
 		
 		
-		
-		public final String SERVER_URL_IN_GAME_STATS = "http://api.elophant.com/v2/NA/in_progress_game_info/"
-				+ name + "?key=eS4XmrLVhc7EhPson8dV";
-		public final String SERVER_URL_SUMMONER = "http://api.elophant.com/v2/NA/summoner/"
-				+ name.replace(" ", "") + "?key=eS4XmrLVhc7EhPson8dV";
 		
 
 		@Override
 		protected PostFetchResult doInBackground(String... urls) {
 			PostFetchResult result = new PostFetchResult();
+			sharedPrefs = PreferenceManager.getDefaultSharedPreferences(cxtTwo);
+			
+			final String SERVER_URL_SUMMONER = "http://api.elophant.com/v2/" + sharedPrefs.getString("user_region", "NA") 
+					+ "/summoner/" + name.replace(" ", "") + "?key=eS4XmrLVhc7EhPson8dV";
 
-			//result.igs = JsonUtil.fromJsonUrl(SERVER_URL_IN_GAME_STATS, InGameStats.class);
 			result.summoner = JsonUtil.fromJsonUrl(SERVER_URL_SUMMONER, Summoner.class);
+			
 			
 			try {
 				if (result.summoner.getSuccess() == true) {
 					String acctId = result.summoner.getData().getAcctId().toString();
 					String summonerId = result.summoner.getData().getSummonerId().toString();
 					
-					result.recentGames = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + acctId.toString() + "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getGameStatistics();
-					result.sLeagues = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/leagues/" + summonerId.toString() + "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getSummonerLeagues();
-					result.stats = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/ranked_stats/" + acctId.toString() + "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getLifetimeStatistics();
+					result.recentGames = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/" + sharedPrefs.getString("user_region", "NA") 
+							+ "/recent_games/" + acctId.toString() + "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getGameStatistics();
+					result.sLeagues = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/" + sharedPrefs.getString("user_region", "NA") 
+							+ "/leagues/" + summonerId.toString() + "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getSummonerLeagues();
+					result.stats = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/" + sharedPrefs.getString("user_region", "NA") 
+							+ "/ranked_stats/" + acctId.toString() + "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getLifetimeStatistics();
 				
 				}
 				
@@ -170,6 +174,7 @@ public class AsyncTasks {
 			super.onPreExecute();
 			dialog = ProgressDialog.show(context, "", "Loading " + name + "'s match history...", true);
 			dialog.show();
+			
 		}
 
 		@Override

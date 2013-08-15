@@ -78,6 +78,7 @@ public class ImageAdapter extends BaseAdapter {
             R.drawable.kennensquare, R.drawable.khazixsquare, 
             R.drawable.kogmawsquare, R.drawable.leblancsquare, 
             R.drawable.leesinsquare, R.drawable.leonasquare, 
+            R.drawable.lissandrasquare, R.drawable.luciansquare,
             R.drawable.lulusquare, R.drawable.luxsquare, 
             R.drawable.malphitesquare, R.drawable.malzaharsquare, 
             R.drawable.maokaisquare, R.drawable.masteryisquare, 

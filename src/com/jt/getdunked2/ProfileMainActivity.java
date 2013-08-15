@@ -9,7 +9,6 @@ import com.jt.getdunked2.AsyncTasks.PostFetcher;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Parcelable;
-import android.provider.UserDictionary.Words;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -18,7 +17,6 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.SearchView.OnQueryTextListener;
-import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -63,6 +61,7 @@ public class ProfileMainActivity extends ActionBarActivity{
 		ActionBar actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.show();
+		setTitle("Summoner Search");
 		
 
 		
@@ -116,7 +115,7 @@ public class ProfileMainActivity extends ActionBarActivity{
 				url = "http://api.elophant.com/v2/NA/in_progress_game_info/"
 						+ name + "?key=eS4XmrLVhc7EhPson8dV";
 				AsyncTasks tasks = new AsyncTasks();
-				PostFetcher pf = tasks.new PostFetcher(ProfileMainActivity.this, ProfileMainActivity.this);
+				PostFetcher pf = tasks.new PostFetcher(ProfileMainActivity.this, ProfileMainActivity.this, getApplicationContext());
 				pf.execute(url);
 				setTitle(name);
 				return false;

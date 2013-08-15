@@ -789,7 +789,7 @@
 	        android:textSize="@dimen/teams_text" />
 
 	    <TextView
-	        android:id="@+id/tvVs"
+	        android:id="@+id/tvVsText"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignBaseline="@+id/tvTeamOnePlayerThree"
@@ -803,7 +803,7 @@
 	        android:id="@+id/tvTeamTwoPlayerThree"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_above="@+id/ivTeamTwoChampFour"
+	        android:layout_alignBottom="@+id/ivTeamTwoChampThree"
 	        android:layout_alignTop="@+id/ivTeamTwoChampThree"
 	        android:layout_marginRight="4dp"
 	        android:layout_toLeftOf="@+id/ivTeamTwoChampThree"

@@ -1,9 +1,17 @@
 package com.jt.getdunked2;
 
+import java.io.BufferedInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+
+import org.apache.http.HttpResponse;
 
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 
@@ -16,6 +24,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
@@ -64,6 +73,34 @@ public class AnotherAsyncTask {
 	TextView tvTeamTwoPlayerThree = MatchHistoryFragment.tvTeamTwoPlayerThree;
 	TextView tvTeamTwoPlayerFour = MatchHistoryFragment.tvTeamTwoPlayerFour;
 	TextView tvTeamTwoPlayerFive = MatchHistoryFragment.tvTeamTwoPlayerFive;
+	
+	TextView tvKillsTitle = MatchHistoryFragment.tvKillsTitle;
+	TextView tvDeathsTitle = MatchHistoryFragment.tvDeathsTitle;
+	TextView tvAssistTitle = MatchHistoryFragment.tvAssistTitle;
+	TextView tvKSTitle = MatchHistoryFragment.tvKSTitle;
+	TextView tvMultiTitle = MatchHistoryFragment.tvMultiTitle;
+	TextView tvDamageChampTitle = MatchHistoryFragment.tvDamageChampTitle;
+	TextView tvPhysChampTitle = MatchHistoryFragment.tvPhysChampTitle;
+	TextView tvMagicChampTitle = MatchHistoryFragment.tvMagicChampTitle;
+	TextView tvDmgDealtTitle = MatchHistoryFragment.tvDmgDealtTitle;
+	TextView tvPhysDealtTitle = MatchHistoryFragment.tvPhysDealtTitle;
+	TextView tvMagicDealtTitle = MatchHistoryFragment.tvMagicDealtTitle;
+	TextView tvCritTitle = MatchHistoryFragment.tvCritTitle;
+	TextView tvHealTitle = MatchHistoryFragment.tvHealTitle;
+	TextView tvDmgTakenTitle = MatchHistoryFragment.tvDmgTakenTitle;
+	TextView tvPhysTakenTitle = MatchHistoryFragment.tvPhysTakenTitle;
+	TextView tvMagicTakenTitle = MatchHistoryFragment.tvMagicTakenTitle;
+	TextView tvGoldTitle = MatchHistoryFragment.tvGoldTitle;
+	TextView tvTurretsTitle = MatchHistoryFragment.tvTurretsTitle;
+	TextView tvInhibsTitle = MatchHistoryFragment.tvInhibitors;
+	TextView tvMinionsTitle = MatchHistoryFragment.tvMinionsTitle;
+	TextView tvNeutralTitle = MatchHistoryFragment.tvNeutralTitle;
+	TextView tvTimeDeadTitle = MatchHistoryFragment.tvTimeDeadTitle;
+	TextView tvWardPlacedTitle = MatchHistoryFragment.tvWardPlacedTitle;
+	TextView tvWardKilledTitle = MatchHistoryFragment.tvWardKilledTitle;
+	
+	TextView tvVsTextMiddleThing = MatchHistoryFragment.tvVsTextMiddleThing;
+	Button btnClose = MatchHistoryFragment.btnClose;
 	
 	ImageView ivTeamOneChampOne = MatchHistoryFragment.ivTeamOneChampOne;
 	ImageView ivTeamOneChampTwo = MatchHistoryFragment.ivTeamOneChampTwo;
@@ -173,8 +210,84 @@ public class AnotherAsyncTask {
 			// TextView declarations -- may not keep
 			dialog.cancel();
 			try {
+				
+				
 				if (result.recentGames.size() > 0) {
-					//tvDebug.setText(result.recentGames.get(position).getGameMode() + " / " + result.recentGames.get(position).getQueueType());
+					// Show da views again
+					tvChampKills.setVisibility(View.VISIBLE);
+					tvDeaths.setVisibility(View.VISIBLE);
+					tvAssists.setVisibility(View.VISIBLE);
+					tvKillingSpree.setVisibility(View.VISIBLE);
+					tvDamageToChamps.setVisibility(View.VISIBLE);
+					tvPhysicalToChamps.setVisibility(View.VISIBLE);
+					tvMagicToChamps.setVisibility(View.VISIBLE);
+					tvDamageDealt.setVisibility(View.VISIBLE);
+					tvPhysicalDamage.setVisibility(View.VISIBLE);
+					tvMagicDamage.setVisibility(View.VISIBLE);
+					tvLargestCrit.setVisibility(View.VISIBLE);
+					tvDamageTaken.setVisibility(View.VISIBLE);
+					tvMagicTaken.setVisibility(View.VISIBLE);
+					tvPhysicalTaken.setVisibility(View.VISIBLE);
+					tvTurrets.setVisibility(View.VISIBLE);
+					tvInhibitors.setVisibility(View.VISIBLE);
+					tvHealingDone.setVisibility(View.VISIBLE);
+					tvGold.setVisibility(View.VISIBLE);
+					tvMultiKill.setVisibility(View.VISIBLE);
+					tvTimeDead.setVisibility(View.VISIBLE);
+					tvChampName.setVisibility(View.VISIBLE);
+					tvKDA.setVisibility(View.VISIBLE);
+					tvTeamOnePlayerOne.setVisibility(View.VISIBLE);
+					tvTeamOnePlayerTwo.setVisibility(View.VISIBLE);
+					tvTeamOnePlayerThree.setVisibility(View.VISIBLE);
+					tvTeamOnePlayerFour.setVisibility(View.VISIBLE);
+					tvTeamOnePlayerFive.setVisibility(View.VISIBLE);
+					tvTeamTwoPlayerOne.setVisibility(View.VISIBLE);
+					tvTeamTwoPlayerTwo.setVisibility(View.VISIBLE);
+					tvTeamTwoPlayerThree.setVisibility(View.VISIBLE);
+					tvTeamTwoPlayerFour.setVisibility(View.VISIBLE);
+					tvTeamTwoPlayerFive.setVisibility(View.VISIBLE);
+					
+					tvKillsTitle.setVisibility(View.VISIBLE);
+					tvDeathsTitle.setVisibility(View.VISIBLE);
+					tvAssistTitle.setVisibility(View.VISIBLE);
+					tvKSTitle.setVisibility(View.VISIBLE);
+					tvMultiTitle.setVisibility(View.VISIBLE);
+					tvDamageChampTitle.setVisibility(View.VISIBLE);
+					tvPhysChampTitle.setVisibility(View.VISIBLE);
+					tvMagicChampTitle.setVisibility(View.VISIBLE);
+					tvDmgDealtTitle.setVisibility(View.VISIBLE);
+					tvPhysDealtTitle.setVisibility(View.VISIBLE);
+					tvMagicDealtTitle.setVisibility(View.VISIBLE);
+					tvCritTitle.setVisibility(View.VISIBLE);
+					tvHealTitle.setVisibility(View.VISIBLE);
+					tvDmgTakenTitle.setVisibility(View.VISIBLE);
+					tvPhysTakenTitle.setVisibility(View.VISIBLE);
+					tvMagicTakenTitle.setVisibility(View.VISIBLE);
+					tvGoldTitle.setVisibility(View.VISIBLE);
+					tvTurretsTitle.setVisibility(View.VISIBLE);
+					tvInhibsTitle.setVisibility(View.VISIBLE);
+					tvMinionsTitle.setVisibility(View.VISIBLE);
+					tvNeutralTitle.setVisibility(View.VISIBLE);
+					tvTimeDeadTitle.setVisibility(View.VISIBLE);
+					tvWardPlacedTitle.setVisibility(View.VISIBLE);
+					tvWardKilledTitle.setVisibility(View.VISIBLE);
+					btnClose.setVisibility(View.VISIBLE);
+					
+					ivTeamOneChampOne.setVisibility(View.VISIBLE);
+					ivTeamOneChampTwo.setVisibility(View.VISIBLE);
+					ivTeamOneChampThree.setVisibility(View.VISIBLE);
+					ivTeamOneChampFour.setVisibility(View.VISIBLE);
+					ivTeamOneChampFive.setVisibility(View.VISIBLE);
+					ivTeamTwoChampOne .setVisibility(View.VISIBLE);
+					ivTeamTwoChampTwo.setVisibility(View.VISIBLE);
+					ivTeamTwoChampThree.setVisibility(View.VISIBLE);
+					ivTeamTwoChampFour.setVisibility(View.VISIBLE);
+					ivTeamTwoChampFive.setVisibility(View.VISIBLE);
+					ivChampIcon.setVisibility(View.VISIBLE);
+					
+
+					
+					
 					switch (result.recentGames.get(position).getChampionId().intValue()) {
 					case 1:
 						ivChampIcon.setImageResource(R.drawable.anniesquare);

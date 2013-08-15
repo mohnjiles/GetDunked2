@@ -17,4 +17,5 @@
     <dimen name="item_image_padding">4dp</dimen>
     <dimen name="teams_text">14sp</dimen>
     <dimen name="team_champs">36dip</dimen>
+    <dimen name="sliding_size">18sp</dimen>
 </resources>

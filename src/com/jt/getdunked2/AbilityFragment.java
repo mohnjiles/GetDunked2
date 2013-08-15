@@ -676,6 +676,17 @@ public class AbilityFragment extends Fragment {
   			setTitles("Happy Hour", "Barrel Roll", "Drunken Rage", "Body Slam", "Explosive Cask");
   			setText(R.string.HappyHour, R.string.BarrelRoll, R.string.DrunkenRage, R.string.BodySlam, R.string.ExplosiveCask);
   			return V;
+  		case 28:
+  			setImages(R.drawable.true_grit, R.drawable.buckshot, R.drawable.smoke_screen, R.drawable.quickdraw, R.drawable.collateral_damage);
+  			setTitles("True Grit", "Buckshot", "Smoke Screen", "Quickdraw", "Collateral Damage");
+  			setText(R.string.TrueGrit, R.string.Buckshot, R.string.SmokeScreen, R.string.Quickdraw, R.string.CollateralDamage);
+  			return V;
+  		case 29:
+  			setImages(R.drawable.warpath, R.drawable.rampage, R.drawable.spirit_of_dread, R.drawable.devastating_charge, R.drawable.onslaught_of_shadows);
+  			setTitles("Warpath", "Rampage", "Spirit of Dread", "Devastating Charge", "Onslaught of Shadows");
+  			setText(R.string.Warpath, R.string.Rampage, R.string.SpiritofDread, R.string.DevastatingCharge, R.string.OnslaughtofShadows);
+  			return V;
+  			
   		default:
   			return V;
   	  }

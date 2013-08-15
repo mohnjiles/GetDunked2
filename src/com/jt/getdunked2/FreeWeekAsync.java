@@ -81,9 +81,11 @@ public class FreeWeekAsync {
 		
 		@Override
 		protected void onPostExecute(Document document) {
-			// set textview for week number
+			// set textview for week number 
 			if (weekText != null) {
 				tvWeekText.setText(weekText.text());
+			} else {
+				tvWeekText.setText("Failed to Load");
 			}
 			
 	

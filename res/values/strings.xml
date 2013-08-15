@@ -10,22 +10,17 @@
         \n\nUpon taking fatal damage, Blood Well activates and places Aatrox in stasis for 3 seconds.
          Over the stasis duration the Blood Well is emptied and Aatrox restores health equal to its contents plus 10.5 + (15.75 × level). 
          Blood Well\'s activation has a static cooldown and is unaffected by cooldown reduction.\n\nAlso, 
-         Aatrox passively increases his attack speed by 1% for every 2% in the Blood Well.</string>	
+         Aatrox passively increases his attack speed by 1% for every 2% in the Blood Well.</string>
     <string name="DarkFlight" formatted="false">ACTIVE: Aatrox takes flight and slams down at a targeted area, 
-        dealing physical damage to nearby enemies upon landing. Enemies in the center of the area are also knocked up for 1 second.
-    </string>
+        dealing physical damage to nearby enemies upon landing. Enemies in the center of the area are also knocked up for 1 second.</string>
     <string name="BloodThirst" formatted="false">Blood Thirst:\nTOGGLE OFF: Aatrox heals himself on every third attack. 
         If Aatrox is below 50% health he will heal for three times as much.\n\nBlood Price:\nTOGGLE ON: Aatrox deals bonus physical 
-        damage on every third attack at the cost of health.
-        </string>
+        damage on every third attack at the cost of health.</string>
     <string name="BladesofTorment" formatted="false">ACTIVE: Aatrox unleashes and sends forward the power of his blade, 
-        dealing magic damage to enemies in a line and slowing them by 40% for a few seconds.
-    </string>
+        dealing magic damage to enemies in a line and slowing them by 40% for a few seconds.</string>
     <string name="Massacre" formatted="false">ACTIVE: Aatrox draws in the blood of his foes, dealing magic damage to nearby enemy champions.\n\n
         For the next 12 seconds, Aatrox gains bonus attack speed and 175 bonus attack range (325 total range). 
-        His attacks are still considered melee.
-    </string>
-         
+        His attacks are still considered melee.</string>
     <string name="AhriLore" formatted="false">Unlike other foxes that roamed the woods of southern Ionia, Ahri had always felt a strange connection to the magical
     world around her; a connection that was somehow incomplete. Deep inside, she felt the skin she had been born into was
     an ill fit for her and dreamt of one day becoming human. Her goal seemed forever out of reach, until she happened upon
@@ -374,6 +369,65 @@
 	    Enemy units in an area around Gragas then take magic damage and are slowed by 35% for 2.5 seconds. Damage is split amongst targets hit.</string>
     <string name="ExplosiveCask" formatted="false">ACTIVE: Gragas throws his cask to target 400-radius area, damaging and knocking back 
 	    enemies in the area up to 600 distance, and briefly gives vision within 500 range.</string>
+    <string name="TrueGrit" formatted="false">Graves gains 1 / 2 / 3 bonus armor and magic resistance every second he remains in combat.
+	     This bonus stacks up to 10 times. Graves is considered in combat if he has dealt or received damage in the last 3 seconds.</string>
+    <string name="Buckshot" formatted="false">ACTIVE: Graves fires three bullets in a cone, dealing physical damage to all enemies in their path. 
+	    Enemies at close range can be hit by multiple projectiles, but each bullet beyond the first will deal only 35% damage.</string>
+    <string name="SmokeScreen" formatted="false">ACTIVE: Graves fires a smoke canister at the target area, 
+	    dealing magic damage upon landing and creating a cloud of smoke 250 wide for 4 seconds. Enemies 
+	    inside the smoke cloud will be slowed and will have their vision reduced by 675 range; 
+	    everything else will look like it is in the Fog of War.</string>
+    <string name="Quickdraw" formatted="false">ACTIVE: Graves dashes forward, gaining an attack speed boost for 4 seconds. 
+	    Using autoattacks on enemy units, but not structures, lowers the cooldown of Quickdraw by 1 second each autoattack.    </string>
+    <string name="CollateralDamage" formatted="false">ACTIVE: Graves fires an explosive shell in a straight line, 
+	    dealing heavy physical damage to the first champion it hits (also damages non-champion enemies whilst in flight). 
+	    After hitting a champion or reaching the end of its range, the shell explodes dealing physical damage in a cone behind the target.</string>
+    <string name="Warpath" formatted="false">Hecarim ignores unit collision and gains bonus attack damage equal to 
+	    10 / 12.5 / 15 / 17.5 / 20 / 22.5 / 25 % of his bonus movement speed.   </string>
+    <string name="Rampage" formatted="false">ACTIVE: Hecarim cleaves nearby enemies, dealing physical damage. 
+	    This skill deals only 66% damage to minions and monsters. \n\nIf Hecarim damages at least one enemy unit with this attack, 
+	    he gains a stack of Rampage, reducing the base cooldown of this skill by 1 second for 8 seconds. This effect can stack up to 2 times.    </string>
+    <string name="SpiritofDread" formatted="false">ACTIVE: Hecarim surrounds himself with the spirit of dread for 4 seconds, 
+	    dealing magic damage per second to all enemies within its reach. Additionally, Hecarim is healed for 20% of the 
+	    damage dealt by any source to enemies within the area. Healing from damage dealt to minions is capped per cast.    </string>
+    <string name="DevastatingCharge" formatted="false">ACTIVE: Hecarim gains 75% movement speed over the course of 3 seconds, 
+	    starting with initial 25% upon cast, and ending one second afterward. While Hecarim is charging, 
+	    he gains 150 extra attack range (325 total). His next attack knocks the target back, dealing physical 
+	    damage based on how far Hecarim has traveled during Devastating Charge\'s duration.\n\nIf Hecarim\'s target is beyond narrow 
+	    terrain, Hecarim will leap over the terrain to his target.        </string>
+    <string name="OnslaughtofShadows" formatted="false">ACTIVE: Hecarim summons spectral riders and charges forward 
+	    with them in a line, dealing magic damage to enemies in their path. Enemies within range of where Hecarim 
+	    stops will flee in terror for 1 second.\n\nThe wave of spectral riders will travel the maximum distance possible in the 
+	    direction of cast, regardless of where Hecarim himself stops.        </string>
+    <string name="TechmaturgicalRepairBots" formatted="false">Heimerdinger gives himself and nearby allied structures and units 
+	    10 / 15 / 20 / 25 health regeneration per 5 seconds.    </string>
+    <string name="H28GEvolutionturret" formatted="false">ACTIVE: Heimerdinger constructs a Turret that fires at nearby enemies, 
+	    dealing magic damage with its attacks (half damage to towers and inhibitors). Heimerdinger stores enough 
+	    parts for a new turret every 25 seconds, affected by cooldown reduction. Turrets disappear automatically 
+	    when Heimerdinger dies. Turrets receive upgrades and transform with every ability rank.\n\nTurret Health: 260 + (15 × level)\n
+	    Turret Range: 525\nTurret Attack Speed: 1.25 (1.85 after 6 seconds)\nSight Radius: 625    </string>
+    <string name="HextechMicroRockets" formatted="false">ACTIVE: Heimerdinger fires long range rockets that target and deal magic 
+	    damage to the 3 enemy units closest to him.    </string>
+    <string name="CH1ConcussionGrenade" formatted="false">ACTIVE: Heimerdinger lobs a grenade at a target location, 
+	    dealing magic damage and blinding to enemy units within 250 range. Enemies within 100 range are stunned for 1.5 seconds.    </string>
+    <string name="UPGRADE" formatted="false">PASSIVE: Heimerdinger gains cooldown reduction.\n\nACTIVE: All active 
+	    Evolution Turrets are healed for 100% of their maximum health. Also for the next 6 seconds all of his abilities 
+	    are improved. His turrets turn blue and start to fire slowing frost shots. Newly created turrets also have this 
+	    property. He now fires 5 Hextech Micro-Rockets instead of 3 and the missile speed on CH-1 Concussion Grenade is 
+	    increased from 750 to 1000.        </string>
+    <string name="IonianFervor" formatted="false">For each nearby enemy champion, Irelia reduces the duration of stuns, 
+	    slows, taunts, fears, snares, immobilizes, blinds and silences.    </string>
+    <string name="Bladesurge" formatted="false">ACTIVE: Irelia dashes forward to strike her target, 
+	    dealing physical damage. This applies on-hit effects. If it kills the target, Bladesurge\'s 
+	    cooldown refreshes and refunds 35 mana.    </string>
+    <string name="HitenStyle" formatted="false">PASSIVE: Irelia\'s autoattacks restore health.\n\nACTIVE: Irelia\'s autoattacks 
+	    deal additional true damage for 6 seconds. Hiten Style\'s passive on-hit health restore is doubled for the duration.    </string>
+    <string name="EquilibriumStrike" formatted="false">ACTIVE: Irelia pierces her target, dealing magic damage and slowing the 
+	    target by 60% for the duration. If the target has a higher health % than Irelia, she stuns the target for the same duration instead.    </string>
+    <string name="TranscendentBlades" formatted="false">ACTIVE: Irelia summons 4 spirit blades and fires one in a line towards the cursor, 
+	    dealing physical damage to all enemies it passes through. Irelia is healed for 25% of the damage dealt to champions and 10% 
+	    of the damage dealt to minions and monsters.\n\nWithin the next 15 seconds, Transcendent Blades can be used 
+	    up to three more times at no cost.</string>
     <string name="ChampionsButton">Champions</string>
     <string name="title_activity_champs">Champions</string>
     <string name="title_section3">lore</string>
@@ -434,6 +488,8 @@
         <item>LeBlanc</item>
         <item>Lee Sin</item>
         <item>Leona</item>
+        <item>Lissandra</item>
+        <item>Lucian</item>
         <item>Lulu</item>
         <item>Lux</item>
         <item>Malphite</item>
@@ -499,6 +555,33 @@
         <item>Zilean</item>
         <item>Zyra</item>
     </string-array>
+    <string-array name="userRegion">
+        <item name="na">North America</item>
+        <item name="euw">Europe West</item>
+        <item name="eune">Europe Northeast</item>
+        <item name="br">Brazil</item>
+<!--    <item name="ru">Russia</item>
+        <item name="tr">Turkey</item>
+        <item name="las">Latin America South</item>
+        <item name="lan">Latin America North</item>
+        <item name="oc">Oceania</item> -->
+    </string-array>
+    <string-array name="userRegionValues">
+        <item name="na">NA</item>
+        <item name="euw">EUW</item>
+        <item name="eune">EUNE</item>
+        <item name="br">BR</item>
+<!--    <item name="ru">ru</item>
+        <item name="tr">tr</item>
+        <item name="las">las</item>
+        <item name="lan">lan</item>
+        <item name="oc">oc</item> -->
+    </string-array>
+    <string-array name="drawerStuff">
+        <item>Settings</item>
+        <item>Champions</item>
+        <item>Summoner Lookup</item>
+    </string-array>
 
     <string name="title_activity_profile">ProfileActivity</string>
     <string name="title_activity_match_history_fragment">MatchHistoryFragment</string>
@@ -513,5 +596,7 @@
     <string name="title_activity_profile_fragment">ProfileFragment</string>
     <string name="title_activity_lifetime_stats_fragment">LifetimeStatsFragment</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_drawer">DrawerActivity</string>
 
 </resources>

@@ -802,7 +802,7 @@
 	        android:textSize="@dimen/teams_text" />
 
 	    <TextView
-	        android:id="@+id/tvVs"
+	        android:id="@+id/tvVsText"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignBaseline="@+id/tvTeamOnePlayerThree"

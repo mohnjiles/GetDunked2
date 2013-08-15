@@ -29,6 +29,7 @@ public class JsonUtil {
 		}
 		try {
 			return GSON.fromJson(sb.toString(), clazz);
+
 		} finally {
 			try {
 				in.close();

@@ -35,6 +35,7 @@ public class MatchHistoryFragment extends Fragment {
 
 	ArrayList<GameStatistics> someArrayList = null;
 
+	// values TextViews
 	public static TextView tvDamageDone;
 	public static TextView tvChampKills;
 	public static TextView tvDeaths;
@@ -72,7 +73,35 @@ public class MatchHistoryFragment extends Fragment {
 	public static TextView tvTeamTwoPlayerThree;
 	public static TextView tvTeamTwoPlayerFour;
 	public static TextView tvTeamTwoPlayerFive;
+	public static TextView tvVsTextMiddleThing;
 	
+	// titles TextViews
+	public static TextView tvKillsTitle;
+	public static TextView tvDeathsTitle;
+	public static TextView tvAssistTitle;
+	public static TextView tvKSTitle;
+	public static TextView tvMultiTitle;
+	public static TextView tvDamageChampTitle;
+	public static TextView tvPhysChampTitle;
+	public static TextView tvMagicChampTitle;
+	public static TextView tvDmgDealtTitle;
+	public static TextView tvPhysDealtTitle;
+	public static TextView tvMagicDealtTitle;
+	public static TextView tvCritTitle;
+	public static TextView tvHealTitle;
+	public static TextView tvDmgTakenTitle;
+	public static TextView tvPhysTakenTitle;
+	public static TextView tvMagicTakenTitle;
+	public static TextView tvGoldTitle;
+	public static TextView tvTurretsTitle;
+	public static TextView tvInhibsTitle;
+	public static TextView tvMinionsTitle;
+	public static TextView tvNeutralTitle;
+	public static TextView tvTimeDeadTitle;
+	public static TextView tvWardPlacedTitle;
+	public static TextView tvWardKilledTitle;
+	
+	// all da ImageViews
 	public static ImageView ivTeamOneChampOne;
 	public static ImageView ivTeamOneChampTwo;
 	public static ImageView ivTeamOneChampThree;
@@ -84,6 +113,9 @@ public class MatchHistoryFragment extends Fragment {
 	public static ImageView ivTeamTwoChampFour;
 	public static ImageView ivTeamTwoChampFive;
 	public static ImageView ivChampIcon;
+	
+	// aaaaaaand a button
+	public static Button btnClose;
 
 	public static Typeface tf;
 	public static ListView lv;
@@ -247,7 +279,7 @@ public class MatchHistoryFragment extends Fragment {
 				
 			}
 			
-			// Set TextView variables
+			// Set value TextView variables
 			tvChampKills = (TextView) pwindo.getContentView().findViewById(R.id.tvChampKills);
 			tvDeaths = (TextView) pwindo.getContentView().findViewById(R.id.tvDeaths);
 			tvAssists = (TextView) pwindo.getContentView().findViewById(R.id.tvAssists);
@@ -274,6 +306,8 @@ public class MatchHistoryFragment extends Fragment {
 			tvNeutralMinionsKilled = (TextView) pwindo.getContentView().findViewById(R.id.tvNeutralMonsters);
 			tvChampName = (TextView) pwindo.getContentView().findViewById(R.id.tvChampName);
 			tvKDA = (TextView) pwindo.getContentView().findViewById(R.id.tvKDA);
+			
+			// set team TextView variables
 			tvTeamOnePlayerOne = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamOnePlayerOne); 
 			tvTeamOnePlayerTwo = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamOnePlayerTwo); 
 			tvTeamOnePlayerThree = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamOnePlayerThree); 
@@ -285,6 +319,7 @@ public class MatchHistoryFragment extends Fragment {
 			tvTeamTwoPlayerFour = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamTwoPlayerFour); 
 			tvTeamTwoPlayerFive = (TextView) pwindo.getContentView().findViewById(R.id.tvTeamTwoPlayerFive); 
 			
+			// set team ImageView variables
 			ivTeamOneChampOne = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamOneChampOne); 
 			ivTeamOneChampTwo = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamOneChampTwo); 
 			ivTeamOneChampThree = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamOneChampThree); 
@@ -296,19 +331,122 @@ public class MatchHistoryFragment extends Fragment {
 			ivTeamTwoChampFour = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamTwoChampFour); 
 			ivTeamTwoChampFive = (ImageView) pwindo.getContentView().findViewById(R.id.ivTeamTwoChampFive); 
 			
+			// champ icon variable
 			ivChampIcon = (ImageView) pwindo.getContentView().findViewById(R.id.ivChampIcon);
+			
+			// Title TextView variables
+			tvKillsTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView01);
+			tvDeathsTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvDamageRec);
+			tvAssistTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvHealingDone);
+			tvKSTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvGoldTitle);
+			tvMultiTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvMultiKillTitle);
+			tvDamageChampTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView15);
+			tvPhysChampTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView16);
+			tvMagicChampTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView17);
+			tvDmgDealtTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvTimeDeadTitle);
+			tvPhysDealtTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvWardsTitle);
+			tvMagicDealtTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvMinionsTitle);
+			tvCritTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView02);
+			tvHealTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView03);
+			tvDmgTakenTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView04);
+			tvPhysTakenTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView05);
+			tvMagicTakenTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView06);
+			tvGoldTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView07);
+			tvTurretsTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView08);
+			tvInhibsTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView09);
+			tvMinionsTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView10);
+			tvNeutralTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView11);
+			tvTimeDeadTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView12);
+			tvWardPlacedTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView13);
+			tvWardKilledTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView14);
+			
+			// some other stuff
+			tvVsTextMiddleThing = (TextView) pwindo.getContentView().findViewById(R.id.tvVsText);
+			btnClose = (Button) pwindo.getContentView().findViewById(R.id.Button01);
 			
 			// Start up dat asynctask
 			AnotherAsyncTask anotherAsyncTask = new AnotherAsyncTask();
 			PostFetcherTwo pft = anotherAsyncTask.new PostFetcherTwo(getActivity(), getActivity());
 			pft.execute(url);
 			
+			// hide the views until we have something to show
+			tvChampKills.setVisibility(View.GONE);
+			tvDeaths.setVisibility(View.GONE);
+			tvAssists.setVisibility(View.GONE);
+			tvKillingSpree.setVisibility(View.GONE);
+			tvDamageToChamps.setVisibility(View.GONE);
+			tvPhysicalToChamps.setVisibility(View.GONE);
+			tvMagicToChamps.setVisibility(View.GONE);
+			tvDamageDealt.setVisibility(View.GONE);
+			tvPhysicalDamage.setVisibility(View.GONE);
+			tvMagicDamage.setVisibility(View.GONE);
+			tvLargestCrit.setVisibility(View.GONE);
+			tvDamageTaken.setVisibility(View.GONE);
+			tvMagicTaken.setVisibility(View.GONE);
+			tvPhysicalTaken.setVisibility(View.GONE);
+			tvTurrets.setVisibility(View.GONE);
+			tvInhibitors.setVisibility(View.GONE);
+			tvHealingDone.setVisibility(View.GONE);
+			tvGold.setVisibility(View.GONE);
+			tvMultiKill.setVisibility(View.GONE);
+			tvTimeDead.setVisibility(View.GONE);
+			tvChampName.setVisibility(View.GONE);
+			tvKDA.setVisibility(View.GONE);
+			tvTeamOnePlayerOne.setVisibility(View.GONE);
+			tvTeamOnePlayerTwo.setVisibility(View.GONE);
+			tvTeamOnePlayerThree.setVisibility(View.GONE);
+			tvTeamOnePlayerFour.setVisibility(View.GONE);
+			tvTeamOnePlayerFive.setVisibility(View.GONE);
+			tvTeamTwoPlayerOne.setVisibility(View.GONE);
+			tvTeamTwoPlayerTwo.setVisibility(View.GONE);
+			tvTeamTwoPlayerThree.setVisibility(View.GONE);
+			tvTeamTwoPlayerFour.setVisibility(View.GONE);
+			tvTeamTwoPlayerFive.setVisibility(View.GONE);
+			
+			tvKillsTitle.setVisibility(View.GONE);
+			tvDeathsTitle.setVisibility(View.GONE);
+			tvAssistTitle.setVisibility(View.GONE);
+			tvKSTitle.setVisibility(View.GONE);
+			tvMultiTitle.setVisibility(View.GONE);
+			tvDamageChampTitle.setVisibility(View.GONE);
+			tvPhysChampTitle.setVisibility(View.GONE);
+			tvMagicChampTitle.setVisibility(View.GONE);
+			tvDmgDealtTitle.setVisibility(View.GONE);
+			tvPhysDealtTitle.setVisibility(View.GONE);
+			tvMagicDealtTitle.setVisibility(View.GONE);
+			tvCritTitle.setVisibility(View.GONE);
+			tvHealTitle.setVisibility(View.GONE);
+			tvDmgTakenTitle.setVisibility(View.GONE);
+			tvPhysTakenTitle.setVisibility(View.GONE);
+			tvMagicTakenTitle.setVisibility(View.GONE);
+			tvGoldTitle.setVisibility(View.GONE);
+			tvTurretsTitle.setVisibility(View.GONE);
+			tvInhibsTitle.setVisibility(View.GONE);
+			tvMinionsTitle.setVisibility(View.GONE);
+			tvNeutralTitle.setVisibility(View.GONE);
+			tvTimeDeadTitle.setVisibility(View.GONE);
+			tvWardPlacedTitle.setVisibility(View.GONE);
+			tvWardKilledTitle.setVisibility(View.GONE);
+			
+			ivTeamOneChampOne.setVisibility(View.GONE);
+			ivTeamOneChampTwo.setVisibility(View.GONE);
+			ivTeamOneChampThree.setVisibility(View.GONE);
+			ivTeamOneChampFour.setVisibility(View.GONE);
+			ivTeamOneChampFive.setVisibility(View.GONE);
+			ivTeamTwoChampOne .setVisibility(View.GONE);
+			ivTeamTwoChampTwo.setVisibility(View.GONE);
+			ivTeamTwoChampThree.setVisibility(View.GONE);
+			ivTeamTwoChampFour.setVisibility(View.GONE);
+			ivTeamTwoChampFive.setVisibility(View.GONE);
+			ivChampIcon.setVisibility(View.GONE);
+			
+			btnClose.setVisibility(View.GONE);
+			
 		
 			// Set close button
 			//Button btnClosePopup = (Button) pwindo.getContentView().findViewById(R.id.btn_close_popup);
-			Button btnCloseTwo = (Button) pwindo.getContentView().findViewById(R.id.Button01);
 			//btnClosePopup.setOnClickListener(cancel_button_click_listener);
-			btnCloseTwo.setOnClickListener(cancel_button_click_listener);
+			btnClose.setOnClickListener(cancel_button_click_listener);
 			
 		}
 
