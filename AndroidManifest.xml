@@ -116,6 +116,10 @@
             android:name="com.jt.getdunked2.DrawerActivity"
             android:label="@string/title_activity_drawer" >
         </activity>
+        <activity
+            android:name="com.jt.getdunked2.GuidesFragment"
+            android:label="@string/title_activity_guides_fragment" >
+        </activity>
     </application>
 
 </manifest>

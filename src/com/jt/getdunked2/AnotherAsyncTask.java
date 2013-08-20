@@ -1,40 +1,30 @@
 package com.jt.getdunked2;
 
-import java.io.BufferedInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import org.apache.http.HttpResponse;
-
 import de.keyboardsurfer.android.widget.crouton.Crouton;
 
 
 
-import android.R.integer;
 import android.app.Activity;
+import android.app.Application;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
 
-public class AnotherAsyncTask {
+public class AnotherAsyncTask extends Application {
 
 	ArrayList<GameStatistics> someArrayList;
-	
 	PopupWindow pWindow = MatchHistoryFragment.pwindo;
 
 	TextView tvChampKills = MatchHistoryFragment.tvChampKills;
@@ -172,7 +162,6 @@ public class AnotherAsyncTask {
 			this.ownerActivity = activity;
 		}
 		
-		
 		public final String SERVER_URL_IN_GAME_STATS = "http://api.elophant.com/v2/NA/in_progress_game_info/"
 				+ name + "?key=eS4XmrLVhc7EhPson8dV";
 		public final String SERVER_URL_SUMMONER = "http://api.elophant.com/v2/NA/summoner/"
@@ -183,13 +172,15 @@ public class AnotherAsyncTask {
 		protected PostFetchResult doInBackground(String... urls) {
 			PostFetchResult result = new PostFetchResult();
 
-			result.summoner = JsonUtil.fromJsonUrl(SERVER_URL_SUMMONER,
-					Summoner.class);			
+			result.summoner = AsyncTasks.PostFetchResult.summoner;		
 			try {
-				result.recentGames = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + result.summoner.getData().getAcctId().toString() 
-						+ "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getGameStatistics();
-				result.stats = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + result.summoner.getData().getAcctId().toString() 
-						+ "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getGameStatistics().get(position).getStatistics();
+				//result.recentGames = JsonUtil.fromJsonUrl("http://api.elophant.com/v2/NA/recent_games/" + result.summoner.getData().getAcctId().toString() 
+				//		+ "?key=eS4XmrLVhc7EhPson8dV", SoData.class).data.getGameStatistics();
+				result.recentGames = AsyncTasks.PostFetchResult.recentGames;
+				if (result.recentGames != null) {
+					result.stats = result.recentGames.get(position).getStatistics();
+				}
+				
 			} catch (Exception e) {
 				Log.w("doInBackground recentGames", "Recent Games error: " + e.getMessage());
 				
@@ -198,96 +189,12 @@ public class AnotherAsyncTask {
 			
 		}
 		
-		@Override
-		protected void onPreExecute(){
-			super.onPreExecute();
-			dialog = ProgressDialog.show(context, "", "Loading " + name + "'s match history...", true);
-			dialog.show();
-		}
 
 		@Override
 		protected void onPostExecute(PostFetchResult result) {
-			// TextView declarations -- may not keep
-			dialog.cancel();
 			try {
 				
-				
-				if (result.recentGames.size() > 0) {
-					// Show da views again
-					tvChampKills.setVisibility(View.VISIBLE);
-					tvDeaths.setVisibility(View.VISIBLE);
-					tvAssists.setVisibility(View.VISIBLE);
-					tvKillingSpree.setVisibility(View.VISIBLE);
-					tvDamageToChamps.setVisibility(View.VISIBLE);
-					tvPhysicalToChamps.setVisibility(View.VISIBLE);
-					tvMagicToChamps.setVisibility(View.VISIBLE);
-					tvDamageDealt.setVisibility(View.VISIBLE);
-					tvPhysicalDamage.setVisibility(View.VISIBLE);
-					tvMagicDamage.setVisibility(View.VISIBLE);
-					tvLargestCrit.setVisibility(View.VISIBLE);
-					tvDamageTaken.setVisibility(View.VISIBLE);
-					tvMagicTaken.setVisibility(View.VISIBLE);
-					tvPhysicalTaken.setVisibility(View.VISIBLE);
-					tvTurrets.setVisibility(View.VISIBLE);
-					tvInhibitors.setVisibility(View.VISIBLE);
-					tvHealingDone.setVisibility(View.VISIBLE);
-					tvGold.setVisibility(View.VISIBLE);
-					tvMultiKill.setVisibility(View.VISIBLE);
-					tvTimeDead.setVisibility(View.VISIBLE);
-					tvChampName.setVisibility(View.VISIBLE);
-					tvKDA.setVisibility(View.VISIBLE);
-					tvTeamOnePlayerOne.setVisibility(View.VISIBLE);
-					tvTeamOnePlayerTwo.setVisibility(View.VISIBLE);
-					tvTeamOnePlayerThree.setVisibility(View.VISIBLE);
-					tvTeamOnePlayerFour.setVisibility(View.VISIBLE);
-					tvTeamOnePlayerFive.setVisibility(View.VISIBLE);
-					tvTeamTwoPlayerOne.setVisibility(View.VISIBLE);
-					tvTeamTwoPlayerTwo.setVisibility(View.VISIBLE);
-					tvTeamTwoPlayerThree.setVisibility(View.VISIBLE);
-					tvTeamTwoPlayerFour.setVisibility(View.VISIBLE);
-					tvTeamTwoPlayerFive.setVisibility(View.VISIBLE);
-					
-					tvKillsTitle.setVisibility(View.VISIBLE);
-					tvDeathsTitle.setVisibility(View.VISIBLE);
-					tvAssistTitle.setVisibility(View.VISIBLE);
-					tvKSTitle.setVisibility(View.VISIBLE);
-					tvMultiTitle.setVisibility(View.VISIBLE);
-					tvDamageChampTitle.setVisibility(View.VISIBLE);
-					tvPhysChampTitle.setVisibility(View.VISIBLE);
-					tvMagicChampTitle.setVisibility(View.VISIBLE);
-					tvDmgDealtTitle.setVisibility(View.VISIBLE);
-					tvPhysDealtTitle.setVisibility(View.VISIBLE);
-					tvMagicDealtTitle.setVisibility(View.VISIBLE);
-					tvCritTitle.setVisibility(View.VISIBLE);
-					tvHealTitle.setVisibility(View.VISIBLE);
-					tvDmgTakenTitle.setVisibility(View.VISIBLE);
-					tvPhysTakenTitle.setVisibility(View.VISIBLE);
-					tvMagicTakenTitle.setVisibility(View.VISIBLE);
-					tvGoldTitle.setVisibility(View.VISIBLE);
-					tvTurretsTitle.setVisibility(View.VISIBLE);
-					tvInhibsTitle.setVisibility(View.VISIBLE);
-					tvMinionsTitle.setVisibility(View.VISIBLE);
-					tvNeutralTitle.setVisibility(View.VISIBLE);
-					tvTimeDeadTitle.setVisibility(View.VISIBLE);
-					tvWardPlacedTitle.setVisibility(View.VISIBLE);
-					tvWardKilledTitle.setVisibility(View.VISIBLE);
-					btnClose.setVisibility(View.VISIBLE);
-					
-					ivTeamOneChampOne.setVisibility(View.VISIBLE);
-					ivTeamOneChampTwo.setVisibility(View.VISIBLE);
-					ivTeamOneChampThree.setVisibility(View.VISIBLE);
-					ivTeamOneChampFour.setVisibility(View.VISIBLE);
-					ivTeamOneChampFive.setVisibility(View.VISIBLE);
-					ivTeamTwoChampOne .setVisibility(View.VISIBLE);
-					ivTeamTwoChampTwo.setVisibility(View.VISIBLE);
-					ivTeamTwoChampThree.setVisibility(View.VISIBLE);
-					ivTeamTwoChampFour.setVisibility(View.VISIBLE);
-					ivTeamTwoChampFive.setVisibility(View.VISIBLE);
-					ivChampIcon.setVisibility(View.VISIBLE);
-					
-
-					
-					
+				if (result.recentGames.size() > 0) {			
 					switch (result.recentGames.get(position).getChampionId().intValue()) {
 					case 1:
 						ivChampIcon.setImageResource(R.drawable.anniesquare);

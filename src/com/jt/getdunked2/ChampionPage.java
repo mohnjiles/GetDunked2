@@ -6,7 +6,9 @@ import com.jfeinstein.jazzyviewpager.JazzyViewPager;
 import com.jfeinstein.jazzyviewpager.JazzyViewPager.TransitionEffect;
 
 
+import android.R.integer;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.app.Fragment;
@@ -24,6 +26,7 @@ import android.widget.Toast;
 
 public class ChampionPage extends ActionBarActivity {
 
+	int screenSize;
 	int position = ChampsActivity.myInt;
 	Integer[] mThumbIds = ImageAdapter.mThumbIds;
 	JazzyViewPager myPager;
@@ -42,29 +45,23 @@ public class ChampionPage extends ActionBarActivity {
 	  aBar.setDisplayHomeAsUpEnabled(true);
 	  aBar.setIcon(mThumbIds[position]);
 
-	  
+	  screenSize = getResources().getConfiguration().screenLayout &
+		        Configuration.SCREENLAYOUT_SIZE_MASK;
 	  
 	  Vector<Fragment> fragments = new Vector<Fragment>();
 	  StatsActivity fragmentOne = new StatsActivity();
-	  Bundle bundle = new Bundle();
-	  bundle.putString(
-	    "url",
-	    "https://lh6.googleusercontent.com/-jZgveEqb6pg/"
-	      + "T3R4kXScycI/AAAAAAAAAE0/xQ7CvpfXDzc/s1024/sample_image_01.jpg");
-	  fragmentOne.setArguments(bundle);
 	  fragments.add(fragmentOne);
 
 	  AbilityFragment fragmenttwo = new AbilityFragment();
-	  bundle.putString(
-	    "url",
-	    "https://lh3.googleusercontent.com/"
-	      + "-WujkdYfcyZ8/T3R4qrIMGUI/AAAAAAAAAGk/277LIdgvnjg/s1024/sample_image_15.jpg");
-	  fragmenttwo.setArguments(bundle);
 	  fragments.add(fragmenttwo);
 
 	  LoreFragment fragmenthree = new LoreFragment();
-	  fragmenthree.setArguments(bundle);
 	  fragments.add(fragmenthree);
+	  
+	  if (screenSize == Configuration.SCREENLAYOUT_SIZE_LARGE || screenSize == Configuration.SCREENLAYOUT_SIZE_XLARGE) {
+		  GuidesFragment fragmentfour = new GuidesFragment();
+		  fragments.add(fragmentfour);
+	  }
 
 	  myPager = (JazzyViewPager) findViewById(R.id.pager);
 	  FragmentAdapter adapter = new FragmentAdapter(
@@ -177,6 +174,10 @@ public class ChampionPage extends ActionBarActivity {
 		    	 return "ABILITIES";
 		     case 2:
 		    	 return "LORE";
+		     case 3:
+		    	 if (screenSize == Configuration.SCREENLAYOUT_SIZE_LARGE || screenSize == Configuration.SCREENLAYOUT_SIZE_XLARGE) {
+		   		 return "GUIDES";
+		   	  }
 		     }
 			 return null;
 		    }

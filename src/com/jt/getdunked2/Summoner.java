@@ -6,6 +6,7 @@ import java.util.List;
 public class Summoner{
    	private Data data;
    	private boolean success;
+   	private String error;
 
  	public Data getData(){
 		return this.data;
@@ -18,5 +19,11 @@ public class Summoner{
 	}
 	public void setSuccess(boolean success){
 		this.success = success;
+	}
+	public String getError() {
+		return error;
+	}
+	public void setError(String error) {
+		this.error = error;
 	}
 }

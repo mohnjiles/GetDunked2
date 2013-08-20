@@ -3,7 +3,7 @@ package com.jt.getdunked2;
 
 import java.util.List;
 
-public class GameStatistics{
+public class GameStatistics {
 	private Number adjustedRating;
    	private boolean afk;
    	private Number boostIpEarned;

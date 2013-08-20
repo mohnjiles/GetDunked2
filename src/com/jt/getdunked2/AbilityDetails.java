@@ -13,6 +13,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,43 +36,43 @@ public class AbilityDetails extends ActionBarActivity{
 	 */
 	JazzyViewPager myPager;
 	int position = ChampsActivity.myInt;
+	Integer[] mThumbIds = ImageAdapter.mThumbIds;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_ability_details);
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		ActionBar actionBar = getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
 		
 		String[] champNames = getResources().getStringArray(R.array.ChampNames);
 		setTitle(champNames[position]);
-
-		  Vector<Fragment> fragments = new Vector<Fragment>();
-		  QPopup fragmentOne = new QPopup();
-		  Bundle bundle = new Bundle();
-		  fragmentOne.setArguments(bundle);
-		  fragments.add(fragmentOne);
-
-		  WPopup fragmenttwo = new WPopup();
-		  fragmenttwo.setArguments(bundle);
-		  fragments.add(fragmenttwo);
-
-		  EPopup fragmenthree = new EPopup();
-		  fragmenthree.setArguments(bundle);
-		  fragments.add(fragmenthree);
-		  
-		  RPopup fragmentfour = new RPopup();
-		  fragmenthree.setArguments(bundle);
-		  fragments.add(fragmentfour);
-
-		  myPager = (JazzyViewPager) findViewById(R.id.pager);
-		  FragmentAdapter adapter = new FragmentAdapter(
-		    getSupportFragmentManager(), fragments);
-		  myPager.setAdapter(adapter);
-		  myPager.setCurrentItem(0);
-		  myPager.setTransitionEffect(TransitionEffect.CubeOut);
-		  
-		  
-
+		actionBar.setIcon(mThumbIds[position]);
+		
+		Vector<Fragment> fragments = new Vector<Fragment>();
+		QPopup fragmentOne = new QPopup();
+		Bundle bundle = new Bundle();
+		fragmentOne.setArguments(bundle);
+		fragments.add(fragmentOne);
+		
+		WPopup fragmenttwo = new WPopup();
+		fragmenttwo.setArguments(bundle);
+		fragments.add(fragmenttwo);
+		
+		EPopup fragmenthree = new EPopup();
+		fragmenthree.setArguments(bundle);
+		fragments.add(fragmenthree);
+		
+		RPopup fragmentfour = new RPopup();
+		fragmenthree.setArguments(bundle);
+		fragments.add(fragmentfour);
+		
+		myPager = (JazzyViewPager) findViewById(R.id.pager);
+		FragmentAdapter adapter = new FragmentAdapter(
+		getSupportFragmentManager(), fragments);
+		myPager.setAdapter(adapter);
+		myPager.setCurrentItem(0);
+		myPager.setTransitionEffect(TransitionEffect.CubeOut);
 	}
 
 	

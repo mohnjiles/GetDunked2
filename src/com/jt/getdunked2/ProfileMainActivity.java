@@ -6,6 +6,7 @@ import com.jfeinstein.jazzyviewpager.JazzyViewPager;
 import com.jfeinstein.jazzyviewpager.JazzyViewPager.TransitionEffect;
 import com.jt.getdunked2.AsyncTasks.PostFetcher;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -25,8 +26,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import com.michaldabski.msqlite.MSQLiteOpenHelper;
+import com.michaldabski.msqlite.queries.CreateTable;
 
-public class ProfileMainActivity extends ActionBarActivity{
+public class ProfileMainActivity extends ActionBarActivity {
 
 	SearchView mSearchView;
     TextView mStatusView;
@@ -40,6 +43,7 @@ public class ProfileMainActivity extends ActionBarActivity{
 	public static String name;
 	public static EditText editTxt;
 	public static MenuItem searchItem;
+	public static ActionBar actionBar;
 	String url;
 	String urlTwo;
 	Button btnSearch;
@@ -47,7 +51,7 @@ public class ProfileMainActivity extends ActionBarActivity{
 	TextView tvDebug;
 	ListView lv;
 	JazzyViewPager myPager;
-	String summonerName = AsyncTasks.summonerName;
+	
 	
 
 	
@@ -58,7 +62,7 @@ public class ProfileMainActivity extends ActionBarActivity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_summoner_lookup);
-		ActionBar actionBar = getSupportActionBar();
+		actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		actionBar.show();
 		setTitle("Summoner Search");

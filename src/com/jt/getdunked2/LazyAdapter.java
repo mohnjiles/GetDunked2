@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import android.R.integer;
 import android.content.Context;
 import android.graphics.drawable.StateListDrawable;
 import android.view.LayoutInflater;
@@ -29,7 +30,7 @@ public class LazyAdapter extends ArrayAdapter {
 	Number summSpellOne = null;
 	Number summSpellTwo = null;
 	int itemNumber = 0;
-	
+	int numOfRecentGames = AsyncTasks.numOfRecentGames;
 	int resource;
 	String response;
 	Context context;
@@ -75,7 +76,8 @@ public class LazyAdapter extends ArrayAdapter {
 	}
 
 	public View getView(int position, View convertView, ViewGroup parent) {
-		GameStatistics gs = (GameStatistics) getItem(9 - position);
+		int someInt = numOfRecentGames - 1;
+		GameStatistics gs = (GameStatistics) getItem(someInt - position);
 		ViewHolder holder;
 		// Get the current location object
 

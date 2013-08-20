@@ -91,7 +91,10 @@ public class MainActivity extends ActionBarActivity {
 					long arg3) {
 				switch (arg2) {
 				case 0:
-					startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+					startActivity(new Intent(MainActivity.this, ChampsActivity.class));
+					break;
+				case 1:
+					startActivity(new Intent(MainActivity.this, ProfileMainActivity.class));
 					break;
 				}
 				
@@ -108,6 +111,16 @@ public class MainActivity extends ActionBarActivity {
 		return true;
 		
 	}
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		switch (item.getItemId()) {
+		case R.id.menu_settings:
+			startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+		
+	}
 	
 	
 	public void champButtonPressed(View view) {
@@ -116,10 +129,6 @@ public class MainActivity extends ActionBarActivity {
 	
 	public void profileButtonPressed(View view) {
 		startActivity(new Intent(MainActivity.this, ProfileMainActivity.class));  
-	}
-	
-	public void drawerButtonPressed(View view) {
-		startActivity(new Intent(MainActivity.this, DrawerActivity.class));  
 	}
 	
 
