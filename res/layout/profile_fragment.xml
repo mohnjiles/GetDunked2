@@ -22,7 +22,7 @@
         android:src="@drawable/challenger_1" />
 
     <TextView
-        android:id="@+id/TextView01"
+        android:id="@+id/tvFriendlyRed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tvWeekNum"
@@ -49,8 +49,8 @@
         android:id="@+id/tvNameTwo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView01"
-        android:layout_alignBottom="@+id/TextView01"
+        android:layout_alignBaseline="@+id/tvFriendlyRed"
+        android:layout_alignBottom="@+id/tvFriendlyRed"
         android:layout_alignLeft="@+id/ivTeamFiveIcon"
         android:layout_alignRight="@+id/ivTeamFiveIcon"
         android:gravity="center"
@@ -247,7 +247,7 @@
         android:id="@+id/ivTeamFiveIcon"
         android:layout_width="@dimen/image_dimens"
         android:layout_height="@dimen/image_dimens"
-        android:layout_below="@+id/TextView01"
+        android:layout_below="@+id/tvFriendlyRed"
         android:layout_marginLeft="8dp"
         android:layout_toRightOf="@+id/ivSoloFiveIcon"
         android:src="@drawable/challenger_1" />
@@ -268,7 +268,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tvWins"
         android:layout_alignBottom="@+id/tvWins"
-        android:layout_alignRight="@+id/TextView01"
+        android:layout_alignRight="@+id/tvFriendlyRed"
         android:layout_marginRight="14dp"
         android:text="Wins"
         android:textColor="#FFFFFF"

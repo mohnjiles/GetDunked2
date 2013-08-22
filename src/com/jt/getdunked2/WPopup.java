@@ -1,5 +1,7 @@
 package com.jt.getdunked2;
 
+import com.jt.getdunked2.R.drawable;
+
 import android.R.raw;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,12 +21,14 @@ public class WPopup extends Fragment {
 	TextView tvHeader4;
 	TextView tvHeader5;
 	TextView tvHeader6;
+	TextView tvHeader7;
 	TextView tvValue1;
 	TextView tvValue2;
 	TextView tvValue3;
 	TextView tvValue4;
 	TextView tvValue5;
 	TextView tvValue6;
+	TextView tvValue7;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,12 +46,14 @@ public class WPopup extends Fragment {
 		tvHeader4 = (TextView) V.findViewById(R.id.tvHeader4);
 		tvHeader5 = (TextView) V.findViewById(R.id.tvHeader5);
 		tvHeader6 = (TextView) V.findViewById(R.id.tvHeader6);
+		tvHeader7 = (TextView) V.findViewById(R.id.tvHeader7);
 		tvValue1 = (TextView) V.findViewById(R.id.tvValue1);
 		tvValue2 = (TextView) V.findViewById(R.id.tvValue2);
 		tvValue3 = (TextView) V.findViewById(R.id.tvValue3);
 		tvValue4 = (TextView) V.findViewById(R.id.tvValue4);
 		tvValue5 = (TextView) V.findViewById(R.id.tvValue5);
 		tvValue6 = (TextView) V.findViewById(R.id.tvValue6);
+		tvValue7 = (TextView) V.findViewById(R.id.tvValue7);
 
 		switch (position) {
 		case 0:
@@ -159,13 +165,53 @@ public class WPopup extends Fragment {
 		case 15:
 			SetStuff("Pale Cascade", R.drawable.pale_cascade, "Range",
 					"Cooldown", "Cost", "Magic Damage Per Orb",
-					"Shield Strength", "200", "10 seconds",
+					"Max Magic Damage", "Shield Strength",
+					"Max Shield Strength", "200", "10 seconds",
 					"60 / 70 / 80 / 90 / 100 Mana",
 					"22 / 34 / 46 / 58 / 70 (+ 20% AP)",
-					"40 / 55 / 70 / 85 / 100 (+ 30% AP)");
+					"66 / 102 / 138 / 174 / 210 (+ 60% AP)",
+					"40 / 55 / 70 / 85 / 100 (+ 30% AP)",
+					"80 / 110 / 140 / 170 / 200 (+ 60% AP)");
+			break;
+		case 16:
+			SetStuff("Burning Agony", R.drawable.burning_agony, "Range",
+					"Cooldown", "Cost", "Magic Damage Per Second",
+					"Crowd Control Reduction", "162.5", "4 seconds",
+					"10 / 15 / 20 / 25 / 30 Health per second",
+					"35 / 50 / 65 / 80 / 95 (+ 20% AP)",
+					"10 / 15 / 20 / 25 / 30%");
+			break;
+		case 17:
+			SetStuff("Blood Rush", R.drawable.blood_rush, "Cooldown", "Cost",
+					"Movement Speed", "Attack Speed", "12 seconds", "40 Mana",
+					"40 / 45 / 50 / 55 / 60%", "20 / 25 / 30 / 35 / 40%");
 			break;
 		}
 		return V;
+	}
+
+	public void SetStuff(String abilityName, int abilityIcon, String header1,
+			String header2, String header3, String header4, String header5,
+			String header6, String header7, String value1, String value2,
+			String value3, String value4, String value5, String value6,
+			String value7) {
+
+		tvSpellName.setText(abilityName);
+		ivPassiveIcon.setImageResource(abilityIcon);
+		tvHeader1.setText(header1);
+		tvHeader2.setText(header2);
+		tvHeader3.setText(header3);
+		tvHeader4.setText(header4);
+		tvHeader5.setText(header5);
+		tvHeader6.setText(header6);
+		tvHeader7.setText(header7);
+		tvValue1.setText(value1);
+		tvValue2.setText(value2);
+		tvValue3.setText(value3);
+		tvValue4.setText(value4);
+		tvValue5.setText(value5);
+		tvValue6.setText(value6);
+		tvValue7.setText(value7);
 	}
 
 	public void SetStuff(String abilityName, int abilityIcon, String header1,
@@ -187,6 +233,8 @@ public class WPopup extends Fragment {
 		tvValue4.setText(value4);
 		tvValue5.setText(value5);
 		tvValue6.setText(value6);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 
 	}
 
@@ -210,6 +258,8 @@ public class WPopup extends Fragment {
 
 		tvHeader6.setVisibility(View.GONE);
 		tvValue6.setVisibility(View.GONE);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 
 	}
 
@@ -232,6 +282,8 @@ public class WPopup extends Fragment {
 		tvValue5.setVisibility(View.GONE);
 		tvHeader6.setVisibility(View.GONE);
 		tvValue6.setVisibility(View.GONE);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 
 	}
 
@@ -254,6 +306,8 @@ public class WPopup extends Fragment {
 		tvValue5.setVisibility(View.GONE);
 		tvHeader6.setVisibility(View.GONE);
 		tvValue6.setVisibility(View.GONE);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 	}
 
 	public void SetStuff(String abilityName, int abilityIcon, String header1,
@@ -274,5 +328,8 @@ public class WPopup extends Fragment {
 		tvValue5.setVisibility(View.GONE);
 		tvHeader6.setVisibility(View.GONE);
 		tvValue6.setVisibility(View.GONE);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
+
 	}
 }

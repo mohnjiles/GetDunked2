@@ -1,5 +1,6 @@
 package com.jt.getdunked2;
 
+import android.R.integer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -18,12 +19,14 @@ public class QPopup extends Fragment {
 	TextView tvHeader4;
 	TextView tvHeader5;
 	TextView tvHeader6;
+	TextView tvHeader7;
 	TextView tvValue1;
 	TextView tvValue2;
 	TextView tvValue3;
 	TextView tvValue4;
 	TextView tvValue5;
 	TextView tvValue6;
+	TextView tvValue7;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,12 +44,14 @@ public class QPopup extends Fragment {
 		tvHeader4 = (TextView) V.findViewById(R.id.tvHeader4);
 		tvHeader5 = (TextView) V.findViewById(R.id.tvHeader5);
 		tvHeader6 = (TextView) V.findViewById(R.id.tvHeader6);
+		tvHeader7 = (TextView) V.findViewById(R.id.tvHeader7);
 		tvValue1 = (TextView) V.findViewById(R.id.tvValue1);
 		tvValue2 = (TextView) V.findViewById(R.id.tvValue2);
 		tvValue3 = (TextView) V.findViewById(R.id.tvValue3);
 		tvValue4 = (TextView) V.findViewById(R.id.tvValue4);
 		tvValue5 = (TextView) V.findViewById(R.id.tvValue5);
 		tvValue6 = (TextView) V.findViewById(R.id.tvValue6);
+		tvValue7 = (TextView) V.findViewById(R.id.tvValue7);
 
 		switch (position) {
 		case 0:
@@ -157,9 +162,45 @@ public class QPopup extends Fragment {
 					"10 / 9 / 8 / 7 / 6 seconds", "55 Mana",
 					"60 / 95 / 130 / 165 / 200 (+ 70% AP)");
 			break;
-
+		case 16:
+			SetStuff("Infected Cleaver", R.drawable.infected_cleaver, "Range",
+					"Cooldown", "Cost", "Magic Damage", "Minimum Damage",
+					"Max Damage vs Monsters", "1000", "4 seconds",
+					"50 / 60 / 70 / 80 / 90 Health",
+					"15 / 18 / 21 / 23 / 25% of target's current health",
+					"80 / 130 / 180 / 230 / 280", "300 / 400 / 500 / 600 / 700");
+			break;
+		case 17:
+			SetStuff("Spinning Axe", R.drawable.spinning_axe, "Cooldown",
+					"Cost", "Bonus Physical Damage",
+					"12 / 11 / 10 / 9 / 8 seconds", "45 Mana",
+					"45 / 55 / 65 / 75 / 85% AD");
+			break;
 		}
 		return V;
+	}
+	
+	public void SetStuff(String abilityName, int abilityIcon, String header1,
+			String header2, String header3, String header4, String header5,
+			String header6, String header7, String value1, String value2, String value3,
+			String value4, String value5, String value6, String value7) {
+		
+		tvSpellName.setText(abilityName);
+		ivPassiveIcon.setImageResource(abilityIcon);
+		tvHeader1.setText(header1);
+		tvHeader2.setText(header2);
+		tvHeader3.setText(header3);
+		tvHeader4.setText(header4);
+		tvHeader5.setText(header5);
+		tvHeader6.setText(header6);
+		tvHeader7.setText(header7);
+		tvValue1.setText(value1);
+		tvValue2.setText(value2);
+		tvValue3.setText(value3);
+		tvValue4.setText(value4);
+		tvValue5.setText(value5);
+		tvValue6.setText(value6);
+		tvValue7.setText(value7);
 	}
 
 	public void SetStuff(String abilityName, int abilityIcon, String header1,
@@ -181,6 +222,8 @@ public class QPopup extends Fragment {
 		tvValue4.setText(value4);
 		tvValue5.setText(value5);
 		tvValue6.setText(value6);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 
 	}
 
@@ -204,6 +247,8 @@ public class QPopup extends Fragment {
 
 		tvHeader6.setVisibility(View.GONE);
 		tvValue6.setVisibility(View.GONE);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 
 	}
 
@@ -226,6 +271,8 @@ public class QPopup extends Fragment {
 		tvValue5.setVisibility(View.GONE);
 		tvHeader6.setVisibility(View.GONE);
 		tvValue6.setVisibility(View.GONE);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 
 	}
 
@@ -248,6 +295,8 @@ public class QPopup extends Fragment {
 		tvValue5.setVisibility(View.GONE);
 		tvHeader6.setVisibility(View.GONE);
 		tvValue6.setVisibility(View.GONE);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 	}
 
 	public void SetStuff(String abilityName, int abilityIcon, String header1,
@@ -268,5 +317,7 @@ public class QPopup extends Fragment {
 		tvValue5.setVisibility(View.GONE);
 		tvHeader6.setVisibility(View.GONE);
 		tvValue6.setVisibility(View.GONE);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 	}
 }

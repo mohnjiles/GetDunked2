@@ -29,6 +29,8 @@ public class AbilityFragment extends Fragment {
 	TextView tvWText;
 	TextView tvEText;
 	TextView tvRText;
+	
+	public static int lastPage = 0;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -66,9 +68,8 @@ public class AbilityFragment extends Fragment {
 			public void onClick(View v) {
 				Intent detailsIntent = new Intent(getActivity()
 						.getBaseContext(), AbilityDetails.class);
-				detailsIntent.putExtra("Ability", 1);
+				detailsIntent.putExtra("Ability", 0);
 				startActivity(detailsIntent);
-
 			}
 		});
 
@@ -79,7 +80,7 @@ public class AbilityFragment extends Fragment {
 			public void onClick(View v) {
 				Intent detailsIntent = new Intent(getActivity()
 						.getBaseContext(), AbilityDetails.class);
-				detailsIntent.putExtra("Ability", 2);
+				detailsIntent.putExtra("Ability", 1);
 				startActivity(detailsIntent);
 
 			}
@@ -92,7 +93,7 @@ public class AbilityFragment extends Fragment {
 			public void onClick(View v) {
 				Intent detailsIntent = new Intent(getActivity()
 						.getBaseContext(), AbilityDetails.class);
-				detailsIntent.putExtra("Ability", 3);
+				detailsIntent.putExtra("Ability", 2);
 				startActivity(detailsIntent);
 
 			}
@@ -105,7 +106,59 @@ public class AbilityFragment extends Fragment {
 			public void onClick(View v) {
 				Intent detailsIntent = new Intent(getActivity()
 						.getBaseContext(), AbilityDetails.class);
-				detailsIntent.putExtra("Ability", 4);
+				detailsIntent.putExtra("Ability", 3);
+				startActivity(detailsIntent);
+
+			}
+		});
+		
+		/*********** Q onClickListener ***********/
+		tvQTitle.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent detailsIntent = new Intent(getActivity()
+						.getBaseContext(), AbilityDetails.class);
+				detailsIntent.putExtra("Ability", 0);
+				startActivity(detailsIntent);
+
+			}
+		});
+
+		/*********** W onClickListener ***********/
+		tvWTitle.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent detailsIntent = new Intent(getActivity()
+						.getBaseContext(), AbilityDetails.class);
+				detailsIntent.putExtra("Ability", 1);
+				startActivity(detailsIntent);
+
+			}
+		});
+
+		/*********** E onClickListener ***********/
+		tvETitle.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent detailsIntent = new Intent(getActivity()
+						.getBaseContext(), AbilityDetails.class);
+				detailsIntent.putExtra("Ability", 2);
+				startActivity(detailsIntent);
+
+			}
+		});
+
+		/*********** R onClickListener ***********/
+		tvRTitle.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent detailsIntent = new Intent(getActivity()
+						.getBaseContext(), AbilityDetails.class);
+				detailsIntent.putExtra("Ability", 3);
 				startActivity(detailsIntent);
 
 			}

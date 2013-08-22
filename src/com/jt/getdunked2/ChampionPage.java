@@ -30,6 +30,7 @@ public class ChampionPage extends ActionBarActivity {
 	int position = ChampsActivity.myInt;
 	Integer[] mThumbIds = ImageAdapter.mThumbIds;
 	JazzyViewPager myPager;
+	int currentPage = 0;
 	
 	@Override
 	 protected void onCreate(Bundle arg0) {
@@ -38,6 +39,9 @@ public class ChampionPage extends ActionBarActivity {
 	  
 	  String[] champNames = getResources().getStringArray(R.array.ChampNames);
 	  setTitle(champNames[position]);
+	  
+	  Intent intent = getIntent();
+	  currentPage = intent.getIntExtra("page", 0);
 	  
 	  
 	  setContentView(R.layout.activity_champion_page);
@@ -67,7 +71,7 @@ public class ChampionPage extends ActionBarActivity {
 	  FragmentAdapter adapter = new FragmentAdapter(
 	    getSupportFragmentManager(), fragments);
 	  myPager.setAdapter(adapter);
-	  myPager.setCurrentItem(0);
+	  myPager.setCurrentItem(currentPage);
 	  myPager.setTransitionEffect(TransitionEffect.CubeOut);
 	 
 
@@ -75,8 +79,7 @@ public class ChampionPage extends ActionBarActivity {
 
 	   @Override
 	   public void onPageSelected(int arg0) {
-	    Toast.makeText(ChampionPage.this,
-	      "Page Selected " + arg0, Toast.LENGTH_LONG).show();
+	    AbilityDetails.previousPage = arg0;
 	   }
 
 	   @Override

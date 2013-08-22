@@ -46,7 +46,7 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignParentLeft="true"
-	        android:layout_below="@+id/TextView01"
+	        android:layout_below="@+id/tvFriendlyRed"
 	        android:text="Deaths"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
@@ -96,8 +96,8 @@
 	        android:id="@+id/tvChampKills"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView01"
-	        android:layout_alignBottom="@+id/TextView01"
+	        android:layout_alignBaseline="@+id/tvFriendlyRed"
+	        android:layout_alignBottom="@+id/tvFriendlyRed"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -310,7 +310,7 @@
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView10"
+	        android:id="@+id/tvEnemyBlue"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/TextView09"
@@ -320,11 +320,11 @@
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView11"
+	        android:id="@+id/tvEnemyRed"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView10"
-	        android:layout_below="@+id/TextView10"
+	        android:layout_alignLeft="@+id/tvEnemyBlue"
+	        android:layout_below="@+id/tvEnemyBlue"
 	        android:text="Neutral Monsters Killed"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
@@ -333,8 +333,8 @@
 	        android:id="@+id/TextView12"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView11"
-	        android:layout_below="@+id/TextView11"
+	        android:layout_alignLeft="@+id/tvEnemyRed"
+	        android:layout_below="@+id/tvEnemyRed"
 	        android:text="Time Spent Dead"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
@@ -379,8 +379,8 @@
 	        android:id="@+id/tvMinionsSlain"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView10"
-	        android:layout_alignBottom="@+id/TextView10"
+	        android:layout_alignBaseline="@+id/tvEnemyBlue"
+	        android:layout_alignBottom="@+id/tvEnemyBlue"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -391,8 +391,8 @@
 	        android:id="@+id/tvNeutralMonsters"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView11"
-	        android:layout_alignBottom="@+id/TextView11"
+	        android:layout_alignBaseline="@+id/tvEnemyRed"
+	        android:layout_alignBottom="@+id/tvEnemyRed"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -718,7 +718,7 @@
 	        android:src="@drawable/ability" />
 
 	    <TextView
-	        android:id="@+id/TextView01"
+	        android:id="@+id/tvFriendlyRed"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/ivTeamOneChampFive"

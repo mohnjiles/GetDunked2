@@ -2,7 +2,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/lib/com.google.ads">
     <!-- The main content view -->
     <RelativeLayout
 	    android:id="@+id/tvNameFive"
@@ -32,13 +32,24 @@
 	        android:onClick="profileButtonPressed"
 	        android:text="Summoner Lookup"
 	        android:textColor="#FFFFFF" />
+	    
+	    <Button
+	        android:id="@+id/button3"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/button2"
+	        android:onClick="timersButtonPressed"
+	        android:text="Jungle Timers"
+	        android:textColor="#FFFFFF" />
 	
 	    <HorizontalScrollView
 	        android:id="@+id/horizontalScrollView1"
 	        
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignParentBottom="true"
+	        android:layout_above="@+id/ad"
 	        android:layout_alignParentLeft="true" >
 	
 	        <RelativeLayout
@@ -247,7 +258,7 @@
 	    </HorizontalScrollView>
 	
 	    <TextView
-	        android:id="@+id/TextView01"
+	        android:id="@+id/tvFriendlyRed"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_above="@+id/tvWeekNum"
@@ -269,6 +280,20 @@
 	        android:text="Loading..."
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/free_week_text" />
+
+	    <com.google.ads.AdView
+	        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	        android:id="@+id/ad"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:gravity="center"
+			ads:testDevices="03E7AEA4628DC9965FF4408CB5DB448C, 8C28DB131FFF8656AF3DA42152CA31D2"
+	        ads:adSize="SMART_BANNER"
+	        ads:adUnitId="ca-app-pub-9789177679017173/4958708842"
+	        ads:loadAdOnCreate="true" >
+	    </com.google.ads.AdView>
 	
 	</RelativeLayout>
     <!-- The navigation drawer -->
@@ -277,7 +302,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
+        android:divider="@android:color/white"
+        android:dividerHeight="1dp"
         android:background="#000000"/>
 </android.support.v4.widget.DrawerLayout>

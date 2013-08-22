@@ -18,12 +18,14 @@ public class EPopup extends Fragment {
 	TextView tvHeader4;
 	TextView tvHeader5;
 	TextView tvHeader6;
+	TextView tvHeader7;
 	TextView tvValue1;
 	TextView tvValue2;
 	TextView tvValue3;
 	TextView tvValue4;
 	TextView tvValue5;
 	TextView tvValue6;
+	TextView tvValue7;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,12 +43,14 @@ public class EPopup extends Fragment {
 		tvHeader4 = (TextView) V.findViewById(R.id.tvHeader4);
 		tvHeader5 = (TextView) V.findViewById(R.id.tvHeader5);
 		tvHeader6 = (TextView) V.findViewById(R.id.tvHeader6);
+		tvHeader7 = (TextView) V.findViewById(R.id.tvHeader7);
 		tvValue1 = (TextView) V.findViewById(R.id.tvValue1);
 		tvValue2 = (TextView) V.findViewById(R.id.tvValue2);
 		tvValue3 = (TextView) V.findViewById(R.id.tvValue3);
 		tvValue4 = (TextView) V.findViewById(R.id.tvValue4);
 		tvValue5 = (TextView) V.findViewById(R.id.tvValue5);
 		tvValue6 = (TextView) V.findViewById(R.id.tvValue6);
+		tvValue7 = (TextView) V.findViewById(R.id.tvValue7);
 
 		switch (position) {
 		case 0:
@@ -151,8 +155,49 @@ public class EPopup extends Fragment {
 					"Cost", "Slow", "250", "26 / 24 / 22 / 20 / 18 seconds",
 					"70 Mana", "35 / 40 / 45 / 50 / 55%");
 			break;
+		case 16:
+			SetStuff(
+					"Masochism",
+					R.drawable.masochism,
+					"Cooldown",
+					"Cost",
+					"Attack Damage",
+					"7 seconds",
+					"25 / 35 / 45 / 55 / 65 Health",
+					"40 / 55 / 70 / 85 / 100 + 0.4 / 0.55 / 0.7 / 0.85 / 1 per 1% of missing health");
+			break;
+		case 17:
+			SetStuff("Stand Aside", R.drawable.stand_aside, "Range",
+					"Cooldown", "Cost", "Physical Damage", "Slow", "1050",
+					"18 / 17 / 16 / 15 / 14 seconds", "70 Mana",
+					"70 / 105 / 140 / 175 / 210 (+ 50% bonus AD)",
+					"20 / 25 / 30 / 35 / 40%");
+			break;
 		}
 		return V;
+	}
+
+	public void SetStuff(String abilityName, int abilityIcon, String header1,
+			String header2, String header3, String header4, String header5,
+			String header6, String header7, String value1, String value2, String value3,
+			String value4, String value5, String value6, String value7) {
+		
+		tvSpellName.setText(abilityName);
+		ivPassiveIcon.setImageResource(abilityIcon);
+		tvHeader1.setText(header1);
+		tvHeader2.setText(header2);
+		tvHeader3.setText(header3);
+		tvHeader4.setText(header4);
+		tvHeader5.setText(header5);
+		tvHeader6.setText(header6);
+		tvHeader7.setText(header7);
+		tvValue1.setText(value1);
+		tvValue2.setText(value2);
+		tvValue3.setText(value3);
+		tvValue4.setText(value4);
+		tvValue5.setText(value5);
+		tvValue6.setText(value6);
+		tvValue7.setText(value7);
 	}
 
 	public void SetStuff(String abilityName, int abilityIcon, String header1,
@@ -174,6 +219,8 @@ public class EPopup extends Fragment {
 		tvValue4.setText(value4);
 		tvValue5.setText(value5);
 		tvValue6.setText(value6);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 
 	}
 
@@ -197,6 +244,8 @@ public class EPopup extends Fragment {
 
 		tvHeader6.setVisibility(View.GONE);
 		tvValue6.setVisibility(View.GONE);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 
 	}
 
@@ -219,6 +268,8 @@ public class EPopup extends Fragment {
 		tvValue5.setVisibility(View.GONE);
 		tvHeader6.setVisibility(View.GONE);
 		tvValue6.setVisibility(View.GONE);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 
 	}
 
@@ -241,6 +292,8 @@ public class EPopup extends Fragment {
 		tvValue5.setVisibility(View.GONE);
 		tvHeader6.setVisibility(View.GONE);
 		tvValue6.setVisibility(View.GONE);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 	}
 
 	public void SetStuff(String abilityName, int abilityIcon, String header1,
@@ -261,5 +314,7 @@ public class EPopup extends Fragment {
 		tvValue5.setVisibility(View.GONE);
 		tvHeader6.setVisibility(View.GONE);
 		tvValue6.setVisibility(View.GONE);
+		tvHeader7.setVisibility(View.GONE);
+		tvValue7.setVisibility(View.GONE);
 	}
 }

@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
+        android:layout_above="@+id/ad"
         android:background="@drawable/gradient"
         tools:context=".AbilityDetails" >
 
@@ -24,5 +25,18 @@
             android:textColor="#fff" >
         </android.support.v4.view.PagerTitleStrip>
     </com.jfeinstein.jazzyviewpager.JazzyViewPager>
+    	    <com.google.ads.AdView
+	        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	        android:id="@+id/ad"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:gravity="center"
+	        ads:testDevices="03E7AEA4628DC9965FF4408CB5DB448C, 8C28DB131FFF8656AF3DA42152CA31D2"
+	        ads:adSize="SMART_BANNER"
+	        ads:adUnitId="ca-app-pub-9789177679017173/4958708842"
+	        ads:loadAdOnCreate="true" >
+	    </com.google.ads.AdView>
 
 </RelativeLayout>

@@ -335,7 +335,7 @@ public class MatchHistoryFragment extends Fragment {
 			ivChampIcon = (ImageView) pwindo.getContentView().findViewById(R.id.ivChampIcon);
 			
 			// Title TextView variables
-			tvKillsTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView01);
+			tvKillsTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvFriendlyRed);
 			tvDeathsTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvDamageRec);
 			tvAssistTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvHealingDone);
 			tvKSTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvGoldTitle);
@@ -354,8 +354,8 @@ public class MatchHistoryFragment extends Fragment {
 			tvGoldTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView07);
 			tvTurretsTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView08);
 			tvInhibsTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView09);
-			tvMinionsTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView10);
-			tvNeutralTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView11);
+			tvMinionsTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvEnemyBlue);
+			tvNeutralTitle = (TextView) pwindo.getContentView().findViewById(R.id.tvEnemyRed);
 			tvTimeDeadTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView12);
 			tvWardPlacedTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView13);
 			tvWardKilledTitle = (TextView) pwindo.getContentView().findViewById(R.id.TextView14);

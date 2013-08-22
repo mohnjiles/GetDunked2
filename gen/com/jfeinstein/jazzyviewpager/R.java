@@ -20,7 +20,7 @@ public final class R {
 		public static final int holo_blue = 0x7f070000;
 	}
 	public static final class drawable {
-		public static final int ic_launcher = 0x7f02025e;
+		public static final int ic_launcher = 0x7f020263;
 	}
 	public static final class id {
 		public static final int accordion = 0x7f06000b;
@@ -38,7 +38,7 @@ public final class R {
 		public static final int zoomout = 0x7f060008;
 	}
 	public static final class layout {
-		public static final int activity_main = 0x7f03001e;
+		public static final int activity_main = 0x7f03001f;
 	}
 	public static final class menu {
 		public static final int activity_main = 0x7f0e0006;

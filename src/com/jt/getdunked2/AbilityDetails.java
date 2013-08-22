@@ -6,6 +6,7 @@ import com.jfeinstein.jazzyviewpager.JazzyViewPager;
 import com.jfeinstein.jazzyviewpager.JazzyViewPager.TransitionEffect;
 
 
+import android.R.integer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
@@ -37,6 +38,8 @@ public class AbilityDetails extends ActionBarActivity{
 	JazzyViewPager myPager;
 	int position = ChampsActivity.myInt;
 	Integer[] mThumbIds = ImageAdapter.mThumbIds;
+	int currentPage = 0;
+	public static int previousPage = 0;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,9 @@ public class AbilityDetails extends ActionBarActivity{
 		setContentView(R.layout.activity_ability_details);
 		ActionBar actionBar = getSupportActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
+		
+		Intent intent = getIntent();
+		currentPage = intent.getIntExtra("Ability", 0);
 		
 		String[] champNames = getResources().getStringArray(R.array.ChampNames);
 		setTitle(champNames[position]);
@@ -71,8 +77,10 @@ public class AbilityDetails extends ActionBarActivity{
 		FragmentAdapter adapter = new FragmentAdapter(
 		getSupportFragmentManager(), fragments);
 		myPager.setAdapter(adapter);
-		myPager.setCurrentItem(0);
+		myPager.setCurrentItem(currentPage);
 		myPager.setTransitionEffect(TransitionEffect.CubeOut);
+		
+		
 	}
 
 	
@@ -93,7 +101,8 @@ public class AbilityDetails extends ActionBarActivity{
 	            parentActivityIntent.addFlags(
 	                    Intent.FLAG_ACTIVITY_CLEAR_TOP |
 	                    Intent.FLAG_ACTIVITY_NEW_TASK);
-	            startActivity(parentActivityIntent);
+	            parentActivityIntent.putExtra("page", previousPage);
+	            startActivity(parentActivityIntent);  
 	            finish();
 	            return true;
 	    }

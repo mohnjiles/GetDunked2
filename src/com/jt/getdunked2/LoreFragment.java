@@ -21,7 +21,7 @@ public class LoreFragment extends Fragment {
     	
     	switch (position) {
     	
-    		case 0:
+    		case 1:
     			tvLoreText.setText(R.string.AhriLore);
     			return v;
     		default:

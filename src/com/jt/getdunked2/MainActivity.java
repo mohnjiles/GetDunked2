@@ -16,7 +16,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import com.google.ads.*;
 
 public class MainActivity extends ActionBarActivity {
 	
@@ -44,6 +46,7 @@ public class MainActivity extends ActionBarActivity {
 	
 	private String[] mChampNames;
 	private ListView mDrawerList;
+	private AdView adView;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +106,14 @@ public class MainActivity extends ActionBarActivity {
 	}
 
 	@Override
+	public void onDestroy() {
+		if (adView != null) {
+			adView.destroy();
+		}
+		super.onDestroy();
+	}
+	
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		MenuInflater menuInflater = getMenuInflater();
@@ -129,6 +140,10 @@ public class MainActivity extends ActionBarActivity {
 	
 	public void profileButtonPressed(View view) {
 		startActivity(new Intent(MainActivity.this, ProfileMainActivity.class));  
+	}
+	
+	public void timersButtonPressed(View view) {
+		startActivity(new Intent(MainActivity.this, JungleTimers.class));  
 	}
 	
 

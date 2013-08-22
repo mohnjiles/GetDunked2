@@ -105,7 +105,7 @@
 	        android:textSize="@dimen/free_week_text" />
 	
 	    <TextView
-	        android:id="@+id/TextView01"
+	        android:id="@+id/tvFriendlyRed"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignParentLeft="true"
@@ -118,8 +118,8 @@
 	        android:id="@+id/textView10"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView01"
-	        android:layout_below="@+id/TextView01"
+	        android:layout_alignLeft="@+id/tvFriendlyRed"
+	        android:layout_below="@+id/tvFriendlyRed"
 	        android:text="Minions Killed"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/free_week_text" />
@@ -128,7 +128,7 @@
 	        android:id="@+id/TextView02"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView01"
+	        android:layout_alignLeft="@+id/tvFriendlyRed"
 	        android:layout_below="@+id/textView9"
 	        android:text="Most Deaths in One Game"
 	        android:textColor="#FFFFFF"
@@ -388,8 +388,8 @@
 	        android:id="@+id/tvGold"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView01"
-	        android:layout_alignBottom="@+id/TextView01"
+	        android:layout_alignBaseline="@+id/tvFriendlyRed"
+	        android:layout_alignBottom="@+id/tvFriendlyRed"
 	        android:layout_alignParentRight="true"
 	        android:text="0"
 	        android:textColor="#FFFFFF"
