@@ -37,8 +37,9 @@ public class ChampsActivity extends ActionBarActivity {
 	            
 	            myInt = position;
 	            
-	            
-	            startActivity(new Intent(ChampsActivity.this, ChampionPage.class));
+	            Intent champPage = new Intent(ChampsActivity.this, ChampionPage.class);
+	            champPage.putExtra("position", position);
+	            startActivity(champPage);
 	            
 	        }
 	    });

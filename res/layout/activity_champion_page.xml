@@ -33,7 +33,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:gravity="center"
-        ads:testDevices="03E7AEA4628DC9965FF4408CB5DB448C, 8C28DB131FFF8656AF3DA42152CA31D2"
+        ads:testDevices="03E7AEA4628DC9965FF4408CB5DB448C, 8C28DB131FFF8656AF3DA42152CA31D2, 8103E3ACE90880F704AF6AB067CD3D9A"
         ads:adSize="SMART_BANNER"
         ads:adUnitId="ca-app-pub-9789177679017173/4958708842"
         ads:loadAdOnCreate="true" >

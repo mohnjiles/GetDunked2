@@ -43,243 +43,6 @@
 	        android:onClick="timersButtonPressed"
 	        android:text="Jungle Timers"
 	        android:textColor="#FFFFFF" />
-	
-	    <HorizontalScrollView
-	        android:id="@+id/horizontalScrollView1"
-	        
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_above="@+id/ad"
-	        android:layout_alignParentLeft="true" >
-	
-	        <RelativeLayout
-	            android:layout_width="536dp"
-	            android:layout_height="match_parent"
-	            android:layout_marginRight="4dp"
-	            android:orientation="horizontal" >
-	
-	            <ImageView
-	                android:id="@+id/ivFreeOne"
-	                android:layout_width="@dimen/free_week_image"
-	                android:layout_height="@dimen/free_week_image"
-	                android:layout_alignParentLeft="true"
-	                android:layout_alignParentTop="true"
-	                android:layout_marginRight="4dp"
-	                android:tag="Not Done" />
-	
-	            <ImageView
-	                android:id="@+id/ivFreeTwo"
-	                android:layout_width="@dimen/free_week_image"
-	                android:layout_height="@dimen/free_week_image"
-	                android:layout_alignParentTop="true"
-	                android:layout_marginRight="4dp"
-	                android:layout_toRightOf="@+id/ivFreeOne"
-	                android:tag="Not Done" />
-	
-	            <ImageView
-	                android:id="@+id/ivFreeThree"
-	                android:layout_width="@dimen/free_week_image"
-	                android:layout_height="@dimen/free_week_image"
-	                android:layout_alignParentTop="true"
-	                android:layout_marginRight="4dp"
-	                android:layout_toRightOf="@+id/ivFreeTwo"
-	                android:tag="Not Done" />
-	
-	            <ImageView
-	                android:id="@+id/ivFreeFour"
-	                android:layout_width="@dimen/free_week_image"
-	                android:layout_height="@dimen/free_week_image"
-	                android:layout_alignParentTop="true"
-	                android:layout_marginRight="4dp"
-	                android:layout_toRightOf="@+id/ivFreeThree"
-	                android:tag="Not Done" />
-	
-	            <ImageView
-	                android:id="@+id/ivFreeFive"
-	                android:layout_width="@dimen/free_week_image"
-	                android:layout_height="@dimen/free_week_image"
-	                android:layout_alignParentTop="true"
-	                android:layout_marginRight="4dp"
-	                android:layout_toRightOf="@+id/ivFreeFour"
-	                android:tag="Not Done" />
-	
-	            <ImageView
-	                android:id="@+id/ivFreeSix"
-	                android:layout_width="@dimen/free_week_image"
-	                android:layout_height="@dimen/free_week_image"
-	                android:layout_alignParentTop="true"
-	                android:layout_marginRight="4dp"
-	                android:layout_toRightOf="@id/ivFreeFive"
-	                android:tag="Not Done" />
-	            <ImageView
-	                android:id="@+id/ivFreeSeven"
-	                android:layout_width="@dimen/free_week_image"
-	                android:layout_height="@dimen/free_week_image"
-	                android:layout_alignParentTop="true"
-	                android:layout_marginRight="4dp"
-	                android:layout_toRightOf="@id/ivFreeSix"
-	                android:tag="Not Done" />
-	            <ImageView
-	                android:id="@+id/ivFreeEight"
-	                android:layout_width="@dimen/free_week_image"
-	                android:layout_height="@dimen/free_week_image"
-	                android:layout_alignParentTop="true"
-	                android:layout_marginRight="4dp"
-	                android:layout_toRightOf="@id/ivFreeSeven"
-	                android:tag="Not Done" />
-	            <ImageView
-	                android:id="@+id/ivFreeNine"
-	                android:layout_width="@dimen/free_week_image"
-	                android:layout_height="@dimen/free_week_image"
-	                android:layout_alignParentTop="true"
-	                android:layout_marginRight="4dp"
-	                android:layout_toRightOf="@id/ivFreeEight"
-	                android:tag="Not Done" />
-	            <ImageView
-	                android:id="@+id/ivFreeTen"
-	                android:layout_width="@dimen/free_week_image"
-	                android:layout_height="@dimen/free_week_image"
-	                android:layout_alignParentTop="true"
-	                android:layout_marginRight="4dp"
-	                android:layout_toRightOf="@id/ivFreeNine"
-	                android:tag="Not Done" />
-	
-	            <TextView
-	                android:id="@+id/tvNameOne"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_alignParentLeft="true"
-	                android:layout_below="@+id/ivFreeOne"
-	                android:layout_toLeftOf="@+id/ivFreeTwo"
-	                android:gravity="center"
-	                android:textColor="#FFFFFF"
-	                android:textSize="@dimen/free_name" />
-	
-	            <TextView
-	                android:id="@+id/tvNameTwo"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_alignLeft="@+id/ivFreeTwo"
-	                android:layout_below="@+id/ivFreeTwo"
-	                android:layout_toLeftOf="@+id/ivFreeThree"
-	                android:gravity="center"
-	                android:textColor="#FFFFFF" 
-	                android:textSize="@dimen/free_name" />
-	
-	            <TextView
-	                android:id="@+id/tvNameThree"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_alignLeft="@+id/ivFreeThree"
-	                android:layout_alignRight="@+id/ivFreeThree"
-	                android:layout_below="@+id/ivFreeThree"
-	                android:gravity="center"
-	                android:textColor="#FFFFFF" 
-	                android:textSize="@dimen/free_name" />
-	
-	            <TextView
-	                android:id="@+id/tvNameFour"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_alignRight="@+id/ivFreeFour"
-	                android:layout_below="@+id/ivFreeFour"
-	                android:layout_toRightOf="@+id/ivFreeThree"
-	                android:gravity="center"
-	                android:textColor="#FFFFFF" 
-	                android:textSize="@dimen/free_name" />
-	
-	
-	            <TextView
-	                android:id="@+id/tvFreeNameFive"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_alignRight="@+id/ivFreeFive"
-	                android:layout_below="@+id/ivFreeFive"
-	                android:layout_toRightOf="@+id/ivFreeFour"
-	                android:gravity="center"
-	                android:textColor="#FFFFFF" 
-	                android:textSize="@dimen/free_name" />
-				
-				<TextView
-	                android:id="@+id/tvNameSix"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_alignRight="@+id/ivFreeSix"
-	                android:layout_below="@+id/ivFreeSix"
-	                android:layout_toRightOf="@+id/ivFreeFive"
-	                android:gravity="center"
-	                android:textColor="#FFFFFF" 
-	                android:textSize="@dimen/free_name" />
-				
-				<TextView
-	                android:id="@+id/tvNameSeven"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_alignRight="@+id/ivFreeSeven"
-	                android:layout_below="@+id/ivFreeSeven"
-	                android:layout_toRightOf="@+id/ivFreeSix"
-	                android:gravity="center"
-	                android:textColor="#FFFFFF" 
-	                android:textSize="@dimen/free_name" />
-				
-				<TextView
-	                android:id="@+id/tvNameEight"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_alignRight="@+id/ivFreeEight"
-	                android:layout_below="@+id/ivFreeEight"
-	                android:layout_toRightOf="@+id/ivFreeSeven"
-	                android:gravity="center"
-	                android:textColor="#FFFFFF" 
-	                android:textSize="@dimen/free_name" />
-				
-				<TextView
-	                android:id="@+id/tvNameNine"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_alignRight="@+id/ivFreeNine"
-	                android:layout_below="@+id/ivFreeNine"
-	                android:layout_toRightOf="@+id/ivFreeEight"
-	                android:gravity="center"
-	                android:textColor="#FFFFFF"
-	                android:textSize="@dimen/free_name"  />
-				
-				<TextView
-	                android:id="@+id/tvNameTen"
-	                android:layout_width="wrap_content"
-	                android:layout_height="wrap_content"
-	                android:layout_alignRight="@+id/ivFreeTen"
-	                android:layout_below="@+id/ivFreeTen"
-	                android:layout_toRightOf="@+id/ivFreeNine"
-	                android:gravity="center"
-	                android:textColor="#FFFFFF" 
-	                android:textSize="@dimen/free_name" />
-	        </RelativeLayout>
-	    </HorizontalScrollView>
-	
-	    <TextView
-	        android:id="@+id/tvFriendlyRed"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_above="@+id/tvWeekNum"
-	        android:layout_alignParentLeft="true"
-	        android:layout_alignParentRight="true"
-	        android:gravity="center"
-	        android:text="Free Champion Rotation"
-	        android:textColor="#FFFFFF"
-	        android:textSize="@dimen/free_week_text" />
-	
-	    <TextView
-	        android:id="@+id/tvWeekNum"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:layout_above="@+id/horizontalScrollView1"
-	        android:layout_alignParentLeft="true"
-	        android:layout_alignParentRight="true"
-	        android:gravity="center"
-	        android:text="Loading..."
-	        android:textColor="#FFFFFF"
-	        android:textSize="@dimen/free_week_text" />
 
 	    <com.google.ads.AdView
 	        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
@@ -289,11 +52,22 @@
 	        android:layout_alignParentBottom="true"
 	        android:layout_alignParentLeft="true"
 	        android:gravity="center"
-			ads:testDevices="03E7AEA4628DC9965FF4408CB5DB448C, 8C28DB131FFF8656AF3DA42152CA31D2"
+			ads:testDevices="03E7AEA4628DC9965FF4408CB5DB448C, 8C28DB131FFF8656AF3DA42152CA31D2, 8103E3ACE90880F704AF6AB067CD3D9A"
 	        ads:adSize="SMART_BANNER"
 	        ads:adUnitId="ca-app-pub-9789177679017173/4958708842"
 	        ads:loadAdOnCreate="true" >
 	    </com.google.ads.AdView>
+
+	    <Button
+	        android:id="@+id/button4"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@+id/button3"
+	        android:text="Free Champion Rotation"
+	        android:onClick="freeWeekPressed"
+	        android:textColor="#FFFFFF" />
 	
 	</RelativeLayout>
     <!-- The navigation drawer -->

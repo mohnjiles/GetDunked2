@@ -18,8 +18,8 @@
         damage on every third attack at the cost of health.</string>
     <string name="BladesofTorment" formatted="false">ACTIVE: Aatrox unleashes and sends forward the power of his blade, 
         dealing magic damage to enemies in a line and slowing them by 40% for a few seconds.</string>
-    <string name="Massacre" formatted="false">ACTIVE: Aatrox draws in the blood of his foes, dealing magic damage to nearby enemy champions.\n\n
-        For the next 12 seconds, Aatrox gains bonus attack speed and 175 bonus attack range (325 total range). 
+    <string name="Massacre" formatted="false">ACTIVE: Aatrox draws in the blood of his foes, dealing magic damage to nearby enemy champions.\n\nFor 
+        the next 12 seconds, Aatrox gains bonus attack speed and 175 bonus attack range (325 total range). 
         His attacks are still considered melee.</string>
     <string name="AhriLore" formatted="false">Unlike other foxes that roamed the woods of southern Ionia, Ahri had always felt a strange connection to the magical
     world around her; a connection that was somehow incomplete. Deep inside, she felt the skin she had been born into was
@@ -39,8 +39,8 @@
     mages on Runeterra. They offered her a chance to attain her humanity without further harm through service in the League
     of Legends.\n\n\t"Mercy is a human luxury... and responsibility."\n\t
     ―Ahri</string>
-    <string name="EssenceTheft">    Ahri gains a charge of Essence Theft with each enemy unit hit by any of her spells, with a cap of 3 
-    charges per spell cast. Upon reaching 9 charges, Ahri\'s next spell will have 35%%; bonus spell vamp.</string>
+    <string name="EssenceTheft" formatted="false">    Ahri gains a charge of Essence Theft with each enemy unit hit by any of her spells, with a cap of 3 
+    charges per spell cast. Upon reaching 9 charges, Ahri\'s next spell will have 35% bonus spell vamp.</string>
     <string name="OrbOfDeception">ACTIVE: Ahri sends out an orb in a line in front of her and then pulls it back, 
   dealing magic damage on the way out and true damage on the way back.</string>
     <string name="FoxFire">    ACTIVE: Ahri releases three fox-fires to surround her for up to 5 seconds. 
@@ -48,7 +48,7 @@
     prioritizing champions, and deal magic damage to the target.
     Additional fox-fires that hit the same target will only deal 50% damage.</string>
     <string name="Charm" formatted="false">ACTIVE: Ahri will blow a kiss that travels in a line in front of her. It will deal magic damage and charm 
-    the first enemy it encounters, forcing them to walk harmlessly towards her, while being slowed by 50%% for 
+    the first enemy it encounters, forcing them to walk harmlessly towards her, while being slowed by 50% for 
     the duration.</string>
     <string name="SpiritRush">    ACTIVE: Ahri dashes towards the cursor and fires essence bolts, dealing magic damage to up to 3 
     nearby enemies, prioritizing champions. In the next 10 seconds, Spirit Rush can be cast two additional 
@@ -617,8 +617,22 @@
         <item name="tr">Turkey</item>
         <item name="las">Latin America South</item>
         <item name="lan">Latin America North</item>
-        <item name="oc">Oceania</item>
+        <item name="oc">Oceania</item>
         -->
+    </string-array>
+    <string-array name="transitionEffect">
+        <item>Accordion</item>
+		<item>Cube In</item>
+		<item>Cube Out</item>
+		<item>Flip Horizontal</item>
+		<item>Flip Vertical</item>
+		<item>Rotate Down</item>
+		<item>Rotate Up</item>
+		<item>Stack</item>
+		<item>Standard</item>
+		<item>Tablet</item>
+		<item>Zoom In</item>
+		<item>Zoom Out</item>
     </string-array>
     <string-array name="userRegionValues">
         <item name="na">NA</item>
@@ -630,12 +644,14 @@
         <item name="tr">tr</item>
         <item name="las">las</item>
         <item name="lan">lan</item>
-        <item name="oc">oc</item>
+        <item name="oc">oc</item>
         -->
     </string-array>
     <string-array name="drawerStuff">
         <item>Champions</item>
         <item>Summoner Lookup</item>
+        <item>Jungle Timers</item>
+        <item>Free Champion Rotation</item>
     </string-array>
 
     <string name="title_activity_profile">ProfileActivity</string>
@@ -655,5 +671,8 @@
     <string name="title_activity_drawer">DrawerActivity</string>
     <string name="title_activity_guides_fragment">GuidesFragment</string>
     <string name="title_activity_jungle_timers">JungleTimers</string>
+    <string name="title_activity_jungle_timer_selector">JungleTimerSelector</string>
+    <string name="title_activity_jungle_timers_tt">JungleTimersTT</string>
+    <string name="title_activity_free_week">FreeWeekActivity</string>
 
 </resources>

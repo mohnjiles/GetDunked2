@@ -9,8 +9,8 @@
     <dimen name="kda">10sp</dimen>
     <dimen name="wins_padding">26dip</dimen>
     <dimen name="wins_padding_two">30dip</dimen>
-    <dimen name="free_week_image">64dip</dimen>
-    <dimen name="free_week_text">14sp</dimen>
+    <dimen name="free_week_image">72dip</dimen>
+    <dimen name="free_week_text">15sp</dimen>
     <dimen name="free_name">11sp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -21,4 +21,13 @@
     <dimen name="teams_text">11sp</dimen>
     <dimen name="team_champs">24dip</dimen>
 	<dimen name="sliding_size">16sp</dimen>
+	<dimen name="jungle_padding">12dp</dimen>
+	<dimen name="tt_timer_size">72dp</dimen>
+	<dimen name="land_tt_timer_size">52dp</dimen>
+	<dimen name="stats_padding">4dp</dimen>
+	<dimen name="stats_text">15sp</dimen>
+	<dimen name="ability_size">64dp</dimen>
+	<dimen name="ability_title">20sp</dimen>
+	<dimen name="ability_text">12sp</dimen>
+	<dimen name="ability_padding">7dp</dimen>
 </resources>

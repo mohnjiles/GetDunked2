@@ -7,4 +7,10 @@
           android:actionLayout="@layout/layout_search"
           yourapp:showAsAction="ifRoom|collapseActionView"
           yourapp:actionViewClass="android.support.v7.widget.SearchView" />
+  	<item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        yourapp:showAsAction="never"
+        android:icon="@drawable/ic_menu_preferences"
+        android:title="@string/action_settings"/>
 </menu>

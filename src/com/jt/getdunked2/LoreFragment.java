@@ -16,7 +16,7 @@ public class LoreFragment extends Fragment {
     	View v = inflater.inflate(R.layout.lore_fragment, container, false);
     	
     	TextView tvLoreText = (TextView)v.findViewById(R.id.tvLore);
-    	int position = ChampsActivity.myInt;
+    	int position = ChampionPage.position;
     	
     	
     	switch (position) {

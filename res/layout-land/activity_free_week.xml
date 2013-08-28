@@ -1,0 +1,250 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".FreeWeekActivity" >
+
+<RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <TextView
+        android:id="@+id/tvNameOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFreeOne"
+        android:layout_alignRight="@+id/ivFreeOne"
+        android:layout_below="@+id/ivFreeOne"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_name" />
+
+    <TextView
+        android:id="@+id/tvNameTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFreeTwo"
+        android:layout_alignRight="@+id/ivFreeTwo"
+        android:layout_below="@+id/ivFreeTwo"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_name" />
+
+    <TextView
+        android:id="@+id/tvNameThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFreeThree"
+        android:layout_alignRight="@+id/ivFreeThree"
+        android:layout_below="@+id/ivFreeThree"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_name" />
+
+    <TextView
+        android:id="@+id/tvNameFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFreeFour"
+        android:layout_alignRight="@+id/ivFreeFour"
+        android:layout_below="@+id/ivFreeFour"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_name" />
+
+    <TextView
+        android:id="@+id/tvFreeNameFive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFreeFive"
+        android:layout_alignRight="@+id/ivFreeFive"
+        android:layout_below="@+id/ivFreeFive"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_name" />
+
+    <TextView
+        android:id="@+id/tvNameSix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFreeSix"
+        android:layout_alignRight="@+id/ivFreeSix"
+        android:layout_below="@+id/ivFreeSix"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_name" />
+
+    <TextView
+        android:id="@+id/tvNameSeven"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFreeSeven"
+        android:layout_alignRight="@+id/ivFreeSeven"
+        android:layout_below="@+id/ivFreeSeven"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_name" />
+
+    <TextView
+        android:id="@+id/tvNameEight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFreeEight"
+        android:layout_alignRight="@+id/ivFreeEight"
+        android:layout_below="@+id/ivFreeEight"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_name" />
+
+    <TextView
+        android:id="@+id/tvNameNine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFreeNine"
+        android:layout_alignRight="@+id/ivFreeNine"
+        android:layout_below="@+id/ivFreeNine"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_name" />
+
+    <TextView
+        android:id="@+id/tvNameTen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFreeTen"
+        android:layout_alignRight="@+id/ivFreeTen"
+        android:layout_below="@+id/ivFreeTen"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_name" />
+
+    <TextView
+        android:id="@+id/tvWeekNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tvFriendlyRed"
+        android:gravity="center"
+        android:text="Loading..."
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sliding_size" />
+
+    <TextView
+        android:id="@+id/tvFriendlyRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="Free Champion Rotation"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sliding_size" />
+
+    <ImageView
+        android:id="@+id/ivFreeThree"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_below="@+id/tvWeekNum"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/jungle_padding"
+        android:tag="Not Done" />
+
+    <ImageView
+        android:id="@+id/ivFreeFour"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_above="@+id/tvNameThree"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/tvNameThree"
+        android:tag="Not Done" />
+
+    <ImageView
+        android:id="@+id/ivFreeTwo"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_alignTop="@+id/ivFreeThree"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/ivFreeThree"
+        android:tag="Not Done" />
+
+    <ImageView
+        android:id="@+id/ivFreeOne"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_alignTop="@+id/ivFreeTwo"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/ivFreeTwo"
+        android:tag="Not Done" />
+
+    <ImageView
+        android:id="@+id/ivFreeFive"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_alignTop="@+id/ivFreeFour"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/ivFreeFour"
+        android:tag="Not Done" />
+
+    <ImageView
+        android:id="@+id/ivFreeSix"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_alignLeft="@+id/tvNameOne"
+        android:layout_below="@+id/tvNameOne"
+        android:layout_marginTop="@dimen/jungle_padding"
+        android:tag="Not Done" />
+
+    <ImageView
+        android:id="@+id/ivFreeSeven"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_above="@+id/tvNameSix"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/tvNameThree"
+        android:tag="Not Done" />
+
+    <ImageView
+        android:id="@+id/ivFreeTen"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_above="@+id/tvNameNine"
+        android:layout_alignLeft="@+id/tvFreeNameFive"
+        android:tag="Not Done" />
+
+    <ImageView
+        android:id="@+id/ivFreeEight"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_above="@+id/tvNameSeven"
+        android:layout_alignLeft="@+id/tvNameThree"
+        android:tag="Not Done" />
+
+    <ImageView
+        android:id="@+id/ivFreeNine"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_above="@+id/tvNameEight"
+        android:layout_alignLeft="@+id/tvNameFour"
+        android:tag="Not Done" />
+
+</RelativeLayout>
+	    <com.google.ads.AdView
+	        xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	        android:id="@+id/ad"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+			ads:testDevices="03E7AEA4628DC9965FF4408CB5DB448C, 8C28DB131FFF8656AF3DA42152CA31D2, 8103E3ACE90880F704AF6AB067CD3D9A"
+	        ads:adSize="SMART_BANNER"
+	        ads:adUnitId="ca-app-pub-9789177679017173/4958708842"
+	        ads:loadAdOnCreate="true" >
+	    </com.google.ads.AdView>
+</RelativeLayout>

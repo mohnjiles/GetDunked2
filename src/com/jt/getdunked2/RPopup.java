@@ -33,7 +33,7 @@ public class RPopup extends Fragment {
 		// Inflate the layout for this fragment
 		View V = inflater.inflate(R.layout.activity_e_popup, container, false);
 
-		int position = ChampsActivity.myInt;
+		int position = ChampionPage.position;
 
 		tvSpellName = (TextView) V.findViewById(R.id.tvSpellName);
 		ivPassiveIcon = (ImageView) V.findViewById(R.id.ivFreeThree);

@@ -8,8 +8,10 @@ import com.jfeinstein.jazzyviewpager.JazzyViewPager.TransitionEffect;
 
 import android.R.integer;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -36,10 +38,14 @@ public class AbilityDetails extends ActionBarActivity{
 	 * The {@link ViewPager} that will host the section contents.
 	 */
 	JazzyViewPager myPager;
-	int position = ChampsActivity.myInt;
+	int position = ChampionPage.position;
 	Integer[] mThumbIds = ImageAdapter.mThumbIds;
 	int currentPage = 0;
 	public static int previousPage = 0;
+	boolean fromFreeWeek = ChampionPage.fromFreeWeek;
+	
+	TransitionEffect tf;
+	SharedPreferences prefs;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -73,14 +79,42 @@ public class AbilityDetails extends ActionBarActivity{
 		fragmenthree.setArguments(bundle);
 		fragments.add(fragmentfour);
 		
+		prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+		  
+		if (prefs.getString("transition_effect", "Stack").equals("Accordion")) {
+			tf = TransitionEffect.Accordion;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Cube Out")) {
+			tf = TransitionEffect.CubeOut;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Cube In")) {
+			tf = TransitionEffect.CubeIn;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Flip Horizontal")) {
+			tf = TransitionEffect.FlipHorizontal;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Flip Vertical")) {
+			tf = TransitionEffect.FlipVertical;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Rotate Down")) {
+			tf = TransitionEffect.RotateDown;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Rotate Up")) {
+			tf = TransitionEffect.RotateUp;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Stack")) {
+			tf = TransitionEffect.Stack;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Standard")) {
+			tf = TransitionEffect.Standard;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Tablet")) {
+			tf = TransitionEffect.Tablet;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Zoom In")) {
+			tf = TransitionEffect.ZoomIn;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Zoom Out")) {
+			tf = TransitionEffect.ZoomOut;
+		} 
+		
 		myPager = (JazzyViewPager) findViewById(R.id.pager);
 		FragmentAdapter adapter = new FragmentAdapter(
 		getSupportFragmentManager(), fragments);
 		myPager.setAdapter(adapter);
 		myPager.setCurrentItem(currentPage);
-		myPager.setTransitionEffect(TransitionEffect.CubeOut);
-		
-		
+		myPager.setTransitionEffect(tf);
+
+
 	}
 
 	
@@ -97,14 +131,29 @@ public class AbilityDetails extends ActionBarActivity{
 	        case android.R.id.home:
 	            // This is called when the Home (Up) button is pressed
 	            // in the Action Bar.
-	            Intent parentActivityIntent = new Intent(this, ChampionPage.class);
-	            parentActivityIntent.addFlags(
-	                    Intent.FLAG_ACTIVITY_CLEAR_TOP |
-	                    Intent.FLAG_ACTIVITY_NEW_TASK);
-	            parentActivityIntent.putExtra("page", previousPage);
-	            startActivity(parentActivityIntent);  
-	            finish();
-	            return true;
+	        	if (fromFreeWeek) {
+	        		Intent parentActivityIntent = new Intent(this, ChampionPage.class);
+		            parentActivityIntent.addFlags(
+		                    Intent.FLAG_ACTIVITY_CLEAR_TOP |
+		                    Intent.FLAG_ACTIVITY_NEW_TASK);
+		            parentActivityIntent.putExtra("page", previousPage);
+		            parentActivityIntent.putExtra("from_free_week", true);
+		            parentActivityIntent.putExtra("position", position);
+		            startActivity(parentActivityIntent);  
+		            finish();
+		            return true;
+	        	} else {
+	        		Intent parentActivityIntent = new Intent(this, ChampionPage.class);
+		            parentActivityIntent.addFlags(
+		                    Intent.FLAG_ACTIVITY_CLEAR_TOP |
+		                    Intent.FLAG_ACTIVITY_NEW_TASK);
+		            parentActivityIntent.putExtra("page", previousPage);
+		            parentActivityIntent.putExtra("position", position);
+		            startActivity(parentActivityIntent);  
+		            finish();
+		            return true;
+	        	}
+	            
 	    }
 	    return super.onOptionsItemSelected(item);
 	}

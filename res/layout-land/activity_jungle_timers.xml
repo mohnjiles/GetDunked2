@@ -1,0 +1,441 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".JungleTimers" >
+
+    <TextView
+        android:id="@+id/tvFriendlyRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFriendlyRed"
+        android:layout_alignRight="@+id/ivFriendlyRed"
+        android:layout_below="@+id/ivFriendlyRed"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <ImageView
+        android:id="@+id/ivEnemyWraith"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_above="@+id/tvEnemyWolf"
+        android:layout_alignTop="@+id/ivEnemyWolf"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/ivEnemyWolf"
+        android:src="@drawable/wraithsquare" />
+
+    <TextView
+        android:id="@+id/tvEnemyWraith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivEnemyWraith"
+        android:layout_alignRight="@+id/ivEnemyWraith"
+        android:layout_below="@+id/ivEnemyWraith"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <ImageView
+        android:id="@+id/ivBaron"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/baron_nashor" />
+
+    <TextView
+        android:id="@+id/tvBaron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/ivBaron"
+        android:layout_below="@+id/ivBaron"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <TextView
+        android:id="@+id/tvDragon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/ivDragon"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <ImageView
+        android:id="@+id/ivDragon"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_above="@+id/tvDragon"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/dragon_square" />
+
+    <TextView
+        android:id="@+id/tvFriendlyBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFriendlyBlue"
+        android:layout_alignRight="@+id/ivFriendlyBlue"
+        android:layout_below="@+id/ivFriendlyBlue"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <TextView
+        android:id="@+id/tvFriendlyWolf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFriendlyWolf"
+        android:layout_alignRight="@+id/ivFriendlyWolf"
+        android:layout_below="@+id/ivFriendlyWolf"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyWraith"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_above="@+id/tvFriendlyWolf"
+        android:layout_alignTop="@+id/ivFriendlyWolf"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/ivFriendlyWolf"
+        android:src="@drawable/wraithsquare" />
+
+    <TextView
+        android:id="@+id/tvFriendlyWraith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFriendlyWraith"
+        android:layout_alignRight="@+id/ivFriendlyWraith"
+        android:layout_below="@+id/ivFriendlyWraith"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyGolem"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignBottom="@+id/ivFriendlyWraith"
+        android:layout_alignTop="@+id/ivFriendlyWraith"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/ivFriendlyWraith"
+        android:src="@drawable/golemsquare" />
+
+    <TextView
+        android:id="@+id/tvFriendlyGolem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFriendlyGolem"
+        android:layout_alignRight="@+id/ivFriendlyGolem"
+        android:layout_below="@+id/ivFriendlyGolem"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <TextView
+        android:id="@+id/tvFriendlyInhib3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFriendlyInhib3"
+        android:layout_alignRight="@+id/ivFriendlyInhib3"
+        android:layout_below="@+id/ivFriendlyInhib3"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/game_type" />
+
+    <ImageView
+        android:id="@+id/ivFlash1"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/flash" />
+
+    <TextView
+        android:id="@+id/tvFlash1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFlash1"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ivFlash1"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <TextView
+        android:id="@+id/tvEnemyInhib1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivEnemyInhib1"
+        android:layout_alignRight="@+id/ivEnemyInhib1"
+        android:layout_below="@+id/ivEnemyInhib1"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/game_type" />
+
+    <TextView
+        android:id="@+id/tvEnemyInhib2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivEnemyInhib2"
+        android:layout_alignRight="@+id/ivEnemyInhib2"
+        android:layout_below="@+id/ivEnemyInhib2"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/game_type" />
+
+    <TextView
+        android:id="@+id/tvEnemyInhib3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivEnemyInhib3"
+        android:layout_alignRight="@+id/ivEnemyInhib3"
+        android:layout_below="@+id/ivEnemyInhib3"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/game_type" />
+
+    <TextView
+        android:id="@+id/tvEnemyBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvDragon"
+        android:layout_alignBottom="@+id/tvDragon"
+        android:layout_alignLeft="@+id/ivEnemyBlue"
+        android:layout_alignRight="@+id/ivEnemyBlue"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <TextView
+        android:id="@+id/tvEnemyWolf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivEnemyWolf"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/ivEnemyWolf"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <ImageView
+        android:id="@+id/ivEnemyWolf"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_above="@+id/tvEnemyWolf"
+        android:layout_alignBottom="@+id/ivDragon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/wolfsquare" />
+
+    <TextView
+        android:id="@+id/tvEnemyGolem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvEnemyWraith"
+        android:layout_alignBottom="@+id/tvEnemyWraith"
+        android:layout_alignLeft="@+id/ivEnemyGolem"
+        android:layout_alignRight="@+id/ivEnemyGolem"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <ImageView
+        android:id="@+id/ivEnemyGolem"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignBottom="@+id/ivEnemyWraith"
+        android:layout_alignTop="@+id/ivEnemyWolf"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/ivEnemyWraith"
+        android:src="@drawable/golemsquare" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyWolf"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignTop="@+id/ivBaron"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/wolfsquare" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyRed"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignTop="@+id/ivFriendlyWolf"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/ivFriendlyWolf"
+        android:src="@drawable/red_buff" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyBlue"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignTop="@+id/ivFriendlyRed"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/ivFriendlyRed"
+        android:src="@drawable/blue_buff" />
+
+    <ImageView
+        android:id="@+id/ivEnemyWolves"
+        android:layout_width="@dimen/jungle_padding"
+        android:layout_height="@dimen/jungle_padding"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyInhib3"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@+id/ivEnemyWolves"
+        android:src="@drawable/blue_inhib" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyInhib2"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/ivFriendlyInhib3"
+        android:src="@drawable/blue_inhib" />
+
+    <TextView
+        android:id="@+id/tvFriendlyInhib2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFriendlyInhib2"
+        android:layout_alignRight="@+id/ivFriendlyInhib2"
+        android:layout_below="@+id/ivFriendlyInhib2"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/game_type" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyInhib1"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/ivFriendlyInhib2"
+        android:src="@drawable/blue_inhib" />
+
+    <TextView
+        android:id="@+id/tvFriendlyInhib1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFriendlyInhib1"
+        android:layout_alignRight="@+id/ivFriendlyInhib1"
+        android:layout_below="@+id/ivFriendlyInhib1"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/game_type" />
+
+    <ImageView
+        android:id="@+id/ivEnemyInhib1"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignTop="@+id/ivFriendlyInhib1"
+        android:layout_toRightOf="@+id/ivEnemyWolves"
+        android:src="@drawable/purple_inhib" />
+
+    <ImageView
+        android:id="@+id/ivEnemyInhib2"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignTop="@+id/ivEnemyInhib1"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/ivEnemyInhib1"
+        android:src="@drawable/purple_inhib" />
+
+    <ImageView
+        android:id="@+id/ivEnemyInhib3"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignTop="@+id/ivEnemyInhib2"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/ivEnemyInhib2"
+        android:src="@drawable/purple_inhib" />
+
+    <ImageView
+        android:id="@+id/ivEnemyRed"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignBottom="@+id/ivEnemyWolf"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/tvEnemyWolf"
+        android:src="@drawable/red_buff" />
+
+    <TextView
+        android:id="@+id/tvEnemyRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivEnemyRed"
+        android:layout_alignRight="@+id/ivEnemyRed"
+        android:layout_below="@+id/ivEnemyRed"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <ImageView
+        android:id="@+id/ivEnemyBlue"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignBottom="@+id/ivEnemyRed"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/ivEnemyRed"
+        android:src="@drawable/blue_buff" />
+
+    <TextView
+        android:id="@+id/tvFlash2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFlash2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <ImageView
+        android:id="@+id/ivFlash2"
+        android:layout_width="@dimen/free_week_image"
+        android:layout_height="@dimen/free_week_image"
+        android:layout_above="@+id/tvFlash2"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/flash" />
+
+</RelativeLayout>

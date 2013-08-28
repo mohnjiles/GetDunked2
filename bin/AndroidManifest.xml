@@ -132,6 +132,26 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.jt.getdunked2.MainActivity" />
         </activity>
+        <activity
+            android:name="com.jt.getdunked2.JungleTimerSelector"
+            android:label="@string/title_activity_jungle_timer_selector" >
+        </activity>
+        <activity
+            android:name="com.jt.getdunked2.JungleTimersTT"
+            android:label="@string/title_activity_jungle_timers_tt"
+            android:parentActivityName="com.jt.getdunked2.JungleTimerSelector" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jt.getdunked2.JungleTimerSelector" />
+        </activity>
+        <activity
+            android:name="com.jt.getdunked2.FreeWeekActivity"
+            android:label="@string/title_activity_free_week"
+            android:parentActivityName="com.jt.getdunked2.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jt.getdunked2.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

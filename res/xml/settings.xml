@@ -4,8 +4,8 @@
     android:layout_height="match_parent" >
 
     <PreferenceCategory 
-        android:title="General Settings"
-        android:key="first_category">
+        android:title="Summoner Search Preferences"
+        android:key="search_category">
         
         
         <ListPreference 
@@ -14,9 +14,43 @@
             android:summary="Server Region"
             android:entries="@array/userRegion"
             android:entryValues="@array/userRegionValues"
-            android:defaultValue="na" 
+            android:defaultValue="NA" 
         />    
+    </PreferenceCategory>
+    
+	<PreferenceCategory
+	    android:title="Jungle Timers Preferences"
+	    android:key="jungle_category" >        
+        
+        <CheckBoxPreference 
+            android:key="enable_notifications"
+            android:title="Jungle Timer Notifications"
+            android:defaultValue="true"
+            android:summary="Enable jungle respawn notifications"/>
+        <RingtonePreference 
+            android:key="notification_sound"
+            android:title="Notification Ringtone"
+            android:summary="Select default notification ringtone"
+            android:ringtoneType="notification"
+            android:defaultValue="Silent"
+            android:dependency="enable_notifications"/>
             
     </PreferenceCategory>
+    
+	<PreferenceCategory 
+        android:title="General Preferences"
+        android:key="general_category">
+        
+        
+        <ListPreference 
+            android:key="transition_effect"
+            android:title="Transition Effect"
+            android:summary="Select default transition effect"
+            android:entries="@array/transitionEffect"
+            android:entryValues="@array/transitionEffect"
+            android:defaultValue="Stack" 
+        />    
+    </PreferenceCategory>
+    
     
 </PreferenceScreen>

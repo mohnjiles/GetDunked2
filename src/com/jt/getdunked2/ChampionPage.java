@@ -8,12 +8,15 @@ import com.jfeinstein.jazzyviewpager.JazzyViewPager.TransitionEffect;
 
 import android.R.integer;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.ActionBar;
@@ -27,10 +30,13 @@ import android.widget.Toast;
 public class ChampionPage extends ActionBarActivity {
 
 	int screenSize;
-	int position = ChampsActivity.myInt;
+	public static int position;
 	Integer[] mThumbIds = ImageAdapter.mThumbIds;
 	JazzyViewPager myPager;
 	int currentPage = 0;
+	public static boolean fromFreeWeek = false;
+	TransitionEffect tf;
+	SharedPreferences prefs;
 	
 	@Override
 	 protected void onCreate(Bundle arg0) {
@@ -38,16 +44,47 @@ public class ChampionPage extends ActionBarActivity {
 	  super.onCreate(arg0);
 	  
 	  String[] champNames = getResources().getStringArray(R.array.ChampNames);
-	  setTitle(champNames[position]);
 	  
 	  Intent intent = getIntent();
 	  currentPage = intent.getIntExtra("page", 0);
+	  position = intent.getIntExtra("position", 0);
+	  fromFreeWeek = intent.getBooleanExtra("from_free_week", false);
 	  
-	  
+	  setTitle(champNames[position]);
 	  setContentView(R.layout.activity_champion_page);
+	  
 	  ActionBar aBar = getSupportActionBar();
 	  aBar.setDisplayHomeAsUpEnabled(true);
 	  aBar.setIcon(mThumbIds[position]);
+	  
+	  prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+	  
+	  if (prefs.getString("transition_effect", "Stack").equals("Accordion")) {
+		  tf = TransitionEffect.Accordion;
+	  } else if (prefs.getString("transition_effect", "Stack").equals("Cube Out")) {
+		  tf = TransitionEffect.CubeOut;
+	  } else if (prefs.getString("transition_effect", "Stack").equals("Cube In")) {
+		  tf = TransitionEffect.CubeIn;
+	  } else if (prefs.getString("transition_effect", "Stack").equals("Flip Horizontal")) {
+		  tf = TransitionEffect.FlipHorizontal;
+	  } else if (prefs.getString("transition_effect", "Stack").equals("Flip Vertical")) {
+		  tf = TransitionEffect.FlipVertical;
+	  } else if (prefs.getString("transition_effect", "Stack").equals("Rotate Down")) {
+		  tf = TransitionEffect.RotateDown;
+	  } else if (prefs.getString("transition_effect", "Stack").equals("Rotate Up")) {
+		  tf = TransitionEffect.RotateUp;
+	  } else if (prefs.getString("transition_effect", "Stack").equals("Stack")) {
+		  tf = TransitionEffect.Stack;
+	  } else if (prefs.getString("transition_effect", "Stack").equals("Standard")) {
+		  tf = TransitionEffect.Standard;
+	  } else if (prefs.getString("transition_effect", "Stack").equals("Tablet")) {
+		  tf = TransitionEffect.Tablet;
+	  } else if (prefs.getString("transition_effect", "Stack").equals("Zoom In")) {
+		  tf = TransitionEffect.ZoomIn;
+	  } else if (prefs.getString("transition_effect", "Stack").equals("Zoom Out")) {
+		  tf = TransitionEffect.ZoomOut;
+	  } 
+	    
 
 	  screenSize = getResources().getConfiguration().screenLayout &
 		        Configuration.SCREENLAYOUT_SIZE_MASK;
@@ -72,7 +109,7 @@ public class ChampionPage extends ActionBarActivity {
 	    getSupportFragmentManager(), fragments);
 	  myPager.setAdapter(adapter);
 	  myPager.setCurrentItem(currentPage);
-	  myPager.setTransitionEffect(TransitionEffect.CubeOut);
+	  myPager.setTransitionEffect(tf);
 	 
 
 	  myPager.setOnPageChangeListener(new OnPageChangeListener() {
@@ -108,13 +145,24 @@ public class ChampionPage extends ActionBarActivity {
 	        case android.R.id.home:
 	            // This is called when the Home (Up) button is pressed
 	            // in the Action Bar.
-	            Intent parentActivityIntent = new Intent(this, ChampsActivity.class);
-	            parentActivityIntent.addFlags(
-	                    Intent.FLAG_ACTIVITY_CLEAR_TOP |
-	                    Intent.FLAG_ACTIVITY_NEW_TASK);
-	            startActivity(parentActivityIntent);
-	            finish();
-	            return true;
+	        	if (fromFreeWeek) {
+	        		Intent parentActivityIntent = new Intent(this, FreeWeekActivity.class);
+		            parentActivityIntent.addFlags(
+		                    Intent.FLAG_ACTIVITY_CLEAR_TOP |
+		                    Intent.FLAG_ACTIVITY_NEW_TASK);
+		            startActivity(parentActivityIntent);
+		            finish();
+		            return true;
+	        	} else {
+	        		Intent parentActivityIntent = new Intent(this, ChampsActivity.class);
+		            parentActivityIntent.addFlags(
+		                    Intent.FLAG_ACTIVITY_CLEAR_TOP |
+		                    Intent.FLAG_ACTIVITY_NEW_TASK);
+		            startActivity(parentActivityIntent);
+		            finish();
+		            return true;
+	        	}
+	            
 	    }
 	    return super.onOptionsItemSelected(item);
 	}

@@ -10,41 +10,7 @@
     tools:context=".JungleTimers" >
 
     <ImageView
-        android:id="@+id/ivFriendlyBlue"
-        android:layout_width="@dimen/popup_champ_icon"
-        android:layout_height="@dimen/popup_champ_icon"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:src="@drawable/blue_buff" />
-
-    <ImageView
-        android:id="@+id/ivFriendlyRed"
-        android:layout_width="@dimen/popup_champ_icon"
-        android:layout_height="@dimen/popup_champ_icon"
-        android:layout_alignTop="@+id/ivFriendlyBlue"
-        android:layout_marginLeft="11dp"
-        android:layout_toRightOf="@+id/ivFriendlyBlue"
-        android:src="@drawable/red_buff" />
-
-    <ImageView
-        android:id="@+id/ImageView04"
-        android:layout_width="@dimen/popup_champ_icon"
-        android:layout_height="@dimen/popup_champ_icon"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/ImageView03"
-        android:src="@drawable/golemsquare" />
-
-    <ImageView
-        android:id="@+id/ImageView03"
-        android:layout_width="@dimen/popup_champ_icon"
-        android:layout_height="@dimen/popup_champ_icon"
-        android:layout_alignTop="@+id/ImageView02"
-        android:layout_marginRight="11dp"
-        android:layout_toLeftOf="@+id/ImageView04"
-        android:src="@drawable/wraithsquare" />
-
-    <ImageView
-        android:id="@+id/ImageView02"
+        android:id="@+id/ivFriendlyWolf"
         android:layout_width="@dimen/popup_champ_icon"
         android:layout_height="@dimen/popup_champ_icon"
         android:layout_alignTop="@+id/ivFriendlyRed"
@@ -60,7 +26,8 @@
         android:layout_below="@+id/ivFriendlyBlue"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <TextView
         android:id="@+id/tvFriendlyRed"
@@ -71,46 +38,50 @@
         android:layout_below="@+id/ivFriendlyRed"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <TextView
-        android:id="@+id/TextView02"
+        android:id="@+id/tvFriendlyWolf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/tvFriendlyRed"
         android:layout_alignBottom="@+id/tvFriendlyRed"
-        android:layout_alignLeft="@+id/ImageView02"
-        android:layout_alignRight="@+id/ImageView02"
+        android:layout_alignLeft="@+id/ivFriendlyWolf"
+        android:layout_alignRight="@+id/ivFriendlyWolf"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <TextView
-        android:id="@+id/TextView03"
+        android:id="@+id/tvFriendlyWraith"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView02"
-        android:layout_alignBottom="@+id/TextView02"
-        android:layout_alignLeft="@+id/ImageView03"
-        android:layout_alignRight="@+id/ImageView03"
+        android:layout_alignBaseline="@+id/tvFriendlyWolf"
+        android:layout_alignBottom="@+id/tvFriendlyWolf"
+        android:layout_alignLeft="@+id/ivFriendlyWraith"
+        android:layout_alignRight="@+id/ivFriendlyWraith"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <TextView
-        android:id="@+id/TextView04"
+        android:id="@+id/tvFriendlyGolem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView03"
-        android:layout_alignBottom="@+id/TextView03"
-        android:layout_alignLeft="@+id/ImageView04"
-        android:layout_alignRight="@+id/ImageView04"
+        android:layout_alignBaseline="@+id/tvFriendlyWraith"
+        android:layout_alignBottom="@+id/tvFriendlyWraith"
+        android:layout_alignLeft="@+id/ivFriendlyGolem"
+        android:layout_alignRight="@+id/ivFriendlyGolem"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/ivFriendlyInhib1"
         android:layout_width="@dimen/popup_champ_icon"
         android:layout_height="@dimen/popup_champ_icon"
         android:layout_alignLeft="@+id/tvFriendlyRed"
@@ -120,94 +91,101 @@
         android:src="@drawable/blue_inhib" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/ivFriendlyInhib2"
         android:layout_width="@dimen/popup_champ_icon"
         android:layout_height="@dimen/popup_champ_icon"
-        android:layout_alignLeft="@+id/TextView02"
-        android:layout_alignTop="@+id/imageView1"
+        android:layout_alignLeft="@+id/tvFriendlyWolf"
+        android:layout_alignTop="@+id/ivFriendlyInhib1"
         android:src="@drawable/blue_inhib" />
 
     <ImageView
-        android:id="@+id/ImageView05"
+        android:id="@+id/ivFriendlyInhib3"
         android:layout_width="@dimen/popup_champ_icon"
         android:layout_height="@dimen/popup_champ_icon"
-        android:layout_alignLeft="@+id/TextView03"
-        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignLeft="@+id/tvFriendlyWraith"
+        android:layout_alignTop="@+id/ivFriendlyInhib2"
         android:src="@drawable/blue_inhib" />
 
     <TextView
-        android:id="@+id/TextView05"
+        android:id="@+id/tvFriendlyInhib1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_alignRight="@+id/imageView1"
-        android:layout_below="@+id/imageView1"
+        android:layout_alignLeft="@+id/ivFriendlyInhib1"
+        android:layout_alignRight="@+id/ivFriendlyInhib1"
+        android:layout_below="@+id/ivFriendlyInhib1"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <TextView
-        android:id="@+id/TextView06"
+        android:id="@+id/tvFriendlyInhib2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView05"
-        android:layout_alignBottom="@+id/TextView05"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignRight="@+id/imageView2"
+        android:layout_alignBaseline="@+id/tvFriendlyInhib1"
+        android:layout_alignBottom="@+id/tvFriendlyInhib1"
+        android:layout_alignLeft="@+id/ivFriendlyInhib2"
+        android:layout_alignRight="@+id/ivFriendlyInhib2"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <TextView
-        android:id="@+id/TextView07"
+        android:id="@+id/tvFriendlyInhib3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView06"
-        android:layout_alignBottom="@+id/TextView06"
-        android:layout_alignLeft="@+id/ImageView05"
-        android:layout_alignRight="@+id/ImageView05"
+        android:layout_alignBaseline="@+id/tvFriendlyInhib2"
+        android:layout_alignBottom="@+id/tvFriendlyInhib2"
+        android:layout_alignLeft="@+id/ivFriendlyInhib3"
+        android:layout_alignRight="@+id/ivFriendlyInhib3"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/ivBaron"
         android:layout_width="@dimen/free_week_image"
         android:layout_height="@dimen/free_week_image"
         android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/TextView06"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/tvFriendlyInhib2"
         android:src="@drawable/baron_nashor" />
 
     <ImageView
-        android:id="@+id/ImageView06"
+        android:id="@+id/ivDragon"
         android:layout_width="@dimen/free_week_image"
         android:layout_height="@dimen/free_week_image"
-        android:layout_alignTop="@+id/imageView3"
-        android:layout_toRightOf="@+id/TextView06"
+        android:layout_alignTop="@+id/ivBaron"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/tvFriendlyInhib2"
         android:src="@drawable/dragon_square" />
 
     <TextView
-        android:id="@+id/TextView08"
+        android:id="@+id/tvBaron"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/imageView3"
-        android:layout_alignRight="@+id/imageView3"
-        android:layout_below="@+id/imageView3"
+        android:layout_alignLeft="@+id/ivBaron"
+        android:layout_alignRight="@+id/ivBaron"
+        android:layout_below="@+id/ivBaron"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <TextView
-        android:id="@+id/TextView09"
+        android:id="@+id/tvDragon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView08"
-        android:layout_alignBottom="@+id/TextView08"
-        android:layout_alignLeft="@+id/ImageView06"
-        android:layout_alignRight="@+id/ImageView06"
+        android:layout_alignBaseline="@+id/tvBaron"
+        android:layout_alignBottom="@+id/tvBaron"
+        android:layout_alignLeft="@+id/ivDragon"
+        android:layout_alignRight="@+id/ivDragon"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <TextView
         android:id="@+id/tvEnemyBlue"
@@ -218,24 +196,8 @@
         android:layout_alignRight="@+id/ivEnemyBlue"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
-
-    <ImageView
-        android:id="@+id/ivEnemyBlue"
-        android:layout_width="@dimen/popup_champ_icon"
-        android:layout_height="@dimen/popup_champ_icon"
-        android:layout_above="@+id/tvEnemyBlue"
-        android:layout_alignParentLeft="true"
-        android:src="@drawable/blue_buff" />
-
-    <ImageView
-        android:id="@+id/ivEnemyRed"
-        android:layout_width="@dimen/popup_champ_icon"
-        android:layout_height="@dimen/popup_champ_icon"
-        android:layout_alignTop="@+id/ivEnemyBlue"
-        android:layout_marginLeft="11dp"
-        android:layout_toRightOf="@+id/ivEnemyBlue"
-        android:src="@drawable/red_buff" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <TextView
         android:id="@+id/tvEnemyRed"
@@ -246,10 +208,11 @@
         android:layout_below="@+id/ivEnemyRed"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <ImageView
-        android:id="@+id/ImageView09"
+        android:id="@+id/ivEnemyWolf"
         android:layout_width="@dimen/popup_champ_icon"
         android:layout_height="@dimen/popup_champ_icon"
         android:layout_alignTop="@+id/ivEnemyRed"
@@ -257,57 +220,52 @@
         android:src="@drawable/wolfsquare" />
 
     <TextView
-        android:id="@+id/TextView12"
+        android:id="@+id/tvEnemyWolf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView09"
-        android:layout_alignRight="@+id/ImageView09"
-        android:layout_below="@+id/ImageView09"
+        android:layout_alignLeft="@+id/ivEnemyWolf"
+        android:layout_alignRight="@+id/ivEnemyWolf"
+        android:layout_below="@+id/ivEnemyWolf"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <ImageView
-        android:id="@+id/ImageView10"
+        android:id="@+id/ivEnemyWraith"
         android:layout_width="@dimen/popup_champ_icon"
         android:layout_height="@dimen/popup_champ_icon"
-        android:layout_above="@+id/TextView12"
-        android:layout_marginLeft="11dp"
-        android:layout_toRightOf="@+id/ImageView09"
+        android:layout_above="@+id/tvEnemyWolf"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/ivEnemyWolf"
         android:src="@drawable/wraithsquare" />
 
     <TextView
-        android:id="@+id/TextView13"
+        android:id="@+id/tvEnemyWraith"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView10"
-        android:layout_alignRight="@+id/ImageView10"
-        android:layout_below="@+id/ImageView10"
+        android:layout_alignLeft="@+id/ivEnemyWraith"
+        android:layout_alignRight="@+id/ivEnemyWraith"
+        android:layout_below="@+id/ivEnemyWraith"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
-
-    <ImageView
-        android:id="@+id/ImageView11"
-        android:layout_width="@dimen/popup_champ_icon"
-        android:layout_height="@dimen/popup_champ_icon"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/ImageView10"
-        android:src="@drawable/golemsquare" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <TextView
-        android:id="@+id/TextView14"
+        android:id="@+id/tvEnemyGolem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/ImageView11"
-        android:layout_alignRight="@+id/ImageView11"
-        android:layout_below="@+id/ImageView11"
+        android:layout_alignLeft="@+id/ivEnemyGolem"
+        android:layout_alignRight="@+id/ivEnemyGolem"
+        android:layout_below="@+id/ivEnemyGolem"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <TextView
-        android:id="@+id/TextView15"
+        android:id="@+id/tvEnemyInhib1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/ivEnemyRed"
@@ -316,53 +274,160 @@
         android:layout_marginBottom="4dp"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <ImageView
-        android:id="@+id/ImageView12"
+        android:id="@+id/ivEnemyInhib1"
         android:layout_width="@dimen/popup_champ_icon"
         android:layout_height="@dimen/popup_champ_icon"
-        android:layout_above="@+id/TextView15"
-        android:layout_alignLeft="@+id/TextView15"
+        android:layout_above="@+id/tvEnemyInhib1"
+        android:layout_alignLeft="@+id/tvEnemyInhib1"
         android:src="@drawable/purple_inhib" />
 
     <TextView
-        android:id="@+id/TextView16"
+        android:id="@+id/tvEnemyInhib2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView15"
-        android:layout_alignBottom="@+id/TextView15"
+        android:layout_alignBaseline="@+id/tvEnemyInhib1"
+        android:layout_alignBottom="@+id/tvEnemyInhib1"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <ImageView
-        android:id="@+id/ImageView13"
+        android:id="@+id/ivEnemyInhib2"
         android:layout_width="@dimen/popup_champ_icon"
         android:layout_height="@dimen/popup_champ_icon"
-        android:layout_alignTop="@+id/ImageView12"
-        android:layout_toLeftOf="@+id/ImageView10"
+        android:layout_alignTop="@+id/ivEnemyInhib1"
+        android:layout_toLeftOf="@+id/ivEnemyWraith"
         android:src="@drawable/purple_inhib" />
 
     <TextView
-        android:id="@+id/TextView17"
+        android:id="@+id/tvEnemyInhib3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/TextView16"
-        android:layout_alignBottom="@+id/TextView16"
-        android:layout_alignLeft="@+id/TextView07"
-        android:layout_alignRight="@+id/ImageView10"
+        android:layout_alignBottom="@+id/tvEnemyInhib2"
+        android:layout_alignLeft="@+id/tvFriendlyInhib3"
+        android:layout_alignRight="@+id/tvFriendlyInhib3"
+        android:layout_below="@+id/ivEnemyInhib3"
         android:gravity="center"
         android:text="0:00"
-        android:textColor="#FFFFFF" />
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
 
     <ImageView
-        android:id="@+id/ImageView14"
+        android:id="@+id/ivEnemyInhib3"
         android:layout_width="@dimen/popup_champ_icon"
         android:layout_height="@dimen/popup_champ_icon"
-        android:layout_alignLeft="@+id/TextView17"
-        android:layout_alignTop="@+id/ImageView13"
+        android:layout_alignLeft="@+id/tvEnemyInhib3"
+        android:layout_alignTop="@+id/ivEnemyInhib2"
         android:src="@drawable/purple_inhib" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyWraith"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignTop="@+id/ivFriendlyWolf"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/ivFriendlyWolf"
+        android:src="@drawable/wraithsquare" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyRed"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignTop="@+id/ivFriendlyBlue"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/ivFriendlyWolf"
+        android:src="@drawable/red_buff" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyBlue"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/ivFriendlyRed"
+        android:src="@drawable/blue_buff" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyGolem"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_alignTop="@+id/ivFriendlyWraith"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/ivFriendlyWraith"
+        android:src="@drawable/golemsquare" />
+
+    <ImageView
+        android:id="@+id/ivEnemyRed"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_above="@+id/tvEnemyBlue"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/ivEnemyWolf"
+        android:src="@drawable/red_buff" />
+
+    <ImageView
+        android:id="@+id/ivEnemyBlue"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_above="@+id/tvEnemyBlue"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/tvEnemyRed"
+        android:src="@drawable/blue_buff" />
+
+    <ImageView
+        android:id="@+id/ivEnemyGolem"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_above="@+id/tvEnemyWraith"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/ivEnemyWraith"
+        android:src="@drawable/golemsquare" />
+
+    <ImageView
+        android:id="@+id/ivFlash1"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_below="@+id/tvFriendlyInhib2"
+        android:layout_toLeftOf="@+id/ivDragon"
+        android:src="@drawable/flash" />
+
+    <TextView
+        android:id="@+id/tvFlash1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFlash1"
+        android:layout_below="@+id/ivFlash1"
+        android:layout_toLeftOf="@+id/ivDragon"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <TextView
+        android:id="@+id/tvFlash2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ivEnemyInhib2"
+        android:layout_alignLeft="@+id/ivEnemyInhib2"
+        android:layout_alignRight="@+id/ivEnemyInhib2"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/free_week_text" />
+
+    <ImageView
+        android:id="@+id/ivFlash2"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_above="@+id/tvFlash2"
+        android:layout_alignLeft="@+id/tvFlash2"
+        android:layout_alignRight="@+id/tvFlash2"
+        android:src="@drawable/flash" />
 
 </RelativeLayout>

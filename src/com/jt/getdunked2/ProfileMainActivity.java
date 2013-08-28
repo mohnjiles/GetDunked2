@@ -6,10 +6,12 @@ import com.jfeinstein.jazzyviewpager.JazzyViewPager;
 import com.jfeinstein.jazzyviewpager.JazzyViewPager.TransitionEffect;
 import com.jt.getdunked2.AsyncTasks.PostFetcher;
 
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -52,12 +54,9 @@ public class ProfileMainActivity extends ActionBarActivity {
 	ListView lv;
 	JazzyViewPager myPager;
 	
-	
+	TransitionEffect tf;
+	SharedPreferences prefs;
 
-	
-	
-	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -92,13 +91,41 @@ public class ProfileMainActivity extends ActionBarActivity {
 		fragmenthree.setArguments(bundle);
 		fragments.add(fragmentfour);
 		
+		prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+		  
+		if (prefs.getString("transition_effect", "Stack").equals("Accordion")) {
+			tf = TransitionEffect.Accordion;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Cube Out")) {
+			tf = TransitionEffect.CubeOut;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Cube In")) {
+			tf = TransitionEffect.CubeIn;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Flip Horizontal")) {
+			tf = TransitionEffect.FlipHorizontal;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Flip Vertical")) {
+			tf = TransitionEffect.FlipVertical;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Rotate Down")) {
+			tf = TransitionEffect.RotateDown;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Rotate Up")) {
+			tf = TransitionEffect.RotateUp;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Stack")) {
+			tf = TransitionEffect.Stack;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Standard")) {
+			tf = TransitionEffect.Standard;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Tablet")) {
+			tf = TransitionEffect.Tablet;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Zoom In")) {
+			tf = TransitionEffect.ZoomIn;
+		} else if (prefs.getString("transition_effect", "Stack").equals("Zoom Out")) {
+			tf = TransitionEffect.ZoomOut;
+		} 
+		
 		myPager = (JazzyViewPager) findViewById(R.id.profileMainPager);
 		myPager.setOffscreenPageLimit(4);
 		adapter = new FragmentAdapter(
 		getSupportFragmentManager(), fragments);
 		myPager.setAdapter(adapter);
 		myPager.setCurrentItem(0);
-		myPager.setTransitionEffect(TransitionEffect.CubeOut);
+		myPager.setTransitionEffect(tf);
 		  
 	}
 	

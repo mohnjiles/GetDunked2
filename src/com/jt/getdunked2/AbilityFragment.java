@@ -42,7 +42,7 @@ public class AbilityFragment extends Fragment {
 		// imageview variables
 		ivPassive = (ImageView) V.findViewById(R.id.ivFreeThree);
 		ivQ = (ImageView) V.findViewById(R.id.ivFreeTwo);
-		ivW = (ImageView) V.findViewById(R.id.imageView3);
+		ivW = (ImageView) V.findViewById(R.id.ivBaron);
 		ivE = (ImageView) V.findViewById(R.id.imageView4);
 		ivR = (ImageView) V.findViewById(R.id.imageView5);
 
@@ -59,7 +59,7 @@ public class AbilityFragment extends Fragment {
 		tvEText = (TextView) V.findViewById(R.id.tvEText);
 		tvRText = (TextView) V.findViewById(R.id.tvRText);
 
-		int position = ChampsActivity.myInt;
+		int position = ChampionPage.position;
 
 		/*********** Q onClickListener ***********/
 		ivQ.setOnClickListener(new View.OnClickListener() {

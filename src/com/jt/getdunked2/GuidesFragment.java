@@ -11,7 +11,7 @@ import android.webkit.WebView;
 
 public class GuidesFragment extends Fragment {
 	
-	int position = ChampsActivity.myInt;
+	int position = ChampionPage.position;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, 

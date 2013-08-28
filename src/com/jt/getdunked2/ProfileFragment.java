@@ -90,10 +90,10 @@ public class ProfileFragment extends Fragment {
 		tvFiveLosses = (TextView) V.findViewById(R.id.tvFiveLosses);
 		winsThree = (TextView) V.findViewById(R.id.tvWins);
 		winsSolo = (TextView) V.findViewById(R.id.tvNameFour);
-		winsFive = (TextView) V.findViewById(R.id.TextView04);
-		lossesFive = (TextView) V.findViewById(R.id.TextView05);
-		lossesThree = (TextView) V.findViewById(R.id.TextView06);
-		lossesSolo = (TextView) V.findViewById(R.id.TextView08);
+		winsFive = (TextView) V.findViewById(R.id.tvFriendlyGolem);
+		lossesFive = (TextView) V.findViewById(R.id.tvFriendlyInhib1);
+		lossesThree = (TextView) V.findViewById(R.id.tvFriendlyInhib2);
+		lossesSolo = (TextView) V.findViewById(R.id.tvBaron);
 		
 			  
 

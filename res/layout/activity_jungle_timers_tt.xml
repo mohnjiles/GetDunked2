@@ -1,0 +1,199 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".JungleTimersTT" >
+
+    <ImageView
+        android:id="@+id/ivVilemaw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/vilemawsquare" />
+
+    <TextView
+        android:id="@+id/tvVilemaw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivVilemaw"
+        android:layout_alignRight="@+id/ivVilemaw"
+        android:layout_below="@+id/ivVilemaw"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sliding_size" />
+
+    <ImageView
+        android:id="@+id/ivWestAltar"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_above="@+id/tvVilemaw"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/ivVilemaw"
+        android:layout_marginRight="@dimen/jungle_padding"
+        android:layout_toLeftOf="@+id/ivVilemaw"
+        android:src="@drawable/west_altar" />
+
+    <ImageView
+        android:id="@+id/ivEastAltar"
+        android:layout_width="@dimen/popup_champ_icon"
+        android:layout_height="@dimen/popup_champ_icon"
+        android:layout_above="@+id/tvVilemaw"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/ivVilemaw"
+        android:layout_marginLeft="@dimen/jungle_padding"
+        android:layout_toRightOf="@+id/ivVilemaw"
+        android:src="@drawable/east_altar" />
+
+    <TextView
+        android:id="@+id/tvWestAltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivWestAltar"
+        android:layout_alignRight="@+id/ivWestAltar"
+        android:layout_below="@+id/ivWestAltar"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sliding_size" />
+
+    <TextView
+        android:id="@+id/tvEastAltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivEastAltar"
+        android:layout_alignRight="@+id/ivEastAltar"
+        android:layout_below="@+id/ivEastAltar"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sliding_size" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyWolves"
+        android:layout_width="@dimen/tt_timer_size"
+        android:layout_height="@dimen/tt_timer_size"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/wolfsquare" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyWraiths"
+        android:layout_width="@dimen/tt_timer_size"
+        android:layout_height="@dimen/tt_timer_size"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/wraithsquare" />
+
+    <ImageView
+        android:id="@+id/ivFriendlyGolems"
+        android:layout_width="@dimen/tt_timer_size"
+        android:layout_height="@dimen/tt_timer_size"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/golemsquare" />
+
+    <TextView
+        android:id="@+id/tvFriendlyWolves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivFriendlyWolves"
+        android:layout_alignRight="@+id/ivFriendlyWolves"
+        android:layout_below="@+id/ivFriendlyWolves"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sliding_size" />
+
+    <TextView
+        android:id="@+id/tvFriendlyWraiths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvFriendlyWolves"
+        android:layout_alignBottom="@+id/tvFriendlyWolves"
+        android:layout_alignLeft="@+id/ivFriendlyWraiths"
+        android:layout_alignRight="@+id/ivFriendlyWraiths"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sliding_size" />
+
+    <TextView
+        android:id="@+id/tvFriendlyGolems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvFriendlyWraiths"
+        android:layout_alignBottom="@+id/tvFriendlyWraiths"
+        android:layout_alignLeft="@+id/ivFriendlyGolems"
+        android:layout_alignRight="@+id/ivFriendlyGolems"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sliding_size" />
+
+    <TextView
+        android:id="@+id/tvEnemyWolves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivEnemyWolves"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/ivEnemyWolves"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sliding_size" />
+
+    <TextView
+        android:id="@+id/tvEnemyWraiths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sliding_size" />
+
+    <TextView
+        android:id="@+id/tvEnemyGolems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ivEnemyGolems"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/ivEnemyGolems"
+        android:gravity="center"
+        android:text="0:00"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/sliding_size" />
+
+    <ImageView
+        android:id="@+id/ivEnemyWolves"
+        android:layout_width="@dimen/tt_timer_size"
+        android:layout_height="@dimen/tt_timer_size"
+        android:layout_above="@+id/tvEnemyWolves"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/wolfsquare" />
+
+    <ImageView
+        android:id="@+id/ivEnemyWraiths"
+        android:layout_width="@dimen/tt_timer_size"
+        android:layout_height="@dimen/tt_timer_size"
+        android:layout_above="@+id/tvEnemyWraiths"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/wraithsquare" />
+
+    <ImageView
+        android:id="@+id/ivEnemyGolems"
+        android:layout_width="@dimen/tt_timer_size"
+        android:layout_height="@dimen/tt_timer_size"
+        android:layout_above="@+id/tvEnemyGolems"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/golemsquare" />
+
+</RelativeLayout>

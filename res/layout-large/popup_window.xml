@@ -72,7 +72,7 @@
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView02"
+	        android:id="@+id/tvFriendlyWolf"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/tvMinionsTitle"
@@ -82,11 +82,11 @@
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView03"
+	        android:id="@+id/tvFriendlyWraith"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView02"
-	        android:layout_below="@+id/TextView02"
+	        android:layout_alignLeft="@+id/tvFriendlyWolf"
+	        android:layout_below="@+id/tvFriendlyWolf"
 	        android:layout_marginTop="8dp"
 	        android:text="Healing Done"
 	        android:textColor="#FFFFFF"
@@ -192,8 +192,8 @@
 	        android:id="@+id/tvLargestCrit"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView02"
-	        android:layout_alignBottom="@+id/TextView02"
+	        android:layout_alignBaseline="@+id/tvFriendlyWolf"
+	        android:layout_alignBottom="@+id/tvFriendlyWolf"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -201,31 +201,31 @@
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView04"
+	        android:id="@+id/tvFriendlyGolem"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView03"
-	        android:layout_below="@+id/TextView03"
+	        android:layout_alignLeft="@+id/tvFriendlyWraith"
+	        android:layout_below="@+id/tvFriendlyWraith"
 	        android:text="Damage Taken"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView05"
+	        android:id="@+id/tvFriendlyInhib1"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView04"
-	        android:layout_below="@+id/TextView04"
+	        android:layout_alignLeft="@+id/tvFriendlyGolem"
+	        android:layout_below="@+id/tvFriendlyGolem"
 	        android:text="Physical Damage Taken"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView06"
+	        android:id="@+id/tvFriendlyInhib2"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView05"
-	        android:layout_below="@+id/TextView05"
+	        android:layout_alignLeft="@+id/tvFriendlyInhib1"
+	        android:layout_below="@+id/tvFriendlyInhib1"
 	        android:text="Magic Damage Taken"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
@@ -234,8 +234,8 @@
 	        android:id="@+id/tvHealingValue"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView03"
-	        android:layout_alignBottom="@+id/TextView03"
+	        android:layout_alignBaseline="@+id/tvFriendlyWraith"
+	        android:layout_alignBottom="@+id/tvFriendlyWraith"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -246,8 +246,8 @@
 	        android:id="@+id/tvDamageTaken"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView04"
-	        android:layout_alignBottom="@+id/TextView04"
+	        android:layout_alignBaseline="@+id/tvFriendlyGolem"
+	        android:layout_alignBottom="@+id/tvFriendlyGolem"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -258,8 +258,8 @@
 	        android:id="@+id/tvPhysicalTaken"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView05"
-	        android:layout_alignBottom="@+id/TextView05"
+	        android:layout_alignBaseline="@+id/tvFriendlyInhib1"
+	        android:layout_alignBottom="@+id/tvFriendlyInhib1"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -270,8 +270,8 @@
 	        android:id="@+id/tvMagicDamage"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView06"
-	        android:layout_alignBottom="@+id/TextView06"
+	        android:layout_alignBaseline="@+id/tvFriendlyInhib2"
+	        android:layout_alignBottom="@+id/tvFriendlyInhib2"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -279,10 +279,10 @@
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView07"
+	        android:id="@+id/tvFriendlyInhib3"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView06"
+	        android:layout_alignLeft="@+id/tvFriendlyInhib2"
 	        android:layout_below="@+id/tvMagicDamage"
 	        android:layout_marginTop="8dp"
 	        android:text="Gold Earned"
@@ -290,21 +290,21 @@
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView08"
+	        android:id="@+id/tvBaron"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView07"
-	        android:layout_below="@+id/TextView07"
+	        android:layout_alignLeft="@+id/tvFriendlyInhib3"
+	        android:layout_below="@+id/tvFriendlyInhib3"
 	        android:text="Turrets Destroyed"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView09"
+	        android:id="@+id/tvDragon"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView08"
-	        android:layout_below="@+id/TextView08"
+	        android:layout_alignLeft="@+id/tvBaron"
+	        android:layout_below="@+id/tvBaron"
 	        android:text="Inhibitors Destroyed"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
@@ -313,8 +313,8 @@
 	        android:id="@+id/tvEnemyBlue"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView09"
-	        android:layout_below="@+id/TextView09"
+	        android:layout_alignLeft="@+id/tvDragon"
+	        android:layout_below="@+id/tvDragon"
 	        android:text="Minions Slain"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
@@ -330,7 +330,7 @@
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView12"
+	        android:id="@+id/tvEnemyWolf"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/tvEnemyRed"
@@ -343,8 +343,8 @@
 	        android:id="@+id/tvGoldEarned"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView07"
-	        android:layout_alignBottom="@+id/TextView07"
+	        android:layout_alignBaseline="@+id/tvFriendlyInhib3"
+	        android:layout_alignBottom="@+id/tvFriendlyInhib3"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -355,8 +355,8 @@
 	        android:id="@+id/tvTurrets"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView08"
-	        android:layout_alignBottom="@+id/TextView08"
+	        android:layout_alignBaseline="@+id/tvBaron"
+	        android:layout_alignBottom="@+id/tvBaron"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -367,8 +367,8 @@
 	        android:id="@+id/tvInhibitors"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView09"
-	        android:layout_alignBottom="@+id/TextView09"
+	        android:layout_alignBaseline="@+id/tvDragon"
+	        android:layout_alignBottom="@+id/tvDragon"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -403,8 +403,8 @@
 	        android:id="@+id/tvTimeDead"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView12"
-	        android:layout_alignBottom="@+id/TextView12"
+	        android:layout_alignBaseline="@+id/tvEnemyWolf"
+	        android:layout_alignBottom="@+id/tvEnemyWolf"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -412,10 +412,10 @@
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView13"
+	        android:id="@+id/tvEnemyWraith"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView12"
+	        android:layout_alignLeft="@+id/tvEnemyWolf"
 	        android:layout_below="@+id/tvTimeDead"
 	        android:text="Wards Placed"
 	        android:textColor="#FFFFFF"
@@ -425,8 +425,8 @@
 	        android:id="@+id/tvWardsPlaced"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView13"
-	        android:layout_alignBottom="@+id/TextView13"
+	        android:layout_alignBaseline="@+id/tvEnemyWraith"
+	        android:layout_alignBottom="@+id/tvEnemyWraith"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -434,11 +434,11 @@
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView14"
+	        android:id="@+id/tvEnemyGolem"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView13"
-	        android:layout_below="@+id/TextView13"
+	        android:layout_alignLeft="@+id/tvEnemyWraith"
+	        android:layout_below="@+id/tvEnemyWraith"
 	        android:text="Wards Killed"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
@@ -447,8 +447,8 @@
 	        android:id="@+id/tvWardsKilled"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView14"
-	        android:layout_alignBottom="@+id/TextView14"
+	        android:layout_alignBaseline="@+id/tvEnemyGolem"
+	        android:layout_alignBottom="@+id/tvEnemyGolem"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -459,8 +459,8 @@
 	        android:id="@+id/tvDamageToChamps"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView15"
-	        android:layout_alignBottom="@+id/TextView15"
+	        android:layout_alignBaseline="@+id/tvEnemyInhib1"
+	        android:layout_alignBottom="@+id/tvEnemyInhib1"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -471,8 +471,8 @@
 	        android:id="@+id/tvMagicToChamps"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView16"
-	        android:layout_alignBottom="@+id/TextView16"
+	        android:layout_alignBaseline="@+id/tvEnemyInhib2"
+	        android:layout_alignBottom="@+id/tvEnemyInhib2"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -483,8 +483,8 @@
 	        android:id="@+id/tvPhysicalToChamps"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignBaseline="@+id/TextView17"
-	        android:layout_alignBottom="@+id/TextView17"
+	        android:layout_alignBaseline="@+id/tvEnemyInhib3"
+	        android:layout_alignBottom="@+id/tvEnemyInhib3"
 	        android:layout_alignParentRight="true"
 	        android:gravity="right"
 	        android:text="0"
@@ -495,7 +495,7 @@
 	        android:id="@+id/Button01"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_below="@+id/TextView14"
+	        android:layout_below="@+id/tvEnemyGolem"
 	        android:layout_centerHorizontal="true"
 	        android:layout_marginTop="8dp"
 	        android:minHeight="@dimen/close_button_height"
@@ -504,7 +504,7 @@
 	        android:textSize="@dimen/close_button_size" />
 
 	    <TextView
-	        android:id="@+id/TextView15"
+	        android:id="@+id/tvEnemyInhib1"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/tvTimeDeadTitle"
@@ -515,21 +515,21 @@
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView16"
+	        android:id="@+id/tvEnemyInhib2"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView15"
-	        android:layout_below="@+id/TextView15"
+	        android:layout_alignLeft="@+id/tvEnemyInhib1"
+	        android:layout_below="@+id/tvEnemyInhib1"
 	        android:text="Physical Damage to Champions"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
 
 	    <TextView
-	        android:id="@+id/TextView17"
+	        android:id="@+id/tvEnemyInhib3"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_alignLeft="@+id/TextView16"
-	        android:layout_below="@+id/TextView16"
+	        android:layout_alignLeft="@+id/tvEnemyInhib2"
+	        android:layout_below="@+id/tvEnemyInhib2"
 	        android:text="Magic Damage to Champions"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
@@ -539,7 +539,7 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignLeft="@+id/tvWardsTitle"
-	        android:layout_below="@+id/TextView17"
+	        android:layout_below="@+id/tvEnemyInhib3"
 	        android:text="Damage Dealt"
 	        android:textColor="#FFFFFF"
 	        android:textSize="@dimen/game_type" />
